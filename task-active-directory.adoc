@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: task-active-directory.html 
+keywords: active directory, ad, data sense, cloud data sense 
+summary: Sie können ein globales Active Directory mit NetApp Data Classification integrieren, um die von Data Classification gemeldeten Ergebnisse zu Dateibesitzern und zu den Benutzern und Gruppen, die Zugriff auf Ihre Dateien haben, zu verbessern. 
+---
+= Integrieren Sie Ihr Active Directory mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein globales Active Directory mit NetApp Data Classification integrieren, um die von Data Classification gemeldeten Ergebnisse zu Dateibesitzern und zu den Benutzern und Gruppen, die Zugriff auf Ihre Dateien haben, zu verbessern.
+
+Wenn Sie bestimmte Datenquellen (unten aufgeführt) einrichten, müssen Sie Active Directory-Anmeldeinformationen eingeben, damit Data Classification CIFS-Volumes scannen kann.  Diese Integration bietet der Datenklassifizierung Details zu Dateieigentümern und Berechtigungen für die in diesen Datenquellen gespeicherten Daten.  Das für diese Datenquellen eingegebene Active Directory kann sich von den globalen Active Directory-Anmeldeinformationen unterscheiden, die Sie hier eingeben.  Die Datenklassifizierung sucht in allen integrierten Active Directorys nach Benutzer- und Berechtigungsdetails.
+
+Diese Integration bietet zusätzliche Informationen an den folgenden Stellen in der Datenklassifizierung:
+
+* Sie können den "Dateibesitzer" verwendenlink:task-investigate-data.html["Filter"] und sehen Sie sich die Ergebnisse in den Metadaten der Datei im Untersuchungsbereich an.  Anstelle des Dateibesitzers, der die SID (Security IDentifier) enthält, wird der tatsächliche Benutzername eingetragen.
++
+Sie können auch weitere Details zum Dateibesitzer anzeigen: Kontoname, E-Mail-Adresse und SAM-Kontoname oder Elemente anzeigen, die diesem Benutzer gehören.
+
+* Sie können sehenlink:task-investigate-data.html["vollständige Dateiberechtigungen"] für jede Datei und jedes Verzeichnis, wenn Sie auf die Schaltfläche „Alle Berechtigungen anzeigen“ klicken.
+* Imlink:task-controlling-governance-data.html["Governance-Dashboard"] , zeigt das Bedienfeld „Berechtigungen öffnen“ einen größeren Detaillierungsgrad zu Ihren Daten an.
+
+
+
+NOTE: Lokale Benutzer-SIDs und SIDs aus unbekannten Domänen werden nicht in den tatsächlichen Benutzernamen übersetzt.
+
+
+
+== Unterstützte Datenquellen
+
+Eine Active Directory-Integration mit Datenklassifizierung kann Daten aus den folgenden Datenquellen identifizieren:
+
+* On-Premises- ONTAP -Systeme
+* Cloud Volumes ONTAP
+* Azure NetApp Files
+* FSx für ONTAP
+
+
+
+
+== Stellen Sie eine Verbindung zu Ihrem Active Directory-Server her
+
+Nachdem Sie die Datenklassifizierung bereitgestellt und das Scannen Ihrer Datenquellen aktiviert haben, können Sie die Datenklassifizierung in Ihr Active Directory integrieren.  Auf Active Directory kann über eine DNS-Server-IP-Adresse oder eine LDAP-Server-IP-Adresse zugegriffen werden.
+
+Die Active Directory-Anmeldeinformationen können schreibgeschützt sein, durch die Bereitstellung von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
+
+Wenn Sie bei CIFS-Volumes/Dateifreigaben sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Klassifizierungsscans der Datenklassifizierung unverändert bleiben, muss der Benutzer über die Berechtigung „Attribute schreiben“ verfügen.  Wenn möglich, empfehlen wir, den in Active Directory konfigurierten Benutzer zu einem Teil einer übergeordneten Gruppe in der Organisation zu machen, die über Berechtigungen für alle Dateien verfügt.
+
+.Anforderungen
+* Sie müssen bereits ein Active Directory für die Benutzer in Ihrem Unternehmen eingerichtet haben.
+* Sie benötigen die Informationen für das Active Directory:
++
+** DNS-Server-IP-Adresse oder mehrere IP-Adressen
++
+oder
+
++
+LDAP-Server-IP-Adresse oder mehrere IP-Adressen
+
+** Benutzername und Passwort für den Zugriff auf den Server
+** Domänenname (Active Directory-Name)
+** Ob Sie sicheres LDAP (LDAPS) verwenden oder nicht
+** LDAP-Server-Port (normalerweise 389 für LDAP und 636 für sicheres LDAP)
+
+
+* Die folgenden Ports müssen für die ausgehende Kommunikation durch die Data Classification-Instanz geöffnet sein:
++
+[cols="20,20,30,30"]
+|===
+| Protokoll | Hafen | Ziel | Zweck 
+
+
+| TCP und UDP | 389 | Active Directory | LDAP 
+
+
+| TCP | 636 | Active Directory | LDAP über SSL 
+
+
+| TCP | 3268 | Active Directory | Globaler Katalog 
+
+
+| TCP | 3269 | Active Directory | Globaler Katalog über SSL 
+|===
+
+
+.Schritte
+. Klicken Sie auf der Seite „Datenklassifizierungskonfiguration“ auf *Active Directory hinzufügen*.
++
+image:screenshot_compliance_integrate_active_directory.png["Ein Screenshot, der zeigt, wie Sie auf die Schaltfläche klicken, um einen Active Directory-Server zur Datenklassifizierung hinzuzufügen."]
+
+. Geben Sie im Dialogfeld „Mit Active Directory verbinden“ die Active Directory-Details ein und klicken Sie auf *Verbinden*.
++
+Sie können bei Bedarf mehrere IP-Adressen hinzufügen, indem Sie *IP hinzufügen* auswählen.
+
++
+image:screenshot_compliance_active_directory_dialog.png["Ein Screenshot des Dialogfelds, in dem Sie das Active Directory definieren, das Sie in die Datenklassifizierung integrieren möchten."]
+
++
+Die Datenklassifizierung wird in das Active Directory integriert und der Konfigurationsseite wird ein neuer Abschnitt hinzugefügt.
+
++
+image:screenshot_compliance_active_directory_added.png["Ein Screenshot, der das neue Active Directory zeigt, das in die Datenklassifizierung integriert ist."]
+
+
+
+
+
+== Verwalten Sie Ihre Active Directory-Integration
+
+Wenn Sie Werte in Ihrer Active Directory-Integration ändern müssen, klicken Sie auf die Schaltfläche *Bearbeiten* und nehmen Sie die Änderungen vor.
+
+Sie können die Integration auch löschen, indem Sie dasimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie auf die Schaltfläche „Active Directory entfernen“ und dann auf „Active Directory entfernen“.

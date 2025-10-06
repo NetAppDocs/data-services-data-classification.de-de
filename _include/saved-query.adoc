@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Definieren Sie auf der Registerkarte „Untersuchung“ eine Suche, indem Sie die gewünschten Filter auswählen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Untersuchung“"] für Details.
+. Wenn Sie alle Filtereigenschaften nach Ihren Wünschen eingestellt haben, wählen Sie *Abfrage speichern*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Screenshot, der zeigt, wie eine gefilterte Abfrage als gespeicherte Abfrage gespeichert wird."]
+
+. Benennen Sie die gespeicherte Abfrage und fügen Sie eine Beschreibung hinzu.  Der Name muss eindeutig sein.
+. Optional können Sie die Abfrage als Richtlinie speichern:
++
+.. Um die Abfrage als Richtlinie zu speichern, schalten Sie den Schalter *Als Richtlinie ausführen* um.
+.. Wählen Sie *Dauerhaft löschen* oder *E-Mail-Updates senden*.  Wenn Sie E-Mail-Updates auswählen, können Sie die Abfrageergebnisse täglich, wöchentlich oder monatlich per E-Mail an _alle_ Konsolenbenutzer senden.  Alternativ können Sie die Benachrichtigung in der gleichen Häufigkeit an bestimmte E-Mail-Adressen senden.
+
+
+. Wählen Sie *Speichern*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Ein Screenshot, der zeigt, wie Sie die gespeicherte Abfrage konfigurieren und speichern."]
+
+
+
+Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Registerkarte **Gespeicherte Abfragen** anzeigen.

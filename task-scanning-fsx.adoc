@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-fsx.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen des Amazon FSx für ONTAP -Volumes mit NetApp Data Classification zu beginnen. 
+---
+= Amazon FSx nach ONTAP -Volumes mit NetApp Data Classification scannen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Führen Sie einige Schritte aus, um mit dem Scannen des Amazon FSx für ONTAP -Volumes mit NetApp Data Classification zu beginnen.
+
+
+
+== Bevor Sie beginnen
+
+* Sie benötigen einen aktiven Konsolenagenten in AWS, um die Datenklassifizierung bereitzustellen und zu verwalten.
+* Die Sicherheitsgruppe, die Sie beim Erstellen des Systems ausgewählt haben, muss Datenverkehr von der Data Classification-Instanz zulassen.  Sie können die zugehörige Sicherheitsgruppe mithilfe der mit dem FSx for ONTAP Dateisystem verbundenen ENI finden und mithilfe der AWS Management Console bearbeiten.
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["AWS-Sicherheitsgruppen für Linux-Instanzen"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/security-group-rules.html["AWS-Sicherheitsgruppen für Windows-Instances"^]
+
++
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Elastische AWS-Netzwerkschnittstellen (ENI)"^]
+
+* Stellen Sie sicher, dass die folgenden Ports für die Data Classification-Instanz geöffnet sind:
++
+** Für NFS – Ports 111 und 2049.
+** Für CIFS – Ports 139 und 445.
+
+
+
+
+
+
+== Bereitstellen der Datenklassifizierungsinstanz
+
+link:task-deploy-cloud-compliance.html["Datenklassifizierung bereitstellen"^]wenn noch keine Instanz bereitgestellt ist.
+
+Sie sollten die Datenklassifizierung im selben AWS-Netzwerk bereitstellen wie den Konsolenagenten für AWS und die FSx-Volumes, die Sie scannen möchten.
+
+*Hinweis:* Die Bereitstellung der Datenklassifizierung an einem lokalen Standort wird beim Scannen von FSx-Volumes derzeit nicht unterstützt.
+
+Upgrades der Datenklassifizierungssoftware erfolgen automatisiert, solange die Instanz über eine Internetverbindung verfügt.
+
+
+
+== Aktivieren Sie die Datenklassifizierung in Ihren Systemen
+
+Sie können die Datenklassifizierung für FSx für ONTAP -Volumes aktivieren.
+
+. In der NetApp Konsole: *Governance > Klassifizierung*.
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+image:screenshot_fsx_scanning_activate.png["Ein Screenshot der Registerkarte „Konfiguration“ unmittelbar nach der Bereitstellung der Datenklassifizierungsinstanz."]
+
+. Wählen Sie aus, wie Sie die Volumes in jedem System scannen möchten. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Erfahren Sie mehr über Mapping- und Klassifizierungsscans"]:
++
+** Um alle Volumes zuzuordnen, wählen Sie *Alle Volumes zuordnen*.
+** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Alle Volumes zuordnen und klassifizieren*.
+** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen und/oder klassifizieren möchten.
+
+
+. Wählen Sie im Bestätigungsdialogfeld *Genehmigen* aus, damit die Datenklassifizierung mit dem Scannen Ihrer Datenträger beginnt.
+
+
+.Ergebnis
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes.  Die Ergebnisse stehen im Compliance-Dashboard zur Verfügung, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat.  Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
+
+[NOTE]
+====
+* Wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, scannt das System die Dateien in Ihren Volumes standardmäßig nicht, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus*.  Auf der resultierenden Seite können Sie eine Einstellung aktivieren, sodass die Datenklassifizierung die Volumes unabhängig von den Berechtigungen scannt.
+* Die Datenklassifizierung scannt nur eine Dateifreigabe unter einem Volume.  Wenn Ihre Volumes mehrere Freigaben enthalten, müssen Sie diese anderen Freigaben separat als Freigabegruppe scannen. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Weitere Einzelheiten zu dieser Datenklassifizierungsbeschränkung"^] .
+
+
+====
+
+
+== Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
+
+Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.
+
+Sie müssen Data Classification CIFS-Anmeldeinformationen bereitstellen, damit es auf CIFS-Volumes zugreifen kann.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Konfigurationsseite *Details anzeigen* aus, um den Status zu überprüfen und etwaige Fehler zu beheben.
++
+Das folgende Bild zeigt beispielsweise ein Volume, das Data Classification aufgrund von Netzwerkverbindungsproblemen zwischen der Data Classification-Instanz und dem Volume nicht scannen kann.
+
++
+image:screenshot_fsx_scanning_no_network_error.png["Ein Screenshot der Seite „Details anzeigen“ in der Scankonfiguration, der zeigt, dass das Volume aufgrund der Netzwerkkonnektivität zwischen der Datenklassifizierung und dem Volume nicht gescannt wird."]
+
+. Stellen Sie sicher, dass zwischen der Data Classification-Instanz und jedem Netzwerk, das Volumes für FSx for ONTAP enthält, eine Netzwerkverbindung besteht.
++
+
+NOTE: Bei FSx for ONTAP kann die Datenklassifizierung Volumes nur in derselben Region wie die Konsole scannen.
+
+. Stellen Sie sicher, dass die NFS-Volume-Exportrichtlinien die IP-Adresse der Data Classification-Instanz enthalten, damit diese auf die Daten auf jedem Volume zugreifen kann.
+. Wenn Sie CIFS verwenden, stellen Sie der Datenklassifizierung Active Directory-Anmeldeinformationen zur Verfügung, damit CIFS-Volumes gescannt werden können.
++
+.. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+.. Wählen Sie für jedes System *CIFS-Anmeldeinformationen bearbeiten* und geben Sie den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
++
+Die Anmeldeinformationen können schreibgeschützt sein, durch die Angabe von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
+
++
+Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+
++
+Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angezeigt werden, dass alle CIFS-Volumes erfolgreich authentifiziert wurden.
+
+
+
+
+
+
+
+== Aktivieren und Deaktivieren von Compliance-Scans auf Volumes
+
+Sie können reine Mapping-Scans oder Mapping- und Klassifizierungs-Scans in einem System jederzeit über die Konfigurationsseite starten oder stoppen.  Sie können auch von reinen Mapping-Scans zu Mapping- und Klassifizierungs-Scans wechseln und umgekehrt.  Wir empfehlen Ihnen, alle Bände zu scannen.
+
+Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter auf EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^] .
+
+image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
+
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Suchen Sie auf der Konfigurationsseite das System mit den Volumes, die Sie scannen möchten.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Um Nur-Mapping-Scans auf einem Volume zu aktivieren, wählen Sie im Volume-Bereich *Map* aus.  Oder wählen Sie zum Aktivieren auf allen Volumes im Überschriftenbereich *Karte* aus.  Um das vollständige Scannen eines Volumes zu aktivieren, wählen Sie im Volumebereich *Zuordnen und klassifizieren* aus.  Oder wählen Sie zur Aktivierung auf allen Volumes im Überschriftenbereich *Zuordnen und klassifizieren* aus.
+** Um das Scannen auf einem Volume zu deaktivieren, wählen Sie im Volumebereich *Aus*.  Um das Scannen auf allen Volumes zu deaktivieren, wählen Sie im Überschriftenbereich *Aus*.
+
+
+
+
+
+NOTE: Neue Datenträger, die dem System hinzugefügt werden, werden nur dann automatisch gescannt, wenn Sie im Überschriftenbereich die Einstellung *Zuordnen* oder *Zuordnen und Klassifizieren* festgelegt haben.  Wenn Sie im Überschriftenbereich die Option *Benutzerdefiniert* oder *Aus* einstellen, müssen Sie die Zuordnung und/oder das vollständige Scannen für jedes neue Volume aktivieren, das Sie dem System hinzufügen.
+
+
+
+== Scannen von Datenschutzvolumes
+
+Standardmäßig werden Datenschutzvolumes (DP) nicht gescannt, da sie nicht extern verfügbar sind und die Datenklassifizierung nicht auf sie zugreifen kann.  Dies sind die Zielvolumes für SnapMirror -Vorgänge von einem FSx für ONTAP Dateisystem.
+
+Zunächst werden diese Volumes in der Volumeliste als _Typ_ *DP* mit dem _Status_ *Nicht scannen* und der _Erforderlichen Aktion_ *Zugriff auf DP-Volumes aktivieren* identifiziert.
+
+image:screenshot_cloud_compliance_dp_volumes.png["Ein Screenshot, der die Schaltfläche „Zugriff auf DP-Volumes aktivieren“ zeigt, die Sie zum Scannen von Datenschutz-Volumes auswählen können."]
+
+.Schritte
+Wenn Sie diese Datenschutzvolumes scannen möchten:
+
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie oben auf der Seite *Zugriff auf DP-Volumes aktivieren* aus.
+. Überprüfen Sie die Bestätigungsnachricht und wählen Sie erneut *Zugriff auf DP-Volumes aktivieren*.
++
+** Volumes, die ursprünglich als NFS-Volumes im Quell-FSx für ONTAP -Dateisystem erstellt wurden, sind aktiviert.
+** Für Volumes, die ursprünglich als CIFS-Volumes im Quelldateisystem FSx for ONTAP erstellt wurden, müssen Sie CIFS-Anmeldeinformationen eingeben, um diese DP-Volumes zu scannen.  Wenn Sie bereits Active Directory-Anmeldeinformationen eingegeben haben, damit Data Classification CIFS-Volumes scannen kann, können Sie diese Anmeldeinformationen verwenden oder einen anderen Satz von Administratoranmeldeinformationen angeben.
++
+image:screenshot_compliance_dp_cifs_volumes.png["Ein Screenshot der beiden Optionen zum Aktivieren von CIFS-Datenschutzvolumes."]
+
+
+
+. Aktivieren Sie jedes DP-Volume, das Sie scannen möchten.
+
+
+.Ergebnis
+Nach der Aktivierung erstellt die Datenklassifizierung eine NFS-Freigabe aus jedem DP-Volume, das zum Scannen aktiviert wurde.  Die Freigabe-Exportrichtlinien erlauben nur den Zugriff von der Datenklassifizierungsinstanz.
+
+Wenn Sie beim ersten Aktivieren des Zugriffs auf DP-Volumes keine CIFS-Datensicherungsvolumes hatten und später welche hinzufügen, wird oben auf der Konfigurationsseite die Schaltfläche *Zugriff auf CIFS DP aktivieren* angezeigt.  Wählen Sie diese Schaltfläche und fügen Sie CIFS-Anmeldeinformationen hinzu, um den Zugriff auf diese CIFS-DP-Volumes zu ermöglichen.
+
+
+NOTE: Active Directory-Anmeldeinformationen werden nur in der Speicher-VM des ersten CIFS-DP-Volumes registriert, daher werden alle DP-Volumes auf dieser SVM gescannt.  Bei Volumes, die sich auf anderen SVMs befinden, sind die Active Directory-Anmeldeinformationen nicht registriert, sodass diese DP-Volumes nicht gescannt werden.

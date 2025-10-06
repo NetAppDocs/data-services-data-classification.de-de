@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, scan shares 
+summary: Bekannte Einschränkungen kennzeichnen Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
+---
+= Bekannte Einschränkungen bei der NetApp Datenklassifizierung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bekannte Einschränkungen kennzeichnen Funktionen, die in dieser Version nicht unterstützt werden oder nicht richtig zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+
+
+
+== Deaktivierte Optionen für die NetApp Datenklassifizierung
+
+Mit der Version vom Dezember 2023 (Version 1.26.6) wurden die folgenden Optionen entfernt:
+
+* Die Option zum Aktivieren der Überwachungsprotokollerfassung wurde deaktiviert.
+* Während der Verzeichnisuntersuchung ist die Option zum Berechnen der Anzahl personenbezogener Daten (PII) nach Verzeichnissen nicht verfügbar.
+* Die Option zum Integrieren von Daten mithilfe von Azure Information Protection (AIP)-Beschriftungen wurde deaktiviert.
+
+
+
+
+== Datenklassifizierungsscan
+
+Bei Datenklassifizierungsscans treten die folgenden Einschränkungen auf.
+
+
+
+=== Die Datenklassifizierung scannt nur eine Freigabe unter einem Volume
+
+Wenn Sie mehrere Dateifreigaben unter einem einzigen Volume haben, scannt die Datenklassifizierung die Freigabe mit der höchsten Hierarchie.  Wenn Sie beispielsweise Aktien wie die folgenden haben:
+
+* /A
+* /A/B
+* /C
+* /D/E
+
+
+In dieser Konfiguration werden nur die Daten in /A gescannt.  Die Daten in /C und /D werden nicht gescannt.
+
+.Problemumgehung
+Es gibt eine Problemumgehung, um sicherzustellen, dass Sie Daten von allen Freigaben in Ihrem Volume scannen. Gehen Sie folgendermaßen vor:
+
+. Fügen Sie im System das zu scannende Volume hinzu.
+. Nachdem die Datenklassifizierung das Scannen des Volumes abgeschlossen hat, gehen Sie zur Seite _Datenuntersuchung_ und erstellen Sie einen Filter, um zu sehen, welche Freigabe gescannt wird:
++
+Filtern Sie die Daten nach „Systemname“ und „Verzeichnistyp = Freigabe“, um zu sehen, welche Freigabe gescannt wird.
+
+. Rufen Sie die vollständige Liste der im Volume vorhandenen Freigaben ab, damit Sie sehen können, welche Freigaben nicht gescannt werden.
+. link:task-scanning-file-shares.html["Die restlichen Anteile einer Anteilsgruppe hinzufügen"] .
++
+Fügen Sie alle Anteile einzeln hinzu, zum Beispiel:
+
++
+....
+/C
+/D
+....
+. Führen Sie diese Schritte für jedes Volume im System aus, das über mehrere Freigaben verfügt.
+
+
+
+
+=== Zeitstempel des letzten Zugriffs
+
+Wenn Data Classification einen Scan eines Verzeichnisses durchführt, wirkt sich der Scan auf das Feld **Zuletzt aufgerufen** des Verzeichnisses aus.  Wenn Sie das Feld **Letzter Zugriff** anzeigen, geben diese Metadaten entweder das Datum und die Uhrzeit des Scans oder den letzten Zeitpunkt wieder, zu dem ein Benutzer auf das Verzeichnis zugegriffen hat.

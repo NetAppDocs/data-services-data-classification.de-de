@@ -1,0 +1,19 @@
+= Version 1.46
+:allow-uri-read: 
+
+
+
+
+=== Version 1.46
+
+Diese Version der Datenklassifizierung enthält Fehlerbehebungen und die folgenden Updates:
+
+.Verbesserte Einblicke in Scan-Ereignisse auf der Audit-Seite
+Die Audit-Seite unterstützt jetzt erweiterte Einblicke in Scan-Ereignisse für die BlueXP classification.  Auf der Audit-Seite wird jetzt angezeigt, wann der Scan eines Systems beginnt, sowie der Status der Systeme und etwaige Probleme.  Status für Freigaben und Systeme sind nur für Mapping-Scans verfügbar.
+
+Weitere Informationen zur Seite „Audit“ finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html["Überwachen Sie NetApp -Konsolenvorgänge"^] .
+
+.Unterstützung für RHEL 9.6
+Diese Version fügt Unterstützung für Red Hat Enterprise Linux v9.6 für die manuelle Vor-Ort-Installation der BlueXP classification hinzu, einschließlich Dark Site-Bereitstellungen.
+
+Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und die BlueXP classification 1.30 oder höher: Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 und 9.5.

@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task-test-linux-system.html 
+keywords: cloud compliance, bluexp, data sense, get started, deploy, data classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman, ubuntu, rhel, dark site 
+summary: Bevor Sie Data Classification manuell auf einem Linux-Host installieren, können Sie auf dem Host ein Skript ausführen, um zu überprüfen, ob alle Voraussetzungen für die Installation von Data Classification erfüllt sind.  Sie können dieses Skript auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud ausführen.  Der Host kann mit dem Internet verbunden sein oder sich an einem Standort ohne Internetzugang befinden. 
+---
+= Überprüfen Sie, ob Ihr Linux-Host für die Installation von NetApp Data Classification bereit ist.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bevor Sie NetApp Data Classification manuell auf einem Linux-Host installieren, führen Sie optional ein Skript auf dem Host aus, um zu überprüfen, ob alle Voraussetzungen für die Installation von Data Classification erfüllt sind.  Sie können dieses Skript auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud ausführen.  Der Host kann mit dem Internet verbunden sein oder sich an einem Standort ohne Internetzugang befinden (ein „Dark Site“).
+
+Es gibt auch ein erforderliches Testskript, das Teil des Installationsskripts für die Datenklassifizierung ist.  Das hier beschriebene Skript ist speziell für Benutzer konzipiert, die den Linux-Host unabhängig von der Ausführung des Installationsskripts zur Datenklassifizierung überprüfen möchten.
+
+
+
+== Erste Schritte
+
+Sie führen die folgenden Aufgaben aus.
+
+. Installieren Sie optional einen Konsolenagenten, falls Sie noch keinen installiert haben.  Sie können das Testskript ausführen, ohne dass ein Konsolenagent installiert ist. Das Skript prüft jedoch die Konnektivität zwischen dem Konsolenagenten und dem Hostcomputer der Datenklassifizierung. Daher wird empfohlen, dass Sie über einen Konsolenagenten verfügen.
+. Bereiten Sie den Hostcomputer vor und überprüfen Sie, ob er alle Anforderungen erfüllt.
+. Aktivieren Sie den ausgehenden Internetzugriff vom Data Classification-Hostcomputer.
+. Stellen Sie sicher, dass alle erforderlichen Ports auf allen Systemen aktiviert sind.
+. Laden Sie das Prerequisite-Testskript herunter und führen Sie es aus.
+
+
+
+
+== Erstellen eines Konsolenagenten
+
+Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  Sie können das Skript „Voraussetzungen“ jedoch ohne einen Konsolenagenten ausführen.
+
+Du kannst https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.  Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+
+Informationen zum Erstellen eines Konsolenagenten in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+
+Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wenn Sie das Voraussetzungen-Skript ausführen.  Sie verfügen über diese Informationen, wenn Sie den Konsolenagenten in Ihren Räumlichkeiten installiert haben.  Wenn der Konsolenagent in der Cloud bereitgestellt wird, finden Sie diese Informationen in der Konsole: Wählen Sie das Hilfesymbol, dann *Support* und dann *Konsolenagent*.
+
+
+
+== Überprüfen der Hostanforderungen
+
+Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.
+
+* Die Datenklassifizierung wird auf einem Host, der gemeinsam mit anderen Anwendungen genutzt wird, nicht unterstützt – der Host muss ein dedizierter Host sein.
+* Beim Aufbau des Hostsystems in Ihren Räumlichkeiten können Sie je nach Größe des Datensatzes, für den Sie einen Datenklassifizierungsscan durchführen möchten, zwischen diesen Systemgrößen wählen.
++
+[cols="17,17,27,31"]
+|===
+| Systemgröße | CPU | RAM (Auslagerungsspeicher muss deaktiviert sein) | Scheibe 
+
+
+| *Extra groß* | 32 CPUs | 128 GB RAM  a| 
+** 1 TiB SSD auf / oder 100 GiB verfügbar auf /opt
+** 895 GiB verfügbar auf /var/lib/docker
+** 5 GiB auf /tmp
+** *Für Podman, 30 GB auf /var/tmp*
+
+
+
+
+| *Groß* | 16 CPUs | 64 GB RAM  a| 
+** 500 GiB SSD auf / oder 100 GiB verfügbar auf /opt
+** 400 GiB verfügbar auf /var/lib/docker oder für Podman /var/lib/containers
+** 5 GiB auf /tmp
+** *Für Podman, 30 GB auf /var/tmp*
+
+
+|===
+* Wenn Sie für Ihre Data Classification-Installation eine Compute-Instanz in der Cloud bereitstellen, wird empfohlen, ein System zu verwenden, das die oben genannten Systemanforderungen für „Groß“ erfüllt:
++
+** *Amazon Elastic Compute Cloud (Amazon EC2)-Instanztyp*: „m6i.4xlarge“. link:reference-instance-types.html#aws-instance-types["Weitere AWS-Instanztypen anzeigen"^] .
+** *Azure-VM-Größe*: „Standard_D16s_v3“. link:reference-instance-types.html#azure-instance-types["Weitere Azure-Instanztypen anzeigen"^] .
+** *GCP-Maschinentyp*: „n2-standard-16“. link:reference-instance-types.html#gcp-instance-types["Weitere GCP-Instanztypen anzeigen"^] .
+
+
+* *UNIX-Ordnerberechtigungen*: Die folgenden UNIX-Mindestberechtigungen sind erforderlich:
++
+[cols="25,25"]
+|===
+| Ordner | Mindestberechtigungen 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /opt | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/system | `rwxr-xr-x` 
+|===
+* *Betriebssystem*:
++
+** Die folgenden Betriebssysteme erfordern die Verwendung der Docker-Container-Engine:
++
+*** Red Hat Enterprise Linux Version 7.8 und 7.9
+*** Ubuntu 22.04 (erfordert Data Classification Version 1.23 oder höher)
+*** Ubuntu 24.04 (erfordert Data Classification Version 1.23 oder höher)
+
+
+** Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und erfordern Data Classification Version 1.30 oder höher:
++
+*** Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 und 9.6.
+
+
+** Advanced Vector Extensions (AVX2) müssen auf dem Hostsystem aktiviert sein.
+
+
+* *Red Hat Subscription Management*: Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann das System während der Installation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+* *Zusätzliche Software*: Sie müssen die folgende Software auf dem Host installieren, bevor Sie Data Classification installieren:
++
+** Abhängig vom verwendeten Betriebssystem müssen Sie eine der Container-Engines installieren:
++
+*** Docker Engine Version 19.3.1 oder höher. https://docs.docker.com/engine/install/["Installationsanweisungen anzeigen"^] .
+*** Podman Version 4 oder höher.  Um Podman zu installieren, geben Sie ein(`sudo yum install podman netavark -y` ).
+
+
+
+
+
+
+* Python Version 3.6 oder höher. https://www.python.org/downloads/["Installationsanweisungen anzeigen"^] .
++
+** *NTP-Überlegungen*: NetApp empfiehlt, das Datenklassifizierungssystem für die Verwendung eines Network Time Protocol (NTP)-Dienstes zu konfigurieren.  Die Zeit muss zwischen dem Datenklassifizierungssystem und dem Konsolenagentsystem synchronisiert werden.
+
+
+
+
+* *Firewalld-Überlegungen*: Wenn Sie planen, `firewalld` , wir empfehlen, dass Sie es vor der Installation der Datenklassifizierung aktivieren.  Führen Sie die folgenden Befehle aus, um zu konfigurieren `firewalld` damit es mit der Datenklassifizierung kompatibel ist:
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+Wenn Sie planen, zusätzliche Datenklassifizierungshosts als Scannerknoten (in einem verteilten Modell) zu verwenden, fügen Sie Ihrem primären System jetzt diese Regeln hinzu:
+
++
+....
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+....
++
+Beachten Sie, dass Sie Docker oder Podman neu starten müssen, wenn Sie aktivieren oder aktualisieren `firewalld` Einstellungen.
+
+
+
+
+
+== Ausgehenden Internetzugriff von der Datenklassifizierung aus aktivieren
+
+Für die Datenklassifizierung ist ein ausgehender Internetzugang erforderlich.  Wenn Ihr virtuelles oder physisches Netzwerk einen Proxyserver für den Internetzugang verwendet, stellen Sie sicher, dass die Datenklassifizierungsinstanz über ausgehenden Internetzugang verfügt, um die folgenden Endpunkte zu kontaktieren.
+
+
+TIP: Dieser Abschnitt ist für Hostsysteme, die an Standorten ohne Internetverbindung installiert sind, nicht erforderlich.
+
+[cols="43,57"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://api.bluexp.netapp.com | Kommunikation mit dem Konsolendienst, der NetApp -Konten umfasst. 
+
+
+| \https://netapp-cloud-account.auth0.com \https://auth0.com | Kommunikation mit der Konsolen-Website zur zentralen Benutzerauthentifizierung. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste, Vorlagen und ermöglicht das Senden von Protokollen und Metriken. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
+
+
+| \https://github.com/docker \https://download.docker.com | Stellt erforderliche Pakete für die Docker-Installation bereit. 
+
+
+| \http://packages.ubuntu.com/ \http://archive.ubuntu.com | Stellt erforderliche Pakete für die Ubuntu-Installation bereit. 
+|===
+
+
+== Stellen Sie sicher, dass alle erforderlichen Ports aktiviert sind
+
+Sie müssen sicherstellen, dass alle erforderlichen Ports für die Kommunikation zwischen dem Konsolenagenten, der Datenklassifizierung, Active Directory und Ihren Datenquellen geöffnet sind.
+
+[cols="25,25,50"]
+|===
+| Verbindungstyp | Häfen | Beschreibung 
+
+
+| Konsolenagent <> Datenklassifizierung | 8080 (TCP), 443 (TCP) und 80. 9000 | Die Firewall- oder Routing-Regeln für den Konsolen-Agenten müssen eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Data Classification-Instanz zulassen.  Stellen Sie sicher, dass Port 8080 geöffnet ist, damit Sie den Installationsfortschritt in der Konsole sehen können.  Wenn auf dem Linux-Host eine Firewall verwendet wird, wird Port 9000 für interne Prozesse innerhalb eines Ubuntu-Servers benötigt. 
+
+
+| Konsolenagent <> ONTAP -Cluster (NAS) | 443 (TCP)  a| 
+Die Konsole erkennt ONTAP Cluster mithilfe von HTTPS. Wenn Sie benutzerdefinierte Firewall-Richtlinien verwenden, muss der Konsolen-Agent-Host ausgehenden HTTPS-Zugriff über Port 443 zulassen.  Wenn sich der Konsolenagent in der Cloud befindet, wird die gesamte ausgehende Kommunikation durch die vordefinierten Firewall- oder Routing-Regeln zugelassen.
+
+|===
+
+
+== Ausführen des Voraussetzungenskripts für die Datenklassifizierung
+
+Führen Sie die folgenden Schritte aus, um das Voraussetzungenskript für die Datenklassifizierung auszuführen.
+
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["Sehen Sie sich dieses Video an"^]um zu sehen, wie Sie das Voraussetzungen-Skript ausführen und die Ergebnisse interpretieren.
+
+.Bevor Sie beginnen
+* Überprüfen Sie, ob Ihr Linux-System die<<Überprüfen der Hostanforderungen,Hostanforderungen>> .
+* Stellen Sie sicher, dass auf dem System die beiden erforderlichen Softwarepakete (Docker Engine oder Podman und Python 3) installiert sind.
+* Stellen Sie sicher, dass Sie über Root-Rechte auf dem Linux-System verfügen.
+
+
+.Schritte
+. Laden Sie das Skript „Data Classification Prerequisites“ von der https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] .  Die Datei, die Sie auswählen sollten, hat den Namen *standalone-pre-requisite-tester-<version>*.
+. Kopieren Sie die Datei auf den Linux-Host, den Sie verwenden möchten (mit `scp` oder eine andere Methode).
+. Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
++
+[source, cli]
+----
+chmod +x standalone-pre-requisite-tester-v1.25.0
+----
+. Führen Sie das Skript mit dem folgenden Befehl aus.
++
+[source, cli]
+----
+ ./standalone-pre-requisite-tester-v1.25.0 <--darksite>
+----
++
+Fügen Sie die Option „--darksite“ nur hinzu, wenn Sie das Skript auf einem Host ausführen, der keinen Internetzugang hat.  Bestimmte Voraussetzungstests werden übersprungen, wenn der Host nicht mit dem Internet verbunden ist.
+
+. Das Skript fordert Sie zur Eingabe der IP-Adresse des Data Classification-Hostcomputers auf.
++
+** Geben Sie die IP-Adresse oder den Hostnamen ein.
+
+
+. Das Skript fragt, ob Sie einen installierten Konsolenagenten haben.
++
+** Geben Sie *N* ein, wenn Sie keinen installierten Konsolenagenten haben.
+** Geben Sie *Y* ein, wenn Sie einen installierten Konsolenagenten haben.  Geben Sie dann die IP-Adresse oder den Hostnamen des Konsolenagenten ein, damit das Testskript diese Konnektivität testen kann.
+
+
+. Das Skript führt eine Reihe von Tests auf dem System aus und zeigt im Verlauf die Ergebnisse an.  Wenn es fertig ist, schreibt es ein Protokoll der Sitzung in eine Datei namens `prerequisites-test-<timestamp>.log` im Verzeichnis `/opt/netapp/install_logs` .
+
+
+.Ergebnis
+Wenn alle erforderlichen Tests erfolgreich ausgeführt wurden, können Sie Data Classification auf dem Host installieren, wenn Sie bereit sind.
+
+Wenn Probleme entdeckt wurden, werden sie zur Behebung als „Empfohlen“ oder „Erforderlich“ kategorisiert.  Bei den empfohlenen Problemen handelt es sich in der Regel um Elemente, die die Ausführung der Scan- und Kategorisierungsaufgaben zur Datenklassifizierung verlangsamen würden.  Diese Punkte müssen nicht korrigiert werden, Sie möchten sie aber möglicherweise dennoch ansprechen.
+
+Wenn Sie „Erforderliche“ Probleme haben, sollten Sie diese beheben und das Voraussetzungen-Testskript erneut ausführen.

@@ -1,0 +1,390 @@
+---
+sidebar: sidebar 
+permalink: task-investigate-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
+summary: Sie können die Daten Ihrer Organisation untersuchen, indem Sie die Details auf der Seite „Datenuntersuchung“ anzeigen.  Hier können Sie Ihre Recherche fortsetzen, nachdem Sie sich das Governance-Dashboard angesehen haben. 
+---
+= Untersuchen Sie die in Ihrem Unternehmen gespeicherten Daten mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Data Investigation-Dashboard bietet Einblicke in Ihre Daten auf Datei- und Verzeichnisebene und ermöglicht Ihnen das Sortieren und Filtern der Ergebnisse.  Die Seite „Datenuntersuchung“ bietet Einblicke in Datei- und Verzeichnismetadaten und -berechtigungen und identifiziert doppelte Dateien.  Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen.  Die Seite „Datenuntersuchung“ unterstützt auch das Verschieben, Kopieren und Löschen von Dateien.
+
+
+NOTE: Um Erkenntnisse aus der Untersuchungsseite zu gewinnen, müssen Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, zeigen keine Details auf Dateiebene an.
+
+
+
+== Struktur der Datenuntersuchung
+
+Auf der Seite „Datenuntersuchung“ werden die Daten in drei Registerkarten sortiert:
+
+* **Unstrukturierte Daten**: Dateidaten
+* **Verzeichnisse**: Ordner und Dateifreigaben
+* **Strukturiert**: Datenbank
+
+
+
+
+== Datenfilter
+
+Die Seite „Datenuntersuchung“ bietet zahlreiche Filter zum Sortieren Ihrer Daten, damit Sie das finden, was Sie benötigen.  Sie können mehrere Filter gleichzeitig verwenden.
+
+Um einen Filter hinzuzufügen, wählen Sie die Schaltfläche **Filter hinzufügen**.
+
+image:screenshot_compliance_investigation_filtered.png["Ein Screenshot der Filter, die beim Verfeinern der Ergebnisse auf der Untersuchungsseite verfügbar sind."]
+
+*Filterempfindlichkeit und Inhalt*
+
+Verwenden Sie die folgenden Filter, um anzuzeigen, wie viele vertrauliche Informationen Ihre Daten enthalten.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Kategorie | Wählen Sie dielink:reference-private-data-categories.html["Arten von Kategorien"] . 
+
+
+| Empfindlichkeitsstufe | Wählen Sie die Empfindlichkeitsstufe: Persönlich, Persönlich sensibel oder Nicht sensibel. 
+
+
+| Anzahl der Kennungen | Wählen Sie den Bereich der erkannten vertraulichen Kennungen pro Datei aus.  Umfasst personenbezogene Daten und sensible personenbezogene Daten.  Beim Filtern in Verzeichnissen summiert die Datenklassifizierung die Übereinstimmungen aller Dateien in jedem Ordner (und Unterordnern).  HINWEIS: In der Version vom Dezember 2023 (Version 1.26.6) wurde die Option zum Berechnen der Anzahl personenbezogener Daten (PII) nach Verzeichnissen entfernt. 
+
+
+| Personenbezogene Daten | Wählen Sie dielink:reference-private-data-categories.html["Arten personenbezogener Daten"] . 
+
+
+| Sensible personenbezogene Daten | Wählen Sie dielink:reference-private-data-categories.html["Arten sensibler personenbezogener Daten"] . 
+
+
+| Betroffener | Geben Sie den vollständigen Namen oder eine bekannte Kennung einer betroffenen Person ein. link:task-generating-compliance-reports.html["Erfahren Sie hier mehr über betroffene Personen"] . 
+|===
+*Benutzereigentümer und Benutzerberechtigungen filtern*
+
+Verwenden Sie die folgenden Filter, um Dateieigentümer und Berechtigungen für den Zugriff auf Ihre Daten anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Berechtigungen öffnen | Wählen Sie die Art der Berechtigungen innerhalb der Daten und innerhalb von Ordnern/Freigaben aus. 
+
+
+| Benutzer-/Gruppenberechtigungen | Wählen Sie einen oder mehrere Benutzernamen und/oder Gruppennamen aus oder geben Sie einen Teilnamen ein. 
+
+
+| Dateieigentümer | Geben Sie den Namen des Dateieigentümers ein. 
+
+
+| Anzahl der Benutzer mit Zugriff | Wählen Sie einen oder mehrere Kategoriebereiche aus, um anzuzeigen, welche Dateien und Ordner für eine bestimmte Anzahl von Benutzern geöffnet sind. 
+|===
+*Chronologisch filtern*
+
+Verwenden Sie die folgenden Filter, um Daten basierend auf Zeitkriterien anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Erstellungszeit | Wählen Sie einen Zeitraum aus, in dem die Datei erstellt wurde.  Sie können auch einen benutzerdefinierten Zeitraum angeben, um die Suchergebnisse weiter zu verfeinern. 
+
+
+| Entdeckte Zeit | Wählen Sie einen Zeitraum aus, in dem die Datenklassifizierung die Datei entdeckt hat.  Sie können auch einen benutzerdefinierten Zeitraum angeben, um die Suchergebnisse weiter zu verfeinern. 
+
+
+| Zuletzt geändert | Wählen Sie einen Zeitraum aus, in dem die Datei zuletzt geändert wurde.  Sie können auch einen benutzerdefinierten Zeitraum angeben, um die Suchergebnisse weiter zu verfeinern. 
+
+
+| Letzter Zugriff  a| 
+Wählen Sie einen Zeitraum aus, in dem zuletzt auf die Datei oder das Verzeichnis* zugegriffen wurde.  Sie können auch einen benutzerdefinierten Zeitraum angeben, um die Suchergebnisse weiter zu verfeinern.  Bei den Dateitypen, die von Data Classification gescannt werden, ist dies der letzte Zeitpunkt, zu dem Data Classification die Datei gescannt hat.
+
+|===
+{Asterisk} Die letzte Zugriffszeit für ein Verzeichnis ist nur für NFS- oder CIFS-Freigaben verfügbar.
+
+*Metadaten filtern*
+
+Verwenden Sie die folgenden Filter, um Daten basierend auf Standort, Größe und Verzeichnis oder Dateityp anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Dateipfad | Geben Sie bis zu 20 Teil- oder Vollpfade ein, die Sie in die Abfrage einschließen oder aus ihr ausschließen möchten.  Wenn Sie sowohl Einschlusspfade als auch Ausschlusspfade eingeben, sucht die Datenklassifizierung zuerst nach allen Dateien in den eingeschlossenen Pfaden, entfernt dann Dateien aus ausgeschlossenen Pfaden und zeigt anschließend die Ergebnisse an.  Beachten Sie, dass die Verwendung von „*“ in diesem Filter keine Wirkung hat und dass Sie bestimmte Ordner nicht vom Scan ausschließen können – alle Verzeichnisse und Dateien unter einer konfigurierten Freigabe werden gescannt. 
+
+
+| Verzeichnistyp | Wählen Sie den Verzeichnistyp aus: entweder „Freigeben“ oder „Ordner“. 
+
+
+| Dateityp | Wählen Sie dielink:reference-private-data-categories.html["Dateitypen"] . 
+
+
+| Dateigröße | Wählen Sie den Dateigrößenbereich aus. 
+
+
+| Datei-Hash | Geben Sie den Hash der Datei ein, um eine bestimmte Datei zu finden, auch wenn der Name anders ist. 
+|===
+*Filterspeichertyp*
+
+Verwenden Sie die folgenden Filter, um Daten nach Speichertyp anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Systemtyp | Wählen Sie den Systemtyp aus. 
+
+
+| Name der Systemumgebung | Wählen Sie bestimmte Systeme aus. 
+
+
+| Speicher-Repository | Wählen Sie das Speicherrepository aus, beispielsweise ein Volume oder ein Schema. 
+|===
+*Filterabfrage*
+
+Verwenden Sie den folgenden Filter, um Daten nach gespeicherten Abfragen anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Gespeicherte Abfrage | Wählen Sie eine oder mehrere gespeicherte Abfragen aus.  Gehen Sie zumlink:task-using-policies.html["Registerkarte „Gespeicherte Abfragen“"] , um die Liste der vorhandenen gespeicherten Abfragen anzuzeigen und neue zu erstellen. 
+
+
+| Schlagwörter | Wählenlink:task-org-private-data.html["das Tag oder die Tags"] die Ihren Dateien zugewiesen sind. 
+|===
+*Filteranalysestatus*
+
+Verwenden Sie den folgenden Filter, um Daten nach dem Scanstatus der Datenklassifizierung anzuzeigen.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Analysestatus | Wählen Sie eine Option aus, um die Liste der Dateien anzuzeigen, deren erster Scan aussteht, deren Scan abgeschlossen ist, deren erneuter Scan aussteht oder deren Scan fehlgeschlagen ist. 
+
+
+| Scan-Analyse-Ereignis | Wählen Sie aus, ob Sie Dateien anzeigen möchten, die nicht klassifiziert wurden, weil die Datenklassifizierung den letzten Zugriffszeitpunkt nicht wiederherstellen konnte, oder Dateien, die klassifiziert wurden, obwohl die Datenklassifizierung den letzten Zugriffszeitpunkt nicht wiederherstellen konnte. 
+|===
+link:reference-collected-metadata.html["Details zum Zeitstempel „Letzter Zugriff“ anzeigen"]Weitere Informationen zu den Elementen, die auf der Untersuchungsseite angezeigt werden, wenn Sie mithilfe des Scan-Analyse-Ereignisses filtern.
+
+*Daten nach Duplikaten filtern*
+
+Verwenden Sie den folgenden Filter, um Dateien anzuzeigen, die in Ihrem Speicher dupliziert sind.
+
+[cols="30,60"]
+|===
+| Filter | Details 
+
+
+| Duplikate | Wählen Sie aus, ob die Datei in den Repositories dupliziert wird. 
+|===
+
+
+== Dateimetadaten anzeigen
+
+Die Metadaten zeigen Ihnen nicht nur das System und das Volume an, auf dem sich die Datei befindet, sondern enthalten auch viele weitere Informationen, darunter die Dateiberechtigungen, den Dateieigentümer und ob es Duplikate dieser Datei gibt.  Diese Informationen sind nützlich, wenn Sie planen,link:task-using-policies.html["Erstellen gespeicherter Abfragen"] weil Sie alle Informationen sehen, die Sie zum Filtern Ihrer Daten verwenden können.
+
+Die Verfügbarkeit von Informationen hängt von der Datenquelle ab.  Beispielsweise werden Volumename und Berechtigungen für Datenbankdateien nicht freigegeben.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Untersuchung“ aus.
+. Wählen Sie in der Liste „Datenuntersuchung“ auf der rechten Seite das Abwärtspfeilzeichenimage:button_down_caret.png["Abwärtspfeil"] rechts für jede einzelne Datei, um die Dateimetadaten anzuzeigen.
++
+image:screenshot_compliance_file_details.png["Ein Screenshot, der die Metadatendetails für eine Datei auf der Seite „Datenuntersuchung“ zeigt."]
+
+. Optional können Sie mit der Schaltfläche *Tag erstellen* ein Tag erstellen oder der Datei hinzufügen.  Wählen Sie ein vorhandenes Tag aus dem Dropdown-Menü aus oder fügen Sie mit der Schaltfläche *+ Hinzufügen* ein neues Tag hinzu.  Tags können zum Filtern von Daten verwendet werden.
+
+
+
+
+== Benutzerberechtigungen für Dateien und Verzeichnisse anzeigen
+
+Um eine Liste aller Benutzer oder Gruppen anzuzeigen, die Zugriff auf eine Datei oder ein Verzeichnis haben, sowie die Art ihrer Berechtigungen, wählen Sie *Alle Berechtigungen anzeigen*.  Diese Option ist nur für Daten in CIFS-Freigaben verfügbar.
+
+Wenn Sie Sicherheitskennungen (SIDs) anstelle von Benutzer- und Gruppennamen verwenden, sollten Sie Ihr Active Directory in die Datenklassifizierung integrieren. Weitere Informationen finden Sie unter link:task-active-directory.html["Active Directory zur Datenklassifizierung hinzufügen"] .
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Untersuchung“ aus.
+. Wählen Sie in der Liste „Datenuntersuchung“ auf der rechten Seite das Abwärtspfeilzeichenimage:button_down_caret.png["Abwärtspfeil"] rechts für jede einzelne Datei, um die Dateimetadaten anzuzeigen.
+. Um eine Liste aller Benutzer oder Gruppen anzuzeigen, die Zugriff auf eine Datei oder ein Verzeichnis haben, sowie die Art ihrer Berechtigungen, wählen Sie im Feld „Öffnen Sie Berechtigungen“ die Option „Alle Berechtigungen anzeigen“ aus.
++
+
+NOTE: Die Datenklassifizierung zeigt bis zu 100 Benutzer in der Liste an.
+
+. Wählen Sie das Abwärtspfeilzeichenimage:button_down_caret.png["Abwärtspfeil"] Klicken Sie für jede Gruppe auf die Schaltfläche, um die Liste der Benutzer anzuzeigen, die Teil der Gruppe sind.
++
+
+TIP: Sie können eine Ebene der Gruppe erweitern, um die Benutzer anzuzeigen, die Teil der Gruppe sind.
+
+. Wählen Sie den Namen eines Benutzers oder einer Gruppe aus, um die Untersuchungsseite zu aktualisieren, damit Sie alle Dateien und Verzeichnisse sehen können, auf die der Benutzer oder die Gruppe Zugriff hat.
+
+
+
+
+== Suchen Sie in Ihren Speichersystemen nach doppelten Dateien
+
+Sie können überprüfen, ob in Ihren Speichersystemen doppelte Dateien gespeichert werden.  Dies ist nützlich, wenn Sie Bereiche identifizieren möchten, in denen Sie Speicherplatz sparen können.  Außerdem sollten Sie sicherstellen, dass bestimmte Dateien mit speziellen Berechtigungen oder vertraulichen Informationen nicht unnötig in Ihren Speichersystemen dupliziert werden.
+
+Alle Ihre Dateien (Datenbanken ausgenommen), die 1 MB oder größer sind oder persönliche oder vertrauliche persönliche Informationen enthalten, werden auf Duplikate verglichen.
+
+Bei der Datenklassifizierung wird Hashing-Technologie verwendet, um doppelte Dateien zu ermitteln.  Wenn eine Datei denselben Hashcode wie eine andere Datei hat, können Sie 100 % sicher sein, dass es sich bei den Dateien um exakte Duplikate handelt – auch wenn die Dateinamen unterschiedlich sind.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Untersuchung“ aus.
+. Wählen Sie im Filterbereich „Dateigröße“ zusammen mit „Duplikate“ („Hat Duplikate“) aus, um zu sehen, welche Dateien eines bestimmten Größenbereichs in Ihrer Umgebung dupliziert sind.
+. Laden Sie optional die Liste der doppelten Dateien herunter und senden Sie sie an Ihren Speicheradministrator, damit dieser entscheiden kann, welche Dateien ggf. gelöscht werden können.
+. Optional können Sie die doppelten Dateien löschen, markieren oder verschieben.  Wählen Sie die Dateien aus, für die Sie eine Aktion ausführen möchten, und wählen Sie dann die entsprechende Aktion aus.
+
+
+*Anzeigen, ob eine bestimmte Datei dupliziert ist*
+
+Sie können sehen, ob eine einzelne Datei Duplikate enthält.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Untersuchung“ aus.
+. Wählen Sie in der Liste „Datenuntersuchung“image:button_down_caret.png["Abwärtspfeil"] rechts für jede einzelne Datei, um die Dateimetadaten anzuzeigen.
++
+Wenn für eine Datei Duplikate vorhanden sind, wird diese Information neben dem Feld _Duplikate_ angezeigt.
+
+. Um die Liste der doppelten Dateien und ihren Speicherort anzuzeigen, wählen Sie *Details anzeigen*.
+. Wählen Sie auf der nächsten Seite *Duplikate anzeigen* aus, um die Dateien auf der Untersuchungsseite anzuzeigen.
+. Optional können Sie die doppelten Dateien löschen, markieren oder verschieben.  Wählen Sie die Dateien aus, für die Sie eine Aktion ausführen möchten, und wählen Sie dann die entsprechende Aktion aus.
+
+
+
+TIP: Sie können den auf dieser Seite bereitgestellten „Datei-Hash“-Wert verwenden und ihn jederzeit direkt auf der Untersuchungsseite eingeben, um nach einer bestimmten doppelten Datei zu suchen – oder Sie können ihn in einer gespeicherten Abfrage verwenden.
+
+
+
+== Laden Sie Ihren Bericht herunter
+
+Sie können Ihre gefilterten Ergebnisse im CSV- oder JSON-Format herunterladen.
+
+Es können bis zu drei Berichtsdateien heruntergeladen werden, wenn die Datenklassifizierung Dateien (unstrukturierte Daten), Verzeichnisse (Ordner und Dateifreigaben) und Datenbanken (strukturierte Daten) scannt.
+
+Die Dateien werden in Dateien mit einer festen Anzahl von Zeilen oder Datensätzen aufgeteilt:
+
+* JSON: 100.000 Datensätze pro Bericht, dessen Generierung etwa 5 Minuten dauert
+* CSV: 200.000 Datensätze pro Bericht, dessen Generierung etwa 4 Minuten dauert
+
+
+
+NOTE: Sie können eine Version der CSV-Datei herunterladen und in diesem Browser anzeigen.  Diese Version ist auf 10.000 Datensätze beschränkt.
+
+
+
+=== Was ist im herunterladbaren Bericht enthalten?
+
+Der *Datenbericht zu unstrukturierten Dateien* enthält die folgenden Informationen zu Ihren Dateien:
+
+* Dateiname
+* Standorttyp
+* Systemname
+* Speicherrepository (z. B. ein Volume, Bucket, Freigaben)
+* Repository-Typ
+* Dateipfad
+* Dateityp
+* Dateigröße (in MB)
+* Erstellungszeit
+* Zuletzt geändert
+* Letzter Zugriff
+* Dateieigentümer
++
+** Zu den Dateieigentümerdaten gehören Kontoname, SAM-Kontoname und E-Mail-Adresse, wenn Active Directory konfiguriert ist.
+
+
+* Kategorie
+* Persönliche Informationen
+* Sensible persönliche Informationen
+* Berechtigungen öffnen
+* Scan-Analysefehler
+* Datum der Löschungserkennung
++
+Das Löscherkennungsdatum gibt das Datum an, an dem die Datei gelöscht oder verschoben wurde.  Auf diese Weise können Sie erkennen, wann vertrauliche Dateien verschoben wurden.  Gelöschte Dateien werden nicht zur Anzahl der Dateien gezählt, die im Dashboard oder auf der Untersuchungsseite angezeigt werden.  Die Dateien erscheinen nur in den CSV-Berichten.
+
+
+
+Der *Bericht zu unstrukturierten Verzeichnisdaten* enthält die folgenden Informationen zu Ihren Ordnern und Dateifreigaben:
+
+* Systemtyp
+* Systemname
+* Verzeichnisname
+* Speicherrepository (z. B. ein Ordner oder Dateifreigaben)
+* Verzeichnisbesitzer
+* Erstellungszeit
+* Entdeckte Zeit
+* Zuletzt geändert
+* Letzter Zugriff
+* Berechtigungen öffnen
+* Verzeichnistyp
+
+
+Der *Strukturierter Datenbericht* enthält die folgenden Informationen zu Ihren Datenbanktabellen:
+
+* DB-Tabellenname
+* Standorttyp
+* Systemname
+* Speicherrepository (z. B. ein Schema)
+* Spaltenanzahl
+* Zeilenanzahl
+* Persönliche Informationen
+* Sensible persönliche Informationen
+
+
+.Schritte zum Erstellen des Berichts
+. Wählen Sie auf der Seite „Datenuntersuchung“ dieimage:button_download.png["Download-Button"] Schaltfläche oben rechts auf der Seite.
+. Wählen Sie den Berichtstyp: CSV oder JSON.
+. Geben Sie einen **Berichtsnamen** ein.
+. Um den vollständigen Bericht herunterzuladen, wählen Sie **System** und dann **System** und **Lautstärke** aus den jeweiligen Dropdown-Menüs.  Geben Sie einen **Zielordnerpfad** an.
++
+Um den Bericht im Browser herunterzuladen, wählen Sie **Lokal** aus.  Beachten Sie, dass diese Option den Bericht auf die ersten 10.000 Zeilen beschränkt und auf das **CSV**-Format beschränkt ist.  Wenn Sie **Lokal** auswählen, müssen Sie keine weiteren Felder ausfüllen.
+
+. Wählen Sie **Bericht herunterladen**.
++
+image:screenshot_compliance_investigation_report2.png["Ein Screenshot der Seite „Untersuchungsbericht herunterladen“ mit mehreren Optionen."]
+
+
+
+.Ergebnis
+In einem Dialogfeld wird die Meldung angezeigt, dass die Berichte heruntergeladen werden.
+
+
+
+== Erstellen Sie eine gespeicherte Abfrage basierend auf ausgewählten Filtern
+
+.Schritte
+. Definieren Sie auf der Registerkarte „Untersuchung“ eine Suche, indem Sie die gewünschten Filter auswählen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Untersuchung“"] für Details.
+. Wenn Sie alle Filtereigenschaften nach Ihren Wünschen eingestellt haben, wählen Sie *Abfrage speichern*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Screenshot, der zeigt, wie eine gefilterte Abfrage als gespeicherte Abfrage gespeichert wird."]
+
+. Benennen Sie die gespeicherte Abfrage und fügen Sie eine Beschreibung hinzu.  Der Name muss eindeutig sein.
+. Optional können Sie die Abfrage als Richtlinie speichern:
++
+.. Um die Abfrage als Richtlinie zu speichern, schalten Sie den Schalter *Als Richtlinie ausführen* um.
+.. Wählen Sie *Dauerhaft löschen* oder *E-Mail-Updates senden*.  Wenn Sie E-Mail-Updates auswählen, können Sie die Abfrageergebnisse täglich, wöchentlich oder monatlich per E-Mail an _alle_ Konsolenbenutzer senden.  Alternativ können Sie die Benachrichtigung in der gleichen Häufigkeit an bestimmte E-Mail-Adressen senden.
+
+
+. Wählen Sie *Speichern*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Ein Screenshot, der zeigt, wie Sie die gespeicherte Abfrage konfigurieren und speichern."]
+
+
+
+Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Registerkarte **Gespeicherte Abfragen** anzeigen.
+
+
+TIP: Es kann bis zu 15 Minuten dauern, bis die Ergebnisse auf der Seite „Gespeicherte Abfragen“ angezeigt werden.

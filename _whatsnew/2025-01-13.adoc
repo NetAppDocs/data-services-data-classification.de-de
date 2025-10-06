@@ -1,0 +1,29 @@
+= Version 1.39
+:allow-uri-read: 
+
+
+
+
+=== Version 1.39
+
+Diese BlueXP classification Klassifizierungsversion aktualisiert den Exportprozess für den Datenuntersuchungsbericht.  Dieses Export-Update ist nützlich, um zusätzliche Analysen Ihrer Daten durchzuführen, zusätzliche Visualisierungen der Daten zu erstellen oder die Ergebnisse Ihrer Datenuntersuchung mit anderen zu teilen.
+
+Bisher war der Export des Data Investigation-Berichts auf 10.000 Zeilen beschränkt.  Mit dieser Version wurde die Beschränkung aufgehoben, sodass Sie alle Ihre Daten exportieren können.  Diese Änderung ermöglicht Ihnen den Export von mehr Daten aus Ihren Datenuntersuchungsberichten und bietet Ihnen so mehr Flexibilität bei Ihrer Datenanalyse.
+
+Sie können die Arbeitsumgebung, Volumes, Zielordner und entweder das JSON- oder CSV-Format auswählen.  Der exportierte Dateiname enthält einen Zeitstempel, der Ihnen hilft, den Zeitpunkt des Datenexports zu identifizieren.
+
+Zu den unterstützten Arbeitsumgebungen gehören:
+
+* Cloud Volumes ONTAP
+* FSx für ONTAP
+* ONTAP
+* Gruppe „Freigeben“
+
+
+Für den Export von Daten aus dem Data Investigation-Bericht gelten die folgenden Einschränkungen:
+
+* Die maximale Anzahl der herunterzuladenden Datensätze beträgt 500 Millionen pro Typ (Dateien, Verzeichnisse und Tabellen).
+* Der Export von einer Million Datensätzen dauert voraussichtlich etwa 35 Minuten.
+
+
+Einzelheiten zur Datenuntersuchung und zum Bericht finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"] .

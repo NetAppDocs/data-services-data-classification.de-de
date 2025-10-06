@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task-exclude-scan-paths.html 
+keywords: exclude scans, folders, directories 
+summary: Wenn Sie möchten, dass NetApp Data Classification das Scannen von Daten ausschließt, die sich in bestimmten Datenquellenverzeichnissen befinden, können Sie diese Verzeichnisnamen zu einer Konfigurationsdatei hinzufügen.  Nachdem Sie diese Änderung angewendet haben, schließt die Datenklassifizierungs-Engine das Scannen von Daten in diesen Verzeichnissen aus. 
+---
+= Schließen Sie bestimmte Verzeichnisse von NetApp Data Classification-Scans aus
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie möchten, dass NetApp Data Classification bestimmte Verzeichnisse von Scans ausschließt, können Sie diese Verzeichnisnamen zu einer Konfigurationsdatei hinzufügen.  Nachdem Sie diese Änderung angewendet haben, schließt die Datenklassifizierungs-Engine diese Verzeichnisse von Scans aus.
+
+
+NOTE: Standardmäßig werden bei Datenklassifizierungsscans Volume-Snapshot-Daten ausgeschlossen, die mit ihrer Quelle im Volume identisch sind.
+
+
+
+== Unterstützte Datenquellen
+
+Das Ausschließen bestimmter Verzeichnisse von Datenklassifizierungsscans wird für NFS- und CIFS-Freigaben in den folgenden Datenquellen unterstützt:
+
+* On-Premises- ONTAP
+* Cloud Volumes ONTAP
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Allgemeine Dateifreigaben
+
+
+
+
+== Definieren Sie die Verzeichnisse, die vom Scan ausgeschlossen werden sollen
+
+Bevor Sie Verzeichnisse vom Klassifizierungsscan ausschließen können, müssen Sie sich beim Datenklassifizierungssystem anmelden, damit Sie eine Konfigurationsdatei bearbeiten und ein Skript ausführen können.  Erfahren Sie, wie Sielink:reference-log-in-to-instance.html["Melden Sie sich beim Datenklassifizierungssystem an"] abhängig davon, ob Sie die Software manuell auf einem Linux-Rechner installiert oder die Instanz in der Cloud bereitgestellt haben.
+
+.Überlegungen
+* Sie können maximal 50 Verzeichnispfade pro Datenklassifizierungssystem ausschließen.
+* Das Ausschließen von Verzeichnispfaden kann die Scanzeiten beeinträchtigen.
+
+
+.Schritte
+. Gehen Sie im Datenklassifizierungssystem zu "/opt/netapp/config/custom_configuration" und öffnen Sie die Datei `data_provider.yaml` .
+. Geben Sie im Abschnitt „data_providers“ unter der Zeile „exclude:“ die auszuschließenden Verzeichnispfade ein. Beispiel:
++
+....
+exclude:
+- "folder1"
+- "folder2"
+....
++
+Ändern Sie nichts anderes in dieser Datei.
+
+. Speichern Sie die Änderungen an der Datei.
+. Gehen Sie zu „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ und führen Sie das folgende Skript aus:
+
+
+`update_data_providers_from_config_file.sh`
+
++ Dieser Befehl übergibt die vom Scannen auszuschließenden Verzeichnisse an die Klassifizierungs-Engine.
+
+.Ergebnis
+Bei allen nachfolgenden Scans Ihrer Daten werden die angegebenen Verzeichnisse nicht gescannt.
+
+Mit denselben Schritten können Sie Elemente zur Ausschlussliste hinzufügen, bearbeiten oder daraus löschen.  Die überarbeitete Ausschlussliste wird aktualisiert, nachdem Sie das Skript ausgeführt haben, um Ihre Änderungen zu bestätigen.
+
+
+
+== Beispiele
+
+.Konfiguration 1:
+Jeder Ordner, der irgendwo im Namen „folder1“ enthält, wird von allen Datenquellen ausgeschlossen.
+
+....
+data_providers:
+   exclude:
+   - "folder1"
+....
+.Erwartete Ergebnisse für Pfade, die ausgeschlossen werden:
+* /CVO1/Ordner1
+* /CVO1/Ordner1name
+* /CVO1/Ordner10
+* /CVO1/*Ordner1
+* /CVO1/+Ordner1name
+* /CVO1/notfolder10
+* /CVO22/Ordner1
+* /CVO22/Ordner1name
+* /CVO22/Ordner10
+
+
+.Beispiele für Pfade, die nicht ausgeschlossen werden:
+* /CVO1/*Ordner
+* /CVO1/Ordnername
+* /CVO22/*Ordner20
+
+
+.Konfiguration 2:
+Jeder Ordner, der nur am Anfang des Namens „*folder1“ enthält, wird ausgeschlossen.
+
+....
+data_providers:
+   exclude:
+   - "\\*folder1"
+....
+.Erwartete Ergebnisse für Pfade, die ausgeschlossen werden:
+* /CVO/*Ordner1
+* /CVO/*Ordner1name
+* /CVO/*Ordner10
+
+
+.Beispiele für Pfade, die nicht ausgeschlossen werden:
+* /CVO/Ordner1
+* /CVO/Ordner1name
+* /CVO/nicht*Ordner10
+
+
+.Konfiguration 3:
+Jeder Ordner in der Datenquelle „CVO22“, der irgendwo im Namen „folder1“ enthält, wird ausgeschlossen.
+
+....
+data_providers:
+   exclude:
+   - "CVO22/folder1"
+....
+.Erwartete Ergebnisse für Pfade, die ausgeschlossen werden:
+* /CVO22/Ordner1
+* /CVO22/Ordner1name
+* /CVO22/Ordner10
+
+
+.Beispiele für Pfade, die nicht ausgeschlossen werden:
+* /CVO1/Ordner1
+* /CVO1/Ordner1name
+* /CVO1/Ordner10
+
+
+
+
+== Escapezeichen für Sonderzeichen in Ordnernamen
+
+Wenn Ihr Ordnername eines der folgenden Sonderzeichen enthält und Sie die Daten in diesem Ordner vom Scannen ausschließen möchten, müssen Sie vor dem Ordnernamen die Escape-Sequenz \\ verwenden.
+
+ ., +, *, ?, ^, $, (, ), [, ], {, }, |
+Beispiel:
+
+Pfad in der Quelle: `/project/*not_to_scan`
+
+Syntax in der Ausschlussdatei: `"\\*not_to_scan"`
+
+
+
+== Aktuelle Ausschlussliste anzeigen
+
+Es ist möglich, dass der Inhalt der `data_provider.yaml` Konfigurationsdatei anders sein als das, was tatsächlich nach dem Ausführen des `update_data_providers_from_config_file.sh` Skript.  Um die aktuelle Liste der Verzeichnisse anzuzeigen, die Sie vom Datenklassifizierungsscan ausgeschlossen haben, führen Sie den folgenden Befehl von „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ aus:
+
+ get_data_providers_configuration.sh

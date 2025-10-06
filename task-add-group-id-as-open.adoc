@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: task-add-group-id-as-open.html 
+keywords: permissions, open to organization, file access 
+summary: 'Wenn Gruppen-IDs an Dateien oder Ordner in NFS-Dateifreigaben angehängt werden, definieren sie die Berechtigungen für die Datei oder den Ordner, beispielsweise, ob sie „für die Organisation geöffnet“ sind.  Wenn einige Gruppen-IDs (GIDs) zunächst nicht mit der Berechtigungsstufe „Für die Organisation offen“ eingerichtet sind, können Sie diese Berechtigung zur GID hinzufügen, sodass alle Dateien und Ordner, an die diese GID angehängt ist, als „für die Organisation offen“ gelten.' 
+---
+= Definieren Sie zusätzliche Gruppen-IDs als offen für die Organisation in NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Gruppen-IDs (GIDs) an Dateien oder Ordner in NFS-Dateifreigaben angehängt werden, definieren sie die Berechtigungen für die Datei oder den Ordner, beispielsweise, ob sie „für die Organisation geöffnet“ sind.  Wenn einige GIDs zunächst nicht mit der Berechtigungsstufe „Für die Organisation offen“ eingerichtet sind, können Sie diese Berechtigung zur GID hinzufügen, sodass alle Dateien und Ordner, an die diese GID angehängt ist, als „für die Organisation offen“ gelten.
+
+Nachdem Sie diese Änderung vorgenommen haben und NetApp Data Classification Ihre Dateien und Ordner erneut scannt, wird diese Berechtigung für alle Dateien und Ordner mit diesen Gruppen-IDs auf der Seite „Untersuchungsdetails“ angezeigt. Außerdem werden sie in Berichten angezeigt, in denen Sie Dateiberechtigungen anzeigen.
+
+Um diese Funktion zu aktivieren, müssen Sie sich beim Datenklassifizierungssystem anmelden, damit Sie eine Konfigurationsdatei bearbeiten und ein Skript ausführen können.  Erfahren Sie, wie Sielink:reference-log-in-to-instance.html["Melden Sie sich beim Datenklassifizierungssystem an"] abhängig davon, ob Sie die Software manuell auf einem Linux-Rechner installiert oder die Instanz in der Cloud bereitgestellt haben.
+
+
+
+== Fügen Sie Gruppen-IDs die Berechtigung „Für Organisation öffnen“ hinzu
+
+Sie müssen über die Gruppen-ID-Nummern (GIDs) verfügen, bevor Sie mit dieser Aufgabe beginnen.
+
+.Schritte
+. Gehen Sie im Datenklassifizierungssystem zu "/opt/netapp/config/custom_configuration" und öffnen Sie die Datei `data_provider.yaml` .
+. Fügen Sie in der Zeile „organization_group_ids: []“ die Gruppen-IDs hinzu. Beispiel:
++
+ organization_group_ids: [1014, 1015, 21, 2021, 1013, 2020, 1018, 1019]
++
+Ändern Sie sonst nichts in dieser Datei.
+
+. Speichern Sie die Änderungen an der Datei.
+. Gehen Sie zu „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ und führen Sie das folgende Skript aus:
++
+ update_data_providers_from_config_file.sh
++
+Dieser Befehl übergibt die überarbeiteten Gruppen-ID-Berechtigungen an die Klassifizierungs-Engine.
+
+
+
+.Ergebnis
+Bei allen nachfolgenden Scans Ihrer Daten werden Dateien oder Ordner mit diesen Gruppen-IDs als „für die Organisation offen“ gekennzeichnet.
+
+Mit denselben Schritten können Sie die Liste der Gruppen-IDs bearbeiten und alle Gruppen-IDs löschen, die Sie in der Vergangenheit hinzugefügt haben.  Die überarbeitete Liste der Gruppen-IDs wird aktualisiert, nachdem Sie das Skript ausgeführt haben, um Ihre Änderungen zu übernehmen.
+
+
+
+== Aktuelle Liste der Gruppen-IDs anzeigen
+
+Es ist möglich, dass der Inhalt der `data_provider.yaml` Konfigurationsdatei von dem abweicht, was nach dem Ausführen des `update_data_providers_from_config_file.sh` Skript.  Um die aktuelle Liste der Gruppen-IDs anzuzeigen, die Sie zur Datenklassifizierung hinzugefügt haben, führen Sie den folgenden Befehl von „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ aus:
+
+ get_data_providers_configuration.sh

@@ -1,0 +1,246 @@
+---
+sidebar: sidebar 
+permalink: task-generating-compliance-reports.html 
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
+summary: NetApp Data Classification bietet Berichte, mit denen Sie den Status des Datenschutzprogramms Ihres Unternehmens besser verstehen können. 
+---
+= Compliance-Berichte zur NetApp Datenklassifizierung anzeigen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification bietet Berichte, mit denen Sie den Status des Datenschutzprogramms Ihres Unternehmens besser verstehen können.
+
+Standardmäßig zeigen die Dashboards zur Datenklassifizierung Compliance- und Governance-Daten für alle Systeme, Datenbanken und Datenquellen an.  Wenn Sie Berichte anzeigen möchten, die nur Daten für einige der Systeme enthalten, können Sie diese filtern, um nur diese anzuzeigen.
+
+[NOTE]
+====
+* Compliance-Berichte sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, können nur den Datenmapping-Bericht generieren.
+* NetApp kann keine hundertprozentige Genauigkeit der personenbezogenen Daten und sensiblen personenbezogenen Daten garantieren, die durch die Datenklassifizierung identifiziert werden.  Sie sollten die Informationen immer durch Überprüfung der Daten validieren.
+
+
+====
+Für die Datenklassifizierung stehen folgende Berichte zur Verfügung:
+
+* *Bericht zur Bewertung der Datenermittlung*: Bietet eine umfassende Analyse der gescannten Umgebung, um die Ergebnisse des Systems hervorzuheben und Problembereiche sowie mögliche Abhilfemaßnahmen aufzuzeigen.
+* *Datenzuordnungsbericht*: Bietet Informationen zur Größe und Anzahl der Dateien in Ihren Systemen.  Hierzu zählen Nutzungskapazität, Alter der Daten, Datengröße und Dateitypen.
+* *Bericht zur Anforderung des Zugriffs auf personenbezogene Daten*: Ermöglicht Ihnen, einen Bericht aller Dateien zu extrahieren, die Informationen zum spezifischen Namen oder zur persönlichen Kennung einer betroffenen Person enthalten.
+* *HIPAA-Bericht*: Hilft Ihnen, die Verteilung von Gesundheitsinformationen in Ihren Dateien zu identifizieren.
+* *PCI DSS-Bericht*: Hilft Ihnen, die Verteilung von Kreditkarteninformationen in Ihren Dateien zu identifizieren.
+* *Bericht zur Bewertung des Datenschutzrisikos*: Bietet Einblicke in den Datenschutz Ihrer Daten und eine Bewertung des Datenschutzrisikos.
+* *Berichte zu einem bestimmten Informationstyp*: Es sind Berichte verfügbar, die Details zu den identifizierten Dateien enthalten, die personenbezogene Daten und sensible personenbezogene Daten enthalten.  Sie können die Dateien auch nach Kategorie und Dateityp aufgeschlüsselt anzeigen.
+
+
+
+
+== Wählen Sie die Systeme für Berichte aus
+
+Sie können den Inhalt des Dashboards „Datenklassifizierungs-Compliance“ filtern, um Compliance-Daten für alle Systeme und Datenbanken oder nur für bestimmte Systeme anzuzeigen.
+
+Wenn Sie das Dashboard filtern, beschränkt die Datenklassifizierung die Compliance-Daten und -Berichte auf die von Ihnen ausgewählten Systeme.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+. Wählen Sie das Dropdown-Menü „Systemfilter“ und dann die Systeme aus.
+. Wählen Sie **Akzeptieren**, um Ihre Auswahl zu bestätigen.
++
+image:screenshot-report-filter.png["Screenshow, die die Filterung von Systemen zeigt."]
+
+
+
+
+
+== Bericht über die Anforderung des Zugriffs betroffener Personen
+
+Datenschutzbestimmungen wie die europäische DSGVO gewähren betroffenen Personen (wie Kunden oder Mitarbeitern) das Recht auf Zugriff auf ihre personenbezogenen Daten.  Wenn eine betroffene Person diese Informationen anfordert, spricht man von einem DSAR (Data Subject Access Request).  Die Organisationen sind verpflichtet, auf diese Anfragen „unverzüglich“ und spätestens innerhalb eines Monats nach Erhalt zu antworten.
+
+Sie können auf einen DSAR reagieren, indem Sie nach dem vollständigen Namen oder einer bekannten Kennung (z. B. einer E-Mail-Adresse) einer Person suchen und dann einen Bericht herunterladen.  Der Bericht soll Ihr Unternehmen dabei unterstützen, die DSGVO oder ähnliche Datenschutzgesetze einzuhalten.
+
+*Wie kann Ihnen die Datenklassifizierung dabei helfen, auf einen DSAR zu reagieren?*
+
+Wenn Sie eine Suche nach einer betroffenen Person durchführen, findet die Datenklassifizierung alle Dateien, die den Namen oder die Kennung dieser Person enthalten.  Die Datenklassifizierung überprüft die neuesten vorindizierten Daten auf den Namen oder die Kennung.  Es wird kein neuer Scan gestartet.
+
+Nachdem die Suche abgeschlossen ist, können Sie die Liste der Dateien für einen Bericht über die Anforderung des Zugriffs betroffener Personen herunterladen.  Der Bericht fasst Erkenntnisse aus den Daten zusammen und fasst sie in rechtlichen Begriffen zusammen, die Sie an die Person zurücksenden können.
+
+
+NOTE: Die Suche nach betroffenen Personen wird derzeit in Datenbanken nicht unterstützt.
+
+*Suche nach betroffenen Personen und Download von Berichten*
+
+Suchen Sie nach dem vollständigen Namen oder einer bekannten Kennung der betroffenen Person und laden Sie dann einen Dateilistenbericht oder DSAR-Bericht herunter.  Sie können suchen nachlink:reference-private-data-categories.html#types-of-personal-data["alle Arten persönlicher Informationen"] .
+
+
+NOTE: Bei der Suche nach den Namen der betroffenen Personen werden Englisch, Deutsch, Japanisch und Spanisch unterstützt.  Die Unterstützung für weitere Sprachen wird später hinzugefügt.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+
+
+. Wählen Sie auf der Compliance-Seite *Datensubjekte* aus.
+. Suchen Sie nach dem vollständigen Namen oder einer bekannten Kennung der betroffenen Person.
++
+Hier ist ein Beispiel, das eine Suche nach dem Namen _john doe_ zeigt:
+
++
+image:screenshot_dsar_search.gif["Screenshot der Betroffenensuche."]
+
+. Wählen Sie eine der verfügbaren Optionen:
++
+** *DSAR-Bericht herunterladen*: Eine formelle Antwort auf die Zugriffsanfrage, die Sie an die betroffene Person senden können.  Dieser Bericht enthält automatisch generierte Informationen auf Grundlage der von Data Classification zur betroffenen Person ermittelten Daten und dient als Vorlage.  Sie sollten das Formular ausfüllen und intern prüfen, bevor Sie es an die betroffene Person senden.
+** *Ergebnisse untersuchen*: Eine Seite, auf der Sie die Daten untersuchen können, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern und die Dateiliste herunterladen.
++
+
+NOTE: Bei mehr als 10.000 Ergebnissen werden nur die ersten 10.000 in der Dateiliste angezeigt.
+
+
+
+
+
+
+
+== Bericht zum Health Insurance Portability and Accountability Act (HIPAA)
+
+Der Bericht zum Health Insurance Portability and Accountability Act (HIPAA) kann Ihnen dabei helfen, Dateien mit Gesundheitsinformationen zu identifizieren.  Es soll Ihr Unternehmen dabei unterstützen, die HIPAA-Datenschutzgesetze einzuhalten.  Die Datenklassifizierung sucht unter anderem nach folgenden Informationen:
+
+* Gesundheitsreferenzmuster
+* ICD-10-CM Medizinischer Code
+* ICD-9-CM Medizinischer Code
+* HR – Kategorie Gesundheit
+* Kategorie „Gesundheitsanwendungsdaten“
+
+
+Der Bericht enthält die folgenden Informationen:
+
+* Übersicht: In wie vielen Dateien sind Gesundheitsinformationen enthalten und in welchen Systemen.
+* Verschlüsselung: Der Prozentsatz der Dateien mit Gesundheitsinformationen, die sich auf verschlüsselten oder unverschlüsselten Systemen befinden.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
+* Ransomware-Schutz: Der Prozentsatz der Dateien mit Gesundheitsinformationen, die sich auf Systemen befinden, auf denen der Ransomware-Schutz aktiviert ist oder nicht.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
+* Aufbewahrung: Der Zeitraum, in dem die Dateien zuletzt geändert wurden.  Dies ist hilfreich, da Sie Gesundheitsinformationen nicht länger aufbewahren sollten, als Sie für deren Verarbeitung benötigen.
+* Verteilung von Gesundheitsinformationen: Die Systeme, auf denen die Gesundheitsinformationen gefunden wurden, und ob Verschlüsselung und Ransomware-Schutz aktiviert sind.
+
+
+*HIPAA-Bericht erstellen*
+
+Gehen Sie zur Registerkarte „Compliance“, um den Bericht zu erstellen.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+. Suchen Sie den **Berichtsbereich**.  Wählen Sie das Download-Symbol neben *HIPAA-Bericht*.
++
+image:screenshot-report-options.png["Screenshot der Berichtsoptionen auf der Compliance-Seite."]
+
+
+
+.Ergebnis
+Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und bei Bedarf an andere Gruppen senden können.
+
+
+
+== Bericht zum Payment Card Industry Data Security Standard (PCI DSS)
+
+Mithilfe des Berichts zum Payment Card Industry Data Security Standard (PCI DSS) können Sie die Verteilung von Kreditkarteninformationen in Ihren Dateien ermitteln.
+
+Der Bericht enthält die folgenden Informationen:
+
+* Übersicht: Wie viele Dateien enthalten Kreditkarteninformationen und in welchen Systemen.
+* Verschlüsselung: Der Prozentsatz der Dateien mit Kreditkarteninformationen, die sich auf verschlüsselten oder unverschlüsselten Systemen befinden.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
+* Ransomware-Schutz: Der Prozentsatz der Dateien mit Kreditkarteninformationen, die sich auf Systemen befinden, auf denen der Ransomware-Schutz aktiviert ist oder nicht.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
+* Aufbewahrung: Der Zeitraum, in dem die Dateien zuletzt geändert wurden.  Dies ist hilfreich, da Sie Kreditkarteninformationen nicht länger aufbewahren sollten, als Sie für die Verarbeitung benötigen.
+* Verbreitung von Kreditkarteninformationen: Die Systeme, auf denen die Kreditkarteninformationen gefunden wurden, und ob Verschlüsselung und Ransomware-Schutz aktiviert sind.
+
+
+*PCI DSS-Bericht erstellen*
+
+Gehen Sie zur Registerkarte „Compliance“, um den Bericht zu erstellen.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+. Suchen Sie den **Berichtsbereich**.  Wählen Sie das Download-Symbol neben *PCI DSS-Bericht*.
++
+image:screenshot-report-options.png["Screenshot der Berichtsoptionen auf der Compliance-Seite."]
+
+
+
+.Ergebnis
+Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und bei Bedarf an andere Gruppen senden können.
+
+
+
+== Bericht zur Bewertung des Datenschutzrisikos
+
+Der Bericht zur Bewertung des Datenschutzrisikos bietet einen Überblick über den Datenschutzrisikostatus Ihres Unternehmens, wie es Datenschutzbestimmungen wie die DSGVO und das CCPA vorschreiben.
+
+Der Bericht enthält die folgenden Informationen:
+
+* Compliance-Status: Ein Schweregrad und die Verteilung der Daten, unabhängig davon, ob es sich um nicht vertrauliche, persönliche oder vertrauliche persönliche Daten handelt.
+* Bewertungsübersicht: Eine Aufschlüsselung der gefundenen Arten personenbezogener Daten sowie der Datenkategorien.
+* Betroffene Personen in dieser Bewertung: Die Anzahl der Personen nach Standort, für die nationale Kennungen gefunden wurden.
+
+
+*Bericht zur Datenschutzrisikobewertung erstellen*
+
+Gehen Sie zur Registerkarte „Compliance“, um den Bericht zu erstellen.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+. Suchen Sie den **Berichtsbereich**.  Wählen Sie das Download-Symbol neben *Bericht zur Bewertung des Datenschutzrisikos*.
++
+image:screenshot-report-options.png["Screenshot der Berichtsoptionen auf der Compliance-Seite."]
+
+
+
+.Ergebnis
+Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und bei Bedarf an andere Gruppen senden können.
+
+*Schweregrad*
+
+Die Datenklassifizierung berechnet den Schweregrad für den Bericht zur Bewertung des Datenschutzrisikos auf der Grundlage von drei Variablen:
+
+* Der Prozentsatz personenbezogener Daten an allen Daten.
+* Der Prozentsatz sensibler personenbezogener Daten an allen Daten.
+* Der Prozentsatz der Dateien, die betroffene Personen enthalten, wird durch nationale Kennungen wie Personalausweise, Sozialversicherungsnummern und Steuernummern bestimmt.
+
+
+Die zur Ermittlung der Punktzahl verwendete Logik lautet wie folgt:
+
+[cols="27,73"]
+|===
+| Schweregrad | Logik 
+
+
+| 0 | Alle drei Variablen sind genau 0 % 
+
+
+| 1 | Eine der Variablen ist größer als 0 % 
+
+
+| 2 | Eine der Variablen ist größer als 3 % 
+
+
+| 3 | Zwei der Variablen sind größer als 3 % 
+
+
+| 4 | Drei der Variablen sind größer als 3 % 
+
+
+| 5 | Eine der Variablen ist größer als 6 % 
+
+
+| 6 | Zwei der Variablen sind größer als 6 % 
+
+
+| 7 | Drei der Variablen sind größer als 6 % 
+
+
+| 8 | Eine der Variablen ist größer als 15 % 
+
+
+| 9 | Zwei der Variablen sind größer als 15 % 
+
+
+| 10 | Drei der Variablen sind größer als 15 % 
+|===

@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-collected-metadata.html 
+keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
+summary: Bei der Datenklassifizierung werden bei der Durchführung von Klassifizierungsscans der Daten aus Ihren Datenquellen und Systemen bestimmte Metadaten erfasst.  Die Datenklassifizierung kann auf die meisten Metadaten zugreifen, die wir zur Klassifizierung Ihrer Daten benötigen. Es gibt jedoch einige Quellen, bei denen wir nicht auf die benötigten Daten zugreifen können. 
+---
+= Aus Datenquellen in der NetApp Datenklassifizierung erfasste Metadaten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification sammelt bestimmte Metadaten, wenn Klassifizierungsscans für die Daten aus Ihren Datenquellen und Systemen durchgeführt werden.  Die Datenklassifizierung kann auf die meisten Metadaten zugreifen, die wir zur Klassifizierung Ihrer Daten benötigen. Es gibt jedoch einige Quellen, bei denen wir nicht auf die benötigten Daten zugreifen können.
+
+[cols="15,25,25,25"]
+|===
+|  | *Metadaten* | *CIFS* | *NFS* 
+
+
+.3+| *Zeitstempel* | _Erstellungszeit_ | Verfügbar | Nicht verfügbar (wird unter Linux nicht unterstützt) 
+
+
+| _Letzter Zugriffszeitpunkt_ | Verfügbar | Verfügbar 
+
+
+| _Letzte Änderungszeit_ | Verfügbar | Verfügbar 
+
+
+.2+| *Berechtigungen* | _Öffnen Sie Berechtigungen_ | Wenn die Gruppe „JEDER“ Zugriff auf die Datei hat, gilt sie als „Für die Organisation offen“. | Wenn „Andere“ Zugriff auf die Datei haben, gilt sie als „Für die Organisation offen“. 
+
+
+| _Benutzer-/Gruppenzugriff_ | Benutzer- und Gruppeninformationen werden aus LDAP übernommen | Nicht verfügbar (NFS-Benutzer werden normalerweise lokal auf dem Server verwaltet, daher kann dieselbe Person auf jedem Server eine andere UID haben) 
+|===
+[NOTE]
+====
+* Die Datenklassifizierung extrahiert nicht die „Zeit des letzten Zugriffs“ aus den Datenbankdatenquellen.
+* Ältere Versionen des Windows-Betriebssystems (z. B. Windows 7 und Windows 8) deaktivieren die Erfassung des Attributs „Zeit des letzten Zugriffs“ standardmäßig, da dies die Systemleistung beeinträchtigen kann.  Wenn dieses Attribut nicht erfasst wird, sind Datenklassifizierungsanalysen, die auf der „Zeit des letzten Zugriffs“ basieren, davon betroffen.  Sie können die Erfassung der letzten Zugriffszeit auf diesen älteren Windows-Systemen bei Bedarf aktivieren.
+
+
+====
+
+
+== Zeitstempel des letzten Zugriffs
+
+Wenn die Datenklassifizierung Daten aus Dateifreigaben extrahiert, betrachtet das Betriebssystem dies als Zugriff auf die Daten und ändert die „letzte Zugriffszeit“ entsprechend.  Nach dem Scannen versucht die Datenklassifizierung, die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen.  Wenn die Datenklassifizierung keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, kann das System die letzte Zugriffszeit nicht auf den ursprünglichen Zeitstempel zurücksetzen.  Mit SnapLock konfigurierte ONTAP Volumes verfügen über schreibgeschützte Berechtigungen und können die letzte Zugriffszeit auch nicht auf den ursprünglichen Zeitstempel zurücksetzen.
+
+Wenn Data Classification nicht über diese Berechtigungen verfügt, scannt das System diese Dateien in Ihren Volumes standardmäßig nicht, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen jedoch egal ist, ob die letzte Zugriffszeit in Ihren Dateien auf die ursprüngliche Zeit zurückgesetzt wird, können Sie unten auf der Konfigurationsseite den Schalter *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* auswählen, damit die Datenklassifizierung die Volumes unabhängig von den Berechtigungen scannt.
+
+image:screenshot_scan_missing_permissions.png["Ein Screenshot, der den Schalter zeigt, mit dem Sie Ihre Dateien mit Data Classification scannen lassen können, auch wenn Data Classification nicht über die erforderlichen Berechtigungen verfügt, um die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen."]
+
+Diese Funktionalität ist auf lokale ONTAP Systeme, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP Management und Dateifreigaben von Drittanbietern anwendbar.
+
+Auf der Untersuchungsseite gibt es einen Filter namens „Scan-Analyse-Ereignis“, mit dem Sie entweder die Dateien anzeigen können, die nicht klassifiziert wurden, weil die Datenklassifizierung den letzten Zugriffszeitpunkt nicht zurücksetzen konnte, oder die Dateien, die klassifiziert wurden, obwohl die Datenklassifizierung den letzten Zugriffszeitpunkt nicht zurücksetzen konnte.
+
+image:screenshot_scan_analysis_event_filter.png["Ein Screenshot des Filters, um zu sehen, welche Dateien gescannt und welche nicht gescannt wurden, je nachdem, ob sie Schreibberechtigungen hatten oder nicht."]
+
+Die Filterauswahl ist:
+
+* „Nicht klassifiziert – Letzter Zugriffszeitpunkt kann nicht zurückgesetzt werden“ – Hier werden die Dateien angezeigt, die aufgrund fehlender Schreibberechtigungen nicht klassifiziert wurden.
+* „Klassifiziert und letzte Zugriffszeit aktualisiert“ – Hier werden die Dateien angezeigt, die klassifiziert wurden und bei denen die Datenklassifizierung die letzte Zugriffszeit nicht auf das ursprüngliche Datum zurücksetzen konnte.  Dieser Filter ist nur für Umgebungen relevant, in denen Sie *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* aktiviert haben.
+
+
+Bei Bedarf können Sie diese Ergebnisse in einen Bericht exportieren, sodass Sie sehen können, welche Dateien aufgrund von Berechtigungen gescannt werden und welche nicht. https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#data-investigation-report["Erfahren Sie mehr über den Data Investigation Report"^] .

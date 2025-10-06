@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-file-shares.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen von Nicht- NetApp -NFS- oder CIFS-Dateifreigaben direkt mit Data Classification zu beginnen.  Diese Dateifreigaben können vor Ort oder in der Cloud gespeichert sein. 
+---
+= Scannen Sie Dateifreigaben mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um Dateifreigaben zu scannen, müssen Sie zunächst eine Dateifreigabegruppe in NetApp Data Classification erstellen.  Dateifreigabegruppen sind für NFS- oder CIFS-Freigaben (SMB), die vor Ort oder in der Cloud gehostet werden.
+
+
+NOTE: Das Scannen von Daten aus Nicht- NetApp Dateifreigaben wird in der Kernversion der Datenklassifizierung nicht unterstützt.
+
+
+
+== Voraussetzungen
+
+Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung aktivieren.
+
+* Die Freigaben können überall gehostet werden, auch in der Cloud oder vor Ort.  CIFS-Freigaben von älteren NetApp 7-Mode-Speichersystemen können als Dateifreigaben gescannt werden.
++
+** Die Datenklassifizierung kann aus 7-Mode-Systemen weder Berechtigungen noch die „letzte Zugriffszeit“ extrahieren.
+** Aufgrund eines bekannten Problems zwischen einigen Linux-Versionen und CIFS-Freigaben auf 7-Mode-Systemen müssen Sie die Freigabe so konfigurieren, dass nur SMBv1 mit aktivierter NTLM-Authentifizierung verwendet wird.
+
+
+* Zwischen der Data Classification-Instanz und den Freigaben muss eine Netzwerkverbindung bestehen.
+* Sie können eine DFS-Freigabe (Distributed File System) als normale CIFS-Freigabe hinzufügen.  Da die Datenklassifizierung nicht erkennt, dass die Freigabe auf mehreren Servern/Volumes basiert, die zu einer einzigen CIFS-Freigabe zusammengefasst sind, erhalten Sie möglicherweise Berechtigungs- oder Verbindungsfehler bezüglich der Freigabe, obwohl die Meldung tatsächlich nur für einen der Ordner/Freigaben gilt, der sich auf einem anderen Server/Volume befindet.
+* Stellen Sie bei CIFS-Freigaben (SMB) sicher, dass Sie über Active Directory-Anmeldeinformationen verfügen, die Lesezugriff auf die Freigaben ermöglichen.  Administratoranmeldeinformationen werden bevorzugt, wenn die Datenklassifizierung Daten scannen muss, für die erweiterte Berechtigungen erforderlich sind.
++
+Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+
+* Alle CIFS-Dateifreigaben in einer Gruppe müssen dieselben Active Directory-Anmeldeinformationen verwenden.
+* Sie können NFS- und CIFS-Freigaben (entweder mit Kerberos oder NTLM) mischen.  Sie müssen die Freigaben separat zur Gruppe hinzufügen.  Das heißt, Sie müssen den Vorgang zweimal durchführen – einmal pro Protokoll.
++
+** Sie können keine Dateifreigabegruppe erstellen, die CIFS-Authentifizierungstypen (Kerberos und NTLM) mischt.
+
+
+* Wenn Sie CIFS mit Kerberos-Authentifizierung verwenden, stellen Sie sicher, dass die angegebene IP-Adresse für die Datenklassifizierung zugänglich ist.  Die Dateifreigaben können nicht hinzugefügt werden, wenn die IP-Adresse nicht erreichbar ist.
+
+
+
+
+== Erstellen einer Dateifreigabegruppe
+
+Wenn Sie Dateifreigaben zur Gruppe hinzufügen, müssen Sie das Format verwenden `<host_name>:/<share_path>` .
+
+Sie können Dateifreigaben einzeln hinzufügen oder eine zeilengetrennte Liste der Dateifreigaben eingeben, die Sie scannen möchten.  Sie können bis zu 100 Aktien gleichzeitig hinzufügen.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Konfigurationsseite *System hinzufügen* > *Dateifreigabegruppe hinzufügen*.
+. Geben Sie im Dialogfeld „Dateifreigabegruppe hinzufügen“ den Namen für die Freigabegruppe ein und wählen Sie dann *Weiter*.
+. Wählen Sie das Protokoll für die Dateifreigaben aus, die Sie hinzufügen.
++
+image:screen-cl-config-shares-add.png["Ein Screenshot des Modals zum Hinzufügen von Freigaben, der Optionen zum Auswählen von Protokollen und Freigaben zeigt"]
+
++
+.. Wenn Sie CIFS-Freigaben mit NTLM-Authentifizierung hinzufügen, geben Sie die Active Directory-Anmeldeinformationen ein, um auf die CIFS-Volumes zuzugreifen.  Obwohl schreibgeschützte Anmeldeinformationen unterstützt werden, wird empfohlen, den Vollzugriff mit Administratoranmeldeinformationen zu gewähren. Wählen Sie **Speichern**.
+
+
+. Fügen Sie die Dateifreigaben hinzu, die Sie scannen möchten (eine Dateifreigabe pro Zeile).  Wählen Sie dann **Weiter**.
+. Ein Bestätigungsdialogfeld zeigt die Anzahl der hinzugefügten Freigaben an.
++
+Wenn im Dialogfeld Freigaben aufgelistet sind, die nicht hinzugefügt werden konnten, erfassen Sie diese Informationen, damit Sie das Problem beheben können.  Wenn das Problem eine Namenskonvention betrifft, können Sie die Freigabe mit einem korrigierten Namen erneut hinzufügen.
+
+. Konfigurieren Sie das Scannen auf dem Volume:
++
+** Um reine Mapping-Scans auf Dateifreigaben zu aktivieren, wählen Sie *Map*.
+** Um vollständige Scans von Dateifreigaben zu aktivieren, wählen Sie *Zuordnen und klassifizieren*.
+** Um das Scannen von Dateifreigaben zu deaktivieren, wählen Sie *Aus*.
++
+
+NOTE: Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  + Wenn Sie *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* auf *Ein* schalten, setzt der Scan die letzte Zugriffszeit zurück und scannt alle Dateien unabhängig von den Berechtigungen.  + Weitere Informationen zum Zeitstempel des letzten Zugriffs finden Sie unterlink:link:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] .
+
+
+
+
+
+.Ergebnis
+Die Datenklassifizierung beginnt mit dem Scannen der Dateien in den von Ihnen hinzugefügten Dateifreigaben.  Du kannstxref:#track-the-scanning-progress[Verfolgen Sie den Scan-Fortschritt] und sehen Sie sich die Ergebnisse des Scans im **Dashboard** an.
+
+
+NOTE: Wenn der Scan für eine CIFS-Konfiguration mit Kerberos-Authentifizierung nicht erfolgreich abgeschlossen wird, überprüfen Sie die Registerkarte **Konfiguration** auf Fehler.
+
+
+
+== Bearbeiten einer Dateifreigabegruppe
+
+Nachdem Sie eine Dateifreigabegruppe erstellt haben, können Sie das CIFS-Protokoll bearbeiten oder Dateifreigaben hinzufügen und entfernen.
+
+.Bearbeiten Sie die CIFS-Protokollkonfiguration
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Konfigurationsseite die Dateifreigabegruppe aus, die Sie ändern möchten.
+. Wählen Sie **CIFS-Anmeldeinformationen bearbeiten**.
++
+image:screenshot-edit-cifs-credential.png["Screenshot des Menüs „CIFS-Anmeldeinformationen bearbeiten“."]
+
+. Wählen Sie die Authentifizierungsmethode: **NTLM** oder **Kerberos**.
+. Geben Sie den **Benutzernamen** und das **Passwort** von Active Directory ein.
+. Wählen Sie **Speichern**, um den Vorgang abzuschließen.
+
+
+.Dateifreigaben zu Compliance-Scans hinzufügen
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Konfigurationsseite die Dateifreigabegruppe aus, die Sie ändern möchten.
+. Wählen Sie **+ Freigaben hinzufügen**.
+. Wählen Sie das Protokoll für die Dateifreigaben aus, die Sie hinzufügen.
++
+image:screen-cl-config-shares-add.png["Ein Screenshot des Modals zum Hinzufügen von Freigaben, der Optionen zum Auswählen von Protokollen und Freigaben zeigt"]
+
++
+Wenn Sie Dateifreigaben zu einem bereits konfigurierten Protokoll hinzufügen, sind keine Änderungen erforderlich.
+
++
+Wenn Sie Dateifreigaben mit einem zweiten Protokoll hinzufügen, stellen Sie sicher, dass Sie die Authentifizierung ordnungsgemäß konfiguriert haben, wie imlink:#prerequisites["Voraussetzungen"] .
+
+. Fügen Sie die Dateifreigaben hinzu, die Sie scannen möchten (eine Dateifreigabe pro Zeile), und verwenden Sie dabei das Format `<host_name>:/<share_path>` .
+. Wählen Sie **Weiter**, um das Hinzufügen der Dateifreigaben abzuschließen.
+
+
+.Entfernen einer Dateifreigabe aus Compliance-Scans
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie das System aus, von dem Sie Dateifreigaben entfernen möchten.
+. Wählen Sie *Konfiguration*.
+. Wählen Sie auf der Konfigurationsseite die Aktionenimage:button-actions-horizontal.png["Symbol „Aktionen“"] für die Dateifreigabe, die Sie entfernen möchten.
+. Wählen Sie im Menü „Aktionen“ die Option „Freigabe entfernen“ aus.
+
+
+
+
+== Verfolgen Sie den Scan-Fortschritt
+
+Sie können den Fortschritt des ersten Scans verfolgen.
+
+. Wählen Sie das Menü **Konfiguration**.
+. Wählen Sie die **Systemkonfiguration**.
+. Überprüfen Sie für das Speicherrepository die Spalte „Scan-Fortschritt“, um den Status anzuzeigen.
+

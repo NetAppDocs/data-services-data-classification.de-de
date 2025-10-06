@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-storagegrid.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen von Daten in StorageGRID direkt mit NetApp Data Classification zu beginnen. 
+---
+= Scannen Sie StorageGRID -Daten mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Führen Sie einige Schritte aus, um mit dem Scannen von Daten in StorageGRID direkt mit NetApp Data Classification zu beginnen.
+
+
+
+== Überprüfen Sie die StorageGRID Anforderungen
+
+Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung aktivieren.
+
+* Sie benötigen die Endpunkt-URL, um eine Verbindung mit dem Objektspeicherdienst herzustellen.
+* Sie benötigen den Zugriffsschlüssel und den geheimen Schlüssel von StorageGRID , damit die Datenklassifizierung auf die Buckets zugreifen kann.
+
+
+
+
+== Bereitstellen der Datenklassifizierungsinstanz
+
+Stellen Sie die Datenklassifizierung bereit, wenn noch keine Instanz bereitgestellt ist.
+
+Wenn Sie Daten von StorageGRID scannen, die über das Internet zugänglich sind, können Sielink:task-deploy-cloud-compliance.html["Datenklassifizierung in der Cloud bereitstellen"^] oderlink:task-deploy-compliance-onprem.html["Stellen Sie die Datenklassifizierung an einem lokalen Standort mit Internetzugang bereit"^] .
+
+Wenn Sie Daten von StorageGRID scannen, das in einer Dark Site ohne Internetzugang installiert wurde, müssen Sielink:task-deploy-compliance-dark-site.html["Stellen Sie die Datenklassifizierung am selben lokalen Standort bereit, der keinen Internetzugang hat"^] .  Dies erfordert auch, dass der Konsolenagent am selben lokalen Standort bereitgestellt wird.
+
+
+
+== Fügen Sie den StorageGRID -Dienst zur Datenklassifizierung hinzu
+
+Fügen Sie den StorageGRID -Dienst hinzu.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Konfigurationsseite *System hinzufügen* > * StorageGRID hinzufügen*.
+. Geben Sie im Dialogfeld „StorageGRID -Dienst hinzufügen“ die Details für den StorageGRID -Dienst ein und wählen Sie *Weiter*.
++
+.. Geben Sie den Namen ein, den Sie für das System verwenden möchten.  Dieser Name sollte den Namen des StorageGRID -Dienstes widerspiegeln, mit dem Sie eine Verbindung herstellen.
+.. Geben Sie die Endpunkt-URL ein, um auf den Objektspeicherdienst zuzugreifen.
+.. Geben Sie den Zugriffsschlüssel und den geheimen Schlüssel ein, damit die Datenklassifizierung auf die Buckets in StorageGRID zugreifen kann.
++
+image:screenshot-scanning-storagegrid-add.png["Ein Screenshot des Dialogfelds, in dem Sie die Werte für den Zugriff auf den StorageGRID -Dienst eingeben."]
+
+
+
+
+
+.Ergebnis
+StorageGRID wird zur Liste der Systeme hinzugefügt.
+
+
+
+== Aktivieren und Deaktivieren von Compliance-Scans für StorageGRID -Buckets
+
+Nachdem Sie die Datenklassifizierung auf StorageGRID aktiviert haben, besteht der nächste Schritt darin, die Buckets zu konfigurieren, die Sie scannen möchten.  Die Datenklassifizierung erkennt diese Buckets und zeigt sie in dem von Ihnen erstellten System an.
+
+.Schritte
+. Suchen Sie auf der Konfigurationsseite das StorageGRID -System.
+. Wählen Sie auf der StorageGRID -Systemkachel *Konfiguration* aus.
+. Führen Sie einen der folgenden Schritte aus, um das Scannen zu aktivieren oder zu deaktivieren:
++
+** Um Nur-Mapping-Scans für einen Bucket zu aktivieren, wählen Sie *Map*.
+** Um vollständige Scans für einen Bucket zu aktivieren, wählen Sie *Zuordnen und klassifizieren*.
+** Um das Scannen eines Buckets zu deaktivieren, wählen Sie *Aus*.
+
+
+
+
+.Ergebnis
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen aktivierten Buckets.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.  Wenn Fehler vorliegen, werden diese zusammen mit der erforderlichen Aktion zur Behebung des Fehlers in der Spalte „Status“ angezeigt.

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: Beginnen Sie mit der NetApp Datenklassifizierung, indem Sie in der NetApp Konsole auf den Dienst zugreifen. 
+---
+= Zugriff auf die NetApp -Datenklassifizierung
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können über die NetApp Konsole auf die NetApp -Datenklassifizierung zugreifen.
+
+Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für die NetApp -Konsole anmelden. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung bei der Konsole"^] .
+
+Für bestimmte Aufgaben sind bestimmte Konsolenbenutzerrollen erforderlich. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Bevor Sie beginnen
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Sie sollten einen Konsolenagenten hinzufügen."^]
+* link:task-deploy-cloud-compliance.html["Finden Sie heraus, welcher Bereitstellungsstil für die Datenklassifizierung zu Ihrer Arbeitslast passt."]
+
+
+.Schritte
+. Navigieren Sie in einem Webbrowser zulink:https://console.netapp.com/["Konsole"^] .
+. Melden Sie sich bei der Konsole an.
+. Wählen Sie auf der Hauptseite der NetApp Konsole *Governance* > *Datenklassifizierung*.
+. Wenn Sie zum ersten Mal auf die Datenklassifizierung zugreifen, wird die Zielseite angezeigt.
++
+Wählen Sie *Klassifizierung vor Ort oder in der Cloud bereitstellen*, um mit der Bereitstellung Ihrer Klassifizierungsinstanz zu beginnen.  Weitere Informationen finden Sie unterlink:task-deploy-cloud-compliance.html["Welche Datenklassifizierungsbereitstellung sollten Sie verwenden?"]
+
++
+image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
+
++
+Andernfalls wird das Dashboard zur Datenklassifizierung angezeigt.
+
+

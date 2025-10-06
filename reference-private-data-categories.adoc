@@ -1,0 +1,481 @@
+---
+sidebar: sidebar 
+permalink: reference-private-data-categories.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
+summary: Es gibt viele Arten privater Daten, die die Datenklassifizierung in Ihren Datenträgern identifizieren kann. 
+---
+= Kategorien privater Daten in der NetApp -Datenklassifizierung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es gibt viele Arten privater Daten, die NetApp Data Classification in Ihren Volumes und Datenbanken identifizieren kann.
+
+Bei der Datenklassifizierung werden zwei Arten personenbezogener Daten unterschieden:
+
+* *Persönlich identifizierbare Informationen (PII)*
+* *Sensible personenbezogene Daten (SPII)*
+
+
+
+TIP: Wenn Sie eine Datenklassifizierung benötigen, um andere private Datentypen zu identifizieren, z. B. zusätzliche nationale ID-Nummern oder Gesundheitskennungen, wenden Sie sich an Ihren Kundenbetreuer.
+
+
+
+== Arten personenbezogener Daten
+
+Bei den in Dateien enthaltenen personenbezogenen Daten oder persönlich identifizierbaren Informationen (PII) kann es sich um allgemeine personenbezogene Daten oder nationale Kennungen handeln.  Die dritte Spalte in der folgenden Tabelle gibt an, ob die Datenklassifizierunglink:task-controlling-private-data.html#view-files-that-contain-personal-data["Näherungsvalidierung"^] um seine Ergebnisse für die Kennung zu validieren.
+
+Die Sprachen, in denen diese Elemente erkannt werden können, sind in der Tabelle angegeben.
+
+[cols="13,37,10,8,8,8,8,8"]
+|===
+| Typ | Kennung | Näherungsvalidierung? | Englisch | Deutsch | Spanisch | Französisch | japanisch 
+
+
+.6+| Allgemein | Kreditkartennummer | Ja | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Betroffene Personen | Nein | ✓ | ✓ | ✓ |  |  
+
+
+| E-Mail-Adresse | Nein | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| IBAN-Nummer (International Bank Account Number) | Nein | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| IP-Adresse | Nein | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Passwort | Ja | ✓ | ✓ | ✓ |  | ✓ 
+
+
+.88+| Nationale Kennungen | Australische TFN (Steuernummer) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Australischer Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Australische Medicare-Nummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Australische Passnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Österreichische Sozialversicherungsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Belgischer Personalausweis (Numero National) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Nummer des Personalausweises für Botswana (Omang). | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Botswana-Passnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Brasilianischer Personalausweis (CPF) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Britischer Reisepass | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Bulgarischer Personalausweis (UCN) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Kanadische Bankinformationsnummern – Kontonummer | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Bankinformationsnummern – Transitnummer | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Staatsbürgerschaft/Permanent Resident Number – PR-Kartennummer (UCI) | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Alberta | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – British Columbia | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Manitoba | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – New Brunswick | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Neufundland und Labrador | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Nordwest-Territorien | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Nova Scotia | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Nunavut | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Ontario | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Prince Edward Island | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Quebec | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Saskatchewan | Ja | ✓ |  |  |  |  
+
+
+| Kanadischer Führerschein – Yukon | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Alberta PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – British Columbia PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Manitoba PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Neufundland und Labrador PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Nordwest-Territorien PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Nova Scotia PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Nunavut PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Ontario PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Prince Edward Island PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Quebec PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Saskatchewan PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Gesundheitskartennummer – Yukon PHIN | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Passnummer | Ja | ✓ |  |  |  |  
+
+
+| Kanadische Sozialversicherungsnummer (SIN) | Ja | ✓ |  |  |  |  
+
+
+| Kroatischer Personalausweis (OIB) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Zypriotische Steueridentifikationsnummer (TIC) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Tschechische/Slowakische ID | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Dänischer Ausweis (CPR) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Niederländischer Ausweis (BSN) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Estnischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Finnischer Ausweis (HETU) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Französischer Führerschein | Ja | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Französischer Ausweis | Ja | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Französisches INSEE | Ja | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Französische Sozialversicherungsnummer | Ja | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Französische Steueridentifikationsnummer (SPI) | Ja | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Deutscher Personalausweisnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Deutsche interne ID für Banküberweisungen | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Deutsche Sozialversicherungsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Steuerliche Identifikationsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Griechischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Ungarische Steueridentifikationsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Irischer Personalausweis (PPS) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Israelischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Italienische Steueridentifikationsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Japanische persönliche Identifikationsnummer (sowohl privat als auch geschäftlich) | Ja | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Lettischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Litauischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Luxemburgische ID | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Maltesischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Nummer des National Health Service (NHS) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Neuseeländisches Bankkonto | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Neuseeländischer Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Neuseeländische IRD-Nummer (Steuernummer) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Neuseeländische NHI-Nummer (National Health Index) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Neuseeländische Reisepassnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Polnischer Personalausweis (PESEL) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Portugiesische Steueridentifikationsnummer (NIF) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Rumänischer Personalausweis (CNP) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Nationaler Registrierungsausweis von Singapur (NRIC) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Slowenischer Ausweis (EMSO) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Südafrikanischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Spanische Steueridentifikationsnummer | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Schwedischer Ausweis | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Britischer Ausweis (NINO) | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| USA Kalifornien Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| USA Indiana Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| USA New York Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| USA Texas Führerschein | Ja | ✓ | ✓ | ✓ |  |  
+
+
+| Sozialversicherungsnummer der USA (SSN) | Ja | ✓ | ✓ | ✓ |  |  
+|===
+
+
+== Arten sensibler personenbezogener Daten
+
+Die Datenklassifizierung kann die folgenden sensiblen persönlichen Informationen (SPII) in Dateien finden.
+
+Die folgenden SPII können derzeit nur in englischer Sprache erkannt werden:
+
+* *Strafprozessuale Referenz*: Daten zu strafrechtlichen Verurteilungen und Straftaten einer natürlichen Person.
+* *Ethnizitätsreferenz*: Daten zur rassischen oder ethnischen Herkunft einer natürlichen Person.
+* *Gesundheitsbezug*: Daten zur Gesundheit einer natürlichen Person.
+* *ICD-9-CM-Medizincodes*: In der Medizin- und Gesundheitsbranche verwendete Codes.
+* *ICD-10-CM-Medizincodes*: In der Medizin- und Gesundheitsbranche verwendete Codes.
+* *Referenz zu philosophischen Überzeugungen*: Daten zu den philosophischen Überzeugungen einer natürlichen Person.
+* *Referenz zu politischen Meinungen*: Daten zu den politischen Meinungen einer natürlichen Person.
+* *Referenz zu religiösen Überzeugungen*: Daten zu den religiösen Überzeugungen einer natürlichen Person.
+* *Referenz zum Sexualleben oder zur sexuellen Orientierung*: Daten zum Sexualleben oder zur sexuellen Orientierung einer natürlichen Person.
+
+
+
+
+== Kategorientypen
+
+Die Datenklassifizierung kategorisiert Ihre Daten wie folgt.
+
+Die meisten dieser Kategorien sind auf Englisch, Deutsch und Spanisch erkennbar.
+
+[cols="25,25,15,15,15"]
+|===
+| Kategorie | Typ | Englisch | Deutsch | Spanisch 
+
+
+.4+| Finanzen | Bilanzen | ✓ | ✓ | ✓ 
+
+
+| Bestellungen | ✓ | ✓ | ✓ 
+
+
+| Rechnungen | ✓ | ✓ | ✓ 
+
+
+| Quartalsberichte | ✓ | ✓ | ✓ 
+
+
+.6+| Personalwesen | Hintergrundüberprüfungen | ✓ |  | ✓ 
+
+
+| Vergütungspläne | ✓ | ✓ | ✓ 
+
+
+| Arbeitsverträge | ✓ |  | ✓ 
+
+
+| Mitarbeiterbewertungen | ✓ |  | ✓ 
+
+
+| Systemzustand | ✓ |  | ✓ 
+
+
+| Lebensläufe | ✓ | ✓ | ✓ 
+
+
+.2+| Rechtliches | Geheimhaltungsvereinbarungen | ✓ | ✓ | ✓ 
+
+
+| Lieferanten-Kunden-Verträge | ✓ | ✓ | ✓ 
+
+
+.2+| Marketing | Kampagnen | ✓ | ✓ | ✓ 
+
+
+| Konferenzen | ✓ | ✓ | ✓ 
+
+
+| Operationen | Prüfberichte | ✓ | ✓ | ✓ 
+
+
+| Verkäufe | Verkaufsaufträge | ✓ | ✓ |  
+
+
+.4+| Leistungen | RFI | ✓ |  | ✓ 
+
+
+| RFP | ✓ |  | ✓ 
+
+
+| SAU | ✓ | ✓ | ✓ 
+
+
+| Training | ✓ | ✓ | ✓ 
+
+
+| Support | Beschwerden und Tickets | ✓ | ✓ | ✓ 
+|===
+Die folgenden Metadaten werden ebenfalls in denselben unterstützten Sprachen kategorisiert und identifiziert:
+
+* Anwendungsdaten
+* Archivdateien
+* Audio
+* Breadcrumbs aus der Datenklassifizierung von Geschäftsanwendungsdaten
+* CAD-Dateien
+* Code
+* Beschädigt
+* Datenbank- und Indexdateien
+* Designdateien
+* E-Mail-Anwendungsdaten
+* Verschlüsselt (Dateien mit einem hohen Entropiewert)
+* Ausführbare Dateien
+* Finanzielle Anwendungsdaten
+* Gesundheitsanwendungsdaten
+* Bilder
+* Protokolle
+* Verschiedene Dokumente
+* Verschiedene Präsentationen
+* Verschiedene Tabellenkalkulationen
+* Sonstiges "Unbekannt"
+* Passwortgeschützte Dateien
+* Strukturierte Daten
+* Videos
+* Null-Byte-Dateien
+
+
+
+
+== Dateitypen
+
+Die Datenklassifizierung durchsucht alle Dateien nach Kategorien und Metadaten und zeigt alle Dateitypen im Abschnitt „Dateitypen“ des Dashboards an.  Wenn die Datenklassifizierung personenbezogene Daten (PII) erkennt oder eine DSAR-Suche durchführt, werden nur die folgenden Dateiformate unterstützt:
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+== Genauigkeit der gefundenen Informationen
+
+NetApp kann keine 100-prozentige Genauigkeit der durch die Datenklassifizierung identifizierten personenbezogenen Daten und sensiblen personenbezogenen Daten garantieren.  Sie sollten die Informationen immer durch Überprüfung der Daten validieren.
+
+Basierend auf unseren Tests zeigt die folgende Tabelle die Genauigkeit der von der Datenklassifizierung gefundenen Informationen.  Wir unterteilen es nach _Präzision_ und _Rückruf_:
+
+Präzision:: Die Wahrscheinlichkeit, dass das, was die Datenklassifizierung findet, richtig identifiziert wurde.  Beispielsweise bedeutet eine Genauigkeitsrate von 90 % für personenbezogene Daten, dass 9 von 10 Dateien, die als personenbezogene Daten identifiziert wurden, tatsächlich personenbezogene Daten enthalten.  1 von 10 Dateien wäre ein falsch positives Ergebnis.
+Abrufen:: Die Wahrscheinlichkeit, dass die Datenklassifizierung das findet, was sie finden soll.  Beispielsweise bedeutet eine Rückrufrate von 70 % für personenbezogene Daten, dass die Datenklassifizierung 7 von 10 Dateien identifizieren kann, die tatsächlich personenbezogene Daten in Ihrem Unternehmen enthalten.  Bei der Datenklassifizierung würden 30 % der Daten fehlen und diese würden nicht im Dashboard angezeigt.
+
+
+Wir verbessern ständig die Genauigkeit unserer Ergebnisse.  Diese Verbesserungen werden in zukünftigen Versionen der Datenklassifizierung automatisch verfügbar sein.
+
+[cols="25,20,20"]
+|===
+| Typ | Präzision | Abrufen 
+
+
+| Personenbezogene Daten - Allgemein | 90 % – 95 % | 60 % – 80 % 
+
+
+| Personenbezogene Daten - Länderkennungen | 30 % – 60 % | 40 % – 60 % 
+
+
+| Sensible personenbezogene Daten | 80 % – 95 % | 20 % – 30 % 
+
+
+| Kategorien | 90 % – 97 % | 60 % – 80 % 
+|===

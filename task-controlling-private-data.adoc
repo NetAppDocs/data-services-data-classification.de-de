@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-private-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
+summary: 'Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Details zu den personenbezogenen Daten (PII) und sensiblen personenbezogenen Daten (SPII) in Ihrem Unternehmen anzeigen.  Sie können außerdem Einblick gewinnen, indem Sie die Kategorien und Dateitypen überprüfen, die die Datenklassifizierung in Ihren Daten gefunden hat.' 
+---
+= Mit NetApp Data Classification können Sie Compliance-Details zu den in Ihrem Unternehmen gespeicherten privaten Daten einsehen.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Details zu den personenbezogenen Daten (PII) und sensiblen personenbezogenen Daten (SPII) in Ihrem Unternehmen anzeigen.  Sie können außerdem Transparenz gewinnen, indem Sie die Kategorien und Dateitypen überprüfen, die NetApp Data Classification in Ihren Daten gefunden hat.
+
+
+NOTE: Details zur Konformität auf Dateiebene sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan durchführen.  Reine Mapping-Scans liefern keine Details auf Dateiebene.
+
+Standardmäßig zeigt das Dashboard „Datenklassifizierung“ Compliance-Daten für alle Systeme und Datenbanken an.  Um nur für einige der Systeme Daten anzuzeigen, wählen Sie diese aus.
+
+image:screenshot_compliance_dashboard.png["Ein Screenshot des Dashboards zur Datenklassifizierung"]
+
+Sie können die Ergebnisse auf der Seite „Datenuntersuchung“ filtern und einen Ergebnisbericht als CSV-Datei herunterladen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Datenuntersuchung“"] für Details.
+
+
+
+== Anzeigen von Dateien, die personenbezogene Daten enthalten
+
+Die Datenklassifizierung identifiziert automatisch bestimmte Wörter, Zeichenfolgen und Muster (Regex) in den Daten. link:link:reference-private-data-categories.html["Zum Beispiel Kreditkartennummern, Sozialversicherungsnummern, Bankkontonummern, Passwörter und mehr."] Die Datenklassifizierung identifiziert diese Art von Informationen in einzelnen Dateien, in Dateien innerhalb von Verzeichnissen (Freigaben und Ordnern) und in Datenbanktabellen.
+
+Sie können auch benutzerdefinierte Suchbegriffe erstellen, um personenbezogene Daten zu identifizieren, die für Ihre Organisation spezifisch sind. Weitere Informationen finden Sie unter link:task-custom-classification.html["Erstellen einer benutzerdefinierten Klassifizierung"] .
+
+Für einige Arten personenbezogener Daten verwendet die Datenklassifizierung eine Näherungsvalidierung, um ihre Ergebnisse zu validieren.  Die Validierung erfolgt durch die Suche nach einem oder mehreren vordefinierten Schlüsselwörtern in der Nähe der gefundenen personenbezogenen Daten.  Beispielsweise identifiziert die Datenklassifizierung eine US-Sozialversicherungsnummer (SSN) als SSN, wenn sie daneben ein Näherungswort sieht, beispielsweise _SSN_ oder _Sozialversicherung_. link:reference-private-data-categories.html["Die Tabelle der personenbezogenen Daten"] zeigt an, wann die Datenklassifizierung eine Näherungsvalidierung verwendet.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Registerkarte „Compliance“ aus.
+. Um die Details aller personenbezogenen Daten zu untersuchen, wählen Sie das Symbol neben dem Prozentsatz der personenbezogenen Daten aus.
++
+image:screenshot_compliance_dashboard.png["Ein Screenshot des Dashboards zur Datenklassifizierung"]
+
+. Um die Details für einen bestimmten Typ personenbezogener Daten zu untersuchen, wählen Sie *Alle anzeigen* und dann das Pfeilsymbol *Ergebnisse untersuchen* für einen bestimmten Typ personenbezogener Daten, beispielsweise E-Mail-Adressen.
++
+image:screenshot_personal_files.png["Ein Screenshot des Dialogfelds „Persönliche Dateien“, in dem Sie neben einem persönlichen Datentyp das Symbol „Ergebnisse untersuchen“ auswählen können."]
+
+. Untersuchen Sie die Daten, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern, den Pfeil *Ergebnisse untersuchen* auswählen, um maskierte Informationen anzuzeigen, oder indem Sie die Dateiliste herunterladen.
++
+Das folgende Bild zeigt persönliche Daten, die in einem Verzeichnis (Freigaben und Ordner) gefunden wurden.  Im Reiter *Strukturiert* können Sie in Datenbanken gefundene personenbezogene Daten einsehen.  Auf der Registerkarte *Unstrukturiert* können Sie Daten auf Dateiebene anzeigen.
+
++
+image:screenshot_compliance_investigation_page.png["Ein Screenshot der Detailinformationen, die in den Dateien gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
+
++
+image:screenshot_compliance_investigation_page_directory.png["Ein Screenshot mit detaillierten Informationen, die in Verzeichnissen gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
+
+
+
+
+
+== Anzeigen von Dateien, die vertrauliche personenbezogene Daten enthalten
+
+Die Datenklassifizierung identifiziert automatisch spezielle Arten sensibler personenbezogener Daten, wie sie in Datenschutzbestimmungen definiert sind, wie z. B. https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["Artikel 9 und 10 der DSGVO"^] .  Beispielsweise Informationen zum Gesundheitszustand, zur ethnischen Herkunft oder zur sexuellen Orientierung einer Person. link:reference-private-data-categories.html["Vollständige Liste anzeigen"] .  Die Datenklassifizierung identifiziert diese Art von Informationen in einzelnen Dateien, in Dateien innerhalb von Verzeichnissen (Freigaben und Ordnern) und in Datenbanktabellen.
+
+Bei der Datenklassifizierung werden KI, natürliche Sprachverarbeitung (NLP), maschinelles Lernen (ML) und kognitives Computing (CC) verwendet, um die Bedeutung der gescannten Inhalte zu verstehen, Entitäten zu extrahieren und sie entsprechend zu kategorisieren.
+
+Eine sensible Datenkategorie der DSGVO ist beispielsweise die ethnische Herkunft.  Aufgrund seiner NLP-Fähigkeiten kann die Datenklassifizierung den Unterschied zwischen einem Satz erkennen, der lautet: „George ist Mexikaner“ (was auf sensible Daten gemäß Artikel 9 der DSGVO hinweist) und „George isst mexikanisches Essen“.
+
+
+NOTE: Beim Scannen nach sensiblen personenbezogenen Daten wird nur Englisch unterstützt.  Die Unterstützung für weitere Sprachen wird später hinzugefügt.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
+. Um die Details aller sensiblen personenbezogenen Daten zu untersuchen, suchen Sie die Karte **Sensible personenbezogene Ergebnisse** und wählen Sie dann **Alle anzeigen**.
++
+image:screenshot-sensitive-personal.png["Screenshot der sensiblen persönlichen Ergebniskarte"] .
+
+. Um die Details für einen bestimmten Typ sensibler personenbezogener Daten zu untersuchen, wählen Sie *Alle anzeigen* und dann das Pfeilsymbol *Ergebnisse untersuchen* für einen bestimmten Typ sensibler personenbezogener Daten.
+. Untersuchen Sie die Daten, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern, auf *Ergebnisse untersuchen* klicken, um maskierte Informationen anzuzeigen, oder indem Sie die Dateiliste herunterladen.
+

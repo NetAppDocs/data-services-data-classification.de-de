@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: Manchmal müssen Sie sich möglicherweise beim NetApp Data Classification-System anmelden, um auf Protokolldateien zuzugreifen oder Konfigurationsdateien zu bearbeiten. 
+---
+= Melden Sie sich beim NetApp Data Classification-System an
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie müssen sich beim NetApp Data Classification-System anmelden, damit Sie auf Protokolldateien zugreifen oder Konfigurationsdateien bearbeiten können.
+
+Wenn Data Classification auf einem Linux-Computer bei Ihnen vor Ort oder auf einem Linux-Computer installiert ist, den Sie in der Cloud bereitgestellt haben, können Sie direkt auf die Konfigurationsdatei und das Skript zugreifen.
+
+Wenn die Datenklassifizierung in der Cloud bereitgestellt wird, müssen Sie per SSH auf die Datenklassifizierungsinstanz zugreifen.  Sie können per SSH auf das System zugreifen, indem Sie den Benutzer und das Kennwort eingeben oder den SSH-Schlüssel verwenden, den Sie während der Installation des Konsolenagenten angegeben haben.  Der SSH-Befehl lautet:
+
+`ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>`
+
+* `<path_to_the_ssh_key>`= Speicherort der SSH-Authentifizierungsschlüssel
+* `<machine_user>:`
++
+** Für AWS: Verwenden Sie den <ec2-user>
+** Für Azure: Verwenden Sie den für die Konsoleninstanz erstellten Benutzer
+** Für GCP: Verwenden Sie den für die Konsoleninstanz erstellten Benutzer
+
+
+* `<datasense_ip>`= IP-Adresse der virtuellen Maschineninstanz
+
+
+Sie müssen die eingehenden Regeln der Sicherheitsgruppe ändern, um auf das System in der Cloud zuzugreifen.  Weitere Informationen finden Sie unter:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Sicherheitsgruppenregeln in AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Sicherheitsgruppenregeln in Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Firewall-Regeln in Google Cloud"^]
+

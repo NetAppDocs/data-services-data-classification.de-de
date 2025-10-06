@@ -1,0 +1,260 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-overview.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+summary: Scannen Sie Ihre Datenquellen mit NetApp Data Classification. 
+---
+= Scannen Sie Datenquellen mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification scannt die Daten in den von Ihnen ausgewählten Repositories (Volumes, Datenbankschemata oder andere Benutzerdaten), um persönliche und vertrauliche Daten zu identifizieren.  Die Datenklassifizierung ordnet dann Ihre Organisationsdaten zu, kategorisiert jede Datei und identifiziert vordefinierte Muster in den Daten.  Das Ergebnis des Scans ist ein Index mit persönlichen Informationen, sensiblen persönlichen Informationen, Datenkategorien und Dateitypen.
+
+Nach dem ersten Scan scannt die Datenklassifizierung Ihre Daten kontinuierlich im Round-Robin-Verfahren, um inkrementelle Änderungen zu erkennen.  Aus diesem Grund ist es wichtig, die Instanz am Laufen zu halten.
+
+Sie können Scans auf Volume-Ebene oder auf Datenbankschemaebene aktivieren und deaktivieren.
+
+
+
+== Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?
+
+Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
+
+* **Nur-Mapping-Scans** bieten nur einen allgemeinen Überblick über Ihre Daten und werden für ausgewählte Datenquellen durchgeführt.  Scans, die nur eine Zuordnung vornehmen, benötigen weniger Zeit als Scans, die eine Zuordnung und Klassifizierung vornehmen, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten anzuzeigen.  Möglicherweise möchten Sie dies zunächst tun, um Forschungsbereiche zu identifizieren und dann einen Map & Classify-Scan für diese Bereiche durchführen.
+* **Map & Classify-Scans** ermöglichen ein gründliches Scannen Ihrer Daten.
+
+
+Die folgende Tabelle zeigt einige der Unterschiede:
+
+[cols="47,18,18"]
+|===
+| Funktion | Scans zuordnen und klassifizieren | Nur-Mapping-Scans 
+
+
+| Scangeschwindigkeit | Langsam | Schnell 
+
+
+| Preise | Frei | Frei 
+
+
+| Kapazität | Begrenzt auf 500 TiB* | Begrenzt auf 500 TiB* 
+
+
+| Liste der Dateitypen und der verwendeten Kapazität | Ja | Ja 
+
+
+| Anzahl der Dateien und genutzte Kapazität | Ja | Ja 
+
+
+| Alter und Größe der Dateien | Ja | Ja 
+
+
+| Fähigkeit zur Ausführung eineslink:task-controlling-governance-data.html["Datenzuordnungsbericht"] | Ja | Ja 
+
+
+| Seite „Datenuntersuchung“ zum Anzeigen von Dateidetails | Ja | Nein 
+
+
+| Suchen nach Namen in Dateien | Ja | Nein 
+
+
+| Erstellenlink:task-using-policies.html["gespeicherte Abfragen"] die benutzerdefinierte Suchergebnisse bereitstellen | Ja | Nein 
+
+
+| Möglichkeit, andere Berichte auszuführen | Ja | Nein 
+
+
+| Möglichkeit, Metadaten aus Dateien anzuzeigen** | Nein | Ja 
+|===
+{Asterisk} Die Datenklassifizierung setzt keine Begrenzung für die Datenmenge, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+
+{asterisk}{asterisk} Die folgenden Metadaten werden während Mapping-Scans aus Dateien extrahiert:
+
+* System
+* Systemtyp
+* Speicherrepository
+* Dateityp
+* Genutzte Kapazität
+* Anzahl der Dateien
+* Dateigröße
+* Dateierstellung
+* Letzter Dateizugriff
+* Datei zuletzt geändert
+* Uhrzeit der Dateierkennung
+* Berechtigungsextraktion
+
+
+.Unterschiede im Governance-Dashboard:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Funktion | Kartieren und klassifizieren | Karte 
+
+
+| Veraltete Daten | Ja | Ja 
+
+
+| Nicht-geschäftliche Daten | Ja | Ja 
+
+
+| Duplizierte Dateien | Ja | Ja 
+
+
+| Vordefinierte gespeicherte Abfragen | Ja | Nein 
+
+
+| Standardmäßig gespeicherte Abfragen | Ja | Ja 
+
+
+| DDA-Bericht | Ja | Ja 
+
+
+| Mapping-Bericht | Ja | Ja 
+
+
+| Erkennung der Empfindlichkeitsstufe | Ja | Nein 
+
+
+| Sensible Daten mit umfassenden Berechtigungen | Ja | Nein 
+
+
+| Berechtigungen öffnen | Ja | Ja 
+
+
+| Alter der Daten | Ja | Ja 
+
+
+| Datenmenge | Ja | Ja 
+
+
+| Kategorien | Ja | Nein 
+
+
+| Dateitypen | Ja | Ja 
+|===
+====
+.Unterschiede im Compliance-Dashboard:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Funktion | Kartieren und klassifizieren | Karte 
+
+
+| Persönliche Informationen | Ja | Nein 
+
+
+| Sensible persönliche Informationen | Ja | Nein 
+
+
+| Bericht zur Bewertung des Datenschutzrisikos | Ja | Nein 
+
+
+| HIPAA-Bericht | Ja | Nein 
+
+
+| PCI DSS-Bericht | Ja | Nein 
+|===
+====
+.Unterschiede bei den Untersuchungsfiltern:
+[%collapsible]
+====
+[cols="40,25,25"]
+|===
+| Funktion | Kartieren und klassifizieren | Karte 
+
+
+| Gespeicherte Abfragen | Ja | Ja 
+
+
+| Systemtyp | Ja | Ja 
+
+
+| System | Ja | Ja 
+
+
+| Speicherrepository | Ja | Ja 
+
+
+| Dateityp | Ja | Ja 
+
+
+| Dateigröße | Ja | Ja 
+
+
+| Erstellungszeit | Ja | Ja 
+
+
+| Entdeckte Zeit | Ja | Ja 
+
+
+| Zuletzt geändert | Ja | Ja 
+
+
+| Letzter Zugriff | Ja | Ja 
+
+
+| Berechtigungen öffnen | Ja | Ja 
+
+
+| Dateiverzeichnispfad | Ja | Ja 
+
+
+| Kategorie | Ja | Nein 
+
+
+| Empfindlichkeitsstufe | Ja | Nein 
+
+
+| Anzahl der Kennungen | Ja | Nein 
+
+
+| personenbezogene Daten | Ja | Nein 
+
+
+| Sensible personenbezogene Daten | Ja | Nein 
+
+
+| Betroffene Person | Ja | Nein 
+
+
+| Duplikate | Ja | Ja 
+
+
+| Klassifizierungsstatus | Ja | Der Status ist immer „Eingeschränkte Einblicke“ 
+
+
+| Scan-Analyseereignis | Ja | Ja 
+
+
+| Datei-Hash | Ja | Ja 
+
+
+| Anzahl der Benutzer mit Zugriff | Ja | Ja 
+
+
+| Benutzer-/Gruppenberechtigungen | Ja | Ja 
+
+
+| Dateieigentümer | Ja | Ja 
+
+
+| Verzeichnistyp | Ja | Ja 
+|===
+====
+
+
+== Wie schnell scannt die Datenklassifizierung Daten
+
+Die Scangeschwindigkeit wird durch Netzwerklatenz, Festplattenlatenz, Netzwerkbandbreite, Umgebungsgröße und Dateiverteilungsgrößen beeinflusst.
+
+* Bei der Durchführung von reinen Mapping-Scans kann die Datenklassifizierung zwischen 100 und 150 TiB Daten pro Tag scannen.
+* Beim Durchführen von Map- und Klassifizierungsscans kann die Datenklassifizierung zwischen 15 und 40 TiB Daten pro Tag scannen.
+

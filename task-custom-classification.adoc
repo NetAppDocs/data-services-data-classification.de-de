@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: Mit NetApp Data Classification können Sie die Suche nach vertraulichen Informationen individuell anpassen und den Service auf individuelle Muster und Schlüsselwörter zuschneiden, die für Ihr Unternehmen relevant sind. 
+---
+= Erstellen Sie eine benutzerdefinierte Klassifizierung in NetApp Data Classification
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit NetApp Data Classification können Sie eine benutzerdefinierte Suche nach vertraulichen Informationen erstellen.  Die Suche kann auf einen regulären Ausdruck (Regex) beschränkt werden.
+
+
+
+== Erstellen einer benutzerdefinierten Klassifizierung
+
+Die benutzerdefinierte Klassifizierung ist nur für Map- und Classify-Scans verfügbar, nicht für reine Mapping-Scans.  Diese Funktion befindet sich derzeit in der Vorschau.
+
+.Schritte
+. Wählen Sie die Registerkarte **Benutzerdefinierte Klassifizierung**.
+. Wählen Sie die Schaltfläche **Neuen Klassifikator hinzufügen**.
+. Fügen Sie einen Klassifikatornamen und eine Beschreibung für den neuen Klassifikator hinzu.
+. Wählen Sie, ob Sie den Klassifikator als *Persönliche Kennung* oder *Kategorie* hinzufügen möchten.
++
+image:screenshot-custom-classifier-name.png["Screenshot des hinzugefügten Klassifikators"]
+
+. Wählen Sie *Weiter*.
+. Um die Anpassung als regulären Ausdruck hinzuzufügen, wählen Sie **Benutzerdefinierter regulärer Ausdruck** und dann **Weiter**.
+. Fügen Sie ein Muster hinzu, um die spezifischen Informationen Ihrer Daten zu erkennen.  Wählen Sie **Validieren**, um die Syntax Ihrer Eingabe zu bestätigen.image:screenshot-create-logic-regex.png["Ein Screenshot des Dialogs zum Erstellen eines regulären Ausdrucks."]
+. Wählen Sie **Fertig**, um die benutzerdefinierte Klassifizierung zu erstellen.
+
+
+Die neue Anpassung wird beim nächsten geplanten Scan erfasst.  Um die Ergebnisse anzuzeigen, siehexref:task-generating-compliance-reports.html[Erstellen von Compliance-Berichten] .

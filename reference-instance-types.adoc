@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: reference-instance-types.html 
+keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
+summary: Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Beim Bereitstellen der Datenklassifizierung in der Cloud wird empfohlen, für die volle Funktionalität ein System mit den Merkmalen „groß“ zu verwenden. 
+---
+= Unterstützte NetApp Data Classification-Instanztypen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die NetApp Data Classification-Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, empfehlen wir Ihnen, für die volle Funktionalität ein System mit der Eigenschaft „groß“ zu verwenden.
+
+Sie können die Datenklassifizierung auf einem System mit weniger CPUs und weniger RAM bereitstellen, bei der Verwendung dieser weniger leistungsstarken Systeme gibt es jedoch einige Einschränkungen. link:concept-classification.html["Erfahren Sie mehr über diese Einschränkungen"^] .
+
+Wenn in den folgenden Tabellen das als „Standard“ gekennzeichnete System in der Region, in der Sie Data Classification installieren, nicht verfügbar ist, wird das nächste System in der Tabelle bereitgestellt.
+
+
+
+== AWS-Instanztypen
+
+[cols="20,30,25"]
+|===
+| Systemgröße | Technische Daten | Instanztyp 
+
+
+| Extragroß | 32 CPUs, 128 GB RAM, 1 TiB gp3 SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.8xlarge"^](Standard) 
+
+
+| Groß | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge"^](Standard) m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge 
+
+
+| Medium | 8 CPUs, 32 GB RAM, 200 GiB SSD | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.2xlarge"^](Standard) m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge 
+
+
+| Klein | 8 CPUs, 16 GB RAM, 100 GiB SSD | https://aws.amazon.com/ec2/instance-types/c6a/["c6a.2xlarge"^](Standard) c5a.2xlarge c5.2xlarge c4.2xlarge 
+|===
+
+
+== Azure-Instanztypen
+
+[cols="20,30,25"]
+|===
+| Systemgröße | Technische Daten | Instanztyp 
+
+
+| Extragroß | 32 CPUs, 128 GB RAM, Betriebssystemfestplatte (2.048 GiB, min. 250 MB/s Durchsatz) und Datenfestplatte (1 TiB SSD, min. 750 MB/s Durchsatz) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^](Standard) 
+
+
+| Groß | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^](Standard) 
+|===
+
+
+== GCP-Instanztypen
+
+[cols="20,30,25"]
+|===
+| Systemgröße | Technische Daten | Instanztyp 
+
+
+| Groß | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-Standard-16"^](Standard) n2d-standard-16 n1-standard-16 
+|===

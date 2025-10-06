@@ -1,0 +1,299 @@
+---
+sidebar: sidebar 
+permalink: faq-cloud-compliance.html 
+keywords: faq, frequently asked questions, questions, cloud compliance, data sense 
+summary: Diese FAQ können hilfreich sein, wenn Sie nur schnell eine Antwort auf eine Frage suchen. 
+---
+= Häufig gestellte Fragen zur NetApp Datenklassifizierung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese FAQ können hilfreich sein, wenn Sie nur schnell eine Antwort auf eine Frage suchen.
+
+
+
+== NetApp Datenklassifizierung
+
+Die folgenden Fragen vermitteln ein allgemeines Verständnis der Datenklassifizierung.
+
+
+
+=== Wie funktioniert die Datenklassifizierung?
+
+Die Datenklassifizierung stellt neben Ihrem NetApp Konsolensystem und Ihren Speichersystemen eine weitere KI-Ebene bereit.  Anschließend werden die Daten auf Volumes, Buckets, Datenbanken und anderen Speicherkonten gescannt und die gefundenen Datenerkenntnisse indiziert.  Die Datenklassifizierung nutzt sowohl künstliche Intelligenz als auch natürliche Sprachverarbeitung, im Gegensatz zu alternativen Lösungen, die üblicherweise auf regulären Ausdrücken und Mustervergleich basieren.
+
+Bei der Datenklassifizierung wird KI verwendet, um ein kontextuelles Verständnis der Daten für eine genaue Erkennung und Klassifizierung zu ermöglichen.  Es wird von KI gesteuert, da es für moderne Datentypen und -skalen konzipiert ist.  Es versteht auch den Datenkontext, um eine starke, genaue Entdeckung und Klassifizierung zu ermöglichen.
+
+link:concept-classification.html["Erfahren Sie mehr über die Funktionsweise der Datenklassifizierung"] .
+
+
+
+=== Verfügt Data Classification über eine REST-API und funktioniert es mit Tools von Drittanbietern?
+
+Ja, Data Classification verfügt über eine REST-API für die unterstützten Funktionen in der Data Classification-Version, die Teil der Console-Kernplattform ist. Sehen link:api-classification.html["API-Dokumentation"] .
+
+
+
+=== Ist die Datenklassifizierung über die Cloud-Marktplätze verfügbar?
+
+Die Datenklassifizierung ist Teil der Kernfunktionen der NetApp Konsole, daher müssen Sie für diesen Dienst nicht die Marktplätze verwenden.
+
+
+
+== Scannen und Analysieren von Datenklassifizierungen
+
+Die folgenden Fragen beziehen sich auf die Scanleistung und Analyse der Datenklassifizierung.
+
+
+
+=== Wie oft scannt die Datenklassifizierung meine Daten?
+
+Während der erste Scan Ihrer Daten etwas Zeit in Anspruch nehmen kann, prüfen nachfolgende Scans nur die inkrementellen Änderungen, wodurch die System-Scan-Zeiten verkürzt werden.  Die Datenklassifizierung scannt Ihre Daten kontinuierlich im Round-Robin-Verfahren, jeweils sechs Repositories gleichzeitig, sodass alle geänderten Daten sehr schnell klassifiziert werden.
+
+link:task-scanning-overview.html["Erfahren Sie, wie Scans funktionieren"] .
+
+Die Datenklassifizierung scannt Datenbanken nur einmal pro Tag; Datenbanken werden nicht kontinuierlich gescannt wie andere Datenquellen.
+
+Datenscans haben nur einen vernachlässigbaren Einfluss auf Ihre Speichersysteme und Ihre Daten.
+
+
+
+=== Schwankt die Scanleistung?
+
+Die Scanleistung kann je nach Netzwerkbandbreite und durchschnittlicher Dateigröße in Ihrer Umgebung variieren.  Es kann auch von den Größenmerkmalen des Hostsystems abhängen (entweder in der Cloud oder vor Ort). Siehe link:concept-classification.html["Die Datenklassifizierungsinstanz"] Und link:task-deploy-overview.html["Bereitstellen der Datenklassifizierung"] für weitere Informationen.
+
+Beim erstmaligen Hinzufügen neuer Datenquellen können Sie auch festlegen, dass anstelle eines vollständigen „Klassifizierungs“-Scans (Map & Classify) nur ein „Mapping“-Scan (Mapping only) durchgeführt wird.  Das Mapping Ihrer Datenquellen kann sehr schnell durchgeführt werden, da zum Anzeigen der darin enthaltenen Daten kein Zugriff auf Dateien erforderlich ist. link:task-scanning-overview.html["Sehen Sie den Unterschied zwischen einem Mapping- und einem Klassifizierungsscan"] .
+
+
+
+=== Kann ich meine Daten mithilfe der Datenklassifizierung durchsuchen?
+
+Die Datenklassifizierung bietet umfangreiche Suchfunktionen, die die Suche nach einer bestimmten Datei oder einem bestimmten Datenelement in allen verbundenen Quellen vereinfachen.  Durch die Datenklassifizierung können Benutzer tiefer suchen als nur das, was die Metadaten widerspiegeln.  Es handelt sich um einen sprachunabhängigen Dienst, der die Dateien auch lesen und eine Vielzahl sensibler Datentypen wie Namen und IDs analysieren kann.  Beispielsweise können Benutzer sowohl strukturierte als auch unstrukturierte Datenspeicher durchsuchen, um Daten zu finden, die möglicherweise unter Verstoß gegen die Unternehmensrichtlinien aus Datenbanken in Benutzerdateien gelangt sind.  Suchvorgänge können für später gespeichert werden und es können Richtlinien erstellt werden, um in einer festgelegten Häufigkeit nach Ergebnissen zu suchen und entsprechende Maßnahmen zu ergreifen.
+
+Sobald die gewünschten Dateien gefunden wurden, können Merkmale aufgelistet werden, darunter Tags, Systemkonto, Bucket, Dateipfad, Kategorie (aus der Klassifizierung), Dateigröße, letzte Änderung, Berechtigungsstatus, Duplikate, Vertraulichkeitsstufe, persönliche Daten, vertrauliche Datentypen innerhalb der Datei, Eigentümer, Dateityp, Dateigröße, Erstellungszeit, Datei-Hash, ob die Daten jemandem zugewiesen wurden, der ihre Aufmerksamkeit sucht, und mehr.  Um nicht relevante Merkmale auszusortieren, können Filter angewendet werden.
+
+Die Datenklassifizierung verfügt außerdem über eine rollenbasierte Zugriffskontrolle (RBAC), um das Verschieben oder Löschen von Dateien zu ermöglichen, sofern die entsprechenden Berechtigungen vorhanden sind.  Wenn die richtigen Berechtigungen nicht vorhanden sind, können die Aufgaben jemandem in der Organisation zugewiesen werden, der über die richtigen Berechtigungen verfügt.
+
+
+
+== Datenklassifizierungsverwaltung und Datenschutz
+
+Die folgenden Fragen bieten Informationen zur Verwaltung der Datenklassifizierung und der Datenschutzeinstellungen.
+
+
+
+=== Wie aktiviere oder deaktiviere ich die Datenklassifizierung?
+
+Zuerst müssen Sie eine Instanz der Datenklassifizierung in der Konsole oder auf einem lokalen System bereitstellen.  Sobald die Instanz ausgeführt wird, können Sie den Dienst auf vorhandenen Systemen, Datenbanken und anderen Datenquellen über die Registerkarte *Konfiguration* oder durch Auswahl eines bestimmten Systems aktivieren. link:task-getting-started-compliance.html["Erfahren Sie, wie Sie loslegen können"] .
+
+
+NOTE: Das Aktivieren der Datenklassifizierung für eine Datenquelle führt zu einem sofortigen ersten Scan.  Die Scanergebnisse werden kurz darauf angezeigt.
+
+Sie können die Datenklassifizierung beim Scannen einzelner Systeme, Datenbanken oder Dateifreigabegruppen auf der Seite „Datenklassifizierungskonfiguration“ deaktivieren. Sehen link:task-managing-compliance.html["Datenquellen aus der Datenklassifizierung entfernen"] .
+
+Um die Datenklassifizierungsinstanz vollständig zu entfernen, entfernen Sie die Datenklassifizierungsinstanz manuell aus dem Portal oder vom lokalen Standort Ihres Cloud-Anbieters.
+
+
+
+=== Kann der Dienst das Scannen von Daten in bestimmten Verzeichnissen ausschließen?
+
+Ja. Wenn Sie möchten, dass die Datenklassifizierung das Scannen von Daten ausschließt, die sich in bestimmten Datenquellenverzeichnissen befinden, können Sie diese Liste der Klassifizierungs-Engine bereitstellen.  Nachdem Sie diese Änderung angewendet haben, schließt die Datenklassifizierung das Scannen von Daten in den angegebenen Verzeichnissen aus. link:task-exclude-scan-paths.html["Mehr erfahren"] .
+
+
+
+=== Werden Snapshots, die sich auf ONTAP Volumes befinden, gescannt?
+
+Nein. Die Datenklassifizierung scannt keine Snapshots, da der Inhalt mit dem Inhalt im Volume identisch ist.
+
+
+
+=== Was passiert, wenn auf Ihren ONTAP Volumes Data Tiering aktiviert ist?
+
+Wenn die Datenklassifizierung Volumes mit Cold Data scannt, die mithilfe von Nur-Mapping-Scans in Objektspeichern abgelegt sind, scannt sie alle Daten – Daten auf lokalen Festplatten und Cold Data, die in Objektspeichern abgelegt sind.  Dies gilt auch für Nicht- NetApp -Produkte, die Tiering implementieren.
+
+Der reine Mapping-Scan erwärmt die kalten Daten nicht – sie bleiben kalt und verbleiben im Objektspeicher.  Wenn Sie hingegen den Map & Classify-Scan durchführen, können einige Konfigurationen die kalten Daten aufheizen.
+
+
+
+== Arten von Quellsystemen und Datentypen
+
+Die folgenden Fragen beziehen sich auf die Speichertypen, die gescannt werden können, und die Datentypen, die gescannt werden.
+
+
+
+=== Gibt es Einschränkungen bei der Entsendung in eine Regierungsregion?
+
+Die Datenklassifizierung wird unterstützt, wenn der Konsolenagent in einer Regierungsregion (AWS GovCloud, Azure Gov oder Azure DoD) bereitgestellt wird – auch als „Eingeschränkter Modus“ bezeichnet.
+
+
+
+=== Welche Datenquellen kann ich scannen, wenn ich Data Classification auf einer Site ohne Internetzugang installiere?
+
+
+IMPORTANT: Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6. NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle. Die Dokumentation zum privaten Modus in der alten BlueXP Schnittstelle finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["PDF-Dokumentation für den privaten Modus von BlueXP"^] .
+
+Die Datenklassifizierung kann nur Daten aus Datenquellen scannen, die sich lokal am Standort vor Ort befinden.  Derzeit kann die Datenklassifizierung die folgenden lokalen Datenquellen im „Privatmodus“ – auch als „dunkle“ Site bezeichnet – scannen:
+
+* On-Premises- ONTAP -Systeme
+* Datenbankschemata
+* Objektspeicher, der das Simple Storage Service (S3)-Protokoll verwendet
+
+
+
+
+=== Welche Dateitypen werden unterstützt?
+
+Die Datenklassifizierung durchsucht alle Dateien nach Kategorien und Metadaten und zeigt alle Dateitypen im Abschnitt „Dateitypen“ des Dashboards an.
+
+Wenn die Datenklassifizierung personenbezogene Daten (PII) erkennt oder eine DSAR-Suche durchführt, werden nur die folgenden Dateiformate unterstützt:
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+=== Welche Arten von Daten und Metadaten werden durch die Datenklassifizierung erfasst?
+
+Mit der Datenklassifizierung können Sie einen allgemeinen „Mapping“-Scan oder einen vollständigen „Klassifizierungs“-Scan Ihrer Datenquellen ausführen.  Die Zuordnung bietet lediglich einen allgemeinen Überblick über Ihre Daten, während die Klassifizierung eine gründliche Überprüfung Ihrer Daten ermöglicht.  Das Mapping Ihrer Datenquellen kann sehr schnell durchgeführt werden, da zum Anzeigen der darin enthaltenen Daten kein Zugriff auf Dateien erforderlich ist.
+
+* *Datenzuordnungsscan (nur Zuordnungsscan)*: Die Datenklassifizierung scannt nur die Metadaten.  Dies ist nützlich für die allgemeine Datenverwaltung und -steuerung, die schnelle Projektplanung, sehr große Grundstücke und die Priorisierung.  Die Datenzuordnung basiert auf Metadaten und gilt als *schneller* Scan.
++
+Nach einem schnellen Scan können Sie einen Datenzuordnungsbericht erstellen.  Dieser Bericht bietet eine Übersicht über die in Ihren Unternehmensdatenquellen gespeicherten Daten und unterstützt Sie bei Entscheidungen zu Ressourcennutzung, Migration, Sicherung, Sicherheit und Compliance-Prozessen.
+
+* *Tiefenscan zur Datenklassifizierung (Map & Classify-Scan)*: Die Datenklassifizierung scannt Daten mithilfe von Standardprotokollen und schreibgeschützter Berechtigung in Ihren gesamten Umgebungen.  Ausgewählte Dateien werden geöffnet und auf vertrauliche geschäftsbezogene Daten, private Informationen und Probleme im Zusammenhang mit Ransomware gescannt.
++
+Nach einem vollständigen Scan stehen Ihnen zahlreiche zusätzliche Datenklassifizierungsfunktionen zur Verfügung, die Sie auf Ihre Daten anwenden können, z. B. das Anzeigen und Verfeinern von Daten auf der Seite „Datenuntersuchung“, die Suche nach Namen in Dateien, das Kopieren, Verschieben und Löschen von Quelldateien und vieles mehr.
+
+
+
+Die Datenklassifizierung erfasst Metadaten wie Dateiname, Berechtigungen, Erstellungszeit, letzter Zugriff und letzte Änderung.  Dies umfasst alle Metadaten, die auf der Seite „Datenuntersuchungsdetails“ und in den Datenuntersuchungsberichten angezeigt werden.
+
+Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII).  Einzelheiten zu privaten Daten finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Kategorien privater Daten, die von der Datenklassifizierung gescannt werden"] .
+
+
+
+=== Kann ich die Datenklassifizierungsinformationen auf bestimmte Benutzer beschränken?
+
+Ja, die Datenklassifizierung ist vollständig in die NetApp Konsole integriert.  Benutzer der NetApp -Konsole können nur Informationen zu den Systemen sehen, zu deren Anzeige sie gemäß ihren Berechtigungen berechtigt sind.
+
+Wenn Sie außerdem bestimmten Benutzern nur das Anzeigen der Scanergebnisse zur Datenklassifizierung gestatten möchten, ohne dass sie die Datenklassifizierungseinstellungen verwalten können, können Sie diesen Benutzern die Rolle „Klassifizierungsbetrachter“ (bei Verwendung der NetApp Konsole im Standardmodus) oder die Rolle „Compliance-Betrachter“ (bei Verwendung der NetApp Konsole im eingeschränkten Modus) zuweisen. link:concept-classification.html["Mehr erfahren"] .
+
+
+
+=== Kann jeder auf die privaten Daten zugreifen, die zwischen meinem Browser und Data Classification gesendet werden?
+
+Nein. Die privaten Daten, die zwischen Ihrem Browser und der Datenklassifizierungsinstanz gesendet werden, sind durch eine End-to-End-Verschlüsselung mit TLS 1.2 gesichert, was bedeutet, dass sie weder von NetApp noch von NetApp Parteien gelesen werden können.  Data Classification gibt keine Daten oder Ergebnisse an NetApp weiter, es sei denn, Sie fordern den Zugriff an und genehmigen ihn.
+
+Die gescannten Daten bleiben in Ihrer Umgebung.
+
+
+
+=== Wie wird mit sensiblen Daten umgegangen?
+
+NetApp hat keinen Zugriff auf vertrauliche Daten und zeigt diese nicht in der Benutzeroberfläche an.  Sensible Daten werden maskiert, bei Kreditkarteninformationen werden beispielsweise die letzten vier Ziffern angezeigt.
+
+
+
+=== Wo werden die Daten gespeichert?
+
+Die Scanergebnisse werden in Elasticsearch in Ihrer Datenklassifizierungsinstanz gespeichert.
+
+
+
+=== Wie erfolgt der Zugriff auf die Daten?
+
+Die Datenklassifizierung greift über API-Aufrufe auf in Elasticsearch gespeicherte Daten zu, die eine Authentifizierung erfordern und mit AES-128 verschlüsselt sind.  Für den direkten Zugriff auf Elasticsearch ist Root-Zugriff erforderlich.
+
+
+
+== Lizenzen und Kosten
+
+Die folgende Frage bezieht sich auf die Lizenzierung und die Kosten für die Nutzung der Datenklassifizierung.
+
+
+
+=== Wie viel kostet die Datenklassifizierung?
+
+Die Datenklassifizierung ist eine Kernfunktion der NetApp Konsole.  Es wird nichts berechnet.
+
+
+
+== Bereitstellung des Konsolenagenten
+
+Die folgenden Fragen beziehen sich auf den Konsolenagenten.
+
+
+
+=== Was ist der Konsolenagent?
+
+Der Konsolenagent ist eine Software, die auf einer Compute-Instanz entweder innerhalb Ihres Cloud-Kontos oder vor Ort ausgeführt wird und es der NetApp Konsole ermöglicht, Cloud-Ressourcen sicher zu verwalten. Sie müssen einen Konsolenagenten bereitstellen, um die Datenklassifizierung zu verwenden.
+
+
+
+=== Wo muss der Konsolenagent installiert werden?
+
+Beim Scannen von Daten muss der NetApp Console-Agent an den folgenden Speicherorten installiert werden:
+
+* Für Cloud Volumes ONTAP in AWS oder Amazon FSx für ONTAP: Der Konsolenagent befindet sich in AWS.
+* Für Cloud Volumes ONTAP in Azure oder in Azure NetApp Files: Der Konsolenagent befindet sich in Azure.
+* Für Cloud Volumes ONTAP in GCP: Der Konsolenagent befindet sich in GCP.
+* Für lokale ONTAP -Systeme: Der Konsolenagent befindet sich vor Ort.
+
+
+Wenn Sie Daten an diesen Standorten haben, müssen Sie möglicherweise https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["mehrere Konsolenagenten"^] .
+
+
+
+=== Benötigt die Datenklassifizierung Zugriff auf Anmeldeinformationen?
+
+Die Datenklassifizierung selbst ruft keine Speicheranmeldeinformationen ab.  Stattdessen werden sie im Konsolenagenten gespeichert.
+
+Bei der Datenklassifizierung werden Anmeldeinformationen der Datenebene verwendet, beispielsweise CIFS-Anmeldeinformationen, um Freigaben vor dem Scannen bereitzustellen.
+
+
+
+=== Verwendet die Kommunikation zwischen dem Dienst und dem Konsolenagenten HTTP?
+
+Ja, die Datenklassifizierung kommuniziert über HTTP mit dem Konsolenagenten.
+
+
+
+== Bereitstellung der Datenklassifizierung
+
+Die folgenden Fragen beziehen sich auf die separate Instanz der Datenklassifizierung.
+
+
+
+=== Welche Bereitstellungsmodelle unterstützt die Datenklassifizierung?
+
+Mit der NetApp Konsole kann der Benutzer Systeme praktisch überall scannen und Berichte dazu erstellen, einschließlich On-Premises-, Cloud- und Hybridumgebungen.  Die Datenklassifizierung wird normalerweise mithilfe eines SaaS-Modells bereitgestellt, bei dem der Dienst über die Konsolenschnittstelle aktiviert wird und keine Hardware- oder Softwareinstallation erfordert.  Auch in diesem Click-and-Run-Bereitstellungsmodus kann die Datenverwaltung unabhängig davon erfolgen, ob sich die Datenspeicher vor Ort oder in der öffentlichen Cloud befinden.
+
+
+
+=== Welcher Instanz- oder VM-Typ wird für die Datenklassifizierung benötigt?
+
+Wannlink:task-deploy-cloud-compliance.html["in der Cloud bereitgestellt"] :
+
+* In AWS läuft die Datenklassifizierung auf einer m6i.4xlarge-Instanz mit einer 500-GiB-GP2-Festplatte.  Sie können während der Bereitstellung einen kleineren Instanztyp auswählen.
+* In Azure wird die Datenklassifizierung auf einer Standard_D16s_v3-VM mit einer 500-GiB-Festplatte ausgeführt.
+* In GCP läuft die Datenklassifizierung auf einer n2-standard-16-VM mit einer persistenten 500-GiB-Standardfestplatte.
+
+
+link:concept-classification.html["Erfahren Sie mehr über die Funktionsweise der Datenklassifizierung"] .
+
+
+
+=== Kann ich die Datenklassifizierung auf meinem eigenen Host bereitstellen?
+
+Ja. Sie können die Datenklassifizierungssoftware auf einem Linux-Host mit Internetzugang in Ihrem Netzwerk oder in der Cloud installieren.  Alles funktioniert gleich und Sie verwalten Ihre Scan-Konfiguration und -Ergebnisse weiterhin über die Konsole.  Sehenlink:task-deploy-compliance-onprem.html["Bereitstellen der Datenklassifizierung vor Ort"] für Systemanforderungen und Installationsdetails.
+
+
+
+=== Was ist mit sicheren Websites ohne Internetzugang?
+
+Ja, das wird auch unterstützt.  Du kannstlink:task-deploy-compliance-dark-site.html["Bereitstellen der Datenklassifizierung an einem lokalen Standort ohne Internetzugang"] für absolut sichere Websites.

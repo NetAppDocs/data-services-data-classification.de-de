@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall.html 
+keywords: remove, delete, stop, stop scans, stop scanning, delete cloud data sense, terminate, deactivate, data sense 
+summary: Sie können die Datenklassifizierungssoftware deinstallieren, um Probleme zu beheben oder die Software dauerhaft vom Host zu entfernen.  Durch das Löschen der Instanz werden auch die zugehörigen Datenträger gelöscht, auf denen sich die indizierten Daten befinden.  Alle von Data Classification gescannten Informationen werden dauerhaft gelöscht. 
+---
+= Deinstallieren Sie NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können NetApp Data Classification deinstallieren, um Probleme zu beheben oder die Software dauerhaft vom Host zu entfernen.  Durch das Löschen der Instanz werden auch die zugehörigen Datenträger gelöscht, auf denen sich die indizierten Daten befinden. Das bedeutet, dass alle von Data Classification gescannten Informationen dauerhaft gelöscht werden.
+
+Die erforderlichen Schritte hängen davon ab, ob Sie die Datenklassifizierung in der Cloud oder auf einem lokalen Host bereitgestellt haben.
+
+
+
+== Deinstallieren Sie Data Classification von einem Cloud-Anbieter
+
+. Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie unten auf der Konfigurationsseite **Klassifizierung deinstallieren** aus.
++
+image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallieren von Data Classification."]
+
+. Geben Sie im Dialogfeld „uninstall“ ein, um mit der Trennung der Data Classification-Instanz vom Konsolenagent fortzufahren.  Wählen Sie zur Bestätigung **Deinstallieren**.
+. Geben Sie im Dialogfeld „Klassifizierung deinstallieren“ *uninstall* ein, um zu bestätigen, dass Sie die Datenklassifizierungsinstanz vom Konsolenagenten trennen möchten, und wählen Sie dann *Deinstallieren* aus.
+. Um den Deinstallationsvorgang abzuschließen, gehen Sie zur Konsole Ihres Cloud-Anbieters und löschen Sie die Data Classification-Instanz.  Die Instanz trägt den Namen _CloudCompliance_ und ist mit einem generierten Hash (UUID) verknüpft.  Beispiel: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+
+
+
+
+== Deinstallieren der Datenklassifizierung aus einer lokalen Bereitstellung
+
+. Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie unten auf der Konfigurationsseite **Klassifizierung deinstallieren** aus.
++
+image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallieren von Data Classification."]
+
+. Geben Sie im Dialogfeld „uninstall“ ein, um mit der Trennung der Data Classification-Instanz vom Konsolenagent fortzufahren.  Wählen Sie zur Bestätigung **Deinstallieren**.
+. Um die Software vom Host zu deinstallieren, führen Sie den `cleanup.sh` Skript auf dem Hostcomputer für die Datenklassifizierung, zum Beispiel:
++
+[source, cli]
+----
+cleanup.sh
+----
++
+Das Skript befindet sich im `/install/light_probe/onprem_installer/cleanup.sh` Verzeichnis. Erfahren Sie, wie Sielink:reference-log-in-to-instance.html["Melden Sie sich beim Data Classification-Hostcomputer an"] .
+
+

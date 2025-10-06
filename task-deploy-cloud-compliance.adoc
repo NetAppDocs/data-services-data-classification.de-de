@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-cloud-compliance.html 
+keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console, 
+summary: Führen Sie einige Schritte aus, um NetApp Data Classification in der Cloud bereitzustellen.  Die NetApp -Konsole stellt die Datenklassifizierungsinstanz im selben Cloud-Provider-Netzwerk bereit wie der Konsolenagent. 
+---
+= Stellen Sie NetApp Data Classification mithilfe der NetApp Console in der Cloud bereit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können NetApp Data Classification mit der NetApp Console in der Cloud bereitstellen.  Die Konsole stellt die Datenklassifizierungsinstanz im selben Cloud-Anbieternetzwerk bereit wie der Konsolenagent.
+
+Beachten Sie, dass Sie auchlink:task-deploy-compliance-onprem.html["Installieren Sie Data Classification auf einem Linux-Host mit Internetzugang"] .  Diese Art der Installation kann eine gute Option sein, wenn Sie es vorziehen, lokale ONTAP -Systeme mit einer Datenklassifizierungsinstanz zu scannen, die sich ebenfalls vor Ort befindet – dies ist jedoch keine Voraussetzung.  Die Software funktioniert unabhängig von der gewählten Installationsmethode auf genau dieselbe Weise.
+
+
+
+== Schnellstart
+
+Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach unten zu den restlichen Abschnitten, um alle Einzelheiten zu erfahren.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Erstellen eines Konsolenagenten
+[role="quick-margin-para"]
+Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen.  Sehen https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+
+[role="quick-margin-para"]
+Sie können auch https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Voraussetzungen
+[role="quick-margin-para"]
+Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt.  Dazu gehören der ausgehende Internetzugriff für die Instanz, die Konnektivität zwischen dem Konsolenagenten und der Datenklassifizierung über Port 443 und mehr.  <<Voraussetzungen, siehe vollständige Liste>>.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Datenklassifizierung bereitstellen
+[role="quick-margin-para"]
+Starten Sie den Installationsassistenten, um die Data Classification-Instanz in der Cloud bereitzustellen.
+
+
+
+== Erstellen eines Konsolenagenten
+
+Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen Konsolenagenten bei Ihrem Cloud-Anbieter.  Sehen https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .  In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-a-connector-is-required["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
+
+Es gibt einige Szenarien, in denen Sie einen Konsolenagenten verwenden müssen, der bei einem bestimmten Cloud-Anbieter bereitgestellt wird:
+
+* Beim Scannen von Daten in Cloud Volumes ONTAP in AWS oder Amazon FSx für ONTAP -Buckets verwenden Sie einen Konsolenagenten in AWS.
+* Beim Scannen von Daten in Cloud Volumes ONTAP in Azure oder in Azure NetApp Files verwenden Sie einen Konsolenagenten in Azure.
++
+** Für Azure NetApp Files muss es in derselben Region bereitgestellt werden wie die Volumes, die Sie scannen möchten.
+
+
+* Beim Scannen von Daten in Cloud Volumes ONTAP in GCP verwenden Sie einen Konsolenagenten in GCP.
+
+
+Lokale ONTAP -Systeme, NetApp Dateifreigaben und Datenbanken können mit einem dieser Cloud-Konsolen-Agenten gescannt werden.
+
+Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder in der Cloud.  Einige Benutzer, die die Datenklassifizierung vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+
+Wie Sie sehen, kann es Situationen geben, in denen Sie verwenden müssen https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#multiple-connectors["mehrere Konsolenagenten"] .
+
+
+TIP: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+
+
+
+=== Regierungsunterstützung für die Region
+
+Die Datenklassifizierung wird unterstützt, wenn der Konsolenagent in einer Regierungsregion (AWS GovCloud, Azure Gov oder Azure DoD) bereitgestellt wird.  Bei einer Bereitstellung auf diese Weise unterliegt die Datenklassifizierung den folgenden Einschränkungen:
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-restricted-mode.html["Weitere Informationen zum Bereitstellen des Konsolenagenten in einer Regierungsregion"^] .
+
+
+
+== Voraussetzungen
+
+Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung in der Cloud bereitstellen.  Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, befindet sie sich im selben Subnetz wie der Konsolenagent.
+
+Ausgehenden Internetzugriff von der Datenklassifizierung aus aktivieren:: Für die Datenklassifizierung ist ein ausgehender Internetzugang erforderlich.  Wenn Ihr virtuelles oder physisches Netzwerk einen Proxyserver für den Internetzugang verwendet, stellen Sie sicher, dass die Datenklassifizierungsinstanz über ausgehenden Internetzugang verfügt, um die folgenden Endpunkte zu kontaktieren.  Der Proxy muss intransparent sein.  Transparente Proxys werden derzeit nicht unterstützt.
++
+--
+Sehen Sie sich die entsprechende Tabelle unten an, je nachdem, ob Sie die Datenklassifizierung in AWS, Azure oder GCP bereitstellen.
+
+--
+
+
+[role="tabbed-block"]
+====
+.Erforderliche Endpunkte für AWS
+--
+[cols="43,57"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://api.bluexp.netapp.com | Kommunikation mit dem Konsolendienst, der NetApp -Konten umfasst. 
+
+
+| \https://netapp-cloud-account.auth0.com \https://auth0.com | Kommunikation mit der Konsolen-Website zur zentralen Benutzerauthentifizierung. 
+
+
+| \https://cloud-compliance-support-netapp.s3.us-west-2.amazonaws.com \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste und Vorlagen. 
+
+
+| \https://kinesis.us-east-1.amazonaws.com | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
+
+
+| \https://cognito-idp.us-east-1.amazonaws.com \https://cognito-identity.us-east-1.amazonaws.com \https://user-feedback-store-prod.s3.us-west-2.amazonaws.com \https://customer-data-production.s3.us-west-2.amazonaws.com | Ermöglicht der Datenklassifizierung den Zugriff auf und das Herunterladen von Manifesten und Vorlagen sowie das Senden von Protokollen und Metriken. 
+|===
+--
+.Erforderliche Endpunkte für Azure
+--
+[cols="43,57"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://api.bluexp.netapp.com | Kommunikation mit dem Konsolendienst, der NetApp -Konten umfasst. 
+
+
+| \https://netapp-cloud-account.auth0.com \https://auth0.com | Kommunikation mit der Konsolen-Website zur zentralen Benutzerauthentifizierung. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste, Vorlagen und ermöglicht das Senden von Protokollen und Metriken. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
+|===
+--
+.Erforderliche Endpunkte für GCP
+--
+[cols="43,57"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://api.bluexp.netapp.com | Kommunikation mit dem Konsolendienst, der NetApp -Konten umfasst. 
+
+
+| \https://netapp-cloud-account.auth0.com \https://auth0.com | Kommunikation mit der Konsolen-Website zur zentralen Benutzerauthentifizierung. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste, Vorlagen und ermöglicht das Senden von Protokollen und Metriken. 
+
+
+| \https://support.compliance.api.bluexp.netapp.com/ | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
+|===
+--
+====
+Stellen Sie sicher, dass die Datenklassifizierung über die erforderlichen Berechtigungen verfügt:: Stellen Sie sicher, dass Data Classification über die Berechtigung zum Bereitstellen von Ressourcen und Erstellen von Sicherheitsgruppen für die Data Classification-Instanz verfügt.
++
+--
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Google Cloud-Berechtigungen"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html#classification["AWS-Berechtigungen"^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#classification["Azure-Berechtigungen"^]
+
+
+--
+Stellen Sie sicher, dass der Konsolenagent auf die Datenklassifizierung zugreifen kann.:: Stellen Sie die Konnektivität zwischen dem Konsolenagenten und der Datenklassifizierungsinstanz sicher.  Die Sicherheitsgruppe für den Konsolenagenten muss eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Datenklassifizierungsinstanz zulassen.  Diese Verbindung ermöglicht die Bereitstellung der Datenklassifizierungsinstanz und ermöglicht Ihnen die Anzeige von Informationen auf den Registerkarten „Compliance“ und „Governance“.  Die Datenklassifizierung wird in Regierungsregionen in AWS und Azure unterstützt.
++
+--
+Für AWS- und AWS GovCloud-Bereitstellungen sind zusätzliche Sicherheitsgruppenregeln für eingehenden und ausgehenden Datenverkehr erforderlich. Sehen https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regeln für den Konsolenagenten in AWS"^] für Details.
+
+Für Azure- und Azure Government-Bereitstellungen sind zusätzliche Sicherheitsgruppenregeln für eingehenden und ausgehenden Datenverkehr erforderlich. Sehen https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regeln für den Konsolen-Agent in Azure"^] für Details.
+
+--
+Stellen Sie sicher, dass die Datenklassifizierung weiterhin ausgeführt werden kann:: Die Instanz zur Datenklassifizierung muss eingeschaltet bleiben, um Ihre Daten kontinuierlich zu scannen.
+Sicherstellen der Webbrowser-Konnektivität zur Datenklassifizierung:: Stellen Sie nach der Aktivierung der Datenklassifizierung sicher, dass Benutzer von einem Host aus auf die Konsolenschnittstelle zugreifen, der über eine Verbindung zur Datenklassifizierungsinstanz verfügt.
++
+--
+Die Datenklassifizierungsinstanz verwendet eine private IP-Adresse, um sicherzustellen, dass die indizierten Daten nicht über das Internet zugänglich sind.  Daher muss der Webbrowser, den Sie für den Zugriff auf die Konsole verwenden, über eine Verbindung zu dieser privaten IP-Adresse verfügen.  Diese Verbindung kann von einer direkten Verbindung zu Ihrem Cloud-Anbieter (z. B. einem VPN) oder von einem Host stammen, der sich im selben Netzwerk wie die Datenklassifizierungsinstanz befindet.
+
+--
+Überprüfen Sie Ihre vCPU-Grenzen:: Stellen Sie sicher, dass das vCPU-Limit Ihres Cloud-Anbieters die Bereitstellung einer Instanz mit der erforderlichen Anzahl von Kernen zulässt.  Sie müssen das vCPU-Limit für die entsprechende Instanzfamilie in der Region überprüfen, in der die Konsole ausgeführt wird. link:concept-classification.html#the-data-classification-instance["Sehen Sie sich die erforderlichen Instanztypen an"] .
++
+--
+Weitere Einzelheiten zu vCPU-Grenzwerten finden Sie unter den folgenden Links:
+
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS-Dokumentation: Amazon EC2-Servicekontingente"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure-Dokumentation: vCPU-Kontingente virtueller Computer"^]
+* https://cloud.google.com/compute/quotas["Google Cloud-Dokumentation: Ressourcenkontingente"^]
+
+
+--
+
+
+
+
+== Datenklassifizierung in der Cloud bereitstellen
+
+Befolgen Sie diese Schritte, um eine Instanz von Data Classification in der Cloud bereitzustellen.  Der Konsolenagent stellt die Instanz in der Cloud bereit und installiert dann die Datenklassifizierungssoftware auf dieser Instanz.
+
+In Regionen, in denen der Standardinstanztyp nicht verfügbar ist, läuft die Datenklassifizierung auf einemlink:reference-instance-types.html["alternativer Instanztyp"] .
+
+[role="tabbed-block"]
+====
+.Bereitstellung in AWS
+--
+.Schritte
+. Wählen Sie auf der Hauptseite der Datenklassifizierung die Option *Klassifizierung vor Ort oder in der Cloud bereitstellen*.
++
+image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
+
+. Wählen Sie auf der Seite „Installation“ die Option „Bereitstellen > Bereitstellen“ aus, um die Instanzgröße „Groß“ zu verwenden und den Cloud-Bereitstellungsassistenten zu starten.
+. Der Assistent zeigt den Fortschritt an, während er die Bereitstellungsschritte durchläuft.  Wenn Eingaben erforderlich sind oder Probleme auftreten, werden Sie dazu aufgefordert.
+. Wenn die Instanz bereitgestellt und die Datenklassifizierung installiert ist, wählen Sie *Weiter zur Konfiguration*, um zur Seite _Konfiguration_ zu gelangen.
+
+
+--
+.Bereitstellen in Azure
+--
+.Schritte
+. Wählen Sie auf der Hauptseite der Datenklassifizierung die Option *Klassifizierung vor Ort oder in der Cloud bereitstellen*.
++
+image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
+
+. Wählen Sie *Bereitstellen*, um den Cloud-Bereitstellungsassistenten zu starten.
+. Der Assistent zeigt den Fortschritt an, während er die Bereitstellungsschritte durchläuft.  Wenn Probleme auftreten, wird es angehalten und zur Eingabe aufgefordert.
+. Wenn die Instanz bereitgestellt und die Datenklassifizierung installiert ist, wählen Sie *Weiter zur Konfiguration*, um zur Seite _Konfiguration_ zu gelangen.
+
+
+--
+.Bereitstellung in Google Cloud
+--
+.Schritte
+. Wählen Sie auf der Hauptseite der Datenklassifizierung *Governance > Klassifizierung* aus.
+. Wählen Sie *Klassifizierung vor Ort oder in der Cloud bereitstellen*.
++
+image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
+
+. Wählen Sie *Bereitstellen*, um den Cloud-Bereitstellungsassistenten zu starten.
+. Der Assistent zeigt den Fortschritt an, während er die Bereitstellungsschritte durchläuft.  Wenn Probleme auftreten, wird es angehalten und zur Eingabe aufgefordert.
+. Wenn die Instanz bereitgestellt und die Datenklassifizierung installiert ist, wählen Sie *Weiter zur Konfiguration*, um zur Seite _Konfiguration_ zu gelangen.
+
+
+--
+====
+.Ergebnis
+Die Konsole stellt die Datenklassifizierungsinstanz bei Ihrem Cloud-Anbieter bereit.
+
+Upgrades des Konsolenagenten und der Datenklassifizierungssoftware erfolgen automatisiert, solange die Instanzen über eine Internetverbindung verfügen.
+
+.Was kommt als Nächstes
+Auf der Konfigurationsseite können Sie die Datenquellen auswählen, die Sie scannen möchten.

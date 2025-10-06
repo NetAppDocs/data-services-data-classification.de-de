@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-anf.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
+summary: Führen Sie einige Schritte aus, um mit der Datenklassifizierung für Azure NetApp Files zu beginnen. 
+---
+= Scannen von Azure NetApp Files Volumes mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Führen Sie einige Schritte aus, um mit der NetApp -Datenklassifizierung für Azure NetApp Files zu beginnen.
+
+
+
+== Ermitteln Sie das Azure NetApp Files -System, das Sie scannen möchten.
+
+Wenn das Azure NetApp Files -System, das Sie scannen möchten, nicht bereits in der NetApp Konsole als System vorhanden ist,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["fügen Sie es auf der Seite „Systeme“ hinzu"^] .
+
+
+
+== Bereitstellen der Datenklassifizierungsinstanz
+
+link:task-deploy-cloud-compliance.html["Datenklassifizierung bereitstellen"^]wenn noch keine Instanz bereitgestellt ist.
+
+Die Datenklassifizierung muss beim Scannen von Azure NetApp Files Volumes in der Cloud bereitgestellt werden und zwar in derselben Region wie die Volumes, die Sie scannen möchten.
+
+*Hinweis:* Die Bereitstellung der Datenklassifizierung an einem lokalen Standort wird beim Scannen von Azure NetApp Files -Volumes derzeit nicht unterstützt.
+
+
+
+== Aktivieren Sie die Datenklassifizierung in Ihren Systemen
+
+Sie können die Datenklassifizierung auf Ihren Azure NetApp Files Volumes aktivieren.
+
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+image:screenshot_cloud_compliance_anf_scan_config.png["Ein Screenshot der Registerkarte „Konfiguration“ unmittelbar nach der Bereitstellung der Datenklassifizierungsinstanz."]
+
+. Wählen Sie aus, wie Sie die Volumes in jedem System scannen möchten. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Erfahren Sie mehr über Mapping- und Klassifizierungsscans"]:
++
+** Um alle Volumes zuzuordnen, wählen Sie *Alle Volumes zuordnen*.
+** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Alle Volumes zuordnen und klassifizieren*.
+** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen und/oder klassifizieren möchten.
++
+Sehen<<Aktivieren und Deaktivieren von Compliance-Scans auf Volumes,Aktivieren und Deaktivieren von Compliance-Scans auf Volumes>> für Details.
+
+
+
+. Wählen Sie im Bestätigungsdialogfeld *Genehmigen* aus.
+
+
+.Ergebnis
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes.  Die Ergebnisse sind im Compliance-Dashboard verfügbar, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat.  Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
+
+* Wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, scannt das System die Dateien in Ihren Volumes standardmäßig nicht, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus*.  Auf der resultierenden Seite können Sie eine Einstellung aktivieren, sodass die Datenklassifizierung die Volumes unabhängig von den Berechtigungen scannt.
+* Die Datenklassifizierung scannt nur eine Dateifreigabe unter einem Volume.  Wenn Ihre Volumes mehrere Freigaben enthalten, müssen Sie diese anderen Freigaben separat als Freigabegruppe scannen. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Erfahren Sie mehr über diese Einschränkung der Datenklassifizierung"^] .
+
+
+
+
+== Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
+
+Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Sie müssen Data Classification CIFS-Anmeldeinformationen bereitstellen, damit es auf CIFS-Volumes zugreifen kann.
+
+
+NOTE: Bei Azure NetApp Files kann die Datenklassifizierung nur Volumes in derselben Region wie die Konsole scannen.
+
+.Checklist
+* Stellen Sie sicher, dass zwischen der Data Classification-Instanz und jedem Netzwerk, das Volumes für Azure NetApp Files enthält, eine Netzwerkverbindung besteht.
+* Stellen Sie sicher, dass die folgenden Ports für die Data Classification-Instanz geöffnet sind:
++
+** Für NFS – Ports 111 und 2049.
+** Für CIFS – Ports 139 und 445.
+
+
+* Stellen Sie sicher, dass die NFS-Volume-Exportrichtlinien die IP-Adresse der Data Classification-Instanz enthalten, damit diese auf die Daten auf jedem Volume zugreifen kann.
+
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+.. Wenn Sie CIFS (SMB) verwenden, stellen Sie sicher, dass die Active Directory-Anmeldeinformationen korrekt sind.  Wählen Sie für jedes System *CIFS-Anmeldeinformationen bearbeiten* und geben Sie dann den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
++
+Die Anmeldeinformationen können schreibgeschützt sein, durch die Angabe von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
+
++
+Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+
++
+Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angezeigt werden, dass alle CIFS-Volumes erfolgreich authentifiziert wurden.
+
++
+image:screenshot_cifs_status.gif["Ein Screenshot, der die Konfigurationsseite und ein Cloud Volumes ONTAP -System zeigt, für das CIFS-Anmeldeinformationen erfolgreich bereitgestellt wurden."]
+
+
+
+. Wählen Sie auf der Konfigurationsseite *Details anzeigen* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen und etwaige Fehler zu beheben.
++
+Das folgende Bild zeigt beispielsweise vier Volumes, von denen Data Classification eines aufgrund von Netzwerkverbindungsproblemen zwischen der Data Classification-Instanz und dem Volume nicht scannen kann.
+
++
+image:screenshot_compliance_volume_details.gif["Ein Screenshot der Seite „Details anzeigen“ in der Scankonfiguration, der vier Volumes zeigt; eines davon wird aufgrund der Netzwerkkonnektivität zwischen der Datenklassifizierung und dem Volume nicht gescannt."]
+
+
+
+
+
+== Aktivieren und Deaktivieren von Compliance-Scans auf Volumes
+
+Sie können reine Mapping-Scans oder Mapping- und Klassifizierungs-Scans in einem System jederzeit über die Konfigurationsseite starten oder stoppen.  Sie können auch von reinen Mapping-Scans zu Mapping- und Klassifizierungs-Scans wechseln und umgekehrt.  Wir empfehlen Ihnen, alle Bände zu scannen.
+
+
+TIP: Neue Datenträger, die dem System hinzugefügt werden, werden nur dann automatisch gescannt, wenn Sie im Überschriftenbereich die Einstellung *Zuordnen* oder *Zuordnen und Klassifizieren* festgelegt haben.  Wenn Sie im Überschriftenbereich die Option *Benutzerdefiniert* oder *Aus* einstellen, müssen Sie die Zuordnung und/oder das vollständige Scannen für jedes neue Volume aktivieren, das Sie dem System hinzufügen.
+
+Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter auf EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^] .
+
+image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Um Nur-Mapping-Scans auf einem Volume zu aktivieren, wählen Sie im Volume-Bereich *Map* aus.  Um die Funktion auf allen Volumes zu aktivieren, wählen Sie im Überschriftenbereich *Karte* aus.
+** Um das vollständige Scannen eines Volumes zu aktivieren, wählen Sie im Volumebereich *Zuordnen und klassifizieren* aus.  Um die Funktion auf allen Volumes zu aktivieren, wählen Sie im Überschriftenbereich *Zuordnen und klassifizieren* aus.
+** Um das Scannen auf einem Volume zu deaktivieren, wählen Sie im Volumebereich *Aus*.  Um das Scannen auf allen Volumes zu deaktivieren, wählen Sie im Überschriftenbereich *Aus*.
+
+
+

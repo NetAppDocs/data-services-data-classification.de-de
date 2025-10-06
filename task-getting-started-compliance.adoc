@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-compliance.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Datenklassifizierung zu beginnen. 
+---
+= Scannen Sie Cloud Volumes ONTAP und lokale ONTAP Volumes mit NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Datenklassifizierung zu beginnen.
+
+
+
+== Voraussetzungen
+
+Stellen Sie vor dem Aktivieren der Datenklassifizierung sicher, dass Sie über eine unterstützte Konfiguration verfügen.
+
+* Wenn Sie Cloud Volumes ONTAP und lokale ONTAP -Systeme scannen, die über das Internet zugänglich sind, können Sielink:task-deploy-cloud-compliance.html["Datenklassifizierung in der Cloud bereitstellen"] oderlink:task-deploy-compliance-onprem.html["an einem lokalen Standort mit Internetzugang"] .
+* Wenn Sie lokale ONTAP -Systeme scannen, die an einem Dark Site ohne Internetzugang installiert wurden, müssen Sielink:task-deploy-compliance-dark-site.html["Stellen Sie die Datenklassifizierung am selben lokalen Standort bereit, der keinen Internetzugang hat"] .  Dazu muss der Konsolenagent am selben lokalen Standort bereitgestellt werden.
+
+
+
+
+== Aktivieren Sie die Datenklassifizierungsprüfung in Ihren Systemen
+
+Sie können das Scannen der Datenklassifizierung auf Cloud Volumes ONTAP -Systemen bei jedem unterstützten Cloud-Anbieter und auf lokalen ONTAP Clustern aktivieren.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+Auf der Konfigurationsseite werden mehrere Systeme angezeigt.
+
++
+image:screen-cl-config-cvo.png["Ein Screenshot der Registerkarte „Konfiguration“, der ein Cloud Volumes ONTAP -System zeigt."]
+
+. Wählen Sie ein System und dann *Konfiguration*.
++
+image:screen-cl-config-cvo-map-options.png["Ein Screenshot der Registerkarte „Konfiguration“, der die Optionen zum Zuordnen und Klassifizieren von Repositories zeigt."]
+
+. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* ein und alle Dateien werden unabhängig von den Berechtigungen gescannt.
++
+Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht klassifiziert, wenn die Datenklassifizierung keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da die Datenklassifizierung die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. link:reference-collected-metadata.html["Mehr erfahren"^] .
+
+. Wählen Sie aus, wie Sie die Volumes in jedem System scannen möchten. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Erfahren Sie mehr über Mapping- und Klassifizierungsscans"]:
++
+** Um alle Volumes zuzuordnen, wählen Sie *Zuordnen*.
+** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Zuordnen und klassifizieren*.
+** Um das Scannen für jedes Volume anzupassen, wählen Sie *Benutzerdefiniert* und wählen Sie dann die Volumes aus, die Sie zuordnen und/oder klassifizieren möchten.
+
+
+. Wählen Sie im Bestätigungsdialogfeld *Genehmigen* aus, damit die Datenklassifizierung mit dem Scannen Ihrer Datenträger beginnt.
+
+
+.Ergebnis
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes.  Die Ergebnisse werden im Compliance-Dashboard angezeigt, sobald die Datenklassifizierung mit dem Scan beginnt.  Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen.
+
+
+NOTE: Die Datenklassifizierung scannt nur eine Dateifreigabe unter einem Volume.  Wenn Ihre Volumes mehrere Freigaben enthalten, müssen Sie diese anderen Freigaben separat als Freigabegruppe scannen. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Weitere Einzelheiten zu dieser Datenklassifizierungsbeschränkung"^] .
+
+
+
+== Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
+
+Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Sie müssen Data Classification CIFS-Anmeldeinformationen bereitstellen, damit es auf CIFS-Volumes zugreifen kann.
+
+.Checklist
+* Stellen Sie sicher, dass zwischen der Data Classification-Instanz und jedem Netzwerk, das Volumes für Cloud Volumes ONTAP oder lokale ONTAP Cluster enthält, eine Netzwerkverbindung besteht.
+* Stellen Sie sicher, dass die Sicherheitsgruppe für Cloud Volumes ONTAP eingehenden Datenverkehr von der Data Classification-Instanz zulässt.
++
+Sie können die Sicherheitsgruppe entweder für den Datenverkehr von der IP-Adresse der Data Classification-Instanz öffnen oder Sie können die Sicherheitsgruppe für den gesamten Datenverkehr innerhalb des virtuellen Netzwerks öffnen.
+
+* Stellen Sie sicher, dass die NFS-Volume-Exportrichtlinien die IP-Adresse der Data Classification-Instanz enthalten, damit diese auf die Daten auf jedem Volume zugreifen kann.
+
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+image:screen-cl-config-cvo-map-options.png["Ein Screenshot der Registerkarte „Konfiguration“, der die Optionen zum Zuordnen und Klassifizieren von Repositories zeigt."]..  Wenn Sie CIFS verwenden, stellen Sie der Datenklassifizierung Active Directory-Anmeldeinformationen zur Verfügung, damit CIFS-Volumes gescannt werden können.  Wählen Sie für jedes System *CIFS-Anmeldeinformationen bearbeiten* und geben Sie den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
+
++
++ Die Anmeldeinformationen können schreibgeschützt sein, aber durch die Bereitstellung von Administratoranmeldeinformationen wird sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, die erweiterte Berechtigungen erfordern.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
+
++
++ Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+
++
++ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angezeigt werden, dass alle CIFS-Volumes erfolgreich authentifiziert wurden.
+
+. Wählen Sie auf der Konfigurationsseite *Konfiguration* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen und etwaige Fehler zu beheben.
+
+
+
+
+== Deaktivieren von Compliance-Scans auf Volumes
+
+Sie können reine Mapping-Scans oder Mapping- und Klassifizierungs-Scans in einem System jederzeit über die Konfigurationsseite starten oder stoppen.  Sie können auch von reinen Mapping-Scans zu Mapping- und Klassifizierungs-Scans wechseln und umgekehrt.  Wir empfehlen Ihnen, alle Bände zu scannen.
+
+
+NOTE: Neue Datenträger, die dem System hinzugefügt werden, werden nur dann automatisch gescannt, wenn Sie im Überschriftenbereich die Einstellung *Zuordnen* oder *Zuordnen und Klassifizieren* festgelegt haben.  Wenn die Option im Überschriftenbereich auf *Benutzerdefiniert* oder *Aus* eingestellt ist, müssen Sie die Zuordnung und/oder das vollständige Scannen für jedes neue Volume aktivieren, das Sie dem System hinzufügen.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie die Schaltfläche *Konfiguration* für das System, das Sie ändern möchten.
++
+image:screen-cl-config-cvo-map-options.png["Ein Screenshot der Registerkarte „Konfiguration“, der die Optionen zum Zuordnen und Klassifizieren von Repositories zeigt."]
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Um das Scannen auf einem Volume zu deaktivieren, wählen Sie im Volumebereich *Aus*.
+** Um das Scannen auf allen Volumes zu deaktivieren, wählen Sie im Überschriftenbereich *Aus*.
+
+
+

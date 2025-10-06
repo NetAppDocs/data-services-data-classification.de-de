@@ -1,0 +1,14 @@
+= Version 1.41
+:allow-uri-read: 
+
+
+
+
+=== Version 1.41
+
+Diese BlueXP classification Klassifizierungsversion enthält allgemeine Verbesserungen und Fehlerbehebungen.  Es beinhaltet außerdem:
+
+.Scanstatus
+Die BlueXP classification verfolgt den Echtzeitfortschritt der _ersten_ Zuordnungs- und Klassifizierungsscans auf einem Datenträger.  Separate progressive Balken verfolgen die Zuordnungs- und Klassifizierungsscans und stellen einen Prozentsatz aller gescannten Dateien dar.  Sie können auch mit der Maus über einen Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien und die Gesamtzahl der Dateien anzuzeigen.  Durch die Verfolgung des Status Ihrer Scans erhalten Sie tiefere Einblicke in den Scan-Fortschritt, sodass Sie Ihre Scans besser planen und die Ressourcenzuweisung verstehen können.
+
+Um den Status Ihrer Scans anzuzeigen, navigieren Sie in der BlueXP classification zu **Konfiguration** und wählen Sie dann die **Konfiguration der Arbeitsumgebung** aus.  Der Fortschritt wird für jeden Band in der Zeile angezeigt.

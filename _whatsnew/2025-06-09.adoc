@@ -1,0 +1,60 @@
+= Version 1.44
+:allow-uri-read: 
+
+
+
+
+=== Version 1.44
+
+Diese BlueXP classification Klassifizierungsversion umfasst:
+
+.Verbesserte Aktualisierungszeiten für das Governance-Dashboard
+Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wurden verbessert.  Die folgende Tabelle zeigt die Aktualisierungshäufigkeit für jede Komponente.
+
+[cols="1,1"]
+|===
+| Komponente | Aktualisierungszeiten 
+
+
+| Zeitalter der Daten | 24 Stunden 
+
+
+| Kategorien | 24 Stunden 
+
+
+| Datenübersicht | 5 Minuten 
+
+
+| Doppelte Dateien | 2 Stunden 
+
+
+| Dateitypen | 24 Stunden 
+
+
+| Nicht-geschäftliche Daten | 2 Stunden 
+
+
+| Berechtigungen öffnen | 24 Stunden 
+
+
+| Gespeicherte Abfragen | 2 Stunden 
+
+
+| Sensible Daten und umfassende Berechtigungen | 24 Stunden 
+
+
+| Datengröße | 24 Stunden 
+
+
+| Veraltete Daten | 2 Stunden 
+
+
+| Top-Datenspeicher nach Vertraulichkeitsstufe | 2 Stunden 
+|===
+Sie können den Zeitpunkt der letzten Aktualisierung anzeigen und die Komponenten „Doppelte Dateien“, „Nicht geschäftliche Daten“, „Gespeicherte Abfragen“, „Veraltete Daten“ und „Top-Datenrepositorys nach Vertraulichkeitsstufe“ manuell aktualisieren.  Weitere Informationen zum Governance-Dashboard finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["Zeigen Sie Governance-Details zu den in Ihrer Organisation gespeicherten Daten an"] .
+
+.Leistungs- und Sicherheitsverbesserungen
+Es wurden Verbesserungen vorgenommen, um die Leistung, den Speicherverbrauch und die Sicherheit der BlueXP Klassifizierung zu verbessern.
+
+.Fehlerbehebungen
+Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu verbessern.  Die BlueXP classification verwendet jetzt Elasticsearch, um die Genauigkeit der Dateianzahlberichterstattung während der Scans zu verbessern.

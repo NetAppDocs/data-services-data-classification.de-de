@@ -1,0 +1,39 @@
+= Version 1.40
+:allow-uri-read: 
+
+
+
+
+=== Version 1.40
+
+Diese BlueXP classification Klassifizierungsversion enthält die folgenden Updates.
+
+.Unterstützung für RHEL 9.5
+Diese Version bietet zusätzlich zu den zuvor unterstützten Versionen Unterstützung für Red Hat Enterprise Linux v9.5.  Dies gilt für jede manuelle Vor-Ort-Installation der BlueXP classification, einschließlich Dark-Site-Bereitstellungen.
+
+Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und die BlueXP classification 1.30 oder höher: Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 und 9.5.
+
+.Priorisieren Sie reine Mapping-Scans
+Wenn Sie reine Mapping-Scans durchführen, können Sie den wichtigsten Scans Priorität einräumen.  Diese Funktion ist hilfreich, wenn Sie über viele Arbeitsumgebungen verfügen und sicherstellen möchten, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
+
+Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt.  Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben.  Mehrere Scans können priorisiert werden.  Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
+
+Die Priorität wird einmalig gewährt.  Automatische erneute Scans der Zuordnungsdaten erfolgen in der Standardreihenfolge.
+
+Die Priorisierung beschränkt sich auflink:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["Nur-Mapping-Scans"^] ; es ist nicht für Karten- und Klassifizierungsscans verfügbar.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"^] .
+
+.Alle Scans wiederholen
+Die BlueXP classification unterstützt die Möglichkeit, alle fehlgeschlagenen Scans stapelweise erneut durchzuführen.
+
+Mit der Funktion **Alle wiederholen** können Sie Scans in einem Stapelvorgang erneut versuchen.  Wenn Klassifizierungsscans aufgrund eines vorübergehenden Problems wie beispielsweise eines Netzwerkausfalls fehlschlagen, können Sie alle Scans gleichzeitig mit einer Schaltfläche wiederholen, anstatt sie einzeln zu wiederholen.  Scans können beliebig oft wiederholt werden.
+
+So wiederholen Sie alle Scans:
+
+. Wählen Sie im BlueXP classification *Konfiguration* aus.
+. Um alle fehlgeschlagenen Scans erneut durchzuführen, wählen Sie *Alle Scans wiederholen*.
+
+
+.Verbesserte Genauigkeit des Kategorisierungsmodells
+Die Genauigkeit des maschinellen Lernmodells fürlink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["vordefinierte Kategorien"] hat sich um 11 % verbessert.

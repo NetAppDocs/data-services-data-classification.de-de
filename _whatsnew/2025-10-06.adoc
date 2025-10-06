@@ -1,0 +1,30 @@
+= Version 1.47
+:allow-uri-read: 
+
+
+
+
+=== Version 1.47
+
+.BlueXP classification heißt jetzt NetApp Datenklassifizierung
+Die BlueXP classification wurde in NetApp Data Classification umbenannt.  Neben der Umbenennung wurde auch die Benutzeroberfläche verbessert.
+
+.BlueXP heißt jetzt NetApp Console
+BlueXP wurde umbenannt und neu gestaltet, um seine Rolle bei der Verwaltung Ihrer Dateninfrastruktur besser widerzuspiegeln.
+
+Die NetApp Console ermöglicht eine zentrale Verwaltung von Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene und liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Verwaltung.
+
+Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Versionshinweise zur NetApp Konsole"] .
+
+.Aktionen (Vorschau)
+Die Datenklassifizierung unterstützt jetzt Aktionen auf der Untersuchungsseite.  Sie können Dateien aus der Datenklassifizierung kopieren, verschieben und löschen.
+
+.Unterstützung für das Taggen von Dateien (Vorschau)
+Die Datenklassifizierung unterstützt jetzt das Taggen einzelner Dateien.  Mit Datei-Tags können Sie eine benutzerdefinierte Kennung für bestimmte Dateien erstellen, die zum Identifizieren und Filtern von Daten verwendet werden kann.  Mit dem Tag können Sie bestimmte Eigenschaften in Ihrer Datenuntersuchung identifizieren oder basierend auf den Tag-Ergebnissen gespeicherte Abfragen und Richtlinien erstellen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Dateimetadaten anzeigen"] .
+
+.Richtlinien für gespeicherte Abfragen (Vorschau)
+Gespeicherte Suchen wurden in „Gespeicherte Abfragen“ umbenannt.  Sie können gespeicherte Abfragen auch in umsetzbare Richtlinien umwandeln: Löschen Sie Daten oder senden Sie E-Mail-Benachrichtigungen basierend auf gespeicherten Abfrageergebnissen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Erstellen von Richtlinien"] .

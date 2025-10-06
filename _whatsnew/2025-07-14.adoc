@@ -1,0 +1,19 @@
+= Version 1.45
+:allow-uri-read: 
+
+
+
+
+=== Version 1.45
+
+Diese BlueXP classification Klassifizierungsversion enthält Codeänderungen, die die Ressourcennutzung optimieren und:
+
+.Verbesserter Workflow zum Hinzufügen von Dateifreigaben zum Scannen
+Der Arbeitsablauf zum Hinzufügen von Dateifreigaben zu einer Dateifreigabegruppe wurde vereinfacht.  Der Prozess unterscheidet jetzt auch die CIFS-Protokollunterstützung basierend auf dem Authentifizierungstyp (Kerberos oder NTLM).
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/task-scanning-file-shares.html["Dateifreigaben scannen"] .
+
+.Erweiterte Informationen zum Dateieigentümer
+Sie können jetzt weitere Informationen zu Dateibesitzern für erfasste Dateien auf der Registerkarte „Untersuchung“ anzeigen.  Wenn Sie die Metadaten für eine Datei auf der Registerkarte „Untersuchung“ anzeigen, suchen Sie den Dateibesitzer und wählen Sie dann **Details anzeigen** aus, um den Benutzernamen, die E-Mail-Adresse und den SAM-Kontonamen anzuzeigen.  Sie können auch andere Elemente anzeigen, die diesem Benutzer gehören.  Diese Funktion ist nur für Arbeitsumgebungen mit Active Directory verfügbar.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"] .

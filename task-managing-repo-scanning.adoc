@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
+summary: Sie können in NetApp Data Classification verwalten, wie Ihre Daten in jedem Ihrer Systeme und Datenquellen gescannt werden.  Sie können die Änderungen auf „Repository“-Basis vornehmen. Das bedeutet, dass Sie je nach Art der Datenquelle, die Sie scannen, Änderungen für jedes Volume, jeden Bucket, jede Freigabe, jedes Schema, jeden Benutzer usw. vornehmen können. 
+---
+= Ändern Sie die NetApp Data Classification-Scaneinstellungen für Ihre Repositories
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können verwalten, wie Ihre Daten in jedem Ihrer Systeme und Datenquellen gescannt werden.  Sie können die Änderungen auf „Repository“-Basis vornehmen. Das bedeutet, dass Sie je nach Art der Datenquelle, die Sie scannen, Änderungen für jedes Volume, Schema, jeden Benutzer usw. vornehmen können.
+
+Sie können unter anderem ändern, ob ein Repository gescannt wird oder nicht und ob NetApp Data Classification einelink:concept-classification.html["Mapping-Scan oder ein Mapping- und Klassifizierungs-Scan"] .  Sie können den Scanvorgang auch anhalten und fortsetzen, beispielsweise wenn Sie den Scanvorgang eines Volumes für einen bestimmten Zeitraum unterbrechen müssen.
+
+
+
+== Den Scan-Status für Ihre Repositories anzeigen
+
+Sie können die einzelnen Repositories anzeigen, die NetApp Data Classification für jedes System und jede Datenquelle scannt (Volumes, Buckets usw.).  Sie können auch sehen, wie viele „kartiert“ und wie viele „klassifiziert“ wurden.  Die Klassifizierung dauert länger, da die vollständige KI-Identifizierung für alle Daten durchgeführt wird.
+
+Sie können den Scan-Status jeder Arbeitsumgebung auf der Konfigurationsseite anzeigen:
+
+* *Initialisierung* (hellblauer Punkt): Die Karten- oder Klassifizierungskonfiguration wird aktiviert.  Dies wird einige Sekunden lang angezeigt, bevor der Status „Ausstehende Warteschlange“ beginnt.
+* *Warteschlange ausstehend* (orangefarbener Punkt): Die Scanaufgabe wartet darauf, in die Scan-Warteschlange aufgenommen zu werden.
+* *In Warteschlange* (orangefarbener Punkt): Die Aufgabe wurde erfolgreich zur Scan-Warteschlange hinzugefügt.  Das System beginnt mit der Zuordnung oder Klassifizierung des Datenträgers, wenn dieser in der Warteschlange an der Reihe ist.
+* *Läuft* (grüner Punkt): Die Scanaufgabe, die sich in der Warteschlange befand, wird derzeit aktiv im ausgewählten Speicherrepository ausgeführt.
+* *Fertig* (grüner Punkt): Der Scan des Speicherrepositorys ist abgeschlossen.
+* *Pausiert* (grauer Punkt): Sie haben die Option „Pause“ ausgewählt, um den Scanvorgang anzuhalten.  Während die Volumenänderungen nicht im System angezeigt werden, werden die gescannten Erkenntnisse weiterhin angezeigt.
+* *Fehler* (roter Punkt): Der Scan kann nicht abgeschlossen werden, da Probleme aufgetreten sind.  Wenn Sie eine Aktion abschließen müssen, wird der Fehler im Tooltip unter der Spalte „Erforderliche Aktion“ angezeigt.  Andernfalls zeigt das System den Status „Fehler“ an und versucht, die Wiederherstellung durchzuführen.  Wenn es fertig ist, ändert sich der Status.
+* *Nicht scannen*: Die Volume-Konfiguration wurde auf „Aus“ eingestellt und das System scannt das Volume nicht.
+
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
++
+image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Sie die Schaltfläche „Konfiguration“ für ein System auswählen."]
+
+. Wählen Sie auf der Registerkarte „Konfiguration“ die Schaltfläche *Konfiguration* für das System.
+. Zeigen Sie auf der Seite „Scan-Konfiguration“ die Scan-Einstellungen für alle Repositorys an.
++
+image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, ob Ihre Buckets gescannt werden und wie der aktuelle Scan-Status ist."]
+
+. Bewegen Sie den Cursor über das Diagramm in der Spalte „Mapping-Status“, um die Anzahl der Dateien anzuzeigen, die in jedem Repository (in diesem Beispiel Bucket) noch zugeordnet oder klassifiziert werden müssen.
+
+
+
+
+== Ändern des Scan-Typs für ein Repository
+
+Sie können reine Mapping-Scans oder Mapping- und Klassifizierungs-Scans in einem System jederzeit über die Konfigurationsseite starten oder stoppen.  Sie können auch von reinen Mapping-Scans zu Mapping- und Klassifizierungs-Scans wechseln und umgekehrt.
+
+
+TIP: Datenbanken können nicht auf reine Mapping-Scans eingestellt werden.  Das Scannen der Datenbank kann aktiviert oder deaktiviert werden, wobei „A“ dem Zuordnen und Klassifizieren entspricht.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Registerkarte „Konfiguration“ die Schaltfläche *Konfiguration* für das System.
++
+image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Sie die Schaltfläche „Konfiguration“ für ein System auswählen."]
+
+. Ändern Sie auf der Seite „Scan-Konfiguration“ beliebige Repositories (in diesem Beispiel Buckets), um *Map*- oder *Map & Classify*-Scans durchzuführen.
++
+image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, wie Sie den Scantyp für einen Bucket auswählen."]
+
++
+Bei bestimmten Systemtypen können Sie die Art des Scannens global für alle Repositories ändern, indem Sie eine Schaltflächenleiste oben auf der Seite verwenden.  Dies gilt für Cloud Volumes ONTAP, On-Premises ONTAP, Azure NetApp Files und Amazon FSx für ONTAP Systeme.
+
++
+Das folgende Beispiel zeigt diese Schaltflächenleiste für ein Azure NetApp Files -System.
+
++
+image:screenshot_compliance_repo_scan_all.png["Ein Screenshot, der zeigt, wie Sie für alle Volumes in einem System die gleiche Scan-Einstellung konfigurieren."]
+
+
+
+
+
+== Priorisieren Sie Scans
+
+Sie können die wichtigsten Nur-Mapping-Scans priorisieren oder Scans zuordnen und klassifizieren, um sicherzustellen, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
+
+Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt.  Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben.  Mehrere Scans können priorisiert werden.  Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
+
+Die Priorität wird einmalig gewährt.  Automatische erneute Scans der Zuordnungsdaten erfolgen in der Standardreihenfolge.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie die Ressourcen aus, die Sie priorisieren möchten.
+. Von den Aktionen `...` Wählen Sie als Option *Scan priorisieren*.
+
+
+
+
+== Scannen nach einem Repository beenden
+
+Sie können das Scannen eines Repositorys (z. B. eines Volumes) beenden, wenn Sie es nicht mehr auf Konformität überwachen müssen.  Dies erreichen Sie, indem Sie das Scannen „ausschalten“.  Wenn das Scannen deaktiviert wird, werden alle Indizes und Informationen zu diesem Datenträger aus dem System entfernt und die Gebühren für das Scannen der Daten werden nicht mehr erhoben.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Registerkarte „Konfiguration“ die Schaltfläche *Konfiguration* für das System.
++
+image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Sie die Schaltfläche „Konfiguration“ für ein System auswählen."]
+
+. Wählen Sie auf der Seite „Scan-Konfiguration“ *Aus* aus, um das Scannen für einen bestimmten Bucket zu beenden.
++
+image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, wie Sie den Scantyp für einen Bucket auswählen."]
+
+
+
+
+
+== Scannen nach einem Repository anhalten und fortsetzen
+
+Sie können das Scannen eines Repositorys „anhalten“, wenn Sie das Scannen bestimmter Inhalte vorübergehend beenden möchten.  Das Anhalten des Scans bedeutet, dass Data Classification in Zukunft keine Scans mehr nach Änderungen oder Ergänzungen am Repository durchführt, alle aktuellen Ergebnisse jedoch weiterhin im System angezeigt werden.  Durch das Anhalten des Scanvorgangs werden die Kosten für die gescannten Daten nicht aufgehoben, da die Daten weiterhin vorhanden sind.
+
+Sie können den Scanvorgang jederzeit „fortsetzen“.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
+. Wählen Sie auf der Registerkarte „Konfiguration“ die Schaltfläche *Konfiguration* für das System.
++
+image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Sie die Schaltfläche „Konfiguration“ für ein System auswählen."]
+
+. Wählen Sie auf der Seite „Scan-Konfiguration“ die Aktionenimage:button-actions-horizontal.png["Symbol „Aktionen“"] Symbol.
+. Wählen Sie *Pause*, um den Scanvorgang für ein Volume anzuhalten, oder wählen Sie *Fortsetzen*, um den Scanvorgang für ein Volume fortzusetzen, der zuvor angehalten wurde.
+

@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-data.html 
+keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
+summary: Behalten Sie die Kontrolle über die Kosten im Zusammenhang mit den Daten auf den Speicherressourcen Ihres Unternehmens.  NetApp Data Classification ermittelt die Menge veralteter Daten, doppelter Dateien und sehr großer Dateien in Ihren Systemen, sodass Sie entscheiden können, ob Sie einige Dateien entfernen oder in einen kostengünstigeren Objektspeicher verschieben möchten. 
+---
+= Mit NetApp Data Classification Governance-Details zu den in Ihrem Unternehmen gespeicherten Daten anzeigen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Behalten Sie die Kontrolle über die Kosten im Zusammenhang mit den Daten auf den Speicherressourcen Ihres Unternehmens.  NetApp Data Classification ermittelt die Menge veralteter Daten, doppelter Dateien und sehr großer Dateien in Ihren Systemen, sodass Sie entscheiden können, ob Sie einige Dateien entfernen oder in einen kostengünstigeren Objektspeicher verschieben möchten.
+
+Hier sollten Sie mit Ihrer Recherche beginnen.  Im Governance-Dashboard können Sie einen Bereich für weitere Untersuchungen auswählen.
+
+Wenn Sie außerdem planen, Daten von lokalen Standorten in die Cloud zu migrieren, können Sie vor dem Verschieben die Größe der Daten anzeigen und feststellen, ob die Daten vertrauliche Informationen enthalten.
+
+
+
+== Überprüfen des Governance-Dashboards
+
+Das Governance-Dashboard bietet Informationen, mit denen Sie die Effizienz steigern und die Kosten im Zusammenhang mit den auf Ihren Speicherressourcen gespeicherten Daten kontrollieren können.
+
+image:screenshot_compliance_governance_dashboard.png["Ein Screenshot des Data Classification Governance-Dashboards."]
+
+.Schritte
+. Wählen Sie im Menü der NetApp Konsole *Governance > Klassifizierung* aus.
+. Wählen Sie *Governance* aus.
++
+Das Governance-Dashboard wird angezeigt.
+
+
+
+
+
+=== Sparmöglichkeiten prüfen
+
+Die Komponente „Einsparmöglichkeiten“ zeigt Daten an, die Sie löschen oder in einen kostengünstigeren Objektspeicher verschieben können.  Die Daten in _Sparmöglichkeiten_ werden alle 2 Stunden aktualisiert.  Sie können die Daten auch manuell aktualisieren.
+
+.Schritte
+. Wählen Sie im Menü „Datenklassifizierung“ die Option „Governance“ aus.
+. Wählen Sie in jeder Kachel „Einsparmöglichkeiten“ des Governance-Dashboards „Speicher optimieren“ aus, um die gefilterten Ergebnisse auf der Untersuchungsseite anzuzeigen.  Um herauszufinden, welche Daten Sie löschen oder auf günstigeren Speicher verschieben sollten, untersuchen Sie die _Sparmöglichkeiten_.
++
+** *Veraltete Daten* – Daten, die zuletzt vor über 3 Jahren geändert wurden.
+** *Doppelte Dateien* – Dateien, die an anderen Speicherorten in den von Ihnen gescannten Datenquellen dupliziert sind. link:task-investigate-data.html["Sehen Sie, welche Arten von doppelten Dateien angezeigt werden"] .
+
+
+
+
+
+NOTE: Wenn eine Ihrer Datenquellen Daten-Tiering implementiert, können alte Daten, die sich bereits im Objektspeicher befinden, in der Kategorie „Veraltete Daten“ identifiziert werden.
+
+
+
+== Erstellen des Data Discovery-Bewertungsberichts
+
+Der Bewertungsbericht zur Datenermittlung bietet eine umfassende Analyse der gescannten Umgebung, um Problembereiche und mögliche Abhilfemaßnahmen aufzuzeigen.  Die Ergebnisse basieren sowohl auf der Zuordnung als auch auf der Klassifizierung Ihrer Daten.  Das Ziel dieses Berichts besteht darin, das Bewusstsein für drei wichtige Aspekte Ihres Datensatzes zu schärfen:
+
+[cols="25,65"]
+|===
+| Funktion | Beschreibung 
+
+
+| Bedenken hinsichtlich der Datenverwaltung | Ein detailliertes Bild aller Daten, die Sie besitzen, und Bereiche, in denen Sie möglicherweise die Datenmenge reduzieren können, um Kosten zu sparen. 
+
+
+| Datensicherheitsrisiken | Bereiche, in denen Ihre Daten aufgrund umfassender Zugriffsberechtigungen internen oder externen Angriffen ausgesetzt sind. 
+
+
+| Lücken in der Datenkonformität | Wo sich Ihre persönlichen oder sensiblen persönlichen Daten befinden, sowohl aus Sicherheitsgründen als auch für DSARs (Anfragen zur Auskunftserteilung durch betroffene Personen). 
+|===
+Mit dem Bericht können Sie folgende Aktionen ausführen:
+
+* Reduzieren Sie die Speicherkosten, indem Sie Ihre Aufbewahrungsrichtlinie ändern oder bestimmte Daten (veraltete oder doppelte Daten) verschieben oder löschen.
+* Schützen Sie Ihre Daten mit umfassenden Berechtigungen, indem Sie die globalen Gruppenverwaltungsrichtlinien überarbeiten.
+* Schützen Sie Ihre Daten, die persönliche oder sensible persönliche Informationen enthalten, indem Sie PII in sicherere Datenspeicher verschieben.
+
+
+.Schritte
+. Wählen Sie unter „Datenklassifizierung“ *Governance* aus.
+. Wählen Sie in der Berichtskachel *Data Discovery Assessment Report* aus.
++
+image:screenshot-compliance-report-buttons.png["Ein Screenshot des Governance-Dashboards, der zeigt, wie der Data Discovery Assessment Report gestartet wird."]
+
+
+
+.Ergebnis
+Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und weitergeben können.
+
+
+
+== Erstellen des Datenzuordnungsübersichtsberichts
+
+Der Übersichtsbericht zur Datenzuordnung bietet einen Überblick über die in Ihren Unternehmensdatenquellen gespeicherten Daten und unterstützt Sie bei Entscheidungen zu Migrations-, Sicherungs-, Sicherheits- und Compliance-Prozessen.  Der Bericht fasst alle Systeme und Datenquellen zusammen.  Es bietet auch eine Analyse für jedes System.
+
+Der Bericht enthält die folgenden Informationen:
+
+[cols="25,65"]
+|===
+| Kategorie | Beschreibung 
+
+
+| Nutzungskapazität | Für alle Systeme: Listet die Anzahl der Dateien und die verwendete Kapazität für jedes System auf.  Für Einzelsysteme: Listet die Dateien auf, die die meiste Kapazität beanspruchen. 
+
+
+| Zeitalter der Daten | Bietet drei Diagramme und Grafiken zum Zeitpunkt der Erstellung, letzten Änderung oder des letzten Zugriffs auf Dateien.  Listet die Anzahl der Dateien und ihre verwendete Kapazität basierend auf bestimmten Datumsbereichen auf. 
+
+
+| Datengröße | Listet die Anzahl der Dateien auf, die in Ihren Systemen innerhalb bestimmter Größenbereiche vorhanden sind. 
+|===
+.Schritte
+. Wählen Sie unter „Datenklassifizierung“ *Governance* aus.
+. Wählen Sie in der Berichtskachel *Vollständiger Übersichtsbericht zur Datenzuordnung* aus.
++
+image:screenshot-compliance-report-buttons.png["Ein Screenshot des Governance-Dashboards, der zeigt, wie der Datenzuordnungsbericht gestartet wird."]
+
+
+
+.Ergebnis
+Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und bei Bedarf an andere Gruppen senden können.
+
+Wenn der Bericht größer als 1 MB ist, wird die PDF-Datei in der Datenklassifizierungsinstanz gespeichert und Sie sehen eine Popup-Meldung mit dem genauen Speicherort.  Wenn Data Classification auf einem Linux-Computer bei Ihnen vor Ort oder auf einem Linux-Computer installiert ist, den Sie in der Cloud bereitgestellt haben, können Sie direkt zur PDF-Datei navigieren.  Wenn die Datenklassifizierung in der Cloud bereitgestellt wird, müssen Sie sich per SSH bei der Datenklassifizierungsinstanz autorisieren, um die PDF-Datei herunterzuladen.
+
+
+
+=== Überprüfen Sie die wichtigsten Datenspeicher nach Datensensibilität
+
+Im Bereich „Top-Datenrepositorys nach Vertraulichkeitsstufe“ des Berichts „Datenzuordnungsübersicht“ werden die vier wichtigsten Datenrepositorys (Systeme und Datenquellen) aufgelistet, die die sensibelsten Elemente enthalten.  Das Balkendiagramm für jedes System ist unterteilt in:
+
+* Nicht sensible Daten
+* personenbezogene Daten
+* Sensible personenbezogene Daten
+
+
+Diese Daten werden alle zwei Stunden aktualisiert und können manuell aktualisiert werden.
+
+.Schritte
+. Um die Gesamtzahl der Elemente in jeder Kategorie anzuzeigen, positionieren Sie den Cursor über jedem Abschnitt der Leiste.
+. Um die Ergebnisse zu filtern, die auf der Untersuchungsseite angezeigt werden, wählen Sie jeden Bereich in der Leiste aus und untersuchen Sie ihn weiter.
+
+
+
+
+=== Überprüfen Sie vertrauliche Daten und umfassende Berechtigungen
+
+Der Bereich „Sensible Daten und umfassende Berechtigungen“ des Governance-Dashboards zeigt die Anzahl der Dateien an, die vertrauliche Daten enthalten und über umfassende Berechtigungen verfügen.  Die Tabelle zeigt die folgenden Berechtigungstypen:
+
+* Von den restriktivsten Berechtigungen bis zu den freizügigsten Einschränkungen auf der horizontalen Achse.
+* Von den am wenigsten sensiblen Daten zu den sensibelsten Daten auf der vertikalen Achse.
+
+
+.Schritte
+. Um die Gesamtzahl der Dateien in jeder Kategorie anzuzeigen, positionieren Sie den Cursor über jedem Kästchen.
+. Um die Ergebnisse zu filtern, die auf der Untersuchungsseite angezeigt werden, wählen Sie ein Kästchen aus und untersuchen Sie die Ergebnisse weiter.
+
+
+
+
+=== Überprüfen Sie die nach Arten offener Berechtigungen aufgelisteten Daten
+
+Der Bereich „Offene Berechtigungen“ des Berichts „Datenzuordnungsübersicht“ zeigt den Prozentsatz für jeden Berechtigungstyp an, der für alle gescannten Dateien vorhanden ist.  Das Diagramm zeigt die folgenden Berechtigungstypen:
+
+* Keine offenen Berechtigungen
+* Offen für Organisation
+* Für die Öffentlichkeit zugänglich
+* Unbekannter Zugriff
+
+
+.Schritte
+. Um die Gesamtzahl der Dateien in jeder Kategorie anzuzeigen, positionieren Sie den Cursor über jedem Kästchen.
+. Um die Ergebnisse zu filtern, die auf der Untersuchungsseite angezeigt werden, wählen Sie ein Kästchen aus und untersuchen Sie die Ergebnisse weiter.
+
+
+
+
+=== Überprüfen Sie das Alter und die Größe der Daten
+
+Sie können die Elemente in den Diagrammen „Alter“ und „Größe“ des Berichts „Datenzuordnungsübersicht“ untersuchen, um festzustellen, ob es Daten gibt, die Sie löschen oder in einen weniger teuren Objektspeicher verschieben sollten.
+
+.Schritte
+. Um im Diagramm „Alter der Daten“ Details zum Alter der Daten anzuzeigen, positionieren Sie den Cursor über einem Punkt im Diagramm.
+. Um nach einem Alters- oder Größenbereich zu filtern, wählen Sie dieses Alter oder diese Größe aus.
++
+** *Datenalter-Diagramm* – Kategorisiert Daten basierend auf dem Zeitpunkt ihrer Erstellung, dem letzten Zugriff oder der letzten Änderung.
+** *Größe des Datendiagramms* – Kategorisiert Daten basierend auf der Größe.
+
+
+
+
+
+NOTE: Wenn eine Ihrer Datenquellen Daten-Tiering implementiert, werden alte Daten, die sich bereits im Objektspeicher befinden, möglicherweise im Diagramm „Alter der Daten“ identifiziert.
