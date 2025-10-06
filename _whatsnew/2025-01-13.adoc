@@ -26,4 +26,4 @@ Für den Export von Daten aus dem Data Investigation-Bericht gelten die folgende
 * Der Export von einer Million Datensätzen dauert voraussichtlich etwa 35 Minuten.
 
 
-Einzelheiten zur Datenuntersuchung und zum Bericht finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"] .
+Einzelheiten zur Datenuntersuchung und zum Bericht finden Sie unter https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"] .

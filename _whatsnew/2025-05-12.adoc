@@ -11,23 +11,23 @@ Diese Version der Datenklassifizierung umfasst:
 .Priorisieren Sie Klassifizierungsscans
 Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden.  Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt.  Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"] .
 
 .Unterstützung für kanadische Datenkategorien personenbezogener Daten (PII)
 Datenklassifizierungsscans identifizieren kanadische PII-Datenkategorien.  Zu diesen Kategorien gehören Bankdaten, Passnummern, Sozialversicherungsnummern, Führerscheinnummern und Krankenversicherungskartennummern für alle kanadischen Provinzen und Territorien.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data["Kategorien personenbezogener Daten"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Kategorien personenbezogener Daten"] .
 
 .Benutzerdefinierte Klassifizierung (Vorschau)
 Die Datenklassifizierung unterstützt benutzerdefinierte Klassifizierungen für Map & Classify-Scans.  Mit benutzerdefinierten Klassifizierungen können Sie Datenklassifizierungsscans anpassen, um mithilfe regulärer Ausdrücke unternehmensspezifische Daten zu erfassen.  Diese Funktion befindet sich derzeit in der Vorschau.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html["Benutzerdefinierte Klassifizierungen hinzufügen"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Benutzerdefinierte Klassifizierungen hinzufügen"] .
 
-.Registerkarte „Gespeicherte Abfragen“
-Die Registerkarte **Richtlinien** wurde umbenanntlink:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html["**Gespeicherte Abfragen**"] .  Die Funktionalität bleibt unverändert.
+.Registerkarte „Gespeicherte Suchen“
+Die Registerkarte **Richtlinien** wurde umbenanntlink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Gespeicherte Suchen**"] . Die Funktionalität bleibt unverändert.
 
 .Scanereignisse an die Audit-Seite senden
-Die Datenklassifizierung unterstützt das Senden von Klassifizierungsereignissen (wenn ein Scan gestartet wird und wenn er endet) an dielink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console Audit-Seite"^] .
+Die Datenklassifizierung unterstützt das Senden von Klassifizierungsereignissen (wenn ein Scan gestartet wird und wenn er endet) an dielink:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console Audit-Seite"^] .
 
 .Sicherheitsupdates
 * Das Keras-Paket wurde aktualisiert, um Schwachstellen (BDSA-2025-0107 und BDSA-2025-1984) zu beheben.

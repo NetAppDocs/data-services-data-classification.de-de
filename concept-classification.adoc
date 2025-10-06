@@ -29,7 +29,7 @@ Die NetApp Konsole ermöglicht eine zentrale Verwaltung von NetApp -Speicher- un
 
 Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp -Konsole zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
 
-Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Konsole"^] .
+Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Konsole"^] .
 
 
 
@@ -37,7 +37,7 @@ Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/bluexp-setup-admin
 
 Bei der Datenklassifizierung werden künstliche Intelligenz (KI), natürliche Sprachverarbeitung (NLP) und maschinelles Lernen (ML) verwendet, um die gescannten Inhalte zu verstehen, Entitäten zu extrahieren und die Inhalte entsprechend zu kategorisieren.  Dadurch kann die Datenklassifizierung die folgenden Funktionsbereiche bereitstellen.
 
-https://bluexp.netapp.com/netapp-cloud-data-sense["Erfahren Sie mehr über Anwendungsfälle für die Datenklassifizierung"^] .
+link:https://www.netapp.com/data-services/classification/["Erfahren Sie mehr über Anwendungsfälle für die Datenklassifizierung"^] .
 
 .Einhaltung der Vorschriften
 Die Datenklassifizierung bietet mehrere Tools, die Sie bei Ihren Compliance-Bemühungen unterstützen können.  Sie können die Datenklassifizierung für Folgendes verwenden:
@@ -60,7 +60,7 @@ Durch die Datenklassifizierung können Daten identifiziert werden, bei denen das
 Die Datenklassifizierung bietet Tools, die Ihnen bei der Reduzierung der Gesamtbetriebskosten (TCO) Ihres Speichers helfen können.  Sie können die Datenklassifizierung für Folgendes verwenden:
 
 * Steigern Sie die Speichereffizienz, indem Sie doppelte oder nicht geschäftsbezogene Daten identifizieren.
-* Sparen Sie Speicherkosten, indem Sie inaktive Daten identifizieren, die Sie in einen kostengünstigeren Objektspeicher verschieben können. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Erfahren Sie mehr über das Tiering von Cloud Volumes ONTAP -Systemen"^] . https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Erfahren Sie mehr über das Tiering von On-Premises ONTAP -Systemen"^] .
+* Sparen Sie Speicherkosten, indem Sie inaktive Daten identifizieren, die Sie in einen kostengünstigeren Objektspeicher verschieben können. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Erfahren Sie mehr über das Tiering von Cloud Volumes ONTAP -Systemen"^] . https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["Erfahren Sie mehr über das Tiering von On-Premises ONTAP -Systemen"^] .
 
 
 
@@ -76,6 +76,7 @@ Die Datenklassifizierung kann strukturierte und unstrukturierte Daten aus den fo
 * Cloud Volumes ONTAP (bereitgestellt in AWS, Azure oder GCP)
 * On-Premises- ONTAP -Cluster
 * StorageGRID
+* Google Cloud NetApp Volumes
 
 
 *Datenquellen*
@@ -107,7 +108,7 @@ Die Nutzung der Datenklassifizierung ist kostenlos.  Es ist keine Klassifizierun
 === Infrastrukturkosten
 
 * Für die Installation der Datenklassifizierung in der Cloud ist die Bereitstellung einer Cloud-Instanz erforderlich, wofür vom Cloud-Anbieter, bei dem die Instanz bereitgestellt wird, Gebühren anfallen. Sehen <<Die Datenklassifizierungsinstanz,der Instanztyp, der für jeden Cloud-Anbieter bereitgestellt wird>> .  Wenn Sie Data Classification auf einem lokalen System installieren, fallen keine Kosten an.
-* Für die Datenklassifizierung müssen Sie einen Konsolenagenten bereitgestellt haben.  In vielen Fällen verfügen Sie aufgrund anderer Speicher und Dienste, die Sie in der Konsole verwenden, bereits über einen Konsolenagenten.  Für die Konsolen-Agentinstanz fallen Gebühren seitens des Cloud-Anbieters an, bei dem sie bereitgestellt wird. Siehe die https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Typ der Instanz, die für jeden Cloud-Anbieter bereitgestellt wird"^] .  Wenn Sie den Konsolenagenten auf einem lokalen System installieren, fallen keine Kosten an.
+* Für die Datenklassifizierung müssen Sie einen Konsolenagenten bereitgestellt haben. In vielen Fällen verfügen Sie aufgrund anderer Speicher und Dienste, die Sie in der Konsole verwenden, bereits über einen Konsolenagenten. Für die Konsolen-Agentinstanz fallen Gebühren seitens des Cloud-Anbieters an, bei dem sie bereitgestellt wird. Siehe die https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Typ der Instanz, die für jeden Cloud-Anbieter bereitgestellt wird"^] . Wenn Sie den Konsolenagenten auf einem lokalen System installieren, fallen keine Kosten an.
 
 
 
@@ -125,7 +126,7 @@ Die Kosten für die Datenübertragung hängen von Ihrer Konfiguration ab.  Wenn 
 
 == Die Datenklassifizierungsinstanz
 
-Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, stellt die Konsole die Instanz im selben Subnetz wie der Konsolenagent bereit. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Erfahren Sie mehr über den Konsolenagenten."^]
+Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, stellt die Konsole die Instanz im selben Subnetz wie der Konsolenagent bereit. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Erfahren Sie mehr über den Konsolenagenten."^]
 
 image:diagram_cloud_compliance_instance.png["Ein Diagramm, das eine Konsoleninstanz und eine Datenklassifizierungsinstanz zeigt, die bei Ihrem Cloud-Anbieter ausgeführt werden."]
 
@@ -183,7 +184,7 @@ Nach dem ersten Scan scannt die Datenklassifizierung Ihre Daten kontinuierlich i
 Sie können Scans auf Volume- oder Datenbankschemaebene aktivieren und deaktivieren.
 
 
-NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann. Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] . + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an. Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
 
 
 

@@ -64,4 +64,4 @@ Die Filterauswahl ist:
 * „Klassifiziert und letzte Zugriffszeit aktualisiert“ – Hier werden die Dateien angezeigt, die klassifiziert wurden und bei denen die Datenklassifizierung die letzte Zugriffszeit nicht auf das ursprüngliche Datum zurücksetzen konnte.  Dieser Filter ist nur für Umgebungen relevant, in denen Sie *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* aktiviert haben.
 
 
-Bei Bedarf können Sie diese Ergebnisse in einen Bericht exportieren, sodass Sie sehen können, welche Dateien aufgrund von Berechtigungen gescannt werden und welche nicht. https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#data-investigation-report["Erfahren Sie mehr über den Data Investigation Report"^] .
+Bei Bedarf können Sie diese Ergebnisse in einen Bericht exportieren, sodass Sie sehen können, welche Dateien aufgrund von Berechtigungen gescannt werden und welche nicht. link:task-investigate-data.html#data-investigation-report["Erfahren Sie mehr über den Data Investigation Report"^] .

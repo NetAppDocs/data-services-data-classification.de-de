@@ -173,7 +173,7 @@ Nach einem vollständigen Scan stehen Ihnen zahlreiche zusätzliche Datenklassif
 
 Die Datenklassifizierung erfasst Metadaten wie Dateiname, Berechtigungen, Erstellungszeit, letzter Zugriff und letzte Änderung.  Dies umfasst alle Metadaten, die auf der Seite „Datenuntersuchungsdetails“ und in den Datenuntersuchungsberichten angezeigt werden.
 
-Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII).  Einzelheiten zu privaten Daten finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Kategorien privater Daten, die von der Datenklassifizierung gescannt werden"] .
+Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII). Einzelheiten zu privaten Daten finden Sie unterxref:reference-private-data-categories.html[Kategorien privater Daten, die von der Datenklassifizierung gescannt werden] .
 
 
 
@@ -245,7 +245,7 @@ Beim Scannen von Daten muss der NetApp Console-Agent an den folgenden Speicheror
 * Für lokale ONTAP -Systeme: Der Konsolenagent befindet sich vor Ort.
 
 
-Wenn Sie Daten an diesen Standorten haben, müssen Sie möglicherweise https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["mehrere Konsolenagenten"^] .
+Wenn Sie Daten an diesen Standorten haben, müssen Sie möglicherweise https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["mehrere Konsolenagenten"^] .
 
 
 

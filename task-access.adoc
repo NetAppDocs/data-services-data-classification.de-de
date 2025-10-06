@@ -16,10 +16,10 @@ Sie können über die NetApp Konsole auf die NetApp -Datenklassifizierung zugrei
 
 Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für die NetApp -Konsole anmelden. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung bei der Konsole"^] .
 
-Für bestimmte Aufgaben sind bestimmte Konsolenbenutzerrollen erforderlich. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+Für bestimmte Aufgaben sind bestimmte Konsolenbenutzerrollen erforderlich. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Bevor Sie beginnen
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Sie sollten einen Konsolenagenten hinzufügen."^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Sie sollten einen Konsolenagenten hinzufügen."^]
 * link:task-deploy-cloud-compliance.html["Finden Sie heraus, welcher Bereitstellungsstil für die Datenklassifizierung zu Ihrer Arbeitslast passt."]
 
 

@@ -24,7 +24,7 @@ Innerhalb der Datenklassifizierung sind vier Kategorien definiert, die den Regis
 * Konfiguration
 
 
-Mit den APIs in der Swagger-Dokumentation können Sie suchen, Daten aggregieren, Ihre Scans verfolgen und Aktionen wie Kopieren, Verschieben und mehr ausführen.
+Mit den APIs in der Swagger-Dokumentation können Sie suchen, Daten aggregieren, Ihre Scans verfolgen und Aktionen wie Kopieren, Verschieben und Löschen ausführen.
 
 
 

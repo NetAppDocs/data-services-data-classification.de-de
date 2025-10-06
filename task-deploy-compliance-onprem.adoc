@@ -36,10 +36,10 @@ Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Erstellen eines Konsolenagenten
 [role="quick-margin-para"]
-Wenn Sie noch keinen Konsolenagenten haben, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
+Wenn Sie noch keinen Konsolenagenten haben, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
 
 [role="quick-margin-para"]
-Sie können auch einen Konsolenagenten bei Ihrem Cloud-Anbieter erstellen.  Sehen https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+Sie können auch einen Konsolenagenten bei Ihrem Cloud-Anbieter erstellen. Sehen https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Überprüfen der Voraussetzungen
 [role="quick-margin-para"]
@@ -56,9 +56,9 @@ Laden Sie die Cloud Data Classification-Software von der NetApp -Support-Site he
 
 == Erstellen eines Konsolenagenten
 
-Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
+Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich. In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
 
-Informationen zum Erstellen eines solchen in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+Informationen zum Erstellen eines solchen in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 
 Es gibt einige Szenarien, in denen Sie einen Konsolenagenten verwenden müssen, der bei einem bestimmten Cloud-Anbieter bereitgestellt wird:
 
@@ -72,7 +72,7 @@ Für Azure NetApp Files muss es in derselben Region bereitgestellt werden wie di
 
 On-Premise ONTAP -Systeme, NetApp Dateifreigaben und Datenbankkonten können mit jedem dieser Cloud-Konsolen-Agenten gescannt werden.
 
-Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.  Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud. Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
 
 Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wenn Sie die Datenklassifizierung installieren.  Sie verfügen über diese Informationen, wenn Sie den Konsolenagenten in Ihren Räumlichkeiten installiert haben.  Wenn der Konsolenagent in der Cloud bereitgestellt wird, finden Sie diese Informationen in der Konsole: Wählen Sie das Hilfesymbol, dann *Support* und dann **Konsolenagent**.
 
@@ -210,16 +210,16 @@ Für die Datenklassifizierung ist ein ausgehender Internetzugang erforderlich.  
 | Endpunkte | Zweck 
 
 
-| \https://api.bluexp.netapp.com | Kommunikation mit der Konsole, die NetApp -Konten umfasst. 
+| \https://api.console.netapp.com | Kommunikation mit der Konsole, die NetApp -Konten umfasst. 
 
 
 | \https://netapp-cloud-account.auth0.com \https://auth0.com | Kommunikation mit der Konsolen-Website zur zentralen Benutzerauthentifizierung. 
 
 
-| \https://support.compliance.api.bluexp.netapp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste, Vorlagen und ermöglicht das Senden von Protokollen und Metriken. 
+| \https://support.compliance.api.console.netapp.com/ \https://hub.docker.com \https://auth.docker.io \https://registry-1.docker.io \https://index.docker.io/ \https://dseasb33srnrn.cloudfront.net/ \https://production.cloudflare.docker.com/ | Bietet Zugriff auf Software-Images, Manifeste, Vorlagen und ermöglicht das Senden von Protokollen und Metriken. 
 
 
-| \https://support.compliance.api.bluexp.netapp.com/ | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
+| \https://support.compliance.api.console.netapp.com/ | Ermöglicht NetApp das Streamen von Daten aus Prüfdatensätzen. 
 
 
 | \https://github.com/docker \https://download.docker.com | Stellt erforderliche Pakete für die Docker-Installation bereit. 
@@ -293,7 +293,7 @@ Sehen<<Vorbereiten des Linux-Hostsystems,Vorbereiten des Linux-Hostsystems>> Und
 Upgrades der Datenklassifizierungssoftware erfolgen automatisiert, solange die Instanz über eine Internetverbindung verfügt.
 
 
-NOTE: Data Classification kann derzeit keine S3-Buckets, Azure NetApp Files oder FSx für ONTAP scannen, wenn die Software vor Ort installiert ist.  In diesen Fällen müssen Sie einen separaten Konsolenagenten und eine Instanz der Datenklassifizierung in der Cloud bereitstellen und https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["zwischen Anschlüssen wechseln"^] für Ihre verschiedenen Datenquellen.
+NOTE: Data Classification kann derzeit keine S3-Buckets, Azure NetApp Files oder FSx für ONTAP scannen, wenn die Software vor Ort installiert ist. In diesen Fällen müssen Sie einen separaten Konsolenagenten und eine Instanz der Datenklassifizierung in der Cloud bereitstellen und https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["zwischen Anschlüssen wechseln"^] für Ihre verschiedenen Datenquellen.
 
 
 

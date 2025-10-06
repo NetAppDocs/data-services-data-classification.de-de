@@ -37,7 +37,7 @@ Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wu
 | Berechtigungen öffnen | 24 Stunden 
 
 
-| Gespeicherte Abfragen | 2 Stunden 
+| Gespeicherte Suchen | 2 Stunden 
 
 
 | Sensible Daten und umfassende Berechtigungen | 24 Stunden 
@@ -51,7 +51,7 @@ Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wu
 
 | Top-Datenspeicher nach Vertraulichkeitsstufe | 2 Stunden 
 |===
-Sie können den Zeitpunkt der letzten Aktualisierung anzeigen und die Komponenten „Doppelte Dateien“, „Nicht geschäftliche Daten“, „Gespeicherte Abfragen“, „Veraltete Daten“ und „Top-Datenrepositorys nach Vertraulichkeitsstufe“ manuell aktualisieren.  Weitere Informationen zum Governance-Dashboard finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["Zeigen Sie Governance-Details zu den in Ihrer Organisation gespeicherten Daten an"] .
+Sie können den Zeitpunkt der letzten Aktualisierung anzeigen und die Komponenten „Doppelte Dateien“, „Nicht geschäftliche Daten“, „Gespeicherte Suchen“, „Veraltete Daten“ und „Top-Datenspeicher nach Vertraulichkeitsstufe“ manuell aktualisieren. Weitere Informationen zum Governance-Dashboard finden Sie unterlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-governance-data.html["Zeigen Sie Governance-Details zu den in Ihrer Organisation gespeicherten Daten an"] .
 
 .Leistungs- und Sicherheitsverbesserungen
 Es wurden Verbesserungen vorgenommen, um die Leistung, den Speicherverbrauch und die Sicherheit der BlueXP Klassifizierung zu verbessern.

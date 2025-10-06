@@ -11,7 +11,7 @@ Diese Version bietet zusätzlich zu den zuvor unterstützten Versionen Unterstü
 
 Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und die BlueXP classification 1.30 oder höher: Red Hat Enterprise Linux Version 8.8, 9.0, 9.1, 9.2, 9.3 und 9.4.
 
-Erfahren Sie mehr über https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Übersicht über die BlueXP classification"] .
+Erfahren Sie mehr über https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Übersicht über die BlueXP classification"] .
 
 .Verbesserte Scan-Leistung
 Diese Version bietet eine verbesserte Scanleistung.
