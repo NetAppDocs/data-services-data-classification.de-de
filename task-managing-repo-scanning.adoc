@@ -4,7 +4,7 @@ permalink: task-managing-repo-scanning.html
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
 summary: Sie können in NetApp Data Classification verwalten, wie Ihre Daten in jedem Ihrer Systeme und Datenquellen gescannt werden.  Sie können die Änderungen auf „Repository“-Basis vornehmen. Das bedeutet, dass Sie je nach Art der Datenquelle, die Sie scannen, Änderungen für jedes Volume, jeden Bucket, jede Freigabe, jedes Schema, jeden Benutzer usw. vornehmen können. 
 ---
-= Ändern Sie die NetApp Data Classification-Scaneinstellungen für Ihre Repositories
+= Ändern Sie die NetApp Data Classification -Scaneinstellungen für Ihre Repositories
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -85,9 +85,9 @@ image:screenshot_compliance_repo_scan_all.png["Ein Screenshot, der zeigt, wie Si
 
 Sie können die wichtigsten Nur-Mapping-Scans priorisieren oder Scans zuordnen und klassifizieren, um sicherzustellen, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
 
-Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt.  Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben.  Mehrere Scans können priorisiert werden.  Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
+Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt. Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben. Mehrere Scans können priorisiert werden. Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
 
-Die Priorität wird einmalig gewährt.  Automatische erneute Scans der Zuordnungsdaten erfolgen in der Standardreihenfolge.
+Die Priorität wird einmalig gewährt. Automatische erneute Scans der Kartendaten erfolgen in der Standardreihenfolge.
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
@@ -117,7 +117,7 @@ image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, w
 
 == Scannen nach einem Repository anhalten und fortsetzen
 
-Sie können das Scannen eines Repositorys „anhalten“, wenn Sie das Scannen bestimmter Inhalte vorübergehend beenden möchten.  Das Anhalten des Scans bedeutet, dass Data Classification in Zukunft keine Scans mehr nach Änderungen oder Ergänzungen am Repository durchführt, alle aktuellen Ergebnisse jedoch weiterhin im System angezeigt werden.  Durch das Anhalten des Scanvorgangs werden die Kosten für die gescannten Daten nicht aufgehoben, da die Daten weiterhin vorhanden sind.
+Sie können das Scannen eines Repositorys „anhalten“, wenn Sie das Scannen bestimmter Inhalte vorübergehend beenden möchten.  Das Anhalten des Scans bedeutet, dass Data Classification keine zukünftigen Scans nach Änderungen oder Ergänzungen am Repository durchführt, aber alle aktuellen Ergebnisse weiterhin im System angezeigt werden.  Durch das Anhalten des Scanvorgangs werden die Kosten für die gescannten Daten nicht aufgehoben, da die Daten weiterhin vorhanden sind.
 
 Sie können den Scanvorgang jederzeit „fortsetzen“.
 

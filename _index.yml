@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Dokumentation zur NetApp -Datenklassifizierung
+  title: Dokumentation zur NetApp Data Classification
   summary: Mit NetApp Data Classification können Sie Daten in der gesamten Hybrid-Multicloud
     Ihres Unternehmens scannen und klassifizieren.  Die Datenklassifizierung nutzt
     KI-gesteuerte Verarbeitung natürlicher Sprache (NLP) zur kontextbezogenen Datenanalyse
@@ -36,7 +36,7 @@ indexpage:
       url: task-getting-started-compliance.html
     - title: Datenbankschemata scannen
       url: task-scanning-databases.html
-    - title: Dateifreigaben (CIFS, NFS) scannen
+    - title: Dateifreigaben scannen (CIFS, NFS)
       url: task-scanning-file-shares.html
     - title: Scannen Sie lokale ONTAP -Volumes
       url: task-getting-started-compliance.html
@@ -59,9 +59,9 @@ indexpage:
       url: task-generating-compliance-reports.html
   - title: Blogs und Community
     links:
-    - title: NetApp Konsole
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp Datenservices
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp Community
       url: https://community.netapp.com/

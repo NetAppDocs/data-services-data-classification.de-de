@@ -28,7 +28,7 @@ Die erforderlichen Schritte hängen davon ab, ob Sie die Datenklassifizierung in
 image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallieren von Data Classification."]
 
 . Geben Sie im Dialogfeld „uninstall“ ein, um mit der Trennung der Data Classification-Instanz vom Konsolenagent fortzufahren.  Wählen Sie zur Bestätigung **Deinstallieren**.
-. Geben Sie im Dialogfeld „Klassifizierung deinstallieren“ *uninstall* ein, um zu bestätigen, dass Sie die Datenklassifizierungsinstanz vom Konsolenagenten trennen möchten, und wählen Sie dann *Deinstallieren* aus.
+. Geben Sie im Dialogfeld „Klassifizierung deinstallieren“ *deinstallieren* ein, um zu bestätigen, dass Sie die Datenklassifizierungsinstanz vom Konsolenagenten trennen möchten, und wählen Sie dann *Deinstallieren* aus.
 . Um den Deinstallationsvorgang abzuschließen, gehen Sie zur Konsole Ihres Cloud-Anbieters und löschen Sie die Data Classification-Instanz.  Die Instanz trägt den Namen _CloudCompliance_ und ist mit einem generierten Hash (UUID) verknüpft.  Beispiel: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
 
 

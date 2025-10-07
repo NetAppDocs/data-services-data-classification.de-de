@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, data sense, classification, scan shares 
 summary: Bekannte Einschränkungen kennzeichnen Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
 ---
-= Bekannte Einschränkungen bei der NetApp Datenklassifizierung
+= Bekannte Einschränkungen bei der NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ Bekannte Einschränkungen kennzeichnen Funktionen, die in dieser Version nicht u
 
 
 
-== Deaktivierte Optionen für die NetApp Datenklassifizierung
+== Deaktivierte Optionen für die NetApp Data Classification
 
 Mit der Version vom Dezember 2023 (Version 1.26.6) wurden die folgenden Optionen entfernt:
 

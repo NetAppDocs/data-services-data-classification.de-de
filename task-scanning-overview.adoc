@@ -26,7 +26,7 @@ Sie können Scans auf Volume-Ebene oder auf Datenbankschemaebene aktivieren und 
 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
 
-* **Nur-Mapping-Scans** bieten nur einen allgemeinen Überblick über Ihre Daten und werden für ausgewählte Datenquellen durchgeführt.  Scans, die nur eine Zuordnung vornehmen, benötigen weniger Zeit als Scans, die eine Zuordnung und Klassifizierung vornehmen, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten anzuzeigen.  Möglicherweise möchten Sie dies zunächst tun, um Forschungsbereiche zu identifizieren und dann einen Map & Classify-Scan für diese Bereiche durchführen.
+* **Nur-Mapping-Scans** bieten nur einen allgemeinen Überblick über Ihre Daten und werden für ausgewählte Datenquellen durchgeführt.  Scans, die nur eine Zuordnung vornehmen, benötigen weniger Zeit als Scans, die eine Zuordnung und Klassifizierung vornehmen, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten anzuzeigen.  Möglicherweise möchten Sie dies zunächst tun, um Forschungsbereiche zu identifizieren und dann einen Map & Classify-Scan für diese Bereiche durchzuführen.
 * **Map & Classify-Scans** ermöglichen ein gründliches Scannen Ihrer Daten.
 
 
@@ -72,7 +72,7 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 
 | Möglichkeit, Metadaten aus Dateien anzuzeigen** | Nein | Ja 
 |===
-{Asterisk} Die Datenklassifizierung setzt keine Begrenzung für die Datenmenge, die gescannt werden kann. Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] . + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an. Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+{Asterisk} Die Datenklassifizierung setzt keine Begrenzung für die Datenmenge, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
 
 {asterisk}{asterisk} Die folgenden Metadaten werden während Mapping-Scans aus Dateien extrahiert:
 

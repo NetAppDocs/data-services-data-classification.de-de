@@ -6,15 +6,15 @@
 
 === Version 1.47
 
-.BlueXP classification heißt jetzt NetApp Datenklassifizierung
-Die BlueXP classification wurde in NetApp Data Classification umbenannt.  Neben der Umbenennung wurde auch die Benutzeroberfläche verbessert.
+.BlueXP classification heißt jetzt NetApp Data Classification
+Die BlueXP classification wurde in NetApp Data Classification umbenannt. Neben der Umbenennung wurde auch die Benutzeroberfläche verbessert.
 
 .BlueXP heißt jetzt NetApp Console
 BlueXP wurde umbenannt und neu gestaltet, um seine Rolle bei der Verwaltung Ihrer Dateninfrastruktur besser widerzuspiegeln.
 
 Die NetApp Console ermöglicht eine zentrale Verwaltung von Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene und liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Verwaltung.
 
-Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/console-relnotes/index.html["Versionshinweise zur NetApp Konsole"] .
+Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/console-relnotes/index.html["Versionshinweise zur NetApp Console"] .
 
 .Verbesserte Untersuchungserfahrung
 Finden und verstehen Sie Ihre Daten schneller mit neuen durchsuchbaren Filtern, Ergebniszählungen pro Wert, Echtzeit-Einblicken, die die wichtigsten Ergebnisse zusammenfassen, und einer aktualisierten Ergebnistabelle mit anpassbaren Spalten und einem ausziehbaren Detailbereich.
@@ -22,10 +22,10 @@ Finden und verstehen Sie Ihre Daten schneller mit neuen durchsuchbaren Filtern, 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Daten untersuchen"] .
 
 .Neue Governance- und Compliance-Dashboards
-Gewinnen Sie schneller wichtige Erkenntnisse mit intuitiven Widgets, klareren Grafiken und verbesserter Ladeleistung.  Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Überprüfen Sie die Governance-Informationen zu Ihren Daten"] Undlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Zeigen Sie Compliance-Informationen zu Ihren Daten an"] .
+Gewinnen Sie schneller wichtige Erkenntnisse mit intuitiven Widgets, klareren Grafiken und verbesserter Ladeleistung. Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Überprüfen Sie die Governance-Informationen zu Ihren Daten"] Undlink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Zeigen Sie Compliance-Informationen zu Ihren Daten an"] .
 
 .Richtlinien für gespeicherte Abfragen (Vorschau)
-Mithilfe der Datenklassifizierung können Sie jetzt die Governance mit bedingten Aktionen automatisieren.  Sie können Aufbewahrungsregeln mit automatischer Löschung erstellen und regelmäßige E-Mail-Benachrichtigungen einrichten. Alles wird über eine aktualisierte Seite mit gespeicherten Abfragen verwaltet.
+Mithilfe der Datenklassifizierung können Sie jetzt die Governance mit bedingten Aktionen automatisieren. Sie können Aufbewahrungsregeln mit automatischer Löschung erstellen und regelmäßige E-Mail-Benachrichtigungen einrichten. Alles wird über eine aktualisierte Seite mit gespeicherten Abfragen verwaltet.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Erstellen von Richtlinien"] .
 
@@ -35,4 +35,4 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Daten untersuchen"] .
 
 .Unterstützung für Google Cloud NetApp Volumes
-Die Datenklassifizierung unterstützt jetzt das Scannen auf Google Cloud NetApp Volumes.  Fügen Sie Google Cloud NetApp Volumes einfach über die NetApp -Konsole hinzu, um Daten nahtlos zu scannen und zu klassifizieren.
+Die Datenklassifizierung unterstützt jetzt das Scannen auf Google Cloud NetApp Volumes. Fügen Sie Google Cloud NetApp Volumes einfach über die NetApp Console hinzu, um Daten nahtlos zu scannen und zu klassifizieren.

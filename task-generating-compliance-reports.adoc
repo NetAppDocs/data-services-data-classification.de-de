@@ -4,7 +4,7 @@ permalink: task-generating-compliance-reports.html
 keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
 summary: NetApp Data Classification bietet Berichte, mit denen Sie den Status des Datenschutzprogramms Ihres Unternehmens besser verstehen können. 
 ---
-= Compliance-Berichte zur NetApp Datenklassifizierung anzeigen
+= Compliance-Berichte zur NetApp Data Classification anzeigen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: NetApp Data Classification bietet Berichte, mit denen Sie den Status de
 [role="lead"]
 NetApp Data Classification bietet Berichte, mit denen Sie den Status des Datenschutzprogramms Ihres Unternehmens besser verstehen können.
 
-Standardmäßig zeigen die Dashboards zur Datenklassifizierung Compliance- und Governance-Daten für alle Systeme, Datenbanken und Datenquellen an.  Wenn Sie Berichte anzeigen möchten, die nur Daten für einige der Systeme enthalten, können Sie diese filtern, um nur diese anzuzeigen.
+Standardmäßig zeigen die Dashboards zur Datenklassifizierung Compliance- und Governance-Daten für alle Systeme, Datenbanken und Datenquellen an.  Wenn Sie Berichte anzeigen möchten, die nur Daten für einige der Systeme enthalten, können Sie filtern, um nur diese anzuzeigen.
 
 [NOTE]
 ====
@@ -146,7 +146,7 @@ Mithilfe des Berichts zum Payment Card Industry Data Security Standard (PCI DSS)
 
 Der Bericht enthält die folgenden Informationen:
 
-* Übersicht: Wie viele Dateien enthalten Kreditkarteninformationen und in welchen Systemen.
+* Übersicht: In wie vielen Dateien sind Kreditkarteninformationen enthalten und in welchen Systemen.
 * Verschlüsselung: Der Prozentsatz der Dateien mit Kreditkarteninformationen, die sich auf verschlüsselten oder unverschlüsselten Systemen befinden.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
 * Ransomware-Schutz: Der Prozentsatz der Dateien mit Kreditkarteninformationen, die sich auf Systemen befinden, auf denen der Ransomware-Schutz aktiviert ist oder nicht.  Diese Informationen gelten speziell für Cloud Volumes ONTAP.
 * Aufbewahrung: Der Zeitraum, in dem die Dateien zuletzt geändert wurden.  Dies ist hilfreich, da Sie Kreditkarteninformationen nicht länger aufbewahren sollten, als Sie für die Verarbeitung benötigen.
@@ -178,7 +178,7 @@ Der Bericht enthält die folgenden Informationen:
 
 * Compliance-Status: Ein Schweregrad und die Verteilung der Daten, unabhängig davon, ob es sich um nicht vertrauliche, persönliche oder vertrauliche persönliche Daten handelt.
 * Bewertungsübersicht: Eine Aufschlüsselung der gefundenen Arten personenbezogener Daten sowie der Datenkategorien.
-* Betroffene Personen in dieser Bewertung: Die Anzahl der Personen nach Standort, für die nationale Kennungen gefunden wurden.
+* Betroffene Personen dieser Bewertung: Die Anzahl der Personen nach Standort, für die nationale Kennungen gefunden wurden.
 
 
 *Bericht zur Datenschutzrisikobewertung erstellen*

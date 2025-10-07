@@ -4,7 +4,7 @@ permalink: reference-instance-types.html
 keywords: BlueXP classification, installation, deployment, instance, virtual machine, cpu, ram, memory, disk, capacity 
 summary: Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Beim Bereitstellen der Datenklassifizierung in der Cloud wird empfohlen, für die volle Funktionalität ein System mit den Merkmalen „groß“ zu verwenden. 
 ---
-= Unterstützte NetApp Data Classification-Instanztypen
+= Unterstützte NetApp Data Classification Instanztypen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, d
 
 
 [role="lead"]
-Die NetApp Data Classification-Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, empfehlen wir Ihnen, für die volle Funktionalität ein System mit der Eigenschaft „groß“ zu verwenden.
+Die NetApp Data Classification -Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, empfehlen wir Ihnen, für die volle Funktionalität ein System mit der Eigenschaft „groß“ zu verwenden.
 
 Sie können die Datenklassifizierung auf einem System mit weniger CPUs und weniger RAM bereitstellen, bei der Verwendung dieser weniger leistungsstarken Systeme gibt es jedoch einige Einschränkungen. link:concept-classification.html["Erfahren Sie mehr über diese Einschränkungen"^] .
 

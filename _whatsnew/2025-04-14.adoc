@@ -9,9 +9,9 @@
 Diese BlueXP classification Klassifizierungsversion umfasst:
 
 .Massenscannen für Arbeitsumgebungen
-Die BlueXP classification unterstützt Massenvorgänge für Arbeitsumgebungen.  Sie können Mapping-Scans aktivieren, Map & Classify-Scans aktivieren, Scans deaktivieren oder eine benutzerdefinierte Konfiguration über Volumes in der Arbeitsumgebung hinweg erstellen.  Wenn Sie eine Auswahl für ein einzelnes Volume treffen, wird die Massenauswahl überschrieben.  Um einen Massenvorgang durchzuführen, navigieren Sie zur Seite **Konfiguration** und treffen Sie Ihre Auswahl.
+Die BlueXP classification unterstützt Massenvorgänge für Arbeitsumgebungen. Sie können Mapping-Scans aktivieren, Map & Classify-Scans aktivieren, Scans deaktivieren oder eine benutzerdefinierte Konfiguration über Volumes in der Arbeitsumgebung hinweg erstellen. Wenn Sie eine Auswahl für ein einzelnes Volume treffen, wird die Massenauswahl überschrieben. Um einen Massenvorgang durchzuführen, navigieren Sie zur Seite **Konfiguration** und treffen Sie Ihre Auswahl.
 
 .Untersuchungsbericht lokal herunterladen
-Die BlueXP classification unterstützt die Möglichkeit, Datenuntersuchungsberichte lokal herunterzuladen und im Browser anzuzeigen.  Wenn Sie die lokale Option wählen, ist die Datenuntersuchung nur im CSV-Format verfügbar und zeigt nur die ersten 10.000 Datenzeilen an.
+Die BlueXP classification unterstützt die Möglichkeit, Datenuntersuchungsberichte lokal herunterzuladen und im Browser anzuzeigen. Wenn Sie die lokale Option wählen, ist die Datenuntersuchung nur im CSV-Format verfügbar und zeigt nur die ersten 10.000 Datenzeilen an.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#create-the-data-investigation-report["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten mit der BlueXP classification"] .

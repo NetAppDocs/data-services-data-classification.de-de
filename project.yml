@@ -12,7 +12,7 @@ settings:
   langs: de-de,us-en,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: NetApp Datenklassifizierungsdokumente
+  - title: NetApp Data Classification
     url: "/index.html"
   - title: Versionshinweise
     entries:
@@ -79,7 +79,7 @@ sidebar:
     entries:
     - title: Verzeichnisse vom Scannen ausschließen
       url: "/task-exclude-scan-paths.html"
-    - title: Definieren Sie vorhandene Gruppen-IDs als „offen für die Organisation“
+    - title: Definieren Sie vorhandene Gruppen-IDs als „offen für die Organisation“.
       url: "/task-add-group-id-as-open.html"
     - title: Datenquellen aus der Datenklassifizierung entfernen
       url: "/task-managing-compliance.html"

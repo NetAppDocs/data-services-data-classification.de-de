@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-collected-metadata.html 
 keywords: compliance, metadata, permissions, time stamps, privacy, last access time 
-summary: Bei der Datenklassifizierung werden bei der Durchführung von Klassifizierungsscans der Daten aus Ihren Datenquellen und Systemen bestimmte Metadaten erfasst.  Die Datenklassifizierung kann auf die meisten Metadaten zugreifen, die wir zur Klassifizierung Ihrer Daten benötigen. Es gibt jedoch einige Quellen, bei denen wir nicht auf die benötigten Daten zugreifen können. 
+summary: Bei der Datenklassifizierung werden bestimmte Metadaten erfasst, wenn Klassifizierungsscans für die Daten aus Ihren Datenquellen und Systemen durchgeführt werden.  Die Datenklassifizierung kann auf die meisten Metadaten zugreifen, die wir zur Klassifizierung Ihrer Daten benötigen. Es gibt jedoch einige Quellen, bei denen wir nicht auf die benötigten Daten zugreifen können. 
 ---
-= Aus Datenquellen in der NetApp Datenklassifizierung erfasste Metadaten
+= Aus Datenquellen in der NetApp Data Classification erfasste Metadaten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -46,7 +46,7 @@ NetApp Data Classification sammelt bestimmte Metadaten, wenn Klassifizierungssca
 
 == Zeitstempel des letzten Zugriffs
 
-Wenn die Datenklassifizierung Daten aus Dateifreigaben extrahiert, betrachtet das Betriebssystem dies als Zugriff auf die Daten und ändert die „letzte Zugriffszeit“ entsprechend.  Nach dem Scannen versucht die Datenklassifizierung, die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen.  Wenn die Datenklassifizierung keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, kann das System die letzte Zugriffszeit nicht auf den ursprünglichen Zeitstempel zurücksetzen.  Mit SnapLock konfigurierte ONTAP Volumes verfügen über schreibgeschützte Berechtigungen und können die letzte Zugriffszeit auch nicht auf den ursprünglichen Zeitstempel zurücksetzen.
+Wenn die Datenklassifizierung Daten aus Dateifreigaben extrahiert, betrachtet das Betriebssystem dies als Zugriff auf die Daten und ändert die „letzte Zugriffszeit“ entsprechend.  Nach dem Scannen versucht die Datenklassifizierung, die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen.  Wenn die Datenklassifizierung keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, kann das System die letzte Zugriffszeit nicht auf den ursprünglichen Zeitstempel zurücksetzen.  Mit SnapLock konfigurierte ONTAP Volumes verfügen über schreibgeschützte Berechtigungen und können den letzten Zugriffszeitpunkt auch nicht auf den ursprünglichen Zeitstempel zurücksetzen.
 
 Wenn Data Classification nicht über diese Berechtigungen verfügt, scannt das System diese Dateien in Ihren Volumes standardmäßig nicht, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen jedoch egal ist, ob die letzte Zugriffszeit in Ihren Dateien auf die ursprüngliche Zeit zurückgesetzt wird, können Sie unten auf der Konfigurationsseite den Schalter *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* auswählen, damit die Datenklassifizierung die Volumes unabhängig von den Berechtigungen scannt.
 

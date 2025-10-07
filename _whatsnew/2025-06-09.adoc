@@ -9,7 +9,7 @@
 Diese BlueXP classification Klassifizierungsversion umfasst:
 
 .Verbesserte Aktualisierungszeiten für das Governance-Dashboard
-Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wurden verbessert.  Die folgende Tabelle zeigt die Aktualisierungshäufigkeit für jede Komponente.
+Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wurden verbessert. Die folgende Tabelle zeigt die Aktualisierungshäufigkeit für jede Komponente.
 
 [cols="1,1"]
 |===
@@ -57,4 +57,4 @@ Sie können den Zeitpunkt der letzten Aktualisierung anzeigen und die Komponente
 Es wurden Verbesserungen vorgenommen, um die Leistung, den Speicherverbrauch und die Sicherheit der BlueXP Klassifizierung zu verbessern.
 
 .Fehlerbehebungen
-Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu verbessern.  Die BlueXP classification verwendet jetzt Elasticsearch, um die Genauigkeit der Dateianzahlberichterstattung während der Scans zu verbessern.
+Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu verbessern. Die BlueXP classification verwendet jetzt Elasticsearch, um die Genauigkeit der Dateianzahlberichterstattung während der Scans zu verbessern.

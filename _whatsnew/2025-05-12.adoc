@@ -9,17 +9,17 @@
 Diese Version der Datenklassifizierung umfasst:
 
 .Priorisieren Sie Klassifizierungsscans
-Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden.  Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt.  Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.
+Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt. Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"] .
 
 .Unterstützung für kanadische Datenkategorien personenbezogener Daten (PII)
-Datenklassifizierungsscans identifizieren kanadische PII-Datenkategorien.  Zu diesen Kategorien gehören Bankdaten, Passnummern, Sozialversicherungsnummern, Führerscheinnummern und Krankenversicherungskartennummern für alle kanadischen Provinzen und Territorien.
+Datenklassifizierungsscans identifizieren kanadische PII-Datenkategorien. Zu diesen Kategorien gehören Bankdaten, Passnummern, Sozialversicherungsnummern, Führerscheinnummern und Krankenversicherungskartennummern für alle kanadischen Provinzen und Territorien.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Kategorien personenbezogener Daten"] .
 
 .Benutzerdefinierte Klassifizierung (Vorschau)
-Die Datenklassifizierung unterstützt benutzerdefinierte Klassifizierungen für Map & Classify-Scans.  Mit benutzerdefinierten Klassifizierungen können Sie Datenklassifizierungsscans anpassen, um mithilfe regulärer Ausdrücke unternehmensspezifische Daten zu erfassen.  Diese Funktion befindet sich derzeit in der Vorschau.
+Die Datenklassifizierung unterstützt benutzerdefinierte Klassifizierungen für Map & Classify-Scans. Mit benutzerdefinierten Klassifizierungen können Sie Datenklassifizierungsscans anpassen, um mithilfe regulärer Ausdrücke unternehmensspezifische Daten zu erfassen. Diese Funktion befindet sich derzeit in der Vorschau.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Benutzerdefinierte Klassifizierungen hinzufügen"] .
 
@@ -31,7 +31,7 @@ Die Datenklassifizierung unterstützt das Senden von Klassifizierungsereignissen
 
 .Sicherheitsupdates
 * Das Keras-Paket wurde aktualisiert, um Schwachstellen (BDSA-2025-0107 und BDSA-2025-1984) zu beheben.
-* Die Konfiguration der Docker-Container wurde aktualisiert.  Der Container hat keinen Zugriff mehr auf die Netzwerkschnittstellen des Hosts, um rohe Netzwerkpakete zu erstellen.  Durch die Reduzierung unnötiger Zugriffe mindert das Update potenzielle Sicherheitsrisiken.
+* Die Konfiguration der Docker-Container wurde aktualisiert. Der Container hat keinen Zugriff mehr auf die Netzwerkschnittstellen des Hosts, um rohe Netzwerkpakete zu erstellen. Durch die Reduzierung unnötiger Zugriffe mindert das Update potenzielle Sicherheitsrisiken.
 
 
 .Leistungsverbesserungen

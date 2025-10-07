@@ -29,7 +29,7 @@ Das Governance-Dashboard bietet Informationen, mit denen Sie die Effizienz steig
 image:screenshot_compliance_governance_dashboard.png["Ein Screenshot des Data Classification Governance-Dashboards."]
 
 .Schritte
-. Wählen Sie im Menü der NetApp Konsole *Governance > Klassifizierung* aus.
+. Wählen Sie im NetApp Console *Governance > Klassifizierung* aus.
 . Wählen Sie *Governance* aus.
 +
 Das Governance-Dashboard wird angezeigt.
@@ -44,7 +44,7 @@ Die Komponente „Einsparmöglichkeiten“ zeigt Daten an, die Sie löschen oder
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Governance“ aus.
-. Wählen Sie in jeder Kachel „Einsparmöglichkeiten“ des Governance-Dashboards „Speicher optimieren“ aus, um die gefilterten Ergebnisse auf der Untersuchungsseite anzuzeigen.  Um herauszufinden, welche Daten Sie löschen oder auf günstigeren Speicher verschieben sollten, untersuchen Sie die _Sparmöglichkeiten_.
+. Wählen Sie in jeder Kachel „Einsparmöglichkeiten“ des Governance-Dashboards *Speicher optimieren* aus, um die gefilterten Ergebnisse auf der Untersuchungsseite anzuzeigen.  Um herauszufinden, welche Daten Sie löschen oder auf günstigeren Speicher verschieben sollten, untersuchen Sie die _Sparmöglichkeiten_.
 +
 ** *Veraltete Daten* – Daten, die zuletzt vor über 3 Jahren geändert wurden.
 ** *Doppelte Dateien* – Dateien, die an anderen Speicherorten in den von Ihnen gescannten Datenquellen dupliziert sind. link:task-investigate-data.html["Sehen Sie, welche Arten von doppelten Dateien angezeigt werden"] .
@@ -108,7 +108,7 @@ Der Bericht enthält die folgenden Informationen:
 | Nutzungskapazität | Für alle Systeme: Listet die Anzahl der Dateien und die verwendete Kapazität für jedes System auf.  Für Einzelsysteme: Listet die Dateien auf, die die meiste Kapazität beanspruchen. 
 
 
-| Zeitalter der Daten | Bietet drei Diagramme und Grafiken zum Zeitpunkt der Erstellung, letzten Änderung oder des letzten Zugriffs auf Dateien.  Listet die Anzahl der Dateien und ihre verwendete Kapazität basierend auf bestimmten Datumsbereichen auf. 
+| Zeitalter der Daten | Bietet drei Diagramme und Grafiken zum Zeitpunkt der Erstellung, der letzten Änderung oder des letzten Zugriffs auf Dateien.  Listet die Anzahl der Dateien und ihre verwendete Kapazität basierend auf bestimmten Datumsbereichen auf. 
 
 
 | Datengröße | Listet die Anzahl der Dateien auf, die in Ihren Systemen innerhalb bestimmter Größenbereiche vorhanden sind. 

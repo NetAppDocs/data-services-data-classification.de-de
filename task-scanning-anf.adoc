@@ -14,13 +14,13 @@ summary: Führen Sie einige Schritte aus, um mit der Datenklassifizierung für A
 
 
 [role="lead"]
-Führen Sie einige Schritte aus, um mit der NetApp -Datenklassifizierung für Azure NetApp Files zu beginnen.
+Führen Sie einige Schritte aus, um mit der NetApp Data Classification für Azure NetApp Files zu beginnen.
 
 
 
 == Ermitteln Sie das Azure NetApp Files -System, das Sie scannen möchten.
 
-Wenn das Azure NetApp Files -System, das Sie scannen möchten, nicht bereits in der NetApp Konsole als System vorhanden ist,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["fügen Sie es auf der Seite „Systeme“ hinzu"^] .
+Wenn das Azure NetApp Files -System, das Sie scannen möchten, nicht bereits in der NetApp Console als System vorhanden ist,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["fügen Sie es auf der Seite „Systeme“ hinzu"^] .
 
 
 

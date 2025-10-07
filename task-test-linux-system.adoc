@@ -37,7 +37,7 @@ Sie führen die folgenden Aufgaben aus.
 
 Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  Sie können das Skript „Voraussetzungen“ jedoch ohne einen Konsolenagenten ausführen.
 
-Du kannst https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud. Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+Du kannst https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.  Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
 
 Informationen zum Erstellen eines Konsolenagenten in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 
@@ -203,7 +203,7 @@ Sie müssen sicherstellen, dass alle erforderlichen Ports für die Kommunikation
 | Verbindungstyp | Häfen | Beschreibung 
 
 
-| Konsolenagent <> Datenklassifizierung | 8080 (TCP), 443 (TCP) und 80. 9000 | Die Firewall- oder Routing-Regeln für den Konsolen-Agenten müssen eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Data Classification-Instanz zulassen.  Stellen Sie sicher, dass Port 8080 geöffnet ist, damit Sie den Installationsfortschritt in der Konsole sehen können.  Wenn auf dem Linux-Host eine Firewall verwendet wird, wird Port 9000 für interne Prozesse innerhalb eines Ubuntu-Servers benötigt. 
+| Konsolenagent <> Datenklassifizierung | 8080 (TCP), 443 (TCP) und 80. 9000 | Die Firewall- oder Routing-Regeln für den Konsolen-Agenten müssen eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Datenklassifizierungsinstanz zulassen.  Stellen Sie sicher, dass Port 8080 geöffnet ist, damit Sie den Installationsfortschritt in der Konsole sehen können.  Wenn auf dem Linux-Host eine Firewall verwendet wird, wird Port 9000 für interne Prozesse innerhalb eines Ubuntu-Servers benötigt. 
 
 
 | Konsolenagent <> ONTAP -Cluster (NAS) | 443 (TCP)  a| 
@@ -220,7 +220,7 @@ https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["Sehen Sie sich dieses Video an
 
 .Bevor Sie beginnen
 * Überprüfen Sie, ob Ihr Linux-System die<<Überprüfen der Hostanforderungen,Hostanforderungen>> .
-* Stellen Sie sicher, dass auf dem System die beiden erforderlichen Softwarepakete (Docker Engine oder Podman und Python 3) installiert sind.
+* Stellen Sie sicher, dass auf dem System die beiden erforderlichen Softwarepakete installiert sind (Docker Engine oder Podman und Python 3).
 * Stellen Sie sicher, dass Sie über Root-Rechte auf dem Linux-System verfügen.
 
 
@@ -253,7 +253,7 @@ Fügen Sie die Option „--darksite“ nur hinzu, wenn Sie das Skript auf einem 
 ** Geben Sie *Y* ein, wenn Sie einen installierten Konsolenagenten haben.  Geben Sie dann die IP-Adresse oder den Hostnamen des Konsolenagenten ein, damit das Testskript diese Konnektivität testen kann.
 
 
-. Das Skript führt eine Reihe von Tests auf dem System aus und zeigt im Verlauf die Ergebnisse an.  Wenn es fertig ist, schreibt es ein Protokoll der Sitzung in eine Datei namens `prerequisites-test-<timestamp>.log` im Verzeichnis `/opt/netapp/install_logs` .
+. Das Skript führt verschiedene Tests auf dem System aus und zeigt im Verlauf die Ergebnisse an.  Wenn es fertig ist, schreibt es ein Protokoll der Sitzung in eine Datei namens `prerequisites-test-<timestamp>.log` im Verzeichnis `/opt/netapp/install_logs` .
 
 
 .Ergebnis

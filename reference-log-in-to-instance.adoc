@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-log-in-to-instance.html 
 keywords: log in, data sense, classification 
-summary: Manchmal müssen Sie sich möglicherweise beim NetApp Data Classification-System anmelden, um auf Protokolldateien zuzugreifen oder Konfigurationsdateien zu bearbeiten. 
+summary: Manchmal müssen Sie sich möglicherweise beim NetApp Data Classification System anmelden, um auf Protokolldateien zuzugreifen oder Konfigurationsdateien zu bearbeiten. 
 ---
-= Melden Sie sich beim NetApp Data Classification-System an
+= Melden Sie sich beim NetApp Data Classification System an
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Manchmal müssen Sie sich möglicherweise beim NetApp Data Classificati
 
 
 [role="lead"]
-Sie müssen sich beim NetApp Data Classification-System anmelden, damit Sie auf Protokolldateien zugreifen oder Konfigurationsdateien bearbeiten können.
+Sie müssen sich beim NetApp Data Classification System anmelden, damit Sie auf Protokolldateien zugreifen oder Konfigurationsdateien bearbeiten können.
 
 Wenn Data Classification auf einem Linux-Computer bei Ihnen vor Ort oder auf einem Linux-Computer installiert ist, den Sie in der Cloud bereitgestellt haben, können Sie direkt auf die Konfigurationsdatei und das Skript zugreifen.
 

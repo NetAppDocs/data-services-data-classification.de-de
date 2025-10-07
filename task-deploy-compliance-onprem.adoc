@@ -16,7 +16,7 @@ summary: Um NetApp Data Classification auf einem Linux-Host in Ihrem Netzwerk od
 [role="lead"]
 Um NetApp Data Classification auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud mit Internetzugang bereitzustellen, müssen Sie den Linux-Host manuell in Ihrem Netzwerk oder in der Cloud bereitstellen.
 
-Die lokale Installation ist eine gute Option, wenn Sie lokale ONTAP -Systeme lieber mit einer Datenklassifizierungsinstanz scannen möchten, die sich ebenfalls vor Ort befindet.  Dies ist keine Voraussetzung.  Die Software funktioniert unabhängig von der gewählten Installationsmethode immer gleich.
+Die lokale Installation ist eine gute Option, wenn Sie lokale ONTAP -Systeme lieber mit einer Datenklassifizierungsinstanz scannen möchten, die sich ebenfalls vor Ort befindet.  Dies ist keine Voraussetzung.  Die Software funktioniert unabhängig von der gewählten Installationsmethode gleich.
 
 Das Installationsskript für die Datenklassifizierung prüft zunächst, ob das System und die Umgebung die erforderlichen Voraussetzungen erfüllen.  Wenn alle Voraussetzungen erfüllt sind, beginnt die Installation.  Wenn Sie die Voraussetzungen unabhängig von der Ausführung der Data Classification-Installation überprüfen möchten, können Sie ein separates Softwarepaket herunterladen, das nur die Voraussetzungen testet. link:task-test-linux-system.html["Erfahren Sie, wie Sie überprüfen können, ob Ihr Linux-Host für die Installation der Datenklassifizierung bereit ist."] .
 
@@ -39,7 +39,7 @@ Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach 
 Wenn Sie noch keinen Konsolenagenten haben, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
 
 [role="quick-margin-para"]
-Sie können auch einen Konsolenagenten bei Ihrem Cloud-Anbieter erstellen. Sehen https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+Sie können auch einen Konsolenagenten bei Ihrem Cloud-Anbieter erstellen.  Sehen https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Überprüfen der Voraussetzungen
 [role="quick-margin-para"]
@@ -56,7 +56,7 @@ Laden Sie die Cloud Data Classification-Software von der NetApp -Support-Site he
 
 == Erstellen eines Konsolenagenten
 
-Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich. In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
+Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
 
 Informationen zum Erstellen eines solchen in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 
@@ -70,9 +70,9 @@ Für Azure NetApp Files muss es in derselben Region bereitgestellt werden wie di
 * Beim Scannen von Daten in Cloud Volumes ONTAP in GCP verwenden Sie einen Konsolenagenten in GCP.
 
 
-On-Premise ONTAP -Systeme, NetApp Dateifreigaben und Datenbankkonten können mit jedem dieser Cloud-Konsolen-Agenten gescannt werden.
+Lokale ONTAP -Systeme, NetApp Dateifreigaben und Datenbankkonten können mit jedem dieser Cloud-Konsolen-Agenten gescannt werden.
 
-Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud. Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Stellen Sie den Konsolenagenten vor Ort bereit"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.  Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
 
 Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wenn Sie die Datenklassifizierung installieren.  Sie verfügen über diese Informationen, wenn Sie den Konsolenagenten in Ihren Räumlichkeiten installiert haben.  Wenn der Konsolenagent in der Cloud bereitgestellt wird, finden Sie diese Informationen in der Konsole: Wählen Sie das Hilfesymbol, dann *Support* und dann **Konsolenagent**.
 
@@ -238,7 +238,7 @@ Sie müssen sicherstellen, dass alle erforderlichen Ports für die Kommunikation
 | Verbindungstyp | Häfen | Beschreibung 
 
 
-| Konsolenagent <> Datenklassifizierung | 8080 (TCP), 443 (TCP) und 80. 9000 | Die Firewall- oder Routing-Regeln für den Konsolen-Agenten müssen eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Data Classification-Instanz zulassen.  Stellen Sie sicher, dass Port 8080 geöffnet ist, damit Sie den Installationsfortschritt in der Konsole sehen können.  Wenn auf dem Linux-Host eine Firewall verwendet wird, wird Port 9000 für interne Prozesse innerhalb eines Ubuntu-Servers benötigt. 
+| Konsolenagent <> Datenklassifizierung | 8080 (TCP), 443 (TCP) und 80. 9000 | Die Firewall- oder Routing-Regeln für den Konsolen-Agenten müssen eingehenden und ausgehenden Datenverkehr über Port 443 zur und von der Datenklassifizierungsinstanz zulassen.  Stellen Sie sicher, dass Port 8080 geöffnet ist, damit Sie den Installationsfortschritt in der Konsole sehen können.  Wenn auf dem Linux-Host eine Firewall verwendet wird, wird Port 9000 für interne Prozesse innerhalb eines Ubuntu-Servers benötigt. 
 
 
 | Konsolenagent <> ONTAP -Cluster (NAS) | 443 (TCP)  a| 
@@ -293,7 +293,7 @@ Sehen<<Vorbereiten des Linux-Hostsystems,Vorbereiten des Linux-Hostsystems>> Und
 Upgrades der Datenklassifizierungssoftware erfolgen automatisiert, solange die Instanz über eine Internetverbindung verfügt.
 
 
-NOTE: Data Classification kann derzeit keine S3-Buckets, Azure NetApp Files oder FSx für ONTAP scannen, wenn die Software vor Ort installiert ist. In diesen Fällen müssen Sie einen separaten Konsolenagenten und eine Instanz der Datenklassifizierung in der Cloud bereitstellen und https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["zwischen Anschlüssen wechseln"^] für Ihre verschiedenen Datenquellen.
+NOTE: Data Classification kann derzeit keine S3-Buckets, Azure NetApp Files oder FSx für ONTAP scannen, wenn die Software vor Ort installiert ist.  In diesen Fällen müssen Sie einen separaten Konsolenagenten und eine Instanz der Datenklassifizierung in der Cloud bereitstellen und https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["zwischen Anschlüssen wechseln"^] für Ihre verschiedenen Datenquellen.
 
 
 
@@ -307,14 +307,14 @@ Beachten Sie, dass bei der Installation von Data Classification alle Installatio
 
 .Bevor Sie beginnen
 * Überprüfen Sie, ob Ihr Linux-System die<<Vorbereiten des Linux-Hostsystems,Hostanforderungen>> .
-* Stellen Sie sicher, dass auf dem System die beiden erforderlichen Softwarepakete (Docker Engine oder Podman und Python 3) installiert sind.
+* Stellen Sie sicher, dass auf dem System die beiden erforderlichen Softwarepakete installiert sind (Docker Engine oder Podman und Python 3).
 * Stellen Sie sicher, dass Sie über Root-Rechte auf dem Linux-System verfügen.
 * Wenn Sie einen Proxy für den Internetzugang verwenden:
 +
 ** Sie benötigen die Proxyserver-Informationen (IP-Adresse oder Hostname, Verbindungsport, Verbindungsschema: https oder http, Benutzername und Passwort).
 ** Wenn der Proxy eine TLS-Abfangfunktion ausführt, müssen Sie den Pfad auf dem Data Classification Linux-System kennen, in dem die TLS-CA-Zertifikate gespeichert sind.
 ** Der Proxy muss intransparent sein.  Die Datenklassifizierung unterstützt derzeit keine transparenten Proxys.
-** Der Benutzer muss ein lokaler Benutzer sein. Domänenbenutzer werden nicht unterstützt.
+** Der Benutzer muss ein lokaler Benutzer sein.  Domänenbenutzer werden nicht unterstützt.
 
 
 * Überprüfen Sie, ob Ihre Offline-Umgebung die erforderlichen<<Ausgehenden Internetzugriff von der Datenklassifizierung aus aktivieren,Berechtigungen und Konnektivität>> .
@@ -334,7 +334,7 @@ tar -xzf DATASENSE-INSTALLER-V1.25.0.tar.gz
 +
 image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
 
-. Je nachdem, ob Sie Data Classification auf einer Instanz installieren, die Sie in der Cloud vorbereitet haben, oder auf einer Instanz, die Sie vor Ort vorbereitet haben, wählen Sie die entsprechende Schaltfläche *Bereitstellen* aus, um die Installation von Data Classification zu starten.
+. Je nachdem, ob Sie Data Classification auf einer Instanz installieren, die Sie in der Cloud vorbereitet haben, oder auf einer Instanz, die Sie bei Ihnen vor Ort vorbereitet haben, wählen Sie die entsprechende Schaltfläche *Bereitstellen* aus, um die Installation von Data Classification zu starten.
 +
 image:screenshot_cloud_compliance_deploy_onprem.png["Ein Screenshot der Auswahl der Schaltfläche zum Bereitstellen der Datenklassifizierung auf einem Computer in der Cloud oder bei Ihnen vor Ort."]
 

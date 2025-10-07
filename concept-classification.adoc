@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-classification.html 
 keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
-summary: Data Classification ist ein Data-Governance-Dienst für die NetApp Konsole, der Ihre unternehmenseigenen Datenquellen vor Ort und in der Cloud scannt, um Daten zuzuordnen und zu klassifizieren und private Informationen zu identifizieren. Dies kann dazu beitragen, Ihr Sicherheits- und Compliance-Risiko zu verringern, die Speicherkosten zu senken und Ihre Datenmigrationsprojekte zu unterstützen. 
+summary: Data Classification ist ein Data-Governance-Dienst für die NetApp Console , der Ihre unternehmenseigenen Datenquellen vor Ort und in der Cloud scannt, um Daten zuzuordnen und zu klassifizieren und private Informationen zu identifizieren. Dies kann dazu beitragen, Ihr Sicherheits- und Compliance-Risiko zu verringern, die Speicherkosten zu senken und Ihre Datenmigrationsprojekte zu unterstützen. 
 ---
-= Erfahren Sie mehr über die NetApp Datenklassifizierung
+= Erfahren Sie mehr über die NetApp Data Classification
 :allow-uri-read: 
 :no-hardbreaks: 
 :nofooter: 
@@ -14,22 +14,22 @@ summary: Data Classification ist ein Data-Governance-Dienst für die NetApp Kons
 
 
 [role="lead"]
-NetApp Data Classification ist ein Data-Governance-Service für die NetApp Konsole, der Ihre unternehmenseigenen Datenquellen vor Ort und in der Cloud scannt, um Daten zuzuordnen und zu klassifizieren und private Informationen zu identifizieren. Dies kann dazu beitragen, Ihr Sicherheits- und Compliance-Risiko zu verringern, die Speicherkosten zu senken und Ihre Datenmigrationsprojekte zu unterstützen.
+NetApp Data Classification ist ein Data-Governance-Service für die NetApp Console , der Ihre unternehmenseigenen Datenquellen vor Ort und in der Cloud scannt, um Daten zuzuordnen und zu klassifizieren und private Informationen zu identifizieren. Dies kann dazu beitragen, Ihr Sicherheits- und Compliance-Risiko zu verringern, die Speicherkosten zu senken und Ihre Datenmigrationsprojekte zu unterstützen.
 
 
-IMPORTANT: Ab Version 1.31 ist die Datenklassifizierung als Kernfunktion in der NetApp Konsole verfügbar.  Es fallen keine zusätzlichen Kosten an.  Es ist keine Klassifizierungslizenz oder kein Abonnement erforderlich.  + Wenn Sie die Vorgängerversion 1.30 oder früher verwendet haben, ist diese Version verfügbar, bis Ihr Abonnement abläuft.
+IMPORTANT: Ab Version 1.31 ist die Datenklassifizierung als Kernfunktion in der NetApp Console verfügbar.  Es fallen keine zusätzlichen Kosten an.  Es ist keine Klassifizierungslizenz oder kein Abonnement erforderlich.  + Wenn Sie die Vorgängerversion 1.30 oder früher verwendet haben, ist diese Version verfügbar, bis Ihr Abonnement abläuft.
 
 
 
-== NetApp Konsole
+== NetApp Console
 
-Auf die Datenklassifizierung kann über die NetApp Konsole zugegriffen werden.
+Auf die Datenklassifizierung kann über die NetApp Console zugegriffen werden.
 
-Die NetApp Konsole ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
+Die NetApp Console ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
 
-Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp -Konsole zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
+Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp Console zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
 
-Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Konsole"^] .
+Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -48,7 +48,7 @@ Die Datenklassifizierung bietet mehrere Tools, die Sie bei Ihren Compliance-Bem�
 
 
 .Stärkung der Sicherheit
-Durch die Datenklassifizierung können Daten identifiziert werden, bei denen das Risiko besteht, dass für kriminelle Zwecke zugegriffen wird.  Sie können die Datenklassifizierung für Folgendes verwenden:
+Durch die Datenklassifizierung können Daten identifiziert werden, bei denen das Risiko besteht, dass für kriminelle Zwecke auf sie zugegriffen wird.  Sie können die Datenklassifizierung für Folgendes verwenden:
 
 * Identifizieren Sie alle Dateien und Verzeichnisse (Freigaben und Ordner) mit offenen Berechtigungen, die Ihrer gesamten Organisation oder der Öffentlichkeit zugänglich sind.
 * Identifizieren Sie vertrauliche Daten, die sich außerhalb des ursprünglichen, dedizierten Speicherorts befinden.
@@ -108,7 +108,7 @@ Die Nutzung der Datenklassifizierung ist kostenlos.  Es ist keine Klassifizierun
 === Infrastrukturkosten
 
 * Für die Installation der Datenklassifizierung in der Cloud ist die Bereitstellung einer Cloud-Instanz erforderlich, wofür vom Cloud-Anbieter, bei dem die Instanz bereitgestellt wird, Gebühren anfallen. Sehen <<Die Datenklassifizierungsinstanz,der Instanztyp, der für jeden Cloud-Anbieter bereitgestellt wird>> .  Wenn Sie Data Classification auf einem lokalen System installieren, fallen keine Kosten an.
-* Für die Datenklassifizierung müssen Sie einen Konsolenagenten bereitgestellt haben. In vielen Fällen verfügen Sie aufgrund anderer Speicher und Dienste, die Sie in der Konsole verwenden, bereits über einen Konsolenagenten. Für die Konsolen-Agentinstanz fallen Gebühren seitens des Cloud-Anbieters an, bei dem sie bereitgestellt wird. Siehe die https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Typ der Instanz, die für jeden Cloud-Anbieter bereitgestellt wird"^] . Wenn Sie den Konsolenagenten auf einem lokalen System installieren, fallen keine Kosten an.
+* Für die Datenklassifizierung müssen Sie einen Konsolenagenten bereitgestellt haben.  In vielen Fällen verfügen Sie aufgrund anderer Speicher und Dienste, die Sie in der Konsole verwenden, bereits über einen Konsolenagenten.  Für die Konsolen-Agentinstanz fallen Gebühren seitens des Cloud-Anbieters an, bei dem sie bereitgestellt wird. Siehe die https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Typ der Instanz, die für jeden Cloud-Anbieter bereitgestellt wird"^] .  Wenn Sie den Konsolenagenten auf einem lokalen System installieren, fallen keine Kosten an.
 
 
 
@@ -175,7 +175,7 @@ Im Großen und Ganzen funktioniert das Scannen der Datenklassifizierung folgende
 
 Nachdem Sie die Datenklassifizierung aktiviert und die zu scannenden Repositories ausgewählt haben (das sind die Volumes, Datenbankschemata oder andere Benutzerdaten), beginnt das Programm sofort mit dem Scannen der Daten, um persönliche und vertrauliche Daten zu identifizieren.  In den meisten Fällen sollten Sie sich auf das Scannen von Live-Produktionsdaten konzentrieren, anstatt auf Backups, Spiegel oder DR-Sites.  Anschließend ordnet die Datenklassifizierung Ihre Organisationsdaten zu, kategorisiert jede Datei und identifiziert und extrahiert Entitäten und vordefinierte Muster in den Daten.  Das Ergebnis des Scans ist ein Index mit persönlichen Informationen, sensiblen persönlichen Informationen, Datenkategorien und Dateitypen.
 
-Data Classification stellt wie jeder andere Client eine Verbindung zu den Daten her, indem NFS- und CIFS-Volumes gemountet werden.  Auf NFS-Volumes wird automatisch schreibgeschützt zugegriffen, während Sie zum Scannen von CIFS-Volumes Active Directory-Anmeldeinformationen angeben müssen.
+Data Classification stellt wie jeder andere Client eine Verbindung zu den Daten her, indem es NFS- und CIFS-Volumes einbindet.  Auf NFS-Volumes wird automatisch schreibgeschützt zugegriffen, während Sie zum Scannen von CIFS-Volumes Active Directory-Anmeldeinformationen angeben müssen.
 
 image:diagram_cloud_compliance_scan.png["Ein Diagramm, das eine Konsoleninstanz und eine Datenklassifizierungsinstanz zeigt, die bei Ihrem Cloud-Anbieter ausgeführt werden.  Die Datenklassifizierungsinstanz stellt eine Verbindung zu NFS- und CIFS-Volumes und -Datenbanken her, um sie zu scannen."]
 
@@ -184,7 +184,7 @@ Nach dem ersten Scan scannt die Datenklassifizierung Ihre Daten kontinuierlich i
 Sie können Scans auf Volume- oder Datenbankschemaebene aktivieren und deaktivieren.
 
 
-NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann. Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Bereitstellen einer weiteren Datenklassifizierungsinstanz"] . + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an. Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
 
 
 
@@ -209,7 +209,7 @@ Die Datenklassifizierung sammelt, indiziert und ordnet die folgenden Daten Kateg
 * *Sensible personenbezogene Daten*: Besondere Arten sensibler personenbezogener Daten (SPII), wie Gesundheitsdaten, ethnische Herkunft oder politische Meinungen, wie in der Datenschutz-Grundverordnung (DSGVO) und anderen Datenschutzbestimmungen definiert. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Erfahren Sie mehr über sensible personenbezogene Daten"^] .
 * *Kategorien*: Die Datenklassifizierung nimmt die gescannten Daten und unterteilt sie in verschiedene Kategorien.  Kategorien sind Themen, die auf einer KI-Analyse des Inhalts und der Metadaten jeder Datei basieren. link:task-controlling-private-data.html#view-files-by-categories["Mehr über Kategorien erfahren"^] .
 * *Typen*: Die Datenklassifizierung nimmt die gescannten Daten und unterteilt sie nach Dateityp. link:task-controlling-private-data.html#view-files-by-file-types["Erfahren Sie mehr über Typen"^] .
-* *Namensentitätserkennung*: Bei der Datenklassifizierung wird KI verwendet, um die natürlichen Namen von Personen aus Dokumenten zu extrahieren. link:task-generating-compliance-reports.html["Erfahren Sie mehr über die Beantwortung von Auskunftsersuchen betroffener Personen"^] .
+* *Namensentitätserkennung*: Die Datenklassifizierung verwendet KI, um die natürlichen Namen von Personen aus Dokumenten zu extrahieren. link:task-generating-compliance-reports.html["Erfahren Sie mehr über die Beantwortung von Auskunftsersuchen betroffener Personen"^] .
 
 
 

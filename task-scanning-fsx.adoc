@@ -57,7 +57,7 @@ Upgrades der Datenklassifizierungssoftware erfolgen automatisiert, solange die I
 
 Sie können die Datenklassifizierung für FSx für ONTAP -Volumes aktivieren.
 
-. In der NetApp Konsole: *Governance > Klassifizierung*.
+. In der NetApp Console: *Governance > Klassifizierung*.
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
 +
 image:screenshot_fsx_scanning_activate.png["Ein Screenshot der Registerkarte „Konfiguration“ unmittelbar nach der Bereitstellung der Datenklassifizierungsinstanz."]
@@ -173,7 +173,7 @@ image:screenshot_compliance_dp_cifs_volumes.png["Ein Screenshot der beiden Optio
 
 
 .Ergebnis
-Nach der Aktivierung erstellt die Datenklassifizierung eine NFS-Freigabe aus jedem DP-Volume, das zum Scannen aktiviert wurde.  Die Freigabe-Exportrichtlinien erlauben nur den Zugriff von der Datenklassifizierungsinstanz.
+Nach der Aktivierung erstellt die Datenklassifizierung eine NFS-Freigabe aus jedem DP-Volume, das zum Scannen aktiviert wurde.  Die Freigabeexportrichtlinien erlauben nur den Zugriff von der Datenklassifizierungsinstanz.
 
 Wenn Sie beim ersten Aktivieren des Zugriffs auf DP-Volumes keine CIFS-Datensicherungsvolumes hatten und später welche hinzufügen, wird oben auf der Konfigurationsseite die Schaltfläche *Zugriff auf CIFS DP aktivieren* angezeigt.  Wählen Sie diese Schaltfläche und fügen Sie CIFS-Anmeldeinformationen hinzu, um den Zugriff auf diese CIFS-DP-Volumes zu ermöglichen.
 

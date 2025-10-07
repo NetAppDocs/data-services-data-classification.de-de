@@ -9,7 +9,7 @@
 Diese BlueXP classification Klassifizierungsversion enthält die folgenden Updates.
 
 .Unterstützung für RHEL 9.5
-Diese Version bietet zusätzlich zu den zuvor unterstützten Versionen Unterstützung für Red Hat Enterprise Linux v9.5.  Dies gilt für jede manuelle Vor-Ort-Installation der BlueXP classification, einschließlich Dark-Site-Bereitstellungen.
+Diese Version bietet zusätzlich zu den zuvor unterstützten Versionen Unterstützung für Red Hat Enterprise Linux v9.5. Dies gilt für jede manuelle Vor-Ort-Installation der BlueXP classification, einschließlich Dark-Site-Bereitstellungen.
 
 Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und die BlueXP classification 1.30 oder höher: Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 und 9.5.
 
@@ -24,7 +24,7 @@ Es gibt zwei Arten von Scans:
 
 Sie können von der Verwendung von Nur-Mapping-Scans profitieren, um Ihre Daten schnell zu scannen und die Datenquellen zu identifizieren, die weiterer Recherche bedürfen. Später können Sie dann Map- und Klassifizierungsscans nur für diese erforderlichen Datenquellen oder Datenträger aktivieren.
 
-Die Priorität wird nur reinen Mapping-Scans zugewiesen, nicht Mapping- und Klassifizierungs-Scans.
+Die Priorität wird nur reinen Mapping-Scans zugewiesen, nicht Mapping- und Klassifizierungsscans.
 
 Die Priorität ist standardmäßig auf 1 eingestellt und Sie können sie auf eine beliebige Zahl zwischen 1 und 10 ändern.  Je niedriger die Zahl, desto höher die Priorität.  Wenn Sie keine Priorität festlegen, wird dem Scan die Priorität 5 zugewiesen.
 

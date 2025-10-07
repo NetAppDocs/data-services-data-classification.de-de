@@ -4,7 +4,7 @@ permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories 
 summary: Wenn Sie möchten, dass NetApp Data Classification das Scannen von Daten ausschließt, die sich in bestimmten Datenquellenverzeichnissen befinden, können Sie diese Verzeichnisnamen zu einer Konfigurationsdatei hinzufügen.  Nachdem Sie diese Änderung angewendet haben, schließt die Datenklassifizierungs-Engine das Scannen von Daten in diesen Verzeichnissen aus. 
 ---
-= Schließen Sie bestimmte Verzeichnisse von NetApp Data Classification-Scans aus
+= Schließen Sie bestimmte Verzeichnisse von NetApp Data Classification -Scans aus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

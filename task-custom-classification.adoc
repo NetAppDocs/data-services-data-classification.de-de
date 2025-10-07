@@ -19,7 +19,7 @@ Mit NetApp Data Classification können Sie eine benutzerdefinierte Suche nach ve
 
 == Erstellen einer benutzerdefinierten Klassifizierung
 
-Die benutzerdefinierte Klassifizierung ist nur für Map- und Classify-Scans verfügbar, nicht für reine Mapping-Scans.  Diese Funktion befindet sich derzeit in der Vorschau.
+Die benutzerdefinierte Klassifizierung ist nur für Map- und Classify-Scans verfügbar, nicht für reine Mapping-Scans. Diese Funktion befindet sich derzeit in der Vorschau.
 
 .Schritte
 . Wählen Sie die Registerkarte **Benutzerdefinierte Klassifizierung**.
@@ -27,7 +27,7 @@ Die benutzerdefinierte Klassifizierung ist nur für Map- und Classify-Scans verf
 . Fügen Sie einen Klassifikatornamen und eine Beschreibung für den neuen Klassifikator hinzu.
 . Wählen Sie, ob Sie den Klassifikator als *Persönliche Kennung* oder *Kategorie* hinzufügen möchten.
 +
-image:screenshot-custom-classifier-name.png["Screenshot des hinzugefügten Klassifikators"]
+image:screenshot-custom-classifier-name.png["Screenshot des Klassifikators „Hinzufügen“"]
 
 . Wählen Sie *Weiter*.
 . Um die Anpassung als regulären Ausdruck hinzuzufügen, wählen Sie **Benutzerdefinierter regulärer Ausdruck** und dann **Weiter**.

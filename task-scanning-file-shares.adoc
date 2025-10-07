@@ -63,7 +63,7 @@ Sie können Dateifreigaben einzeln hinzufügen oder eine zeilengetrennte Liste d
 image:screen-cl-config-shares-add.png["Ein Screenshot des Modals zum Hinzufügen von Freigaben, der Optionen zum Auswählen von Protokollen und Freigaben zeigt"]
 
 +
-.. Wenn Sie CIFS-Freigaben mit NTLM-Authentifizierung hinzufügen, geben Sie die Active Directory-Anmeldeinformationen ein, um auf die CIFS-Volumes zuzugreifen.  Obwohl schreibgeschützte Anmeldeinformationen unterstützt werden, wird empfohlen, den Vollzugriff mit Administratoranmeldeinformationen zu gewähren. Wählen Sie **Speichern**.
+.. Wenn Sie CIFS-Freigaben mit NTLM-Authentifizierung hinzufügen, geben Sie die Active Directory-Anmeldeinformationen ein, um auf die CIFS-Volumes zuzugreifen.  Obwohl schreibgeschützte Anmeldeinformationen unterstützt werden, wird empfohlen, den Vollzugriff mit Administratoranmeldeinformationen zu gewähren.  Wählen Sie **Speichern**.
 
 
 . Fügen Sie die Dateifreigaben hinzu, die Sie scannen möchten (eine Dateifreigabe pro Zeile).  Wählen Sie dann **Weiter**.
@@ -73,12 +73,12 @@ Wenn im Dialogfeld Freigaben aufgelistet sind, die nicht hinzugefügt werden kon
 
 . Konfigurieren Sie das Scannen auf dem Volume:
 +
-** Um reine Mapping-Scans auf Dateifreigaben zu aktivieren, wählen Sie *Map*.
+** Um Nur-Mapping-Scans auf Dateifreigaben zu aktivieren, wählen Sie *Map*.
 ** Um vollständige Scans von Dateifreigaben zu aktivieren, wählen Sie *Zuordnen und klassifizieren*.
 ** Um das Scannen von Dateifreigaben zu deaktivieren, wählen Sie *Aus*.
 +
 
-NOTE: Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  + Wenn Sie *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* auf *Ein* schalten, setzt der Scan die letzte Zugriffszeit zurück und scannt alle Dateien unabhängig von den Berechtigungen.  + Weitere Informationen zum Zeitstempel des letzten Zugriffs finden Sie unterlink:link:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] .
+NOTE: Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  + Wenn Sie *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* auf *Ein* stellen, setzt der Scan die letzte Zugriffszeit zurück und scannt alle Dateien unabhängig von den Berechtigungen.  + Weitere Informationen zum Zeitstempel des letzten Zugriffs finden Sie unterlink:link:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] .
 
 
 

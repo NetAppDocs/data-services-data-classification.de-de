@@ -6,11 +6,11 @@
 
 === Version 1.39
 
-Diese BlueXP classification Klassifizierungsversion aktualisiert den Exportprozess für den Datenuntersuchungsbericht.  Dieses Export-Update ist nützlich, um zusätzliche Analysen Ihrer Daten durchzuführen, zusätzliche Visualisierungen der Daten zu erstellen oder die Ergebnisse Ihrer Datenuntersuchung mit anderen zu teilen.
+Diese BlueXP classification Klassifizierungsversion aktualisiert den Exportprozess für den Datenuntersuchungsbericht. Dieses Export-Update ist nützlich, um zusätzliche Analysen Ihrer Daten durchzuführen, zusätzliche Visualisierungen der Daten zu erstellen oder die Ergebnisse Ihrer Datenuntersuchung mit anderen zu teilen.
 
-Bisher war der Export des Data Investigation-Berichts auf 10.000 Zeilen beschränkt.  Mit dieser Version wurde die Beschränkung aufgehoben, sodass Sie alle Ihre Daten exportieren können.  Diese Änderung ermöglicht Ihnen den Export von mehr Daten aus Ihren Datenuntersuchungsberichten und bietet Ihnen so mehr Flexibilität bei Ihrer Datenanalyse.
+Bisher war der Export des Data Investigation-Berichts auf 10.000 Zeilen beschränkt. Mit dieser Version wurde die Beschränkung aufgehoben, sodass Sie alle Ihre Daten exportieren können. Diese Änderung ermöglicht Ihnen den Export von mehr Daten aus Ihren Datenuntersuchungsberichten und bietet Ihnen so mehr Flexibilität bei Ihrer Datenanalyse.
 
-Sie können die Arbeitsumgebung, Volumes, Zielordner und entweder das JSON- oder CSV-Format auswählen.  Der exportierte Dateiname enthält einen Zeitstempel, der Ihnen hilft, den Zeitpunkt des Datenexports zu identifizieren.
+Sie können die Arbeitsumgebung, Volumes, Zielordner und entweder das JSON- oder CSV-Format auswählen. Der exportierte Dateiname enthält einen Zeitstempel, der Ihnen hilft, den Zeitpunkt des Datenexports zu identifizieren.
 
 Zu den unterstützten Arbeitsumgebungen gehören:
 

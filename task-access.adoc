@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-access.html 
 keywords: log in, sign in 
-summary: Beginnen Sie mit der NetApp Datenklassifizierung, indem Sie in der NetApp Konsole auf den Dienst zugreifen. 
+summary: Beginnen Sie mit der NetApp Data Classification , indem Sie in der NetApp Console auf den Dienst zugreifen. 
 ---
-= Zugriff auf die NetApp -Datenklassifizierung
+= Zugriff auf die NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,9 +12,9 @@ summary: Beginnen Sie mit der NetApp Datenklassifizierung, indem Sie in der NetA
 
 
 [role="lead"]
-Sie können über die NetApp Konsole auf die NetApp -Datenklassifizierung zugreifen.
+Sie können über die NetApp Console auf die NetApp Data Classification zugreifen.
 
-Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für die NetApp -Konsole anmelden. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung bei der Konsole"^] .
+Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für die NetApp Console anmelden. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung bei der Konsole"^] .
 
 Für bestimmte Aufgaben sind bestimmte Konsolenbenutzerrollen erforderlich. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
@@ -26,7 +26,7 @@ Für bestimmte Aufgaben sind bestimmte Konsolenbenutzerrollen erforderlich. link
 .Schritte
 . Navigieren Sie in einem Webbrowser zulink:https://console.netapp.com/["Konsole"^] .
 . Melden Sie sich bei der Konsole an.
-. Wählen Sie auf der Hauptseite der NetApp Konsole *Governance* > *Datenklassifizierung*.
+. Wählen Sie auf der Hauptseite der NetApp Console*Governance* > *Datenklassifizierung*.
 . Wenn Sie zum ersten Mal auf die Datenklassifizierung zugreifen, wird die Zielseite angezeigt.
 +
 Wählen Sie *Klassifizierung vor Ort oder in der Cloud bereitstellen*, um mit der Bereitstellung Ihrer Klassifizierungsinstanz zu beginnen.  Weitere Informationen finden Sie unterlink:task-deploy-cloud-compliance.html["Welche Datenklassifizierungsbereitstellung sollten Sie verwenden?"]

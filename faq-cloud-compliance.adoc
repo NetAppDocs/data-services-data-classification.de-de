@@ -4,7 +4,7 @@ permalink: faq-cloud-compliance.html
 keywords: faq, frequently asked questions, questions, cloud compliance, data sense 
 summary: Diese FAQ können hilfreich sein, wenn Sie nur schnell eine Antwort auf eine Frage suchen. 
 ---
-= Häufig gestellte Fragen zur NetApp Datenklassifizierung
+= Häufig gestellte Fragen zur NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ Diese FAQ können hilfreich sein, wenn Sie nur schnell eine Antwort auf eine Fra
 
 
 
-== NetApp Datenklassifizierung
+== NetApp Data Classification
 
 Die folgenden Fragen vermitteln ein allgemeines Verständnis der Datenklassifizierung.
 
@@ -26,7 +26,7 @@ Die folgenden Fragen vermitteln ein allgemeines Verständnis der Datenklassifizi
 
 === Wie funktioniert die Datenklassifizierung?
 
-Die Datenklassifizierung stellt neben Ihrem NetApp Konsolensystem und Ihren Speichersystemen eine weitere KI-Ebene bereit.  Anschließend werden die Daten auf Volumes, Buckets, Datenbanken und anderen Speicherkonten gescannt und die gefundenen Datenerkenntnisse indiziert.  Die Datenklassifizierung nutzt sowohl künstliche Intelligenz als auch natürliche Sprachverarbeitung, im Gegensatz zu alternativen Lösungen, die üblicherweise auf regulären Ausdrücken und Mustervergleich basieren.
+Die Datenklassifizierung stellt neben Ihrem NetApp Console und Ihren Speichersystemen eine weitere KI-Ebene bereit.  Anschließend werden die Daten auf Volumes, Buckets, Datenbanken und anderen Speicherkonten gescannt und die gefundenen Datenerkenntnisse indiziert.  Die Datenklassifizierung nutzt sowohl künstliche Intelligenz als auch natürliche Sprachverarbeitung, im Gegensatz zu alternativen Lösungen, die üblicherweise auf regulären Ausdrücken und Mustervergleich basieren.
 
 Bei der Datenklassifizierung wird KI verwendet, um ein kontextuelles Verständnis der Daten für eine genaue Erkennung und Klassifizierung zu ermöglichen.  Es wird von KI gesteuert, da es für moderne Datentypen und -skalen konzipiert ist.  Es versteht auch den Datenkontext, um eine starke, genaue Entdeckung und Klassifizierung zu ermöglichen.
 
@@ -42,7 +42,7 @@ Ja, Data Classification verfügt über eine REST-API für die unterstützten Fun
 
 === Ist die Datenklassifizierung über die Cloud-Marktplätze verfügbar?
 
-Die Datenklassifizierung ist Teil der Kernfunktionen der NetApp Konsole, daher müssen Sie für diesen Dienst nicht die Marktplätze verwenden.
+Die Datenklassifizierung ist Teil der Kernfunktionen der NetApp Console , daher müssen Sie für diesen Dienst nicht die Marktplätze verwenden.
 
 
 
@@ -64,7 +64,7 @@ Datenscans haben nur einen vernachlässigbaren Einfluss auf Ihre Speichersysteme
 
 
 
-=== Schwankt die Scanleistung?
+=== Variiert die Scanleistung?
 
 Die Scanleistung kann je nach Netzwerkbandbreite und durchschnittlicher Dateigröße in Ihrer Umgebung variieren.  Es kann auch von den Größenmerkmalen des Hostsystems abhängen (entweder in der Cloud oder vor Ort). Siehe link:concept-classification.html["Die Datenklassifizierungsinstanz"] Und link:task-deploy-overview.html["Bereitstellen der Datenklassifizierung"] für weitere Informationen.
 
@@ -173,15 +173,15 @@ Nach einem vollständigen Scan stehen Ihnen zahlreiche zusätzliche Datenklassif
 
 Die Datenklassifizierung erfasst Metadaten wie Dateiname, Berechtigungen, Erstellungszeit, letzter Zugriff und letzte Änderung.  Dies umfasst alle Metadaten, die auf der Seite „Datenuntersuchungsdetails“ und in den Datenuntersuchungsberichten angezeigt werden.
 
-Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII). Einzelheiten zu privaten Daten finden Sie unterxref:reference-private-data-categories.html[Kategorien privater Daten, die von der Datenklassifizierung gescannt werden] .
+Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII).  Einzelheiten zu privaten Daten finden Sie unterxref:reference-private-data-categories.html[Kategorien privater Daten, die von der Datenklassifizierung gescannt werden] .
 
 
 
 === Kann ich die Datenklassifizierungsinformationen auf bestimmte Benutzer beschränken?
 
-Ja, die Datenklassifizierung ist vollständig in die NetApp Konsole integriert.  Benutzer der NetApp -Konsole können nur Informationen zu den Systemen sehen, zu deren Anzeige sie gemäß ihren Berechtigungen berechtigt sind.
+Ja, die Datenklassifizierung ist vollständig in die NetApp Console integriert.  Benutzer der NetApp Console können nur Informationen zu den Systemen sehen, zu deren Anzeige sie gemäß ihren Berechtigungen berechtigt sind.
 
-Wenn Sie außerdem bestimmten Benutzern nur das Anzeigen der Scanergebnisse zur Datenklassifizierung gestatten möchten, ohne dass sie die Datenklassifizierungseinstellungen verwalten können, können Sie diesen Benutzern die Rolle „Klassifizierungsbetrachter“ (bei Verwendung der NetApp Konsole im Standardmodus) oder die Rolle „Compliance-Betrachter“ (bei Verwendung der NetApp Konsole im eingeschränkten Modus) zuweisen. link:concept-classification.html["Mehr erfahren"] .
+Wenn Sie außerdem bestimmten Benutzern nur das Anzeigen der Scanergebnisse zur Datenklassifizierung gestatten möchten, ohne dass sie die Datenklassifizierungseinstellungen verwalten können, können Sie diesen Benutzern die Rolle „Klassifizierungsbetrachter“ (bei Verwendung der NetApp Console im Standardmodus) oder die Rolle „Compliance-Betrachter“ (bei Verwendung der NetApp Console im eingeschränkten Modus) zuweisen. link:concept-classification.html["Mehr erfahren"] .
 
 
 
@@ -219,7 +219,7 @@ Die folgende Frage bezieht sich auf die Lizenzierung und die Kosten für die Nut
 
 === Wie viel kostet die Datenklassifizierung?
 
-Die Datenklassifizierung ist eine Kernfunktion der NetApp Konsole.  Es wird nichts berechnet.
+Die Datenklassifizierung ist eine Kernfunktion der NetApp Console .  Es wird nichts berechnet.
 
 
 
@@ -231,13 +231,13 @@ Die folgenden Fragen beziehen sich auf den Konsolenagenten.
 
 === Was ist der Konsolenagent?
 
-Der Konsolenagent ist eine Software, die auf einer Compute-Instanz entweder innerhalb Ihres Cloud-Kontos oder vor Ort ausgeführt wird und es der NetApp Konsole ermöglicht, Cloud-Ressourcen sicher zu verwalten. Sie müssen einen Konsolenagenten bereitstellen, um die Datenklassifizierung zu verwenden.
+Der Konsolenagent ist eine Software, die auf einer Compute-Instanz entweder innerhalb Ihres Cloud-Kontos oder vor Ort ausgeführt wird und es der NetApp Console ermöglicht, Cloud-Ressourcen sicher zu verwalten.  Sie müssen einen Konsolenagenten bereitstellen, um die Datenklassifizierung zu verwenden.
 
 
 
 === Wo muss der Konsolenagent installiert werden?
 
-Beim Scannen von Daten muss der NetApp Console-Agent an den folgenden Speicherorten installiert werden:
+Beim Scannen von Daten muss der NetApp Console -Agent an den folgenden Speicherorten installiert werden:
 
 * Für Cloud Volumes ONTAP in AWS oder Amazon FSx für ONTAP: Der Konsolenagent befindet sich in AWS.
 * Für Cloud Volumes ONTAP in Azure oder in Azure NetApp Files: Der Konsolenagent befindet sich in Azure.
@@ -271,7 +271,7 @@ Die folgenden Fragen beziehen sich auf die separate Instanz der Datenklassifizie
 
 === Welche Bereitstellungsmodelle unterstützt die Datenklassifizierung?
 
-Mit der NetApp Konsole kann der Benutzer Systeme praktisch überall scannen und Berichte dazu erstellen, einschließlich On-Premises-, Cloud- und Hybridumgebungen.  Die Datenklassifizierung wird normalerweise mithilfe eines SaaS-Modells bereitgestellt, bei dem der Dienst über die Konsolenschnittstelle aktiviert wird und keine Hardware- oder Softwareinstallation erfordert.  Auch in diesem Click-and-Run-Bereitstellungsmodus kann die Datenverwaltung unabhängig davon erfolgen, ob sich die Datenspeicher vor Ort oder in der öffentlichen Cloud befinden.
+Mit der NetApp Console kann der Benutzer Systeme praktisch überall scannen und Berichte dazu erstellen, einschließlich On-Premises-, Cloud- und Hybridumgebungen.  Die Datenklassifizierung wird normalerweise mithilfe eines SaaS-Modells bereitgestellt, bei dem der Dienst über die Konsolenschnittstelle aktiviert wird und keine Hardware- oder Softwareinstallation erfordert.  Auch in diesem Click-and-Run-Bereitstellungsmodus kann die Datenverwaltung unabhängig davon erfolgen, ob sich die Datenspeicher vor Ort oder in der öffentlichen Cloud befinden.
 
 
 
@@ -281,7 +281,7 @@ Wannlink:task-deploy-cloud-compliance.html["in der Cloud bereitgestellt"] :
 
 * In AWS läuft die Datenklassifizierung auf einer m6i.4xlarge-Instanz mit einer 500-GiB-GP2-Festplatte.  Sie können während der Bereitstellung einen kleineren Instanztyp auswählen.
 * In Azure wird die Datenklassifizierung auf einer Standard_D16s_v3-VM mit einer 500-GiB-Festplatte ausgeführt.
-* In GCP läuft die Datenklassifizierung auf einer n2-standard-16-VM mit einer persistenten 500-GiB-Standardfestplatte.
+* In GCP läuft die Datenklassifizierung auf einer n2-standard-16-VM mit einer persistenten Standardfestplatte mit 500 GiB.
 
 
 link:concept-classification.html["Erfahren Sie mehr über die Funktionsweise der Datenklassifizierung"] .

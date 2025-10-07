@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-getting-started-compliance.html 
 keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
-summary: Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Datenklassifizierung zu beginnen. 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Data Classification zu beginnen. 
 ---
 = Scannen Sie Cloud Volumes ONTAP und lokale ONTAP Volumes mit NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes
 
 
 [role="lead"]
-Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Datenklassifizierung zu beginnen.
+Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP und lokalen ONTAP Volumes mithilfe der NetApp Data Classification zu beginnen.
 
 
 
@@ -28,7 +28,7 @@ Stellen Sie vor dem Aktivieren der Datenklassifizierung sicher, dass Sie über e
 
 
 
-== Aktivieren Sie die Datenklassifizierungsprüfung in Ihren Systemen
+== Aktivieren Sie die Datenklassifizierungsüberprüfung in Ihren Systemen
 
 Sie können das Scannen der Datenklassifizierung auf Cloud Volumes ONTAP -Systemen bei jedem unterstützten Cloud-Anbieter und auf lokalen ONTAP Clustern aktivieren.
 
