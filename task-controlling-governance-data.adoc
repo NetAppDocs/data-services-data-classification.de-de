@@ -59,7 +59,7 @@ NOTE: Wenn eine Ihrer Datenquellen Daten-Tiering implementiert, können alte Dat
 
 == Erstellen des Data Discovery-Bewertungsberichts
 
-Der Bewertungsbericht zur Datenermittlung bietet eine umfassende Analyse der gescannten Umgebung, um Problembereiche und mögliche Abhilfemaßnahmen aufzuzeigen.  Die Ergebnisse basieren sowohl auf der Zuordnung als auch auf der Klassifizierung Ihrer Daten.  Das Ziel dieses Berichts besteht darin, das Bewusstsein für drei wichtige Aspekte Ihres Datensatzes zu schärfen:
+Der Bewertungsbericht zur Datenermittlung bietet eine umfassende Analyse der gescannten Umgebung, um Problembereiche und mögliche Abhilfemaßnahmen aufzuzeigen. Die Ergebnisse basieren sowohl auf der Zuordnung als auch auf der Klassifizierung Ihrer Daten. Das Ziel dieses Berichts besteht darin, das Bewusstsein für drei wichtige Aspekte Ihres Datensatzes zu schärfen:
 
 [cols="25,65"]
 |===

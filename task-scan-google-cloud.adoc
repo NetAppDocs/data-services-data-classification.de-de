@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-scanning-anf.html 
-keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
-summary: Führen Sie einige Schritte aus, um mit der Datenklassifizierung für Azure NetApp Files zu beginnen. 
+permalink: task-scan-google-cloud.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, google cloud, google cloud netapp volumes 
+summary: Scannen Sie Ihr Google Cloud NetApp Volumes -System, um Compliance- und Governance-Standards einzuhalten. 
 ---
-= Scannen von Azure NetApp Files Volumes mit NetApp Data Classification
+= Google Cloud NetApp Volumes mit NetApp Data Classification scannen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Führen Sie einige Schritte aus, um mit der Datenklassifizierung für A
 
 
 [role="lead"]
-Führen Sie einige Schritte aus, um mit der NetApp Data Classification für Azure NetApp Files zu beginnen.
+NetApp Data Classification unterstützt Google Cloud NetApp Volumes als System.  Erfahren Sie, wie Sie Ihr Google Cloud NetApp Volumes -System scannen.
 
 
 
-== Ermitteln Sie das Azure NetApp Files -System, das Sie scannen möchten.
+== Ermitteln Sie das Google Cloud NetApp Volumes -System, das Sie scannen möchten
 
-Wenn das Azure NetApp Files -System, das Sie scannen möchten, nicht bereits als System in der NetApp Console vorhanden ist,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["fügen Sie es auf der Seite „Systeme“ hinzu"^] .
+Wenn das Google Cloud NetApp Volumes -System, das Sie scannen möchten, nicht bereits als System in der NetApp Console vorhanden ist,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["fügen Sie es der Seite „Systeme“ hinzu"^] .
 
 
 
@@ -28,27 +28,24 @@ Wenn das Azure NetApp Files -System, das Sie scannen möchten, nicht bereits als
 
 link:task-deploy-cloud-compliance.html["Datenklassifizierung bereitstellen"^]wenn noch keine Instanz bereitgestellt ist.
 
-Die Datenklassifizierung muss beim Scannen von Azure NetApp Files Volumes in der Cloud bereitgestellt werden und zwar in derselben Region wie die Volumes, die Sie scannen möchten.
+Beim Scannen von Google Cloud NetApp Volumes muss die Datenklassifizierung in der Cloud bereitgestellt werden, und zwar in derselben Region wie die Volumes, die Sie scannen möchten.
 
-*Hinweis:* Die Bereitstellung der Datenklassifizierung an einem lokalen Standort wird beim Scannen von Azure NetApp Files -Volumes derzeit nicht unterstützt.
+*Hinweis:* Die Bereitstellung der Datenklassifizierung an einem lokalen Standort wird beim Scannen von Google Cloud NetApp Volumes derzeit nicht unterstützt.
 
 
 
 == Aktivieren Sie die Datenklassifizierung in Ihren Systemen
 
-Sie können die Datenklassifizierung auf Ihren Azure NetApp Files Volumes aktivieren.
+Sie können die Datenklassifizierung auf Ihrem Google Cloud NetApp Volumes -System aktivieren.
 
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-+
-image:screenshot_cloud_compliance_anf_scan_config.png["Ein Screenshot der Registerkarte „Konfiguration“ unmittelbar nach der Bereitstellung der Datenklassifizierungsinstanz."]
-
 . Wählen Sie aus, wie Sie die Volumes in jedem System scannen möchten. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Erfahren Sie mehr über Mapping- und Klassifizierungsscans"]:
 +
 ** Um alle Volumes zuzuordnen, wählen Sie *Alle Volumes zuordnen*.
 ** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Alle Volumes zuordnen und klassifizieren*.
-** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen oder zuordnen und klassifizieren möchten.
+** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen und/oder klassifizieren möchten.
 +
-Sehen<<Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes,Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes>> für Details.
+Sehen<<Aktivieren und Deaktivieren von Compliance-Scans auf Volumes,Aktivieren und Deaktivieren von Compliance-Scans auf Volumes>> für Details.
 
 
 
@@ -56,23 +53,23 @@ Sehen<<Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes,Aktivieren 
 
 
 .Ergebnis
-Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes. Die Ergebnisse sind im Compliance-Dashboard verfügbar, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat. Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen. Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen. Die Datenklassifizierung zeigt für jeden Scan einen Fortschrittsbalken an.  Sie können mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes. Die Ergebnisse sind im Compliance-Dashboard verfügbar, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat. Die dafür benötigte Zeit hängt von der Datenmenge ab: einige Minuten bis einige Stunden.  Sie können den Fortschritt des ersten Scans im Abschnitt **Systemkonfiguration** des Menüs **Konfiguration** verfolgen.  Die Datenklassifizierung zeigt für jeden Scan einen Fortschrittsbalken an. Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
 
 * Wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, scannt das System die Dateien in Ihren Volumes standardmäßig nicht, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus*.  Auf der resultierenden Seite können Sie eine Einstellung aktivieren, sodass die Datenklassifizierung die Volumes unabhängig von den Berechtigungen scannt.
-* Die Datenklassifizierung scannt nur eine Dateifreigabe unter einem Volume.  Wenn Ihre Volumes mehrere Freigaben enthalten, müssen Sie diese anderen Freigaben separat als Freigabegruppe scannen. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Erfahren Sie mehr über diese Einschränkung der Datenklassifizierung"^] .
+* Die Datenklassifizierung scannt nur eine Dateifreigabe unter einem Volume. Wenn Ihre Volumes mehrere Freigaben enthalten, müssen Sie diese anderen Freigaben separat als Freigabegruppe scannen. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Erfahren Sie mehr über diese Einschränkung der Datenklassifizierung"^].
 
 
 
 
 == Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
 
-Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Sie müssen Data Classification CIFS-Anmeldeinformationen bereitstellen, damit es auf CIFS-Volumes zugreifen kann.
+Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Für CIFS-Volumes müssen Sie die Datenklassifizierung mit CIFS-Anmeldeinformationen bereitstellen.
 
 
-NOTE: Bei Azure NetApp Files kann die Datenklassifizierung nur Volumes in derselben Region wie die Konsole scannen.
+NOTE: Bei Google Cloud NetApp Volumes kann die Datenklassifizierung nur Volumes in derselben Region wie die Konsole scannen.
 
 .Checklist
-* Stellen Sie sicher, dass zwischen der Data Classification-Instanz und jedem Netzwerk, das Volumes für Azure NetApp Files enthält, eine Netzwerkverbindung besteht.
+* Stellen Sie sicher, dass zwischen der Data Classification-Instanz und jedem Netzwerk, das Volumes für Google Cloud NetApp Volumes enthält, eine Netzwerkverbindung besteht.
 * Stellen Sie sicher, dass die folgenden Ports für die Data Classification-Instanz geöffnet sind:
 +
 ** Für NFS – Ports 111 und 2049.
@@ -87,7 +84,7 @@ NOTE: Bei Azure NetApp Files kann die Datenklassifizierung nur Volumes in dersel
 +
 .. Wenn Sie CIFS (SMB) verwenden, stellen Sie sicher, dass die Active Directory-Anmeldeinformationen korrekt sind.  Wählen Sie für jedes System *CIFS-Anmeldeinformationen bearbeiten* und geben Sie dann den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
 +
-Die Anmeldeinformationen können schreibgeschützt sein. Durch die Angabe von Administratoranmeldeinformationen wird sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind. Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
+Die Anmeldeinformationen können schreibgeschützt sein, durch die Angabe von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
 
 +
 Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
@@ -100,12 +97,12 @@ image:screenshot_cifs_status.gif["Ein Screenshot, der die Konfigurationsseite un
 
 
 
-. Wählen Sie auf der Konfigurationsseite *Details anzeigen* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen.  Korrigieren Sie gegebenenfalls alle Fehler, beispielsweise Probleme mit der Netzwerkverbindung.
+. Wählen Sie auf der Konfigurationsseite *Details anzeigen* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen und etwaige Fehler zu beheben.
 
 
 
 
-== Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes
+== Aktivieren und Deaktivieren von Compliance-Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
 

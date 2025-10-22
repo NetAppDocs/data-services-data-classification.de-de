@@ -60,7 +60,7 @@ Durch die Datenklassifizierung können Daten identifiziert werden, bei denen das
 Die Datenklassifizierung bietet Tools, die Ihnen bei der Reduzierung der Gesamtbetriebskosten (TCO) Ihres Speichers helfen können.  Sie können die Datenklassifizierung für Folgendes verwenden:
 
 * Steigern Sie die Speichereffizienz, indem Sie doppelte oder nicht geschäftsbezogene Daten identifizieren.
-* Sparen Sie Speicherkosten, indem Sie inaktive Daten identifizieren, die Sie in einen kostengünstigeren Objektspeicher verschieben können. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Erfahren Sie mehr über das Tiering von Cloud Volumes ONTAP -Systemen"^] . https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["Erfahren Sie mehr über das Tiering von On-Premises ONTAP -Systemen"^] .
+* Sparen Sie Speicherkosten, indem Sie inaktive Daten identifizieren, die Sie in einen kostengünstigeren Objektspeicher verschieben können. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Erfahren Sie mehr über das Tiering von Cloud Volumes ONTAP -Systemen"^] . https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["Erfahren Sie mehr über das Tiering von On-Premises ONTAP -Systemen"^] .
 
 
 
@@ -207,8 +207,9 @@ Die Datenklassifizierung sammelt, indiziert und ordnet die folgenden Daten Kateg
 * *Standardmetadaten* zu Dateien: Dateityp, Größe, Erstellungs- und Änderungsdatum usw.
 * *Personenbezogene Daten*: Persönlich identifizierbare Informationen (PII) wie E-Mail-Adressen, Identifikationsnummern oder Kreditkartennummern, die durch die Datenklassifizierung anhand bestimmter Wörter, Zeichenfolgen und Muster in den Dateien identifiziert werden. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Erfahren Sie mehr über personenbezogene Daten"^] .
 * *Sensible personenbezogene Daten*: Besondere Arten sensibler personenbezogener Daten (SPII), wie Gesundheitsdaten, ethnische Herkunft oder politische Meinungen, wie in der Datenschutz-Grundverordnung (DSGVO) und anderen Datenschutzbestimmungen definiert. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Erfahren Sie mehr über sensible personenbezogene Daten"^] .
-* *Kategorien*: Die Datenklassifizierung nimmt die gescannten Daten und unterteilt sie in verschiedene Kategorien.  Kategorien sind Themen, die auf einer KI-Analyse des Inhalts und der Metadaten jeder Datei basieren. link:task-controlling-private-data.html#view-files-by-categories["Mehr über Kategorien erfahren"^] .
-* *Typen*: Die Datenklassifizierung nimmt die gescannten Daten und unterteilt sie nach Dateityp. link:task-controlling-private-data.html#view-files-by-file-types["Erfahren Sie mehr über Typen"^] .
+* *Kategorien*: Die Datenklassifizierung nimmt die gescannten Daten und unterteilt sie in verschiedene Kategorien. Kategorien sind Themen, die auf einer KI-Analyse des Inhalts und der Metadaten jeder Datei basieren. link:task-controlling-governance-data.html["Mehr über Kategorien erfahren"^].
+
+
 * *Namensentitätserkennung*: Die Datenklassifizierung verwendet KI, um die natürlichen Namen von Personen aus Dokumenten zu extrahieren. link:task-generating-compliance-reports.html["Erfahren Sie mehr über die Beantwortung von Auskunftsersuchen betroffener Personen"^] .
 
 

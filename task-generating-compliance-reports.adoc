@@ -27,12 +27,12 @@ Standardmäßig zeigen die Dashboards zur Datenklassifizierung Compliance- und G
 ====
 Für die Datenklassifizierung stehen folgende Berichte zur Verfügung:
 
-* *Bericht zur Bewertung der Datenermittlung*: Bietet eine umfassende Analyse der gescannten Umgebung, um die Ergebnisse des Systems hervorzuheben und Problembereiche sowie mögliche Abhilfemaßnahmen aufzuzeigen.
-* *Datenzuordnungsbericht*: Bietet Informationen zur Größe und Anzahl der Dateien in Ihren Systemen.  Hierzu zählen Nutzungskapazität, Alter der Daten, Datengröße und Dateitypen.
-* *Bericht zur Anforderung des Zugriffs auf personenbezogene Daten*: Ermöglicht Ihnen, einen Bericht aller Dateien zu extrahieren, die Informationen zum spezifischen Namen oder zur persönlichen Kennung einer betroffenen Person enthalten.
-* *HIPAA-Bericht*: Hilft Ihnen, die Verteilung von Gesundheitsinformationen in Ihren Dateien zu identifizieren.
-* *PCI DSS-Bericht*: Hilft Ihnen, die Verteilung von Kreditkarteninformationen in Ihren Dateien zu identifizieren.
-* *Bericht zur Bewertung des Datenschutzrisikos*: Bietet Einblicke in den Datenschutz Ihrer Daten und eine Bewertung des Datenschutzrisikos.
+* *Bericht zur Bewertung der Datenermittlung*: Bietet eine umfassende Analyse der gescannten Umgebung, um die Ergebnisse des Systems hervorzuheben und Problembereiche sowie mögliche Abhilfemaßnahmen aufzuzeigen.  Dieser Bericht ist im Governance-Dashboard verfügbar.
+* *Vollständiger Übersichtsbericht zur Datenzuordnung*: Bietet Informationen zur Größe und Anzahl der Dateien in Ihren Systemen. Hierzu zählen Nutzungskapazität, Alter der Daten, Datengröße und Dateitypen.  Dieser Bericht ist im Governance-Dashboard verfügbar.
+* *Bericht zur Anforderung des Zugriffs auf personenbezogene Daten*: Ermöglicht Ihnen, einen Bericht aller Dateien zu extrahieren, die Informationen zum spezifischen Namen oder zur persönlichen Kennung einer betroffenen Person enthalten. Dieser Bericht ist im Compliance-Dashboard verfügbar.
+* *HIPAA-Bericht*: Hilft Ihnen, die Verteilung von Gesundheitsinformationen in Ihren Dateien zu identifizieren. Dieser Bericht ist im Compliance-Dashboard verfügbar.
+* *PCI DSS-Bericht*: Hilft Ihnen, die Verteilung von Kreditkarteninformationen in Ihren Dateien zu identifizieren. Dieser Bericht ist im Compliance-Dashboard verfügbar.
+* *Bericht zur Bewertung des Datenschutzrisikos*: Bietet Einblicke in den Datenschutz Ihrer Daten und eine Bewertung des Datenschutzrisikos.  Dieser Bericht ist im Compliance-Dashboard verfügbar.
 * *Berichte zu einem bestimmten Informationstyp*: Es sind Berichte verfügbar, die Details zu den identifizierten Dateien enthalten, die personenbezogene Daten und sensible personenbezogene Daten enthalten.  Sie können die Dateien auch nach Kategorie und Dateityp aufgeschlüsselt anzeigen.
 
 
@@ -79,24 +79,25 @@ NOTE: Bei der Suche nach den Namen der betroffenen Personen werden Englisch, Deu
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Compliance“ aus.
-
-
-. Wählen Sie auf der Compliance-Seite *Datensubjekte* aus.
-. Suchen Sie nach dem vollständigen Namen oder einer bekannten Kennung der betroffenen Person.
+. Suchen Sie auf der Compliance-Seite die Registerkarte **Datensubjekte**.
+. Geben Sie im Abschnitt *Betroffene Personen* einen Namen oder eine bekannte Kennung ein und wählen Sie dann **Suchen** aus.
+. Wenn die Suche abgeschlossen ist, wählen Sie **Herunterladen**, um auf die Antwort auf die Anfrage zur Datenzugriffsanfrage der betroffenen Person zuzugreifen.  Wählen Sie **Ergebnisse untersuchen** aus, um weitere Informationen auf der Seite „Datenuntersuchung“ anzuzeigen.image:screenshot-data-subject-john-doe.png["Screenshot der DSAR-Suche"]
+. Überprüfen Sie die Ergebnisse in der Datenklassifizierung oder laden Sie sie als Bericht herunter, indem Sie das Download-Symbol auswählen.
 +
-Hier ist ein Beispiel, das eine Suche nach dem Namen _john doe_ zeigt:
+.. Wenn Sie das Download-Symbol auswählen, konfigurieren Sie Ihre Download-Einstellungen:
++
+*** Wählen Sie das Filmformat: CSV oder JSON
+*** Geben Sie einen *Berichtsnamen* ein
+*** Wählen Sie das Exportziel: *System* oder Ihren *lokalen* Computer.
++
+Wenn Sie „System“ wählen, werden alle Daten heruntergeladen.  Sie müssen auch *System*, *Volume* und *Zielordnerpfad* auswählen.
 
 +
-image:screenshot_dsar_search.gif["Screenshot der Betroffenensuche."]
+Wenn Sie *Lokal* wählen, wird der Bericht auf die ersten 10.000 Zeilen unstrukturierter Daten, 5.000 Zeilen unstrukturierter Daten und 1.000 Zeilen strukturierter Daten beschränkt.
 
-. Wählen Sie eine der verfügbaren Optionen:
-+
-** *DSAR-Bericht herunterladen*: Eine formelle Antwort auf die Zugriffsanfrage, die Sie an die betroffene Person senden können.  Dieser Bericht enthält automatisch generierte Informationen auf Grundlage der von Data Classification zur betroffenen Person ermittelten Daten und dient als Vorlage.  Sie sollten das Formular ausfüllen und intern prüfen, bevor Sie es an die betroffene Person senden.
-** *Ergebnisse untersuchen*: Eine Seite, auf der Sie die Daten untersuchen können, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern und die Dateiliste herunterladen.
-+
 
-NOTE: Bei mehr als 10.000 Ergebnissen werden nur die ersten 10.000 in der Dateiliste angezeigt.
 
+.. Wählen Sie **Bericht herunterladen**, um den Download zu starten.image:screenshot-download-report.png["Screenshot der Download-Berichtsoptionen"]
 
 
 
@@ -136,7 +137,7 @@ image:screenshot-report-options.png["Screenshot der Berichtsoptionen auf der Com
 
 
 .Ergebnis
-Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und bei Bedarf an andere Gruppen senden können.
+Die Datenklassifizierung generiert einen PDF-Bericht.
 
 
 

@@ -43,14 +43,16 @@ sidebar:
       entries:
       - title: Übersicht über das Scannen Ihrer Datenquellen
         url: "/task-scanning-overview.html"
-      - title: Azure NetApp Files
-        url: "/task-scanning-anf.html"
       - title: Amazon FSx für ONTAP
         url: "/task-scanning-fsx.html"
+      - title: Azure NetApp Files
+        url: "/task-scanning-anf.html"
       - title: Cloud Volumes ONTAP und On-Premise ONTAP
         url: "/task-getting-started-compliance.html"
       - title: Datenbankschemata
         url: "/task-scanning-databases.html"
+      - title: Google Cloud NetApp Volumes
+        url: "/task-scan-google-cloud.html"
       - title: Dateifreigaben
         url: "/task-scanning-file-shares.html"
       - title: StorageGRID
