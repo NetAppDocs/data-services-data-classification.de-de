@@ -78,7 +78,7 @@ Wenn im Dialogfeld Freigaben aufgelistet sind, die nicht hinzugefügt werden kon
 ** Um das Scannen von Dateifreigaben zu deaktivieren, wählen Sie *Aus*.
 +
 
-NOTE: Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert.  Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann.  + Wenn Sie *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* auf *Ein* stellen, setzt der Scan die letzte Zugriffszeit zurück und scannt alle Dateien unabhängig von den Berechtigungen.  + Weitere Informationen zum Zeitstempel des letzten Zugriffs finden Sie unterlink:link:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] .
+NOTE: Der Schalter oben auf der Seite für *Scannen, wenn Berechtigungen zum Schreiben von Attributen fehlen* ist standardmäßig deaktiviert. Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. + Wenn Sie *Scannen bei fehlenden Berechtigungen zum Schreiben von Attributen* auf *Ein* stellen, setzt der Scan die letzte Zugriffszeit zurück und scannt alle Dateien unabhängig von den Berechtigungen. + Weitere Informationen zum Zeitstempel des letzten Zugriffs finden Sie unterlink:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] .
 
 
 
@@ -108,7 +108,7 @@ image:screenshot-edit-cifs-credential.png["Screenshot des Menüs „CIFS-Anmelde
 . Wählen Sie **Speichern**, um den Vorgang abzuschließen.
 
 
-.Dateifreigaben zu Compliance-Scans hinzufügen
+.Dateifreigaben zu Scans hinzufügen
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
 . Wählen Sie auf der Konfigurationsseite die Dateifreigabegruppe aus, die Sie ändern möchten.
 . Wählen Sie **+ Freigaben hinzufügen**.
@@ -126,7 +126,7 @@ Wenn Sie Dateifreigaben mit einem zweiten Protokoll hinzufügen, stellen Sie sic
 . Wählen Sie **Weiter**, um das Hinzufügen der Dateifreigaben abzuschließen.
 
 
-.Entfernen einer Dateifreigabe aus Compliance-Scans
+.Entfernen einer Dateifreigabe aus Scans
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
 . Wählen Sie das System aus, von dem Sie Dateifreigaben entfernen möchten.
 . Wählen Sie *Konfiguration*.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-compliance.html 
 keywords: remove, stop, stop scans, stop scanning, cloud compliance, stop cloud compliance, deactivate, deactivating cloud compliance, data sense 
-summary: Bei Bedarf können Sie die Datenklassifizierung daran hindern, ein oder mehrere Systeme, Datenbanken, Dateifreigabegruppen, OneDrive-Konten, Google Drive-Konten oder SharePoint-Konten zu scannen. 
+summary: Bei Bedarf können Sie die Datenklassifizierung daran hindern, Systeme, Datenbanken oder Dateifreigabegruppen zu scannen. 
 ---
 = Datenquellen aus der NetApp Data Classification entfernen
 :hardbreaks:
@@ -18,21 +18,21 @@ Bei Bedarf können Sie NetApp Data Classification daran hindern, ein oder mehrer
 
 
 
-== Deaktivieren von Compliance-Scans für ein System
+== Deaktivieren von Scans für ein System
 
-Wenn Sie Scans deaktivieren, scannt Data Classification die Daten auf dem System nicht mehr und entfernt die indizierten Compliance-Erkenntnisse aus der Data Classification-Instanz (die Daten aus dem System selbst werden nicht gelöscht).
+Wenn Sie Scans deaktivieren, scannt Data Classification die Daten auf dem System nicht mehr und entfernt die indizierten Erkenntnisse aus der Data Classification-Instanz.  Die Daten aus dem System selbst werden nicht gelöscht.
 
 . Wählen Sie auf der Seite _Konfiguration_ die Optionimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie in der Zeile für das System auf die Schaltfläche „Datenklassifizierung deaktivieren“ und anschließend auf „Datenklassifizierung deaktivieren“.
 
 
 
-TIP: Sie können Compliance-Scans für ein System auch im Bereich „Dienste“ deaktivieren, wenn Sie das System auswählen.
+TIP: Sie können Scans für ein System auch über das Bedienfeld „Dienste“ deaktivieren, wenn Sie das System auswählen.
 
 
 
 == Entfernen einer Datenbank aus der Datenklassifizierung
 
-Wenn Sie eine bestimmte Datenbank nicht mehr scannen möchten, können Sie sie aus der Datenklassifizierungsschnittstelle löschen und alle Scans stoppen.
+Wenn Sie eine bestimmte Datenbank nicht mehr scannen müssen, können Sie sie aus der Datenklassifizierungsschnittstelle löschen und alle Scans stoppen.
 
 . Wählen Sie auf der Seite _Konfiguration_ die Optionimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie in der Zeile für die Datenbank auf die Schaltfläche „DB-Server entfernen“ und dann auf „DB-Server entfernen“.
 

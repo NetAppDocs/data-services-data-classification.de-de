@@ -61,7 +61,7 @@ Wenn Sie die Anmeldeinformationen korrekt eingegeben haben, bestätigt eine Meld
 
 
 
-== Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes
+== Aktivieren oder Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
 

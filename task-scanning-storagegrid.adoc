@@ -62,7 +62,7 @@ StorageGRID wird zur Liste der Systeme hinzugefügt.
 
 
 
-== Aktivieren und Deaktivieren von Compliance-Scans für StorageGRID -Buckets
+== Aktivieren und Deaktivieren von Scans auf StorageGRID Buckets
 
 Nachdem Sie die Datenklassifizierung auf StorageGRID aktiviert haben, besteht der nächste Schritt darin, die Buckets zu konfigurieren, die Sie scannen möchten.  Die Datenklassifizierung erkennt diese Buckets und zeigt sie in dem von Ihnen erstellten System an.
 

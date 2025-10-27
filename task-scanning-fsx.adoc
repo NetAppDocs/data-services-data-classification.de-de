@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-scanning-fsx.html 
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
-summary: Führen Sie einige Schritte aus, um mit dem Scannen des Amazon FSx für ONTAP -Volumes mit NetApp Data Classification zu beginnen. 
+summary: Führen Sie einige Schritte aus, um mit dem Scannen von Amazon FSx nach ONTAP -Volumes mit NetApp Data Classification zu beginnen. 
 ---
 = Amazon FSx nach ONTAP -Volumes mit NetApp Data Classification scannen
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Führen Sie einige Schritte aus, um mit dem Scannen des Amazon FSx für
 
 
 [role="lead"]
-Führen Sie einige Schritte aus, um mit dem Scannen des Amazon FSx für ONTAP -Volumes mit NetApp Data Classification zu beginnen.
+Führen Sie einige Schritte aus, um Amazon FSx mit NetApp Data Classification nach ONTAP -Volumes zu scannen.
 
 
 
@@ -73,7 +73,7 @@ image:screenshot_fsx_scanning_activate.png["Ein Screenshot der Registerkarte „
 
 
 .Ergebnis
-Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes.  Die Ergebnisse stehen im Compliance-Dashboard zur Verfügung, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat.  Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgewählten Volumes. Die Ergebnisse stehen im Compliance-Dashboard zur Verfügung, sobald die Datenklassifizierung die ersten Scans abgeschlossen hat. Die dafür benötigte Zeit hängt von der Datenmenge ab und kann einige Minuten oder Stunden betragen. Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen. Verfolgen Sie den Fortschritt jedes Scans in der Fortschrittsleiste. Sie können mit der Maus über die Fortschrittsleiste fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.
 
 [NOTE]
 ====
@@ -124,7 +124,7 @@ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angez
 
 
 
-== Aktivieren und Deaktivieren von Compliance-Scans auf Volumes
+== Aktivieren und Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
 

@@ -17,7 +17,7 @@ summary: 'Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Det
 Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Details zu den personenbezogenen Daten (PII) und sensiblen personenbezogenen Daten (SPII) in Ihrem Unternehmen anzeigen.  Sie können außerdem Transparenz gewinnen, indem Sie die Kategorien und Dateitypen überprüfen, die NetApp Data Classification in Ihren Daten gefunden hat.
 
 
-NOTE: Details zur Konformität auf Dateiebene sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan durchführen.  Reine Mapping-Scans liefern keine Details auf Dateiebene.
+NOTE: Konformitätsdetails auf Dateiebene sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan durchführen. Reine Mapping-Scans liefern keine Details auf Dateiebene.
 
 Standardmäßig zeigt das Dashboard „Datenklassifizierung“ Compliance-Daten für alle Systeme und Datenbanken an.  Um nur für einige der Systeme Daten anzuzeigen, wählen Sie diese aus.
 
@@ -29,7 +29,7 @@ Sie können die Ergebnisse auf der Seite „Datenuntersuchung“ filtern und ein
 
 == Anzeigen von Dateien, die personenbezogene Daten enthalten
 
-Die Datenklassifizierung identifiziert automatisch bestimmte Wörter, Zeichenfolgen und Muster (Regex) in den Daten. link:link:reference-private-data-categories.html["Zum Beispiel Kreditkartennummern, Sozialversicherungsnummern, Bankkontonummern, Passwörter und mehr."] Die Datenklassifizierung identifiziert diese Art von Informationen in einzelnen Dateien, in Dateien innerhalb von Verzeichnissen (Freigaben und Ordnern) und in Datenbanktabellen.
+Die Datenklassifizierung identifiziert automatisch bestimmte Wörter, Zeichenfolgen und Muster (Regex) in den Daten. link:reference-private-data-categories.html["Zum Beispiel Kreditkartennummern, Sozialversicherungsnummern, Bankkontonummern, Passwörter und mehr."]Die Datenklassifizierung identifiziert diese Art von Informationen in einzelnen Dateien, in Dateien innerhalb von Verzeichnissen (Freigaben und Ordnern) und in Datenbanktabellen.
 
 Sie können auch benutzerdefinierte Suchbegriffe erstellen, um personenbezogene Daten zu identifizieren, die für Ihre Organisation spezifisch sind. Weitere Informationen finden Sie unter link:task-custom-classification.html["Erstellen einer benutzerdefinierten Klassifizierung"] .
 
@@ -47,10 +47,10 @@ image:screenshot_personal_files.png["Ein Screenshot des Dialogfelds „Persönli
 
 . Untersuchen Sie die Daten, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern, den Pfeil *Ergebnisse untersuchen* auswählen, um maskierte Informationen anzuzeigen, oder indem Sie die Dateiliste herunterladen.
 +
-Das folgende Bild zeigt persönliche Daten, die in einem Verzeichnis (Freigaben und Ordner) gefunden wurden.  Im Reiter *Strukturiert* können Sie in Datenbanken gefundene personenbezogene Daten einsehen.  Auf der Registerkarte *Unstrukturiert* können Sie Daten auf Dateiebene anzeigen.
+Die folgenden Bilder zeigen persönliche Daten, die in einem Verzeichnis (Freigaben und Ordner) gefunden wurden. Im Reiter *Strukturiert* können Sie in Datenbanken gefundene personenbezogene Daten einsehen. Auf der Registerkarte *Unstrukturiert* können Sie Daten auf Dateiebene anzeigen.
 
 +
-image:screenshot_compliance_investigation_page.png["Ein Screenshot der Detailinformationen, die in den Dateien gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
+image:screenshot_compliance_investigation_page.png["Ein Screenshot mit detaillierten Informationen, die in Dateien gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
 
 +
 image:screenshot_compliance_investigation_page_directory.png["Ein Screenshot mit detaillierten Informationen, die in Verzeichnissen gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]

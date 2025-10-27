@@ -48,7 +48,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png["Ein Screenshot der Regist
 ** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Alle Volumes zuordnen und klassifizieren*.
 ** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen oder zuordnen und klassifizieren möchten.
 +
-Sehen<<Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes,Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes>> für Details.
+Sehen<<Aktivieren oder Deaktivieren von Scans auf Volumes,Aktivieren oder Deaktivieren von Scans auf Volumes>> für Details.
 
 
 
@@ -105,7 +105,7 @@ image:screenshot_cifs_status.gif["Ein Screenshot, der die Konfigurationsseite un
 
 
 
-== Aktivieren oder Deaktivieren von Compliance-Scans auf Volumes
+== Aktivieren oder Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
 

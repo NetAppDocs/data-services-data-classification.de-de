@@ -102,7 +102,7 @@ image:screenshot_cifs_status.gif["Ein Screenshot, der die Konfigurationsseite un
 
 
 
-== Aktivieren und Deaktivieren von Compliance-Scans auf Volumes
+== Aktivieren und Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
 

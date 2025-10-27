@@ -94,7 +94,7 @@ Die Datenbank wird der Liste der Systeme hinzugefügt.
 
 
 
-== Aktivieren und Deaktivieren von Compliance-Scans für Datenbankschemata
+== Aktivieren und Deaktivieren von Scans für Datenbankschemata
 
 Sie können den vollständigen Scan Ihrer Schemata jederzeit stoppen oder starten.
 
@@ -112,6 +112,6 @@ image:screenshot_compliance_select_schemas.png["Ein Screenshot der Scan-Konfigur
 
 
 .Ergebnis
-Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen aktivierten Datenbankschemata.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.  Wenn Fehler vorliegen, werden diese zusammen mit der erforderlichen Aktion zur Behebung des Fehlers in der Spalte „Status“ angezeigt.
+Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen aktivierten Datenbankschemata. Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen. Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.  Wenn Fehler vorliegen, werden diese zusammen mit den erforderlichen Maßnahmen zur Behebung des Fehlers in der Spalte „Status“ angezeigt.
 
 Die Datenklassifizierung scannt Ihre Datenbanken einmal pro Tag; Datenbanken werden nicht kontinuierlich gescannt wie andere Datenquellen.
