@@ -1,0 +1,14 @@
+= Version 1.48
+:allow-uri-read: 
+
+
+
+
+=== Version 1.48
+
+Diese Version der Datenklassifizierung enthält Fehlerbehebungen, Sicherheitsverbesserungen und Leistungsoptimierungen.
+
+.Verbesserte Darstellung des Scanfortschritts
+Die Scan-Konfigurationen beinhalten jetzt verbesserte Einblicke in den Scan-Abschluss. Bisher wurde ein Fortschrittsbalken nur während des Scanvorgangs angezeigt. Nun bleibt der Fortschrittsbalken auch nach Abschluss der Scans sichtbar, um zu bestätigen, dass diese erfolgreich durchgeführt wurden. Sie können auch die Anzahl der zugeordneten und gescannten Dateien einsehen.
+
+Weitere Informationen zu den Scaneinstellungen finden Sie unter link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Ändern Sie die NetApp Data Classification -Scaneinstellungen für Ihre Repositories"^]Die

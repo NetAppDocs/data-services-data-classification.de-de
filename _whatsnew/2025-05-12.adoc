@@ -6,7 +6,7 @@
 
 === Version 1.43
 
-Diese Version der Datenklassifizierung umfasst:
+Diese BlueXP -Klassifizierungsversion beinhaltet:
 
 .Priorisieren Sie Klassifizierungsscans
 Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt. Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.

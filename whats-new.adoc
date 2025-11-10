@@ -18,6 +18,21 @@ Erfahren Sie, was es Neues bei der NetApp Data Classification gibt.
 
 
 
+== 10. November 2025
+
+
+
+=== Version 1.48
+
+Diese Version der Datenklassifizierung enthält Fehlerbehebungen, Sicherheitsverbesserungen und Leistungsoptimierungen.
+
+.Verbesserte Darstellung des Scanfortschritts
+Die Scan-Konfigurationen beinhalten jetzt verbesserte Einblicke in den Scan-Abschluss. Bisher wurde ein Fortschrittsbalken nur während des Scanvorgangs angezeigt. Nun bleibt der Fortschrittsbalken auch nach Abschluss der Scans sichtbar, um zu bestätigen, dass diese erfolgreich durchgeführt wurden. Sie können auch die Anzahl der zugeordneten und gescannten Dateien einsehen.
+
+Weitere Informationen zu den Scaneinstellungen finden Sie unter link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Ändern Sie die NetApp Data Classification -Scaneinstellungen für Ihre Repositories"^]Die
+
+
+
 == 06. Oktober 2025
 
 
@@ -164,7 +179,7 @@ Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu v
 
 === Version 1.43
 
-Diese Version der Datenklassifizierung umfasst:
+Diese BlueXP -Klassifizierungsversion beinhaltet:
 
 .Priorisieren Sie Klassifizierungsscans
 Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt. Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.

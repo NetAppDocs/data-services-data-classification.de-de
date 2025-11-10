@@ -45,7 +45,7 @@ Sie können die Datenklassifizierung auf Ihrem Google Cloud NetApp Volumes -Syst
 ** Um alle Volumes zuzuordnen und zu klassifizieren, wählen Sie *Alle Volumes zuordnen und klassifizieren*.
 ** Um das Scannen für jedes Volume anzupassen, wählen Sie *Oder wählen Sie den Scantyp für jedes Volume aus* und wählen Sie dann die Volumes aus, die Sie zuordnen und/oder klassifizieren möchten.
 +
-Sehen<<Aktivieren und Deaktivieren von Compliance-Scans auf Volumes,Aktivieren und Deaktivieren von Compliance-Scans auf Volumes>> für Details.
+Sehen<<Aktivieren und Deaktivieren von Scans auf Volumes,Aktivieren und Deaktivieren von Scans auf Volumes>> für Details.
 
 
 

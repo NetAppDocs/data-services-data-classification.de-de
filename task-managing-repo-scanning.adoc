@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
-summary: Sie können in NetApp Data Classification verwalten, wie Ihre Daten in jedem Ihrer Systeme und Datenquellen gescannt werden.  Sie können die Änderungen auf „Repository“-Basis vornehmen. Das bedeutet, dass Sie je nach Art der Datenquelle, die Sie scannen, Änderungen für jedes Volume, jeden Bucket, jede Freigabe, jedes Schema, jeden Benutzer usw. vornehmen können. 
+summary: Erfahren Sie, wie Sie die Scaneinstellungen für ein System in NetApp Data Classification ändern. 
 ---
 = Ändern Sie die NetApp Data Classification -Scaneinstellungen für Ihre Repositories
 :hardbreaks:
@@ -26,12 +26,12 @@ Sie können die einzelnen Repositories anzeigen, die NetApp Data Classification 
 
 Sie können den Scan-Status jeder Arbeitsumgebung auf der Konfigurationsseite anzeigen:
 
-* *Initialisierung* (hellblauer Punkt): Die Karten- oder Klassifizierungskonfiguration wird aktiviert.  Dies wird einige Sekunden lang angezeigt, bevor der Status „Ausstehende Warteschlange“ beginnt.
+* *Initialisierung* (hellblauer Punkt): Die Karten- oder Klassifizierungskonfiguration wird aktiviert. Dieser Wert erscheint kurz, bevor er in den Status „in der Warteschlange“ wechselt.
 * *Warteschlange ausstehend* (orangefarbener Punkt): Die Scanaufgabe wartet darauf, in die Scan-Warteschlange aufgenommen zu werden.
 * *In Warteschlange* (orangefarbener Punkt): Die Aufgabe wurde erfolgreich zur Scan-Warteschlange hinzugefügt.  Das System beginnt mit der Zuordnung oder Klassifizierung des Datenträgers, wenn dieser in der Warteschlange an der Reihe ist.
 * *Läuft* (grüner Punkt): Die Scanaufgabe, die sich in der Warteschlange befand, wird derzeit aktiv im ausgewählten Speicherrepository ausgeführt.
 * *Fertig* (grüner Punkt): Der Scan des Speicherrepositorys ist abgeschlossen.
-* *Pausiert* (grauer Punkt): Sie haben die Option „Pause“ ausgewählt, um den Scanvorgang anzuhalten.  Während die Volumenänderungen nicht im System angezeigt werden, werden die gescannten Erkenntnisse weiterhin angezeigt.
+* *Pausiert* (grauer Punkt): Sie haben den Scanvorgang pausiert. Obwohl die Volumenänderungen im System nicht angezeigt werden, bleiben die gescannten Erkenntnisse verfügbar.
 * *Fehler* (roter Punkt): Der Scan kann nicht abgeschlossen werden, da Probleme aufgetreten sind.  Wenn Sie eine Aktion abschließen müssen, wird der Fehler im Tooltip unter der Spalte „Erforderliche Aktion“ angezeigt.  Andernfalls zeigt das System den Status „Fehler“ an und versucht, die Wiederherstellung durchzuführen.  Wenn es fertig ist, ändert sich der Status.
 * *Nicht scannen*: Die Volume-Konfiguration wurde auf „Aus“ eingestellt und das System scannt das Volume nicht.
 
@@ -46,7 +46,7 @@ image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Si
 +
 image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, ob Ihre Buckets gescannt werden und wie der aktuelle Scan-Status ist."]
 
-. Bewegen Sie den Cursor über das Diagramm in der Spalte „Mapping-Status“, um die Anzahl der Dateien anzuzeigen, die in jedem Repository (in diesem Beispiel Bucket) noch zugeordnet oder klassifiziert werden müssen.
+. Bewegen Sie während eines Scans den Mauszeiger über die Fortschrittsanzeige in der Spalte „Zuordnungsstatus“, um die Anzahl der Dateien in der Warteschlange anzuzeigen, die für dieses Repository zugeordnet oder klassifiziert werden sollen.
 
 
 
@@ -117,9 +117,11 @@ image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, w
 
 == Scannen nach einem Repository anhalten und fortsetzen
 
-Sie können das Scannen eines Repositorys „anhalten“, wenn Sie das Scannen bestimmter Inhalte vorübergehend beenden möchten.  Das Anhalten des Scans bedeutet, dass Data Classification keine zukünftigen Scans nach Änderungen oder Ergänzungen am Repository durchführt, aber alle aktuellen Ergebnisse weiterhin im System angezeigt werden.  Durch das Anhalten des Scanvorgangs werden die Kosten für die gescannten Daten nicht aufgehoben, da die Daten weiterhin vorhanden sind.
+Sie können das Scannen eines Repositorys „anhalten“, wenn Sie das Scannen bestimmter Inhalte vorübergehend beenden möchten. Das Anhalten des Scanvorgangs bedeutet, dass die Datenklassifizierung keine weiteren Scans auf Änderungen oder Ergänzungen im Repository durchführt. Alle aktuellen Scan-Ergebnisse bleiben in der Datenklassifizierung abrufbar.
 
-Sie können den Scanvorgang jederzeit „fortsetzen“.
+Wenn Sie Scans pausieren, werden dadurch die Abrechnungsgebühren nicht entfernt, da die Daten weiterhin im System vorhanden sind.
+
+Sie können den Scanvorgang jederzeit fortsetzen.
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.

@@ -238,9 +238,13 @@ TIP: Sie können eine Ebene der Gruppe erweitern, um die Benutzer anzuzeigen, di
 
 Sie können überprüfen, ob in Ihren Speichersystemen doppelte Dateien gespeichert werden.  Dies ist nützlich, wenn Sie Bereiche identifizieren möchten, in denen Sie Speicherplatz sparen können.  Außerdem sollten Sie sicherstellen, dass bestimmte Dateien mit speziellen Berechtigungen oder vertraulichen Informationen nicht unnötig in Ihren Speichersystemen dupliziert werden.
 
-Alle Ihre Dateien (Datenbanken ausgenommen), die 1 MB oder größer sind oder persönliche oder vertrauliche persönliche Informationen enthalten, werden auf Duplikate verglichen.
+Die Datenklassifizierung vergleicht alle Dateien (mit Ausnahme von Datenbanken) auf Duplikate, falls diese:
 
-Bei der Datenklassifizierung wird Hashing-Technologie verwendet, um doppelte Dateien zu ermitteln.  Wenn eine Datei denselben Hashcode wie eine andere Datei hat, können Sie 100 % sicher sein, dass es sich bei den Dateien um exakte Duplikate handelt – auch wenn die Dateinamen unterschiedlich sind.
+* 1 MB oder mehr
+* Oder enthalten persönliche oder sensible persönliche Informationen
+
+
+Bei der Datenklassifizierung wird Hashing-Technologie verwendet, um doppelte Dateien zu ermitteln. Wenn zwei Dateien denselben Hash-Code haben, handelt es sich um exakte Duplikate, selbst wenn die Dateinamen unterschiedlich sind.
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Untersuchung“ aus.
