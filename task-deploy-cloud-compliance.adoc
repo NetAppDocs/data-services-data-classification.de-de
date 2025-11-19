@@ -26,10 +26,10 @@ Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Erstellen eines Konsolenagenten
 [role="quick-margin-para"]
-Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen.  Sehen https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen. Sehenlink:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["Erstellen eines Konsolenagenten in AWS"^] ,link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oderlink:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Erstellen eines Konsolenagenten in GCP"^] Die
 
 [role="quick-margin-para"]
-Sie können auch https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
+Sie können auchlink:https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Voraussetzungen
 [role="quick-margin-para"]
@@ -43,7 +43,7 @@ Starten Sie den Installationsassistenten, um die Data Classification-Instanz in 
 
 == Erstellen eines Konsolenagenten
 
-Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen Konsolenagenten bei Ihrem Cloud-Anbieter.  Sehen https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .  In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
+Wenn Sie noch keinen Konsolenagenten haben, erstellen Sie einen Konsolenagenten bei Ihrem Cloud-Anbieter. Sehen https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["Erstellen eines Konsolenagenten in AWS"^] oder https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Erstellen eines Konsolenagenten in GCP"^] Die  In den meisten Fällen werden Sie wahrscheinlich einen Konsolenagenten eingerichtet haben, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] Es gibt jedoch Fälle, in denen Sie jetzt einen einrichten müssen.
 
 Es gibt einige Szenarien, in denen Sie einen Konsolenagenten verwenden müssen, der bei einem bestimmten Cloud-Anbieter bereitgestellt wird:
 
@@ -58,9 +58,9 @@ Es gibt einige Szenarien, in denen Sie einen Konsolenagenten verwenden müssen, 
 
 Lokale ONTAP -Systeme, NetApp Dateifreigaben und Datenbanken können mit einem dieser Cloud-Konsolen-Agenten gescannt werden.
 
-Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder in der Cloud.  Einige Benutzer, die die Datenklassifizierung vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+Beachten Sie, dass Sie auch https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder in der Cloud. Einige Benutzer, die die Datenklassifizierung vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
 
-Wie Sie sehen, kann es Situationen geben, in denen Sie verwenden müssen https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["mehrere Konsolenagenten"] .
+Es kann Situationen geben, in denen Sie verwenden müssen https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#multiple-systems-and-agents["mehrere Konsolenagenten"^] Die
 
 
 TIP: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
@@ -71,7 +71,7 @@ TIP: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, d
 
 Die Datenklassifizierung wird unterstützt, wenn der Konsolenagent in einer Regierungsregion (AWS GovCloud, Azure Gov oder Azure DoD) bereitgestellt wird.  Bei einer Bereitstellung auf diese Weise unterliegt die Datenklassifizierung den folgenden Einschränkungen:
 
-https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["Weitere Informationen zum Bereitstellen des Konsolenagenten in einer Regierungsregion"^] .
+link:https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-mode.html["Erfahren Sie mehr über die Bereitstellung des Console-Agenten in einer Regierungsregion"^].
 
 
 
@@ -179,9 +179,9 @@ Die Datenklassifizierungsinstanz verwendet eine private IP-Adresse, um sicherzus
 --
 Weitere Einzelheiten zu vCPU-Grenzwerten finden Sie unter den folgenden Links:
 
-* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS-Dokumentation: Amazon EC2-Servicekontingente"^]
-* https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure-Dokumentation: vCPU-Kontingente virtueller Computer"^]
-* https://cloud.google.com/compute/quotas["Google Cloud-Dokumentation: Ressourcenkontingente"^]
+* link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html["AWS-Dokumentation: Amazon EC2-Servicekontingente"^]
+* link:https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quotas["Azure-Dokumentation: vCPU-Kontingente virtueller Computer"^]
+* link:https://docs.cloud.google.com/docs/quotas/view-manage["Google Cloud-Dokumentation: Ressourcenkontingente"^]
 
 
 --
