@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task-health-monitor.html 
+keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics 
+summary: Die Datenklassifizierung liefert Erkenntnisse über Nutzung und Auslastung und hilft so, die Leistung zu optimieren und Probleme zu beheben. 
+---
+= Überwachung des Zustands der NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:firstname: :nofooter
+:author: :nofooter
+:authorinitials: :
+:authors: :nofooter
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das NetApp Data Classification Health Monitor Dashboard bietet Echtzeitüberwachung und Einblicke in die Leistung. Der Health Monitor erfasst Informationen über Ihre Datenklassifizierungsinfrastruktur, den Systemzustand, Nutzungsmetriken und Nutzungsdaten, sodass Sie Probleme erkennen und beheben können.
+
+
+
+== Erkenntnisse aus dem Gesundheitsmonitor
+
+Das Dashboard des Gesundheitsmonitors präsentiert Informationen in vier Kategorien.
+
+* **Infrastrukturstatus**
++
+Informationen wie Versionsstatus, Systemstabilität, Bereitstellungstyp und Maschinengröße anzeigen.
+
+* **Problematische Container**
++
+Überprüfen Sie das Feld „Problematische Container“, um Einblicke in Container zu erhalten, die häufig gestoppt oder neu gestartet werden. Nutzen Sie diese Informationen, um die einzelnen Behälter zu untersuchen.
+
+* **Systeminformationen**
++
+Das Systeminformationsfeld erfasst wichtige Informationen über die NetApp Console und die Datenklassifizierung, wie z. B. die öffentlichen und privaten IP-Adressen, den Hostnamen, das Betriebssystem, die Konsolenversion und die Konsolen-ID.
+
+* **Nutzung und Verwendung**
++
+Überprüfen Sie die CPU-Auslastung, die Festplattenauslastung und die Speicherauslastung. Diese Werte werden in Speichereinheiten (GB) oder als Prozentsatz der Gesamtnutzung angezeigt. Wenn in einem Feld eine Warnung angezeigt wird, wählen Sie die Warnung aus, um Informationen und Empfehlungen zur Behebung zu erhalten.
+
+
+
+
+
+== Greifen Sie auf das Dashboard des Gesundheitsmonitors zu.
+
+. Wählen Sie unter Datenklassifizierung **Konfiguration** aus.
+. Wählen Sie unter der Überschrift **Konfiguration** die Option **Datenklassifizierungs-Integritätsüberwachung**.
+. Im Dashboard des Gesundheitsmonitors können Sie:
++
+** Überprüfen Sie die Nutzung und den Einsatz. Wenn bei Nutzungs- oder Auslastungsmetriken Warnungen angezeigt werden, wählen Sie die Warnung aus, um Empfehlungen zur Behebung des Problems zu erhalten.
+** Schalten Sie das Diagramm um, um CPU-Auslastung, Festplattenauslastung und Speicherauslastung anzuzeigen. Sie können die x-Achse so ändern, dass Inhalte über Stunden (6, 12 oder 24) oder Tage (2, 7 oder 14) angezeigt werden.
+** Aktualisieren Sie das Dashboard, um die aktuellsten Datenmetriken anzuzeigen.
++
+image:health-monitor.png["Screenshot des Health Monitor-Dashboards"]
+
+
+
+
