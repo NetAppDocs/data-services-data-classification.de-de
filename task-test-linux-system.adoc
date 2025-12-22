@@ -16,7 +16,7 @@ summary: Bevor Sie Data Classification manuell auf einem Linux-Host installieren
 [role="lead"]
 Bevor Sie NetApp Data Classification manuell auf einem Linux-Host installieren, führen Sie optional ein Skript auf dem Host aus, um zu überprüfen, ob alle Voraussetzungen für die Installation von Data Classification erfüllt sind.  Sie können dieses Skript auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud ausführen.  Der Host kann mit dem Internet verbunden sein oder sich an einem Standort ohne Internetzugang befinden (ein „Dark Site“).
 
-Es gibt auch ein erforderliches Testskript, das Teil des Installationsskripts für die Datenklassifizierung ist.  Das hier beschriebene Skript ist speziell für Benutzer konzipiert, die den Linux-Host unabhängig von der Ausführung des Installationsskripts zur Datenklassifizierung überprüfen möchten.
+Das Installationsskript für die Datenklassifizierung enthält ein Testskript, um sicherzustellen, dass Ihre Umgebung die Anforderungen erfüllt. Sie können dieses Skript separat ausführen, um die Bereitschaft des Linux-Hosts vor dem Ausführen des Installationsskripts zu überprüfen.
 
 
 
@@ -24,11 +24,11 @@ Es gibt auch ein erforderliches Testskript, das Teil des Installationsskripts f�
 
 Sie führen die folgenden Aufgaben aus.
 
-. Installieren Sie optional einen Konsolenagenten, falls Sie noch keinen installiert haben.  Sie können das Testskript ausführen, ohne dass ein Konsolenagent installiert ist. Das Skript prüft jedoch die Konnektivität zwischen dem Konsolenagenten und dem Hostcomputer der Datenklassifizierung. Daher wird empfohlen, dass Sie über einen Konsolenagenten verfügen.
-. Bereiten Sie den Hostcomputer vor und überprüfen Sie, ob er alle Anforderungen erfüllt.
-. Aktivieren Sie den ausgehenden Internetzugriff vom Data Classification-Hostcomputer.
-. Stellen Sie sicher, dass alle erforderlichen Ports auf allen Systemen aktiviert sind.
-. Laden Sie das Prerequisite-Testskript herunter und führen Sie es aus.
+* Installieren Sie optional einen Konsolenagenten, falls Sie noch keinen installiert haben.  Sie können das Testskript ausführen, ohne dass ein Konsolenagent installiert ist. Das Skript prüft jedoch die Konnektivität zwischen dem Konsolenagenten und dem Hostcomputer der Datenklassifizierung. Daher wird empfohlen, dass Sie über einen Konsolenagenten verfügen.
+* Bereiten Sie den Hostcomputer vor und überprüfen Sie, ob er alle Anforderungen erfüllt.
+* Aktivieren Sie den ausgehenden Internetzugriff vom Data Classification-Hostcomputer.
+* Stellen Sie sicher, dass alle erforderlichen Ports auf allen Systemen aktiviert sind.
+* Laden Sie das Prerequisite-Testskript herunter und führen Sie es aus.
 
 
 
@@ -37,19 +37,24 @@ Sie führen die folgenden Aufgaben aus.
 
 Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  Sie können das Skript „Voraussetzungen“ jedoch ohne einen Konsolenagenten ausführen.
 
-Du kannst https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud.  Einige Benutzer, die Data Classification vor Ort installieren möchten, entscheiden sich möglicherweise auch für die Installation des Konsolenagenten vor Ort.
+Du kannst link:https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Installieren Sie den Konsolen-Agenten vor Ort"^] auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud. Sie können die Datenklassifizierung auch lokal installieren, wenn der Konsolenagent lokal installiert ist.
 
-Informationen zum Erstellen eines Konsolenagenten in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
+Informationen zum Erstellen eines Console-Agenten in Ihrer Cloud-Provider-Umgebung finden Sie hier:
 
-Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wenn Sie das Voraussetzungen-Skript ausführen.  Sie verfügen über diese Informationen, wenn Sie den Konsolenagenten in Ihren Räumlichkeiten installiert haben.  Wenn der Konsolenagent in der Cloud bereitgestellt wird, finden Sie diese Informationen in der Konsole: Wählen Sie das Hilfesymbol, dann *Support* und dann *Konsolenagent*.
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^]
+
+
+Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wenn Sie das Skript „Voraussetzungen“ ausführen. Diese Informationen stehen Ihnen zur Verfügung, wenn Sie den Console-Agenten in Ihren Räumlichkeiten installiert haben. Wenn der Console-Agent in der Cloud bereitgestellt wird, finden Sie diese Informationen in der Console: Wählen Sie das Hilfesymbol und dann *Support*; wählen Sie im Abschnitt Agent und Audit *Zum Agenten*.
 
 
 
 == Überprüfen der Hostanforderungen
 
-Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.
+Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, der bestimmte Anforderungen an das Betriebssystem, den Arbeitsspeicher und die Software erfüllt.
 
-* Die Datenklassifizierung wird auf einem Host, der gemeinsam mit anderen Anwendungen genutzt wird, nicht unterstützt – der Host muss ein dedizierter Host sein.
+* Die Datenklassifizierung muss auf einem dedizierten Host erfolgen. Der Host darf nicht mit anderen Anwendungen oder Drittanbietersoftware wie z. B. Antivirenprogrammen geteilt werden.
 * Beim Aufbau des Hostsystems in Ihren Räumlichkeiten können Sie je nach Größe des Datensatzes, für den Sie einen Datenklassifizierungsscan durchführen möchten, zwischen diesen Systemgrößen wählen.
 +
 [cols="17,17,27,31"]
