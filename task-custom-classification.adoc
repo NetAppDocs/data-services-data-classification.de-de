@@ -13,26 +13,117 @@ summary: Mit NetApp Data Classification können Sie die Suche nach vertraulichen
 
 
 [role="lead"]
-Mit NetApp Data Classification können Sie eine benutzerdefinierte Suche nach vertraulichen Informationen erstellen.  Die Suche kann auf einen regulären Ausdruck (Regex) beschränkt werden.
+Mit NetApp Data Classification können Sie benutzerdefinierte Kategorien oder persönliche Kennungen erstellen, um Daten zu identifizieren, die den regulatorischen und Compliance-Anforderungen Ihrer Organisation entsprechen.
+
+Die Datenklassifizierung unterstützt zwei Arten von benutzerdefinierten Klassifikatoren: Kategorien und persönliche Kennungen. Benutzerdefinierte Kategorien werden auf Basis einer Reihe von Dateien erstellt, die Sie hochladen. Aus diesen Dateien erstellt die Datenklassifizierung ein KI-Modell, um ähnliche Daten in Ihrer Organisation zu identifizieren (beispielsweise könnte ein Unternehmen für Gesundheitsforschung eine Kategorie für klinische Analysen erstellen). Individuelle Kennungen werden mithilfe von Stichwortlisten oder regulären Ausdrücken (Regex) erstellt, um Informationen zu identifizieren, die spezifisch für Ihre Organisation sind und ein Compliance-Risiko darstellen können.
+
+Alle benutzerdefinierten Klassifizierungen sind im Dashboard „Benutzerdefinierte Klassifizierung“ verfügbar.
 
 
 
-== Erstellen einer benutzerdefinierten Klassifizierung
+== Erstellen Sie eine benutzerdefinierte persönliche Kennung
 
-Die benutzerdefinierte Klassifizierung ist nur für Map- und Classify-Scans verfügbar, nicht für reine Mapping-Scans. Diese Funktion befindet sich derzeit in der Vorschau.
+Die Datenklassifizierung ermöglicht es Ihnen, mithilfe von Kontext-Schlüsselwörtern oder einem regulären Ausdruck eine benutzerdefinierte persönliche Kennung zu erstellen, um Daten zu identifizieren, die für Ihre Organisation eindeutig sind.
+
+.Anforderungen an Schlüsselwörter
+Wenn Sie Ihre persönliche Kennung mithilfe einer Stichwortliste erstellen, muss die Liste folgende Anforderungen erfüllen:
+
+* Bei der Eingabe von Schlüsselwörtern wird nicht zwischen Groß- und Kleinschreibung unterschieden.
+* Schlüsselwörter müssen mindestens drei Zeichen lang sein. Wörter mit weniger als drei Zeichen werden ignoriert.
+* Doppelte Wörter werden nur einmal hinzugefügt.
+* Die Gesamtliste der Schlüsselwörter darf 500.000 Zeichen nicht überschreiten. Die Liste muss mindestens ein Schlüsselwort enthalten.
+
 
 .Schritte
 . Wählen Sie die Registerkarte **Benutzerdefinierte Klassifizierung**.
-. Wählen Sie die Schaltfläche **Neuen Klassifikator hinzufügen**.
-. Fügen Sie einen Klassifikatornamen und eine Beschreibung für den neuen Klassifikator hinzu.
-. Wählen Sie, ob Sie den Klassifikator als *Persönliche Kennung* oder *Kategorie* hinzufügen möchten.
+. Wählen Sie **+ Neuer Klassifikator**, um den benutzerdefinierten Klassifikator zu erstellen.
+. Wählen Sie *Persönliche Kennung*. Optional können Sie **Ergebnisse maskieren**, um erkannte personenbezogene Daten zu maskieren.
+. Wählen Sie **Weiter**.
 +
-image:screenshot-custom-classifier-name.png["Screenshot des Klassifikators „Hinzufügen“"]
+image:screenshot-custom-classifier-name.png["Screenshot der Auswahl des Klassifikatortyps."]
 
-. Wählen Sie *Weiter*.
-. Um die Anpassung als regulären Ausdruck hinzuzufügen, wählen Sie **Benutzerdefinierter regulärer Ausdruck** und dann **Weiter**.
-. Fügen Sie ein Muster hinzu, um die spezifischen Informationen Ihrer Daten zu erkennen.  Wählen Sie **Validieren**, um die Syntax Ihrer Eingabe zu bestätigen.image:screenshot-create-logic-regex.png["Ein Screenshot des Dialogs zum Erstellen eines regulären Ausdrucks."]
-. Wählen Sie **Fertig**, um die benutzerdefinierte Klassifizierung zu erstellen.
+. Um den Klassifikator mit Schlüsselwörtern hinzuzufügen, wählen Sie **Schlüsselwörter** aus. Geben Sie eine Liste von Schlüsselwörtern ein, wobei jeder Eintrag in einer separaten Zeile stehen soll. Stellen Sie sicher, dass die Schlüsselwörter den Anforderungen entsprechen. image:screenshot-keywords.png["Screenshot der Erstellung eines benutzerdefinierten Klassifikators mit Schlüsselwörtern."]
++
+Um den Klassifikator als regulären Ausdruck hinzuzufügen, wählen Sie **Regulärer Ausdruck** und fügen Sie dann ein Muster hinzu, um die spezifischen Informationen Ihrer Daten zu erkennen. Wählen Sie **Validieren**, um die Syntax Ihrer Eingabe zu bestätigen.
+
++
+image:screenshot-create-logic-regex.png["Screenshot des Dialogs zum Erstellen eines regulären Ausdrucks."]
+
++
+.. Optional können Sie eine Beispielzeichenfolge eingeben, die Ihrem regulären Ausdrucksmuster entsprechen soll, und dann **Testen** auswählen, um dies zu überprüfen.
+.. Optional können Sie Wörter hinzufügen, die die Nähe zueinander beschreiben. Wenn Sie Nähewörter hinzufügen, markiert die Datenklassifizierung das Regex-Muster nur dann, wenn die Nähewörter direkt an die übereinstimmende Zeichenkette angrenzen.
 
 
-Die neue Anpassung wird beim nächsten geplanten Scan erfasst.  Um die Ergebnisse anzuzeigen, siehexref:task-generating-compliance-reports.html[Erstellen von Compliance-Berichten] .
+. Wählen Sie **Weiter**.
+. Geben Sie einen **Klassifikatornamen** und eine **Beschreibung** ein, um die benutzerdefinierte Kategorie in Ihrem Dashboard zu identifizieren.
+. Wählen Sie **Speichern**, um die benutzerdefinierte persönliche Kennung zu erstellen.
+
+
+Nachdem Sie eine benutzerdefinierte persönliche Kennung erstellt haben, werden deren Ergebnisse beim nächsten geplanten Scan erfasst. Um schneller Ergebnisse zu erhalten, führen Sie einen Scan auf Abruf durch. Um die Ergebnisse anzuzeigen, siehe xref:task-generating-compliance-reports.html[Erstellen von Compliance-Berichten]Die
+
+
+
+== Erstellen Sie eine benutzerdefinierte Kategorie
+
+Mit benutzerdefinierten Kategorien können Sie Daten speziell für Ihre Organisation kategorisieren. Es werden benutzerdefinierte Kategorien auf Basis von Textdateien erstellt, die Sie hochladen. Aus diesen Dateien erstellt die Datenklassifizierung ein KI-Modell, um ähnliche Informationen in anderen Dateien zu identifizieren.
+
+.Anforderungen an Trainingsdaten
+* Der Trainingsdatensatz muss mindestens 25 Dateien enthalten. Die maximale Dateianzahl beträgt 1.000.
+* Alle Dateien müssen sich direkt im von Ihnen angegebenen Dateipfad befinden.
+* Alle Dateien müssen größer als 100 Byte sein.
+* Die Trainingsdaten für die Datenklassifizierung müssen in einem der folgenden Dateitypen vorliegen: CSV, DOCX, DOC, GZ, JSON, PDF, PPTX, TXT, RTT, XLS oder XLSX. Sie können eine Kombination aller unterstützten Dateitypen hochladen.
+
+
+.Schritte
+. Wählen Sie in NetApp Data Classification die Option *Benutzerdefinierte Klassifizierung*.
+. *+ Neuer Klassifikator* auswählen.
+. Wählen Sie als Klassifizierungstyp *Benutzerdefinierte Kategorie* und klicken Sie dann auf **Weiter**.
+. Definieren Sie die Logik für Ihre benutzerdefinierte Kategorie mithilfe einer Sammlung textbasierter Dateien. Geben Sie die IP-Adresse der *Arbeitsadresse* ein und wählen Sie dann das *Volume* aus dem Dropdown-Menü aus.
++
+Geben Sie den **Verzeichnispfad** für das Verzeichnis ein, das die Trainingsdaten enthält.
+
+. Wählen Sie für die Datenklassifizierung **Dateien laden**, um eine Überprüfung der Dateien durchzuführen. Sie können die Zusammenfassung der Dateien einsehen, in der Dateiname, Größe, Typ und Hinweise aufgeführt sind, falls die Datei für Schulungszwecke als geeignet eingestuft wurde.
++
+image:custom-category-file-summary.png["Screenshot mit der Zusammenfassung der für das Training hochgeladenen Dateien."]
+
++
+.. Um den Dateipfad zu ändern oder Dateien erneut hochzuladen, wählen Sie **Pfad ändern**, geben Sie dann die Daten ein und laden Sie die Dateien erneut.
+
+
+. Wenn Sie mit den hochgeladenen Dateien zufrieden sind, wählen Sie **Weiter**.
+. Geben Sie einen **Klassifikatornamen** und eine **Beschreibung** ein, um die benutzerdefinierte Kategorie in Ihrem Dashboard zu identifizieren.
+. Wählen Sie **Speichern**, um die benutzerdefinierte Kategorie zu erstellen.
+
+
+.Ergebnis
+Nachdem Sie eine benutzerdefinierte Kategorie erstellt haben, werden deren Ergebnisse beim nächsten geplanten Scan erfasst. Um schneller Ergebnisse zu erhalten, starten Sie den Scan manuell.
+
+
+
+== Bearbeiten Sie einen benutzerdefinierten Klassifikator
+
+Sie können die Logik einer persönlichen Kennung auch nach deren Erstellung ändern. Sie können weder den Typ der persönlichen Kennung noch den Logiktyp ändern; beispielsweise können Sie eine benutzerdefinierte Kategorie nicht in eine benutzerdefinierte persönliche Kennung ändern. Außerdem können Sie einen auf Schlüsselwörtern basierenden benutzerdefinierten Bezeichner nicht in einen auf regulären Ausdrücken basierenden benutzerdefinierten Bezeichner ändern.
+
+.Schritte
+. Wählen Sie in NetApp Data Classification die Option *Benutzerdefinierte Klassifizierung*.
+. Identifizieren Sie den Klassifikator, den Sie löschen möchten, und wählen Sie dann das Aktionsmenü aus. `...` am Ende seiner Reihe.
+. Wählen Sie **Logik bearbeiten**.
+. Wenn Sie Schlüsselwörter ändern, fügen Sie die entsprechenden Schlüsselwörter hinzu, löschen oder bearbeiten Sie sie. Wenn Sie einen regulären Ausdruck ändern, geben Sie den neuen regulären Ausdruck ein und überprüfen Sie ihn. Optional können Sie Nähe-Keywords hinzufügen.
+. Wählen Sie **Speichern**, um die Änderungen zu übernehmen.
+
+
+
+
+== Einen benutzerdefinierten Klassifikator löschen
+
+. Wählen Sie in NetApp Data Classification die Option *Benutzerdefinierte Klassifizierung*.
+. Identifizieren Sie den Klassifikator, den Sie löschen möchten, und wählen Sie dann das Aktionsmenü aus. `...` am Ende seiner Reihe.
+. Wählen Sie **Klassifikator löschen**.
+
+
+
+
+== Nächste Schritte
+
+* xref:task-generating-compliance-reports.html[Erstellen von Compliance-Berichten]
+

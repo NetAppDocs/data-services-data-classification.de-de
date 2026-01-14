@@ -55,7 +55,7 @@ Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wen
 Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, der bestimmte Anforderungen an das Betriebssystem, den Arbeitsspeicher und die Software erfüllt.
 
 * Die Datenklassifizierung muss auf einem dedizierten Host erfolgen. Der Host darf nicht mit anderen Anwendungen oder Drittanbietersoftware wie z. B. Antivirenprogrammen geteilt werden.
-* Beim Aufbau des Hostsystems in Ihren Räumlichkeiten können Sie je nach Größe des Datensatzes, für den Sie einen Datenklassifizierungsscan durchführen möchten, zwischen diesen Systemgrößen wählen.
+* Wählen Sie die Größe, die zu dem Datensatz passt, den Sie mit der Datenklassifizierung scannen möchten.
 +
 [cols="17,17,27,31"]
 |===
@@ -124,7 +124,7 @@ Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, de
 * *Red Hat Subscription Management*: Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann das System während der Installation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
 * *Zusätzliche Software*: Sie müssen die folgende Software auf dem Host installieren, bevor Sie Data Classification installieren:
 +
-** Abhängig vom verwendeten Betriebssystem müssen Sie eine der Container-Engines installieren:
+** Je nach verwendetem Betriebssystem müssen Sie eine der Container-Engines installieren:
 +
 *** Docker Engine Version 19.3.1 oder höher. https://docs.docker.com/engine/install/["Installationsanweisungen anzeigen"^] .
 *** Podman Version 4 oder höher.  Um Podman zu installieren, geben Sie ein(`sudo yum install podman netavark -y` ).

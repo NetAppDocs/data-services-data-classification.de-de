@@ -1,0 +1,25 @@
+= Version 1.50
+:allow-uri-read: 
+
+
+
+
+=== Version 1.50
+
+Diese Version der Datenklassifizierung enthält Fehlerbehebungen und die folgenden Aktualisierungen:
+
+.Verbesserungen der benutzerdefinierten Klassifizierung
+Die Datenklassifizierung unterstützt jetzt das Erstellen benutzerdefinierter Kategorien für Ihre Daten. Sie können Dateien hochladen, um ein KI-Modell, das die Datenklassifizierung verwendet, um die Kategoriemarkierung auf Daten anzuwenden, feinabzustimmen. Die Benutzeroberfläche für alle benutzerdefinierten Klassifizierungen wurde verbessert.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Erstellen einer benutzerdefinierten Klassifizierung"^].
+
+.Benutzerdefinierte Definition für veraltete Daten
+Die Datenklassifizierung ermöglicht es Ihnen nun, die Definition veralteter Daten so anzupassen, dass sie Ihren organisatorischen Bedürfnissen entspricht. Bisher galten Daten als veraltet, wenn sie zuletzt vor drei Jahren geändert wurden. Veraltete Daten lassen sich nun anhand des Zeitpunkts des letzten Zugriffs _oder_ der letzten Änderung identifizieren; der Zeitraum kann von vor 6 Monaten bis vor 10 Jahren reichen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-stale-data.html["Anpassen der Definition veralteter Daten"^].
+
+.Verbesserte Leistung
+Die Ladezeiten für alle Seiten in der Datenklassifizierung, den Datenmapping-Bericht und die Filter auf der Untersuchungsseite wurden verkürzt.
+
+.Geschätzte Bearbeitungszeit für Untersuchungsberichte
+Beim Herunterladen eines Untersuchungsberichts zeigt die Datenklassifizierung nun die voraussichtliche Downloadzeit an.

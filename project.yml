@@ -87,6 +87,8 @@ sidebar:
       url: "/task-exclude-scan-paths.html"
     - title: Definieren Sie vorhandene Gruppen-IDs als „offen für die Organisation“.
       url: "/task-add-group-id-as-open.html"
+    - title: veraltete Daten definieren
+      url: "/task-stale-data.html"
     - title: Datenquellen aus der Datenklassifizierung entfernen
       url: "/task-managing-compliance.html"
     - title: Deinstallieren der Datenklassifizierung

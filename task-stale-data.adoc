@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-stale-data.html 
+keywords: support registration, register for support, support, nss account, add nss account, 
+summary: Passen Sie die Definition veralteter Daten in NetApp Data Classification so an, dass die Berichtserstellung Ihren organisatorischen Anforderungen entspricht. 
+---
+= Anpassen der Definition veralteter Daten in NetApp Data Classification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die NetApp Data Classification identifiziert veraltete Daten, um Ihnen dabei zu helfen, Einsparmöglichkeiten und Governance-Risiken zu erkennen. Da die Definition von veralteten Daten je nach organisatorischem Kontext variieren kann, können Sie anpassen, wie die Datenklassifizierung veraltete Daten definiert.
+
+Veraltete Daten können anhand des Zeitpunkts des letzten Zugriffs oder der letzten Änderung definiert werden. Die wählbaren Zeiträume reichen von vor 6 Monaten bis vor 10 Jahren.
+
+Standardmäßig gelten Daten als veraltet, wenn sie zuletzt vor drei Jahren geändert wurden.
+
+.veraltete Daten definieren
+. Wählen Sie unter Ransomware Resilience die Option **Konfiguration**.
+. Scrollen Sie auf der Konfigurationsseite zur Überschrift **Definition veralteter Daten**.
+. Im Dropdown-Menü **Dateieigenschaften** können Sie auswählen, ob veraltete Daten anhand des Zeitpunkts des *zuletzt aufgerufenen* oder des *zuletzt geänderten* Datums definiert werden sollen.
+. Wählen Sie den Zeitraum für die Definition veralteter Daten.
++
+image:stale-data.png["Screenshot der Optionen zur Definition veralteter Daten."]
+
+. Wählen Sie **Speichern**.
+
