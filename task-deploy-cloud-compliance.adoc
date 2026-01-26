@@ -33,7 +33,7 @@ Sie können auchlink:https://docs.netapp.com/us-en/console-setup-admin/task-inst
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Voraussetzungen
 [role="quick-margin-para"]
-Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt.  Dazu gehören der ausgehende Internetzugriff für die Instanz, die Konnektivität zwischen dem Konsolenagenten und der Datenklassifizierung über Port 443 und mehr.  <<Voraussetzungen, siehe vollständige Liste>>.
+Stellen Sie sicher, dass Ihre Umgebung die Voraussetzungen erfüllt. Dazu gehören ausgehender Internetzugang für die Instanz, Konnektivität zwischen dem Console-Agent und Data Classification über Port 443 und mehr. <<Voraussetzungen,Vollständige Liste anzeigen>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Datenklassifizierung bereitstellen
 [role="quick-margin-para"]
