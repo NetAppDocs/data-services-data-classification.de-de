@@ -249,12 +249,3 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 | Verzeichnistyp | Ja | Ja 
 |===
 ====
-
-
-== Wie schnell scannt die Datenklassifizierung Daten
-
-Die Scangeschwindigkeit wird durch Netzwerklatenz, Festplattenlatenz, Netzwerkbandbreite, Umgebungsgröße und Dateiverteilungsgrößen beeinflusst.
-
-* Bei der Durchführung von reinen Mapping-Scans kann die Datenklassifizierung zwischen 100 und 150 TiB Daten pro Tag scannen.
-* Beim Durchführen von Map- und Klassifizierungsscans kann die Datenklassifizierung zwischen 15 und 40 TiB Daten pro Tag scannen.
-
