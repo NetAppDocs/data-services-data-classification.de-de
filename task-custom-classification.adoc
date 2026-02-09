@@ -87,8 +87,7 @@ Geben Sie den **Verzeichnispfad** für das Verzeichnis ein, das die Trainingsdat
 image:custom-category-file-summary.png["Screenshot mit der Zusammenfassung der für das Training hochgeladenen Dateien."]
 
 +
-.. Um den Dateipfad zu ändern oder Dateien erneut hochzuladen, wählen Sie **Pfad ändern**, geben Sie dann die Daten ein und laden Sie die Dateien erneut.
-
+Data Classification zeigt die voraussichtliche Abschlusszeit für das Datentraining an. .. Um den Dateipfad zu ändern oder Dateien erneut hochzuladen, wählen Sie **Change path**, geben Sie die Daten ein und laden Sie die Dateien erneut.
 
 . Wenn Sie mit den hochgeladenen Dateien zufrieden sind, wählen Sie **Weiter**.
 . Geben Sie einen **Klassifikatornamen** und eine **Beschreibung** ein, um die benutzerdefinierte Kategorie in Ihrem Dashboard zu identifizieren.
