@@ -22,7 +22,7 @@ Erfahren Sie, was es Neues bei der NetApp Data Classification gibt.
 
 
 
-=== Version 1.50
+=== Version 1.51
 
 Diese Version der Datenklassifizierung enthält Fehlerbehebungen und die folgenden Aktualisierungen:
 
