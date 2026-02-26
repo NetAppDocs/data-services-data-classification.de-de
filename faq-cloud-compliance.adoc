@@ -135,9 +135,6 @@ Die Datenklassifizierung wird unterstützt, wenn der Konsolenagent in einer Regi
 
 === Welche Datenquellen kann ich scannen, wenn ich Data Classification auf einer Site ohne Internetzugang installiere?
 
-
-IMPORTANT: Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6. NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle. Die Dokumentation zum privaten Modus in der alten BlueXP Schnittstelle finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["PDF-Dokumentation für den privaten Modus von BlueXP"^] .
-
 Die Datenklassifizierung kann nur Daten aus Datenquellen scannen, die sich lokal am Standort vor Ort befinden.  Derzeit kann die Datenklassifizierung die folgenden lokalen Datenquellen im „Privatmodus“ – auch als „dunkle“ Site bezeichnet – scannen:
 
 * On-Premises- ONTAP -Systeme
