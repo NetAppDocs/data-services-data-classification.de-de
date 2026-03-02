@@ -44,7 +44,7 @@ Die Komponente „Einsparmöglichkeiten“ zeigt Daten an, die Sie löschen oder
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Governance“ aus.
-. Wählen Sie in jeder Kachel „Einsparmöglichkeiten“ des Governance-Dashboards *Speicher optimieren* aus, um die gefilterten Ergebnisse auf der Untersuchungsseite anzuzeigen.  Um herauszufinden, welche Daten Sie löschen oder auf günstigeren Speicher verschieben sollten, untersuchen Sie die _Sparmöglichkeiten_.
+. Wählen Sie in jedem Bereich „Einsparpotenziale“ des Governance-Dashboards die Option *Speicher optimieren*, um die gefilterten Ergebnisse auf der Untersuchungsseite anzuzeigen. Um Daten zu finden, die Sie löschen oder in kostengünstigeren Speicher auslagern sollten, untersuchen Sie die _Saving Opportunities_.
 +
 ** *Veraltete Daten* - Standardmäßig gelten Daten als veraltet, wenn sie zuletzt vor mehr als 3 Jahren geändert wurden. Sie können die Definition von veralteten Daten anpassen (task-stale-data.html).
 ** *Doppelte Dateien* – Dateien, die an anderen Speicherorten in den von Ihnen gescannten Datenquellen dupliziert sind. link:task-investigate-data.html["Sehen Sie, welche Arten von doppelten Dateien angezeigt werden"] .

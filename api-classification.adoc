@@ -58,7 +58,7 @@ Die API ist sicher und verwendet dieselbe Authentifizierungsmethode wie die Benu
 
 == Zugriff auf die Swagger-API-Referenz
 
-Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Datenklassifizierungsinstanz.  Bei einer Cloud-Bereitstellung verwenden Sie die öffentliche IP-Adresse.  Dann müssen Sie zu diesem Endpunkt gelangen:
+Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classification-Instanz. Bei einer Cloud-Bereitstellung verwenden Sie die öffentliche IP-Adresse. Anschließend müssen Sie auf diesen Endpunkt zugreifen:
 
 \https://<Klassifizierungs-IP>/documentation
 
