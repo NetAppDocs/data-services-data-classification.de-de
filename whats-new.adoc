@@ -18,6 +18,34 @@ Erfahren Sie, was es Neues bei der NetApp Data Classification gibt.
 
 
 
+== 09. März 2026
+
+
+
+=== Version 1.52
+
+.Ressourcenvalidierung
+Um die Zuverlässigkeit zu gewährleisten, validiert Data Classification nun die verfügbaren Speicher- und Festplattenressourcen während des Scannens, der Berichtserstellung und der Aktionen. Wenn die Speicherauslastung 95 % übersteigt oder der Festplattenspeicher unter 6 GB fällt, pausiert Data Classification die Vorgänge automatisch. Die Vorgänge werden fortgesetzt, sobald die Ressourcen wieder ausreichend sind.
+
+Um Ihre Systemressourcen zu überwachen, siehe link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Überwachen Sie den Zustand der Datenklassifizierung"^].
+
+.Erhöhtes Limit für Kopieren und Verschieben
+Die Funktionen Kopieren und Verschieben werden nun auch für CIFS-Ziele unterstützt. Das Größenlimit pro Datei für beide Aktionen wurde von 50 MB auf 1 GB erhöht. Die Operationsgrenzen für beide Aktionen wurden auf 1 TB oder 5 Millionen Dateien erhöht.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
+
+.Berechtigungen für die Active Directory integration configuration
+Änderungen an den Active Directory (AD)-Integrationseinstellungen in Data Classification sind nun auf Administratoren beschränkt. Viewer haben nicht mehr die Möglichkeit, die AD-Einstellungen zu ändern.
+
+Weitere Informationen zur Rolle des Classification viewer finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Datendienstrollen"^].
+
+.Transparente Proxy-Unterstützung
+Die Datenklassifizierung unterstützt jetzt transparente Proxy-Konfigurationen, was eine reibungslosere Bereitstellung in proxied oder eingeschränkten Netzwerkumgebungen ermöglicht.
+
+Weitere Informationen zum Einsatz in eingeschränkten Umgebungen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Installieren Sie NetApp Data Classification auf einem Linux-Host ohne Internetzugang"^].
+
+
+
 == 09. Februar 2026
 
 
@@ -36,7 +64,7 @@ Beim Export eines Untersuchungsberichts zu Verzeichnissen aus dem Untersuchungs-
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
 
-.Erhöhtes Limit für Kopieren und Verschieben
+.Erhöhte Limits für Kopieren und Verschieben
 Beim Kopieren oder Verschieben von Dateien können Sie jetzt Dateien mit einer Größe von bis zu 250 MB kopieren oder verschieben, eine Erhöhung gegenüber dem vorherigen Limit von 50 MB.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
@@ -83,7 +111,7 @@ Diese Version der Datenklassifizierung enthält Fehlerbehebungen und die folgend
 .Überwachen Sie Kennzahlen und Leistung im Dashboard für die Gesundheitsüberwachung.
 Die Datenklassifizierung bietet jetzt ein Dashboard zur Gesundheitsüberwachung, das eine Echtzeitüberwachung Ihrer Ressourcen sowie Einblicke in Speichernutzung, Festplattennutzung, Festplattenauslastung und mehr ermöglicht. Mithilfe der Erkenntnisse aus dem Dashboard zur Gesundheitsüberwachung können Sie die Infrastruktur Ihrer Bereitstellung überprüfen und Einblicke gewinnen, um Speicher und Leistung zu optimieren.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Überwachen Sie den Zustand der Datenklassifizierung"].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Überwachen Sie den Zustand der Datenklassifizierung"^].
 
 .Verbesserte Ladeleistung
 Die Ladeleistung aller Seiten in der Datenklassifizierung wurde verbessert, um ein effizienteres Benutzererlebnis zu schaffen.

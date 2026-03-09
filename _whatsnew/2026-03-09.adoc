@@ -1,0 +1,27 @@
+= Version 1.52
+:allow-uri-read: 
+
+
+
+
+=== Version 1.52
+
+.Ressourcenvalidierung
+Um die Zuverlässigkeit zu gewährleisten, validiert Data Classification nun die verfügbaren Speicher- und Festplattenressourcen während des Scannens, der Berichtserstellung und der Aktionen. Wenn die Speicherauslastung 95 % übersteigt oder der Festplattenspeicher unter 6 GB fällt, pausiert Data Classification die Vorgänge automatisch. Die Vorgänge werden fortgesetzt, sobald die Ressourcen wieder ausreichend sind.
+
+Um Ihre Systemressourcen zu überwachen, siehe link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Überwachen Sie den Zustand der Datenklassifizierung"^].
+
+.Erhöhtes Limit für Kopieren und Verschieben
+Die Funktionen Kopieren und Verschieben werden nun auch für CIFS-Ziele unterstützt. Das Größenlimit pro Datei für beide Aktionen wurde von 50 MB auf 1 GB erhöht. Die Operationsgrenzen für beide Aktionen wurden auf 1 TB oder 5 Millionen Dateien erhöht.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
+
+.Berechtigungen für die Active Directory integration configuration
+Änderungen an den Active Directory (AD)-Integrationseinstellungen in Data Classification sind nun auf Administratoren beschränkt. Viewer haben nicht mehr die Möglichkeit, die AD-Einstellungen zu ändern.
+
+Weitere Informationen zur Rolle des Classification viewer finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Datendienstrollen"^].
+
+.Transparente Proxy-Unterstützung
+Die Datenklassifizierung unterstützt jetzt transparente Proxy-Konfigurationen, was eine reibungslosere Bereitstellung in proxied oder eingeschränkten Netzwerkumgebungen ermöglicht.
+
+Weitere Informationen zum Einsatz in eingeschränkten Umgebungen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Installieren Sie NetApp Data Classification auf einem Linux-Host ohne Internetzugang"^].

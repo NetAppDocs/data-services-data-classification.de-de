@@ -18,7 +18,7 @@ Beim Export eines Untersuchungsberichts zu Verzeichnissen aus dem Untersuchungs-
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
 
-.Erhöhtes Limit für Kopieren und Verschieben
+.Erhöhte Limits für Kopieren und Verschieben
 Beim Kopieren oder Verschieben von Dateien können Sie jetzt Dateien mit einer Größe von bis zu 250 MB kopieren oder verschieben, eine Erhöhung gegenüber dem vorherigen Limit von 50 MB.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].

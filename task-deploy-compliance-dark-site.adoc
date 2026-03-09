@@ -266,8 +266,6 @@ Sie benötigen die Informationen für das Active Directory:
 
 Bei typischen Konfigurationen installieren Sie die Software auf einem einzelnen Hostsystem.
 
-image:diagram_deploy_onprem_single_host_no_internet.png["Ein Diagramm, das die Standorte der Datenquellen zeigt, die Sie scannen können, wenn Sie eine einzelne Data Classification-Instanz lokal ohne Internetzugang bereitstellen."]
-
 Befolgen Sie diese Schritte, wenn Sie die Data Classification Software auf einem einzelnen lokalen Host in einer Offline-Umgebung installieren.
 
 Beachten Sie, dass bei der Installation von Data Classification alle Installationsaktivitäten protokolliert werden.  Wenn während der Installation Probleme auftreten, können Sie den Inhalt des Installationsüberwachungsprotokolls anzeigen.  Es ist geschrieben an `/opt/netapp/install_logs/` .
