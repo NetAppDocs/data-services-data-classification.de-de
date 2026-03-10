@@ -70,7 +70,7 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 | Möglichkeit, andere Berichte auszuführen | Ja | Nein 
 
 
-| Möglichkeit, Metadaten aus Dateien anzuzeigen** | Nein | Ja 
+| Möglichkeit, Metadaten aus Dateien anzuzeigen** | Ja | Ja 
 |===
 {Asterisk} Die Datenklassifizierung setzt keine Begrenzung für die Datenmenge, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
 
