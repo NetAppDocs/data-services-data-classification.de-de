@@ -664,7 +664,6 @@
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="section-title">Zeitstempel des letzten Zugriffs</block>
   <block id="766aa8e7cd2a6b2b085c6107a7da9b88" category="paragraph">Wenn Data Classification einen Scan eines Verzeichnisses durchführt, wirkt sich der Scan auf das Feld **Zuletzt aufgerufen** des Verzeichnisses aus.  Wenn Sie das Feld **Letzter Zugriff** anzeigen, geben diese Metadaten entweder das Datum und die Uhrzeit des Scans oder den letzten Zeitpunkt wieder, zu dem ein Benutzer auf das Verzeichnis zugegriffen hat.</block>
   <block id="e96a6a2be46b8b1357ec2a787a1d1300" category="summary">Manchmal müssen Sie sich möglicherweise beim NetApp Data Classification System anmelden, um auf Protokolldateien zuzugreifen oder Konfigurationsdateien zu bearbeiten.</block>
-  <block id="3bdd1ff20ed6998a7cc8219fdca4e271" category="doc">Melden Sie sich beim NetApp Data Classification System an</block>
   <block id="3ce6ca22e847cbd536ba7c715301377a" category="paragraph">Sie müssen sich beim NetApp Data Classification System anmelden, damit Sie auf Protokolldateien zugreifen oder Konfigurationsdateien bearbeiten können.</block>
   <block id="2b5271618e7493a8c77e7b4639d819b8" category="paragraph">Wenn Data Classification auf einem Linux-Computer bei Ihnen vor Ort oder auf einem Linux-Computer installiert ist, den Sie in der Cloud bereitgestellt haben, können Sie direkt auf die Konfigurationsdatei und das Skript zugreifen.</block>
   <block id="b432bef38adffbc05fc1ceb150787a02" category="paragraph">Wenn die Datenklassifizierung in der Cloud bereitgestellt wird, müssen Sie per SSH auf die Datenklassifizierungsinstanz zugreifen.  Sie können per SSH auf das System zugreifen, indem Sie den Benutzer und das Kennwort eingeben oder den SSH-Schlüssel verwenden, den Sie während der Installation des Konsolenagenten angegeben haben.  Der SSH-Befehl lautet:</block>
@@ -1569,7 +1568,6 @@
   <block id="0079344bb0661607100d432cde92e6a5" category="list-text">Wählen Sie auf der Konfigurationsseite *Konfiguration* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen und etwaige Fehler zu beheben.</block>
   <block id="e90444baa59788bd6471cf703b12a16e" category="summary">Sie können die Daten Ihrer Organisation untersuchen, indem Sie die Details auf der Seite „Datenuntersuchung“ anzeigen.  Hier können Sie Ihre Recherche fortsetzen, nachdem Sie sich das Governance-Dashboard angesehen haben.</block>
   <block id="4c257f0482d661d1986f92f057e1c581" category="doc">Untersuchen Sie die in Ihrem Unternehmen gespeicherten Daten mit NetApp Data Classification</block>
-  <block id="7ce237dbe0011dccdc7c96c7be17d6ec" category="paragraph">Das Data Investigation-Dashboard bietet Einblicke in Ihre Daten auf Datei- und Verzeichnisebene und ermöglicht Ihnen das Sortieren und Filtern der Ergebnisse.  Die Seite „Datenuntersuchung“ bietet Einblicke in Datei- und Verzeichnismetadaten und -berechtigungen und identifiziert doppelte Dateien.  Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen.  Die Seite „Datenuntersuchung“ unterstützt auch das Verschieben, Kopieren und Löschen von Dateien.</block>
   <block id="8d6bb2090f1e71e8cabff59cd97a6f5f" category="admonition">Um Erkenntnisse aus der Untersuchungsseite zu gewinnen, müssen Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, zeigen keine Details auf Dateiebene an.</block>
   <block id="adbc89b69fed239a539f916b53592ab9" category="section-title">Struktur der Datenuntersuchung</block>
   <block id="7fc46b0c25bc13694774a84c4a0f5b4b" category="paragraph">Auf der Seite „Datenuntersuchung“ werden die Daten in drei Registerkarten sortiert:</block>
@@ -2429,7 +2427,6 @@
   <block id="a1b1318193a35f78be2416bedbe04261" category="sidebar">Zeigen Sie Governance-Details zu Ihren Daten an</block>
   <block id="056f094fced7be2185f9f1e21b455e6b" category="sidebar">Zeigen Sie Compliance-Details zu Ihren Daten an</block>
   <block id="93f515959ce6187b986c42fa6959168b" category="sidebar">Kategorien personenbezogener Daten</block>
-  <block id="d208d030068b6bbb840e4e251deaf193" category="sidebar">Erstellen eines benutzerdefinierten Scans</block>
   <block id="bd3668f2876c07e4375041fda913dc31" category="sidebar">Gespeicherte Abfragen verwalten</block>
   <block id="91cace02ed792be8683fda1544dfb32c" category="sidebar">Scaneinstellungen ändern</block>
   <block id="2a79af6160ec8fbec237f8058c6c9de3" category="sidebar">Verwalten der Datenklassifizierung</block>
@@ -2797,5 +2794,49 @@
   <block id="df4bdd45174b09881add6730bdfaf045" category="section-title">09. März 2026</block>
   <block id="c929bf2a4cebf50fb64dab464b664919" category="inline-image-macro">Ein Diagramm, das die Standorte der Datenquellen zeigt, die Sie scannen können, wenn Sie eine einzelne Data Classification-Instanz lokal ohne Internetzugang bereitstellen.</block>
   <block id="416689a150e5347df135e4852392a307" category="paragraph"><block ref="416689a150e5347df135e4852392a307" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e70d49c282a7c52a8996f7a8357c7524" category="doc">Häufig gestellte Fragen zu NetApp Data Classification</block>
+  <block id="4ccc6bc65ccfbf776471461699df7790" category="inline-link-macro">Daten kopieren, verschieben und löschen</block>
+  <block id="26f19c45862fe8f967db0b3b7d289ad3" category="paragraph">Weitere Informationen finden Sie unter <block ref="151ab796904ad3ebe669fb675d8fec0a" category="inline-link-macro-rx"></block>.</block>
+  <block id="ad5b3224be1d6831dcf88a793785b1f1" category="doc">Häufig gestellte Fragen zu NetApp Data Classification</block>
+  <block id="621a6cff40fed66e7b90194843eb20fb" category="doc">Rechtliche Hinweise für NetApp Data Classification</block>
+  <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Melden Sie sich bei NetApp Data Classification an</block>
+  <block id="f214292b356953b67175bbd37992066d" category="summary">Nach dem Filtern der Daten im Untersuchungs-Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen.</block>
+  <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Dateien mit NetApp Data Classification kopieren, verschieben und löschen</block>
+  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Zusätzlich zu Einblicken in Governance und Einsparpotenziale ermöglicht NetApp Data Classification Ihnen auch, Aktionen an Dateien über das Investigation Dashboard durchzuführen. Nach dem Filtern von Daten im Investigation Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen. Das Ausführen dieser Aktionen kann die Compliance verbessern, zum Beispiel durch das Verschieben von Dateien an einen sichereren Ort, oder Einsparpotenziale schaffen, indem alte oder doppelte Dateien gelöscht werden.</block>
+  <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Dateien kopieren</block>
+  <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">Data Classification unterstützt das Kopieren von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB Daten oder 5 Millionen Dateien kopieren, je nachdem, welche Grenze zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel kopieren. Die Quelldatei bleibt beim Kopieren unverändert.</block>
+  <block id="37214830ec688e601a722f40084e9795" category="list-text">Wählen Sie im Investigation Dashboard die Dateien aus, die Sie kopieren möchten.</block>
+  <block id="2d2f00419a0dd0229c58522ea98e71ae" category="list-text">Wählen Sie oberhalb der Dateiliste **Copy** aus.</block>
+  <block id="b9e9b1bb4d8b072a482f32c6e7d7ff72" category="inline-image-macro">Screenshot der Aktionen auf der Untersuchungsseite</block>
+  <block id="cca60a4ec6a536a71654abbbd1c54e3a" category="paragraph"><block ref="cca60a4ec6a536a71654abbbd1c54e3a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="07f527a3198ae416b045c995367ab422" category="list-text">Wählen Sie das Protokoll des Ziels für die Kopien: **NFS** oder **CIFS**.</block>
+  <block id="4885cff36928d8614fad0e3d21b27679" category="list-text">Wenn Sie NFS ausgewählt haben, geben Sie den Zielpfad mit Schrägstrichen ein, zum Beispiel<block ref="8ed050b486343bdef7b6adadf5b986b8" prefix=" " category="inline-code"></block>.</block>
+  <block id="6a3331936dcbbbfa4db946e4d0f00e9b" category="paragraph">Wenn Sie CIFS ausgewählt haben, geben Sie den Zielpfad mit Backslashes ein, zum Beispiel<block ref="52938cbc0a420230679e4ae98bb4a89a" prefix=" " category="inline-code"></block>. Geben Sie außerdem die Anmeldeinformationen **Username** und **Password** für die CIFS-Freigabe ein.</block>
+  <block id="c64976420b21ffb4d1ba97533079e81c" category="inline-image-macro">Screenshot der Kopierfunktion für NFS-Dateien</block>
+  <block id="12ceb039500c1e7536d6a926d04beed0" category="paragraph"><block ref="12ceb039500c1e7536d6a926d04beed0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="005315d0bf05e5d249f46e46e20423d3" category="list-text">Wählen Sie **Submit**.</block>
+  <block id="ed86a97d5bcbda5898269baae37b79f7" category="section-title">Dateien verschieben</block>
+  <block id="0ac97eb58eed3141f29d93b87eb4d0b7" category="paragraph">Data Classification unterstützt das Verschieben von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB an Daten oder 5 Millionen Dateien verschieben, je nachdem, welches Limit zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel verschieben.</block>
+  <block id="fbb338a6c6a711b7c940515c513f15de" category="list-text">Wählen Sie im Investigation Dashboard die Dateien aus, die Sie verschieben möchten.</block>
+  <block id="2066527d248d6275b0ce325ff50ec8fb" category="list-text">Oberhalb der Dateiliste wählen Sie **Verschieben**.</block>
+  <block id="2a993e09d9313401f99dcee0ed7245f9" category="list-text">Wählen Sie das Protokoll des Ziels: **NFS** oder **CIFS**.</block>
+  <block id="1ab5ecdad0b7cf47d71967b3f0e1f51b" category="list-text">Optional können Sie **Leave breadcrumb** auswählen, um eine Breadcrumb-Datei im Quellvolume zu hinterlassen, die erklärt, wohin und warum die Datei verschoben wurde.</block>
+  <block id="465b61ed91de19635de96ea746fcd8dd" category="list-text">Wenn Sie **Leave breadcrumb** ausgewählt haben, geben Sie einen beschreibenden Text ein, der die Gründe für das Verschieben der Datei und, falls erforderlich, den neuen Speicherort angibt.</block>
+  <block id="f7e4b92188f5354ca61e9869df6224cc" category="inline-image-macro">Screenshot der Verschiebefunktion für NFS-Dateien</block>
+  <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7afd3db29a42496704a6705958fec121" category="list-text">Wählen Sie **Move items**.</block>
+  <block id="19e43848563797a6f937c7895b604754" category="section-title">Dateien löschen</block>
+  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Wenn Sie Daten im Investigation Dashboard filtern, um Speicherplatz- und Kosteneinsparungspotenziale zu ermitteln, können Sie diese Dateien löschen. Das Löschen von Dateien wird nur für unstrukturierte Dateien unterstützt.</block>
+  <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">Wählen Sie im Investigation Dashboard die Dateien aus, die Sie löschen möchten.</block>
+  <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">Geben Sie im Bestätigungsdialog „permanently delete“ ein.</block>
+  <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Wählen Sie **Delete File**, um den Vorgang zu bestätigen.</block>
+  <block id="9c213e0d48408ad93cdfc881eb4f22dd" category="inline-image-macro">Screenshot des Löschdialogs</block>
+  <block id="d5c79828ec7e224f24ce0c5c7bdfd94a" category="paragraph"><block ref="d5c79828ec7e224f24ce0c5c7bdfd94a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1e91143d215d79313744660e8a25c51" category="inline-link-macro">Dateien verschieben, kopieren und löschen</block>
+  <block id="5f346df67220a8ad49f8534209369421" category="paragraph">Das Dashboard „Data Investigation“ zeigt Einblicke auf Datei- und Verzeichnisebene in Ihre Daten und ermöglicht es Ihnen, Ergebnisse zu sortieren und zu filtern. Die Seite „Data Investigation“ präsentiert Einblicke in Metadaten und Berechtigungen von Dateien und Verzeichnissen sowie die Identifizierung doppelter Dateien. Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen. Die Seite „Data Investigation“ unterstützt außerdem <block ref="53552aaf1401627b381eb7f88c3339dc" category="inline-link-macro-rx"></block>.</block>
+  <block id="f394fbb29081ecb4ff4624bf5701d2c0" category="inline-link-macro">unstrukturierte Dateien kopieren, verschieben und löschen</block>
+  <block id="380916f8eca732c161f7d63bc771658e" category="admonition">Nach dem Filtern der Daten können Sie <block ref="80925d04faafa25188db966788d6cf44" category="inline-link-macro-rx"></block> verwenden, um die Compliance zu verbessern oder den Speicher zu optimieren.</block>
+  <block id="a05935ba37500bcaabc75b8fac4a4d69" category="inline-link-macro">Daten aus dem Investigation Dashboard kopieren, verschieben und löschen</block>
+  <block id="dccdd7229b11ad459b3b6fd7edf24186" category="list-text"><block ref="dccdd7229b11ad459b3b6fd7edf24186" category="inline-link-macro-rx"></block></block>
+  <block id="5b077e4667590c350e8809dec7c16b8f" category="sidebar">Überprüfen Sie die Einsatzbereitschaft Ihres Linux-Hosts</block>
+  <block id="44c26efa4311ed85b7e12474f8bd2eaf" category="sidebar">Datenquellen entfernen</block>
 </blocks>

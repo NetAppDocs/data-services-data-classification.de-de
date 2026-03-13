@@ -4,7 +4,7 @@ permalink: reference-log-in-to-instance.html
 keywords: log in, data sense, classification 
 summary: Manchmal müssen Sie sich möglicherweise beim NetApp Data Classification System anmelden, um auf Protokolldateien zuzugreifen oder Konfigurationsdateien zu bearbeiten. 
 ---
-= Melden Sie sich beim NetApp Data Classification System an
+= Melden Sie sich bei NetApp Data Classification an
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

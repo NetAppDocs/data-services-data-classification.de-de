@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-copy-move.html 
+keywords: investigation, filter, delete, copy, move, flexclone, sync 
+summary: Nach dem Filtern der Daten im Untersuchungs-Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen. 
+---
+= Dateien mit NetApp Data Classification kopieren, verschieben und löschen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Zusätzlich zu Einblicken in Governance und Einsparpotenziale ermöglicht NetApp Data Classification Ihnen auch, Aktionen an Dateien über das Investigation Dashboard durchzuführen. Nach dem Filtern von Daten im Investigation Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen. Das Ausführen dieser Aktionen kann die Compliance verbessern, zum Beispiel durch das Verschieben von Dateien an einen sichereren Ort, oder Einsparpotenziale schaffen, indem alte oder doppelte Dateien gelöscht werden.
+
+
+
+== Dateien kopieren
+
+Data Classification unterstützt das Kopieren von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB Daten oder 5 Millionen Dateien kopieren, je nachdem, welche Grenze zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel kopieren. Die Quelldatei bleibt beim Kopieren unverändert.
+
+.Schritte
+. Wählen Sie im Investigation Dashboard die Dateien aus, die Sie kopieren möchten.
+. Wählen Sie oberhalb der Dateiliste **Copy** aus.
++
+image:screenshot-copy-move-delete.png["Screenshot der Aktionen auf der Untersuchungsseite"]
+
+. Wählen Sie das Protokoll des Ziels für die Kopien: **NFS** oder **CIFS**.
+. Wenn Sie NFS ausgewählt haben, geben Sie den Zielpfad mit Schrägstrichen ein, zum Beispiel `hostname:/path/to/destination`.
++
+Wenn Sie CIFS ausgewählt haben, geben Sie den Zielpfad mit Backslashes ein, zum Beispiel `\\server\share\path`. Geben Sie außerdem die Anmeldeinformationen **Username** und **Password** für die CIFS-Freigabe ein.
+
++
+image:screenshot-copy-nfs.png["Screenshot der Kopierfunktion für NFS-Dateien"]
+
+. Wählen Sie **Submit**.
+
+
+
+
+== Dateien verschieben
+
+Data Classification unterstützt das Verschieben von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB an Daten oder 5 Millionen Dateien verschieben, je nachdem, welches Limit zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel verschieben.
+
+.Schritte
+. Wählen Sie im Investigation Dashboard die Dateien aus, die Sie verschieben möchten.
++
+image:screenshot-copy-move-delete.png["Screenshot der Aktionen auf der Untersuchungsseite"]
+
+. Oberhalb der Dateiliste wählen Sie **Verschieben**.
+. Wählen Sie das Protokoll des Ziels: **NFS** oder **CIFS**.
+. Wenn Sie NFS ausgewählt haben, geben Sie den Zielpfad mit Schrägstrichen ein, zum Beispiel `hostname:/path/to/destination`.
++
+Wenn Sie CIFS ausgewählt haben, geben Sie den Zielpfad mit Backslashes ein, zum Beispiel `\\server\share\path`. Geben Sie außerdem die Anmeldeinformationen **Username** und **Password** für die CIFS-Freigabe ein.
+
+. Optional können Sie **Leave breadcrumb** auswählen, um eine Breadcrumb-Datei im Quellvolume zu hinterlassen, die erklärt, wohin und warum die Datei verschoben wurde.
++
+.. Wenn Sie **Leave breadcrumb** ausgewählt haben, geben Sie einen beschreibenden Text ein, der die Gründe für das Verschieben der Datei und, falls erforderlich, den neuen Speicherort angibt.
++
+image:screenshot-move-nfs.png["Screenshot der Verschiebefunktion für NFS-Dateien"]
+
+
+
+. Wählen Sie **Move items**.
+
+
+
+
+== Dateien löschen
+
+Wenn Sie Daten im Investigation Dashboard filtern, um Speicherplatz- und Kosteneinsparungspotenziale zu ermitteln, können Sie diese Dateien löschen. Das Löschen von Dateien wird nur für unstrukturierte Dateien unterstützt.
+
+.Schritte
+. Wählen Sie im Investigation Dashboard die Dateien aus, die Sie löschen möchten.
+. Geben Sie im Bestätigungsdialog „permanently delete“ ein.
+. Wählen Sie **Delete File**, um den Vorgang zu bestätigen.
++
+image:screenshot-delete.png["Screenshot des Löschdialogs"]
+
+

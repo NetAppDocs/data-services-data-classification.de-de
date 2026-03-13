@@ -32,7 +32,7 @@ Um Ihre Systemressourcen zu überwachen, siehe link:https://docs.netapp.com/us-e
 .Erhöhtes Limit für Kopieren und Verschieben
 Die Funktionen Kopieren und Verschieben werden nun auch für CIFS-Ziele unterstützt. Das Größenlimit pro Datei für beide Aktionen wurde von 50 MB auf 1 GB erhöht. Die Operationsgrenzen für beide Aktionen wurden auf 1 TB oder 5 Millionen Dateien erhöht.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Daten kopieren, verschieben und löschen"^].
 
 .Berechtigungen für die Active Directory integration configuration
 Änderungen an den Active Directory (AD)-Integrationseinstellungen in Data Classification sind nun auf Administratoren beschränkt. Viewer haben nicht mehr die Möglichkeit, die AD-Einstellungen zu ändern.
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 .Erhöhte Limits für Kopieren und Verschieben
 Beim Kopieren oder Verschieben von Dateien können Sie jetzt Dateien mit einer Größe von bis zu 250 MB kopieren oder verschieben, eine Erhöhung gegenüber dem vorherigen Limit von 50 MB.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Daten untersuchen"^].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Daten kopieren, verschieben und löschen"^].
 
 .Verbesserte Darstellung für Bildschirme mit niedriger Auflösung
 Data Classification hat die Anzeigeleistung für Bildschirme mit niedriger Auflösung verbessert und so die Benutzererfahrung verbessert.

@@ -14,7 +14,7 @@ summary: Sie können die Daten Ihrer Organisation untersuchen, indem Sie die Det
 
 
 [role="lead"]
-Das Data Investigation-Dashboard bietet Einblicke in Ihre Daten auf Datei- und Verzeichnisebene und ermöglicht Ihnen das Sortieren und Filtern der Ergebnisse.  Die Seite „Datenuntersuchung“ bietet Einblicke in Datei- und Verzeichnismetadaten und -berechtigungen und identifiziert doppelte Dateien.  Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen.  Die Seite „Datenuntersuchung“ unterstützt auch das Verschieben, Kopieren und Löschen von Dateien.
+Das Dashboard „Data Investigation“ zeigt Einblicke auf Datei- und Verzeichnisebene in Ihre Daten und ermöglicht es Ihnen, Ergebnisse zu sortieren und zu filtern. Die Seite „Data Investigation“ präsentiert Einblicke in Metadaten und Berechtigungen von Dateien und Verzeichnissen sowie die Identifizierung doppelter Dateien. Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen. Die Seite „Data Investigation“ unterstützt außerdem link:task-copy-move.html["Dateien verschieben, kopieren und löschen"].
 
 
 NOTE: Um Erkenntnisse aus der Untersuchungsseite zu gewinnen, müssen Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, zeigen keine Details auf Dateiebene an.
@@ -191,6 +191,9 @@ Verwenden Sie den folgenden Filter, um Dateien anzuzeigen, die in Ihrem Speicher
 
 | Duplikate | Wählen Sie aus, ob die Datei in den Repositories dupliziert wird. 
 |===
+
+TIP: Nach dem Filtern der Daten können Sie link:task-copy-move.html["unstrukturierte Dateien kopieren, verschieben und löschen"] verwenden, um die Compliance zu verbessern oder den Speicher zu optimieren.
+
 
 
 == Dateimetadaten anzeigen
@@ -392,3 +395,10 @@ Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Re
 
 
 TIP: Es kann bis zu 15 Minuten dauern, bis die Ergebnisse auf der Seite „Gespeicherte Abfragen“ angezeigt werden.
+
+
+
+== Nächste Schritte
+
+* link:task-copy-move.html["Daten aus dem Investigation Dashboard kopieren, verschieben und löschen"]
+

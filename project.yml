@@ -38,8 +38,7 @@ sidebar:
         url: "/task-deploy-compliance-onprem.html"
       - title: Installation auf einem Linux-Host vor Ort ohne Internetzugang
         url: "/task-deploy-compliance-dark-site.html"
-      - title: Überprüfen Sie, ob Ihr Linux-Host für die Installation der Datenklassifizierung
-          bereit ist.
+      - title: Überprüfen Sie die Einsatzbereitschaft Ihres Linux-Hosts
         url: "/task-test-linux-system.html"
     - title: Aktivieren Sie das Scannen Ihrer Datenquellen
       entries:
@@ -69,18 +68,18 @@ sidebar:
       url: "/task-controlling-private-data.html"
     - title: Kategorien personenbezogener Daten
       url: "/reference-private-data-categories.html"
-    - title: Erstellen eines benutzerdefinierten Scans
-      url: "/task-custom-classification.html"
     - title: Daten untersuchen
       url: "/task-investigate-data.html"
+    - title: Daten kopieren, verschieben und löschen
+      url: "/task-copy-move.html"
+    - title: Erstellen einer benutzerdefinierten Klassifizierung
+      url: "/task-custom-classification.html"
     - title: Gespeicherte Abfragen verwalten
       url: "/task-using-policies.html"
     - title: Scaneinstellungen ändern
       url: "/task-managing-repo-scanning.html"
     - title: Erstellen von Compliance-Berichten
       url: "/task-generating-compliance-reports.html"
-    - title: Überwachen Sie den Systemzustand
-      url: "/task-health-monitor.html"
   - title: Verwalten der Datenklassifizierung
     entries:
     - title: Verzeichnisse vom Scannen ausschließen
@@ -89,7 +88,9 @@ sidebar:
       url: "/task-add-group-id-as-open.html"
     - title: veraltete Daten definieren
       url: "/task-stale-data.html"
-    - title: Datenquellen aus der Datenklassifizierung entfernen
+    - title: Überwachen Sie den Systemzustand
+      url: "/task-health-monitor.html"
+    - title: Datenquellen entfernen
       url: "/task-managing-compliance.html"
     - title: Deinstallieren der Datenklassifizierung
       url: "/task-uninstall.html"
