@@ -39,6 +39,11 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 Weitere Informationen zur Rolle des Classification viewer finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Datendienstrollen"^].
 
+.Unterstützung für RHEL 9.7
+Data Classification hat Red Hat Enterprise Linux v9.7 für die manuelle Installation vor Ort, einschließlich Dark-Site-Bereitstellungen, hinzugefügt.
+
+Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und sie erfordern Data Classification Version 1.30 oder höher: Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 und 9.7.
+
 .Transparente Proxy-Unterstützung
 Die Datenklassifizierung unterstützt jetzt transparente Proxy-Konfigurationen, was eine reibungslosere Bereitstellung in proxied oder eingeschränkten Netzwerkumgebungen ermöglicht.
 

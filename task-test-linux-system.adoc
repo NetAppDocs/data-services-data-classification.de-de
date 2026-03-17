@@ -115,7 +115,7 @@ Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, de
 
 ** Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engine und erfordern Data Classification Version 1.30 oder höher:
 +
-*** Red Hat Enterprise Linux Version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 und 9.6.
+*** Red Hat Enterprise Linux version 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 und 9.7.
 
 
 ** Advanced Vector Extensions (AVX2) müssen auf dem Hostsystem aktiviert sein.
