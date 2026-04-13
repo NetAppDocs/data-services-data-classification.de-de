@@ -1,0 +1,9 @@
+= Version 1.53
+:allow-uri-read: 
+
+
+
+
+=== Version 1.53
+
+Diese Version der Datenklassifizierung enthält Fehlerbehebungen, Sicherheitsverbesserungen und Leistungsoptimierungen.

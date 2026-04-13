@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-add-group-id-as-open.html 
 keywords: permissions, open to organization, file access 
-summary: 'Wenn Gruppen-IDs an Dateien oder Ordner in NFS-Dateifreigaben angehängt werden, definieren sie die Berechtigungen für die Datei oder den Ordner, beispielsweise, ob sie „für die Organisation geöffnet“ sind.  Wenn einige Gruppen-IDs (GIDs) zunächst nicht mit der Berechtigungsstufe „Für die Organisation offen“ eingerichtet sind, können Sie diese Berechtigung zur GID hinzufügen, sodass alle Dateien und Ordner, an die diese GID angehängt ist, als „für die Organisation offen“ gelten.' 
+summary: Wenn Gruppen-IDs Dateien oder Ordnern in NFS-Dateifreigaben zugewiesen werden, definieren sie die Berechtigungen für die jeweilige Datei oder den jeweiligen Ordner. Falls Gruppen-IDs nicht auf die Berechtigungsstufe „Open to Organization“ eingestellt sind, können Sie diese Berechtigung der GID hinzufügen, sodass alle Dateien und Ordner mit dieser GID als „open to the organization“ gelten. 
 ---
 = Definieren Sie zusätzliche Gruppen-IDs als offen für die Organisation in NetApp Data Classification
 :hardbreaks:
