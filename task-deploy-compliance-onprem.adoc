@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-deploy-compliance-onprem.html 
 keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises 
-summary: Um NetApp Data Classification auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud mit Internetzugang bereitzustellen, müssen Sie den Linux-Host manuell in Ihrem Netzwerk oder in der Cloud bereitstellen. 
+summary: Um NetApp Data Classification auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud mit Internetzugang zu installieren, müssen Sie den Linux-Host manuell in Ihrem Netzwerk oder in der Cloud bereitstellen. 
 ---
 = Installieren Sie NetApp Data Classification auf einem Host mit Internetzugang
 :hardbreaks:
@@ -56,7 +56,7 @@ Laden Sie die Cloud Data Classification-Software von der NetApp -Support-Site he
 
 == Erstellen eines Konsolenagenten
 
-Bevor Sie Data Classification installieren und verwenden können, ist ein Konsolenagent erforderlich.  In den meisten Fällen haben Sie wahrscheinlich einen Konsolenagenten eingerichtet, bevor Sie versuchen, die Datenklassifizierung zu aktivieren, da die meisten https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Für Konsolenfunktionen ist ein Konsolenagent erforderlich"] , aber es gibt Fälle, in denen Sie jetzt eines einrichten müssen.
+Für die Installation und Nutzung von NetApp Data Classification ist ein Console Agent erforderlich. In den meisten Fällen haben Sie wahrscheinlich bereits einen Console Agent eingerichtet, bevor Sie NetApp Data Classification aktivieren.
 
 Informationen zum Erstellen eines solchen in der Umgebung Ihres Cloud-Anbieters finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Erstellen eines Konsolenagenten in AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Erstellen eines Konsolenagenten in Azure"^] , oder https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Erstellen eines Konsolenagenten in GCP"^] .
 

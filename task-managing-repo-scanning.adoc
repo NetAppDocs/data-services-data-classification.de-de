@@ -4,7 +4,7 @@ permalink: task-managing-repo-scanning.html
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
 summary: Erfahren Sie, wie Sie die Scaneinstellungen für ein System in NetApp Data Classification ändern. 
 ---
-= Ändern Sie die NetApp Data Classification -Scaneinstellungen für Ihre Repositories
+= Scaneinstellungen in NetApp Data Classification ändern
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
 summary: Sie können die Daten Ihrer Organisation untersuchen, indem Sie die Details auf der Seite „Datenuntersuchung“ anzeigen.  Hier können Sie Ihre Recherche fortsetzen, nachdem Sie sich das Governance-Dashboard angesehen haben. 
 ---
-= Untersuchen Sie die in Ihrem Unternehmen gespeicherten Daten mit NetApp Data Classification
+= Untersuchen Sie Daten in Ihrem Unternehmen mit NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
