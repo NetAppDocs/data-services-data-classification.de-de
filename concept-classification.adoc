@@ -74,9 +74,9 @@ Die Datenklassifizierung kann strukturierte und unstrukturierte Daten aus den fo
 * Amazon FSx for NetApp ONTAP -Verwaltung
 * Azure NetApp Files
 * Cloud Volumes ONTAP (bereitgestellt in AWS, Azure oder GCP)
+* Google Cloud NetApp Volumes
 * On-Premises- ONTAP -Cluster
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 
 *Datenquellen*
@@ -132,7 +132,7 @@ image:diagram_cloud_compliance_instance.png["Ein Diagramm, das eine Konsoleninst
 
 Beachten Sie Folgendes zur Standardinstanz:
 
-* In AWS läuft die Datenklassifizierung auf einem https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge-Instanz"^] mit einer 500 GiB GP2-Festplatte.  Das Betriebssystem-Image ist Amazon Linux 2.  Bei der Bereitstellung in AWS können Sie eine kleinere Instanzgröße wählen, wenn Sie eine kleine Datenmenge scannen.
+* In AWS läuft die Datenklassifizierung auf einem https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge-Instanz"^] mit einer 500 GiB GP2-Festplatte. Das Betriebssystem-Image ist Amazon Linux 2.
 * In Azure läuft die Datenklassifizierung auf einemlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] mit einer 500-GiB-Festplatte.  Das Betriebssystem-Image ist Ubuntu 22.04.
 * In GCP läuft die Datenklassifizierung auf einemlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["n2-standard-16 VM"^] mit einer persistenten 500-GiB-Standardfestplatte.  Das Betriebssystem-Image ist Ubuntu 22.04.
 * In Regionen, in denen die Standardinstanz nicht verfügbar ist, wird die Datenklassifizierung auf einer alternativen Instanz ausgeführt. link:reference-instance-types.html["Alternative Instance-Typen anzeigen"] .
@@ -159,8 +159,6 @@ TIP: Die Instanz sollte ständig ausgeführt werden, da die Datenklassifizierung
 
 | Groß (Standard) | 16 CPUs, 64 GB RAM, 500 GiB SSD | Kann bis zu 250 Millionen Dateien scannen. 
 |===
-Wenn Sie bei der Bereitstellung der Datenklassifizierung in Azure oder GCP Unterstützung benötigen und einen kleineren Instanztyp verwenden möchten, senden Sie eine E-Mail an ng-contact-data-sense@netapp.com.
-
 
 
 == Funktionsweise des Datenklassifizierungsscans

@@ -276,7 +276,7 @@ Mit der NetApp Console kann der Benutzer Systeme praktisch überall scannen und 
 
 Wannlink:task-deploy-cloud-compliance.html["in der Cloud bereitgestellt"] :
 
-* In AWS läuft die Datenklassifizierung auf einer m6i.4xlarge-Instanz mit einer 500-GiB-GP2-Festplatte.  Sie können während der Bereitstellung einen kleineren Instanztyp auswählen.
+* In AWS läuft Data Classification auf einer m6i.4xlarge-Instanz mit einer 500 GiB GP2-Festplatte.
 * In Azure wird die Datenklassifizierung auf einer Standard_D16s_v3-VM mit einer 500-GiB-Festplatte ausgeführt.
 * In GCP läuft die Datenklassifizierung auf einer n2-standard-16-VM mit einer persistenten Standardfestplatte mit 500 GiB.
 
