@@ -14,15 +14,20 @@ summary: Planen Sie, welche Bereitstellung von NetApp Data Classification Ihren 
 
 
 [role="lead"]
-Sie können NetApp Data Classification auf verschiedene Arten bereitstellen.  Erfahren Sie, welche Methode Ihren Anforderungen entspricht.
-
-Die Datenklassifizierung kann auf folgende Arten bereitgestellt werden:
+Sie können NetApp Data Classification auf verschiedene Arten bereitstellen. Sehen Sie sich die verfügbaren Methoden an, um diejenige auszuwählen, die Ihren Anforderungen am besten entspricht.
 
 * link:task-deploy-cloud-compliance.html["Bereitstellung in der Cloud mithilfe der Konsole"] . Die Konsole stellt die Datenklassifizierungsinstanz im selben Cloud-Anbieternetzwerk bereit wie der Konsolenagent.
 * link:task-deploy-compliance-onprem.html["Installation auf einem Linux-Host mit Internetzugang"] . Installieren Sie Data Classification auf einem Linux-Host in Ihrem Netzwerk oder auf einem Linux-Host in der Cloud, der über Internetzugang verfügt.  Diese Art der Installation kann eine gute Option sein, wenn Sie lokale ONTAP -Systeme lieber mit einer Datenklassifizierungsinstanz scannen möchten, die sich ebenfalls vor Ort befindet. Dies ist jedoch keine Voraussetzung.
 * link:task-deploy-compliance-dark-site.html["Installation auf einem Linux-Host an einem lokalen Standort ohne Internetzugang"], auch als _privater Modus_ bekannt. Dieser Installationstyp, der ein Installationsskript verwendet, hat keine Verbindung zur SaaS-Ebene der Konsole.
 
 
-Sowohl die Installation auf einem Linux-Host mit Internetzugang als auch die lokale Installation auf einem Linux-Host ohne Internetzugang verwenden ein Installationsskript.  Das Skript prüft zunächst, ob das System und die Umgebung die Voraussetzungen erfüllen.  Wenn die Voraussetzungen erfüllt sind, beginnt die Installation.  Wenn Sie die Voraussetzungen unabhängig von der Ausführung der Data Classification-Installation überprüfen möchten, können Sie ein separates Softwarepaket herunterladen, das nur die Voraussetzungen testet.
 
-Weitere Informationen finden Sie unter link:task-test-linux-system.html["Überprüfen Sie, ob Ihr Linux-Host für die Installation der Datenklassifizierung bereit ist."] .
+TIP: Bei lokalen VMware vSphere-Bereitstellungen unterstützt die Datenklassifizierung eine vereinfachte link:task-deploy-ova.html["Bereitstellung mit OVA"].
+
+
+
+== Installationsskript für die lokale Umgebung
+
+Sowohl die Installation auf einem Linux-Rechner mit Internetzugang als auch die lokale Installation auf einem Linux-Rechner ohne Internetzugang erfolgen mithilfe eines Installationsskripts. Das Skript prüft zunächst, ob System und Umgebung die Voraussetzungen erfüllen. Sind die Voraussetzungen erfüllt, startet die Installation.
+
+Zur Überprüfung der Bereitschaft Ihres Linux-Systems steht ein separates Softwarepaket zur Verfügung. Um das Überprüfungspaket auszuführen, siehe link:task-test-linux-system.html["Überprüfen Sie, ob Ihr Linux-Host für die Installation von Data Classification bereit ist."].

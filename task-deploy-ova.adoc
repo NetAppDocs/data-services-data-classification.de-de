@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-ova.html 
+keywords: deploy, install, vmware, ova, open virtual appliance 
+summary: 'NetApp Data Classification unterstützt die Bereitstellung für lokale vSphere-Umgebungen mit Open Virtual Appliance (OVA). Die OVA-Bereitstellungsmethode bietet eine vorab validierte, von NetApp verwaltete Umgebung, um die Bereitstellung zu vereinfachen.' 
+---
+= Bereitstellen der NetApp Data Classification mit VMware Open Virtual Appliance
+:allow-uri-read: 
+:no-hardbreaks: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification unterstützt die Bereitstellung mit VMware Open Virtual Appliance (OVA) und bietet ein verwaltetes Paket zur Installation und Ausführung von Data Classification in lokalen VMware vSphere-Umgebungen. Die OVA-Bereitstellungsmethode stellt eine vorab validierte, von NetApp verwaltete Umgebung bereit, um die Bereitstellung zu vereinfachen.
+
+Diese Methode wird für neue VMware-basierte Implementierungen empfohlen.
+
+
+
+== Voraussetzungen
+
+Bevor Sie die OVA-Datei zur Installation der Datenklassifizierung verwenden, benötigen Sie Folgendes:
+
+* Eine VMware vSphere Umgebung
+* Eine statische IPv4-Adresse, die dem Gerät zugewiesen wurde
+* Vom Zielnetzwerk aus erreichbare DNS-Server
+* SSH-Zugriff auf das Gerät aktiviert
+* link:https://mysupport.netapp.com/site/user/registration["NetApp Support Site-Zugangsdaten"] den Installer herunterladen
+
+
+
+
+== Die OVA in VMware vSphere bereitstellen
+
+. Laden Sie die OVA-Datei von link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter. Wählen Sie die für Ihre Umgebung geeignete OVA-Appliance aus:
++
+|===
+| OVA-Appliance | Produktionsgröße | Dateiscan-Limit 
+
+
+| `DataClassification-<version>-L.ova` | Standard-Produktionslast: 16 CPUs, 64 GB RAM, 500 GB Festplatte | 250 Millionen Dateien 
+
+
+| `DataClassification-<version>-XL.ova` | Hohe Produktionslast: 32 CPUs, 128 GB RAM, 1 TB Festplatte | 500 Millionen Dateien 
+|===
+. Geben Sie den vSphere Client ein. Klicken Sie mit der rechten Maustaste auf den Zielcluster oder -host und wählen Sie dann *OVF-Vorlage bereitstellen* > *VM aus OVA erstellen*.
+. Laden Sie die OVA-Datei hoch, die Sie in Schritt eins heruntergeladen haben.
+. Geben Sie den *VM-Namen* und das Zielrechenzentrum, den Host oder Cluster sowie den Datenspeicher an.
+. Akzeptieren Sie die NetApp Endbenutzer-Lizenzvereinbarung.
+. Passen Sie die Vorlage an. Sie müssen folgende Informationen angeben:
++
+** **Hostname** - der Name des Geräts
+** **IPv4-Adresse** – die statische IPv4-Adresse für die Managementoberfläche
+** **IPv4-Subnetzmaske** - zum Beispiel 255.255.255.0
+** **IPv4-Gateway-Adresse** – das Standardgateway
+** **Primärer DNS-Server** – der erforderliche DNS-Resolver
++
+Optional können Sie die **sekundären DNS-Server** und, als durch Kommas getrennte Listen, die **Suchdomänen** (zum Beispiel  `corp.local,lab.local`) und die **NTP-Server** hinzufügen.
+
+
+
+. Legen Sie das *Admin-Passwort* für den Standard-Linux-Benutzer fest.
++
+
+NOTE: Das Passwort wird für Root-Zugriff, SSH-Zugriff und die Systemadministration verwendet. Bewahren Sie das Passwort sicher auf.
+
+. Überprüfen Sie die Zusammenfassung. Wählen Sie *Fertigstellen*, um die Bereitstellung zu starten.
+. Nach Abschluss der Bereitstellung schalten Sie die VM ein.
+
+
+
+
+== Datenklassifizierung installieren
+
+. Laden Sie die Data Classification-Software von der link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter.
++
+Wählen Sie die Datei mit dem Namen *DATASENSE-INSTALLER-<version>.tar.gz* aus.
+
+. Wählen Sie in der Konsole *Governance > Klassifizierung* aus.
+. Wählen Sie *Klassifizierung bereitstellen*.
++
+image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schaltfläche zum Aktivieren der Datenklassifizierung."]
+
+. Je nachdem, ob Sie Data Classification auf einer Instanz installieren, die Sie in der Cloud vorbereitet haben, oder auf einer Instanz, die Sie bei Ihnen vor Ort vorbereitet haben, wählen Sie die entsprechende Option *Bereitstellen* aus, um die Installation von Data Classification zu starten.
+. Das Dialogfeld „Datenklassifizierung vor Ort bereitstellen“ wird angezeigt.  Kopieren Sie den bereitgestellten Befehl (zum Beispiel: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq` ) und fügen Sie es in eine Textdatei ein, damit Sie es später verwenden können.  Wählen Sie dann *Schließen*, um das Dialogfeld zu schließen.
+. Stellen Sie über SSH mit dem Administratorbenutzer eine Verbindung zur OVA-Appliance her.
+. Führen Sie den von Ihnen generierten Installationsbefehl aus, um die Installation abzuschließen und das System bei Ihrer Organisation zu registrieren.
+
+
+
+
+== Nächste Schritte
+
+* link:task-scanning-overview.html["Konfigurieren Sie das Scannen Ihrer Datenquellen"]
+

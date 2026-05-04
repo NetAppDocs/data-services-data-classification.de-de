@@ -20,6 +20,9 @@ Die lokale Installation ist eine gute Option, wenn Sie lokale ONTAP -Systeme lie
 
 Das Installationsskript für die Datenklassifizierung prüft zunächst, ob das System und die Umgebung die erforderlichen Voraussetzungen erfüllen.  Wenn alle Voraussetzungen erfüllt sind, beginnt die Installation.  Wenn Sie die Voraussetzungen unabhängig von der Ausführung der Data Classification-Installation überprüfen möchten, können Sie ein separates Softwarepaket herunterladen, das nur die Voraussetzungen testet. link:task-test-linux-system.html["Erfahren Sie, wie Sie überprüfen können, ob Ihr Linux-Host für die Installation der Datenklassifizierung bereit ist."] .
 
+
+TIP: Bei lokalen VMware vSphere-Bereitstellungen unterstützt die Datenklassifizierung eine vereinfachte link:task-deploy-ova.html["Bereitstellung mit OVA"].
+
 Die typische Installation auf einem Linux-Host _in Ihren Räumlichkeiten_ verfügt über die folgenden Komponenten und Verbindungen.
 
 image:diagram_deploy_onprem_overview.png["Ein Diagramm der erforderlichen Konsolen- und Netzwerkkomponenten und der zugehörigen Verbindungen."]
@@ -321,7 +324,7 @@ Beachten Sie, dass bei der Installation von Data Classification alle Installatio
 
 
 .Schritte
-. Laden Sie die Datenklassifizierungssoftware von der https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] .  Die Datei, die Sie auswählen sollten, heißt *DATASENSE-INSTALLER-<version>.tar.gz*.
+. Laden Sie die Data Classification-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter. Wählen Sie die Datei mit dem Namen *DATASENSE-INSTALLER-<version>.tar.gz* aus.
 . Kopieren Sie die Installationsdatei auf den Linux-Host, den Sie verwenden möchten (mit `scp` oder eine andere Methode).
 . Entpacken Sie die Installationsdatei auf dem Hostcomputer, zum Beispiel:
 +
@@ -384,5 +387,9 @@ Das Data Classification-Installationsprogramm installiert Pakete, registriert di
 
 Wenn zwischen dem Hostcomputer und der Konsolen-Agentinstanz eine Verbindung über Port 8080 besteht, wird der Installationsfortschritt auf der Registerkarte „Datenklassifizierung“ in der Konsole angezeigt.
 
-.Was kommt als Nächstes
-Auf der Konfigurationsseite können Sie die Datenquellen auswählen, die Sie scannen möchten.
+
+
+== Nächste Schritte
+
+* link:task-scanning-overview.html["Konfigurieren Sie das Scannen Ihrer Datenquellen"]
+

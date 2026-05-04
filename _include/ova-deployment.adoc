@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+TIP: Bei lokalen VMware vSphere-Bereitstellungen unterstützt die Datenklassifizierung eine vereinfachte link:task-deploy-ova.html["Bereitstellung mit OVA"].
