@@ -1,18 +1,18 @@
 ---
 indexpage:
   title: Dokumentation zur NetApp Data Classification
-  summary: Mit NetApp Data Classification können Sie Daten in der gesamten Hybrid-Multicloud
-    Ihres Unternehmens scannen und klassifizieren.  Die Datenklassifizierung nutzt
-    KI-gesteuerte Verarbeitung natürlicher Sprache (NLP) zur kontextbezogenen Datenanalyse
-    und -kategorisierung und bietet Ihnen umsetzbare Einblicke in Ihre Daten, um Compliance-Anforderungen
+  summary: NetApp Data Classification ermöglicht es Ihnen, Daten in der hybriden Multi-Cloud-Umgebung
+    Ihres Unternehmens zu scannen und zu klassifizieren. Data Classification nutzt
+    KI-gestützte Verarbeitung natürlicher Sprache (NLP) für die kontextbezogene Datenanalyse
+    und -kategorisierung und liefert Ihnen so umsetzbare Erkenntnisse, um Compliance-Anforderungen
     zu erfüllen, Sicherheitslücken zu erkennen, Kosten zu optimieren und die Migration
     zu beschleunigen.
   keywords: bluexp, data classification, cloud data sense, data sense, compliance,
     security, netapp console, bluexp classification
-  lead: Mit NetApp Data Classification können Sie Daten in der gesamten Hybrid-Multicloud
-    Ihres Unternehmens scannen und klassifizieren.  Die Datenklassifizierung nutzt
-    KI-gesteuerte Verarbeitung natürlicher Sprache (NLP) zur kontextbezogenen Datenanalyse
-    und -kategorisierung und bietet Ihnen umsetzbare Einblicke in Ihre Daten, um Compliance-Anforderungen
+  lead: NetApp Data Classification ermöglicht es Ihnen, Daten in der hybriden Multi-Cloud-Umgebung
+    Ihres Unternehmens zu scannen und zu klassifizieren. Data Classification nutzt
+    KI-gestützte Verarbeitung natürlicher Sprache (NLP) für die kontextbezogene Datenanalyse
+    und -kategorisierung und liefert Ihnen so umsetzbare Erkenntnisse, um Compliance-Anforderungen
     zu erfüllen, Sicherheitslücken zu erkennen, Kosten zu optimieren und die Migration
     zu beschleunigen.
   tiles:

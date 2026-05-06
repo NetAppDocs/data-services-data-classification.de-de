@@ -51,7 +51,7 @@ Nachdem Sie die Datenklassifizierung bereitgestellt und das Scannen Ihrer Datenq
 
 Die Active Directory-Anmeldeinformationen können schreibgeschützt sein, durch die Bereitstellung von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
 
-Wenn Sie bei CIFS-Volumes/Dateifreigaben sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Klassifizierungsscans der Datenklassifizierung unverändert bleiben, muss der Benutzer über die Berechtigung „Attribute schreiben“ verfügen.  Wenn möglich, empfehlen wir, den in Active Directory konfigurierten Benutzer zu einem Teil einer übergeordneten Gruppe in der Organisation zu machen, die über Berechtigungen für alle Dateien verfügt.
+Bei CIFS-Volumes/Dateifreigaben sollte der Benutzer über die Berechtigung „Attribute schreiben“ verfügen, um sicherzustellen, dass die Zugriffszeiten der Dateien durch Data Classification-Scans nicht verändert werden. Wenn möglich, empfehlen wir, den in Active Directory konfigurierten Benutzer einer übergeordneten Gruppe in der Organisation zuzuordnen, die Berechtigungen für alle Dateien hat.
 
 .Anforderungen
 * Sie müssen bereits ein Active Directory für die Benutzer in Ihrem Unternehmen eingerichtet haben.

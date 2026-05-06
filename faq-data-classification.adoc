@@ -234,7 +234,7 @@ Der Konsolenagent ist eine Software, die auf einer Compute-Instanz entweder inne
 
 === Wo muss der Konsolenagent installiert werden?
 
-Beim Scannen von Daten muss der NetApp Console -Agent an den folgenden Speicherorten installiert werden:
+Beim Scannen von Daten muss der NetApp Console-Agent an den folgenden Orten installiert sein:
 
 * Für Cloud Volumes ONTAP in AWS oder Amazon FSx für ONTAP: Der Konsolenagent befindet sich in AWS.
 * Für Cloud Volumes ONTAP in Azure oder in Azure NetApp Files: Der Konsolenagent befindet sich in Azure.
