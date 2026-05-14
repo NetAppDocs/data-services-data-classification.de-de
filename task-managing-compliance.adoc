@@ -45,8 +45,5 @@ Wenn Sie Benutzerdateien aus einer Dateifreigabegruppe nicht mehr scannen möcht
 
 .Schritte
 . Wählen Sie auf der Seite _Konfiguration_ die Optionimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie in der Zeile für die Dateifreigabegruppe auf die Schaltfläche „Dateifreigabegruppe entfernen“ und dann auf „Dateifreigabegruppe entfernen“.
-+
-image:screenshot_compliance_remove_db.png["Ein Screenshot der Schaltfläche „DB-Server entfernen“ auf der Seite „Scan-Konfiguration“."]
-
 . Wählen Sie im Bestätigungsdialogfeld *Freigabegruppe löschen* aus.
 

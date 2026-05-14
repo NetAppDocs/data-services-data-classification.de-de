@@ -18,7 +18,17 @@ Erfahren Sie, was es Neues bei der NetApp Data Classification gibt.
 
 
 
-== 4. Mai 2026
+== 11. Mai 2026
+
+*Version 1.54*
+
+
+
+=== Verbesserte Konfigurationsseite
+
+Die Datenklassifizierung hat die Konfigurationsseite aktualisiert und verbessert, wodurch die Verwaltung von Einstellungen, Systemen, das Aktivieren von Scans und die Überwachung des Systemzustands benutzerfreundlicher gestaltet werden können. Die neue Konfigurationsseite bietet die bestehenden Funktionen in einem übersichtlicheren Format und ermöglicht zusätzlich das Filtern von Systemen nach Typ, Fehlerstatus und Scanstatus. Die neue Seite bietet außerdem eine Zusammenfassung der verbundenen Systeme sowie Übersichten über aktive und konfigurierte Scans.
+
+Überprüfen Sie eine link:https://youtu.be/_8YJ3KyZ7nI["Video-Anleitung"^]. Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html["Scannen Sie Datenquellen mit Data Classification"^].
 
 
 
@@ -380,7 +390,7 @@ Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu v
 
 === Priorisieren Sie Klassifizierungsscans
 
-Die Datenklassifizierung unterstützt die Möglichkeit, neben reinen Mapping-Scans auch Map- und Classify-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map & Classify-Scans wird während und vor Beginn der Scans unterstützt. Wenn Sie einem laufenden Scan Priorität einräumen, werden sowohl die Zuordnungs- als auch die Klassifizierungsscans priorisiert.
+Die Datenklassifizierung unterstützt die Möglichkeit, Map-&-Classify-Scans zusätzlich zu reinen Map-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map-&-Classify-Scans wird sowohl während als auch vor Beginn der Scans unterstützt. Wenn Sie sich entscheiden, einen Scan während seiner Ausführung zu priorisieren, werden sowohl der Mapping- als auch der Klassifizierungsscan priorisiert.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"] .
 
@@ -488,15 +498,15 @@ Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engi
 
 
 
-=== Priorisieren Sie reine Mapping-Scans
+=== Priorisieren Sie nur-Map-Scans
 
-Wenn Sie reine Mapping-Scans durchführen, können Sie den wichtigsten Scans Priorität einräumen. Diese Funktion ist hilfreich, wenn Sie über viele Arbeitsumgebungen verfügen und sicherstellen möchten, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
+Bei Map-only-Scans können Sie die wichtigsten Scans priorisieren. Diese Funktion ist hilfreich, wenn Sie viele Arbeitsumgebungen haben und sicherstellen möchten, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
 
 Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt. Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben. Mehrere Scans können priorisiert werden. Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
 
 Die Priorität wird einmalig gewährt. Automatische erneute Scans der Kartendaten erfolgen in der Standardreihenfolge.
 
-Die Priorisierung beschränkt sich auflink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Nur-Mapping-Scans"^] ; es ist nicht für Karten- und Klassifizierungsscans verfügbar.
+Die Priorisierung ist auf link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Nur-Map-Scans"^] beschränkt; sie ist nicht für Map- und Klassifizierungsscans verfügbar.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"^] .
 

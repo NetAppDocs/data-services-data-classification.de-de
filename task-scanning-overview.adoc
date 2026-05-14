@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-scanning-overview.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, map-only scans, map and classify, full 
 summary: Scannen Sie Ihre Datenquellen mit NetApp Data Classification. 
 ---
 = Scannen Sie Datenquellen mit NetApp Data Classification
@@ -22,19 +22,22 @@ Sie können Scans auf Volume-Ebene oder auf Datenbankschemaebene aktivieren und 
 
 
 
-== Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?
+== Scanarten verstehen
 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
 
-* **Nur-Mapping-Scans** bieten nur einen allgemeinen Überblick über Ihre Daten und werden für ausgewählte Datenquellen durchgeführt.  Scans, die nur eine Zuordnung vornehmen, benötigen weniger Zeit als Scans, die eine Zuordnung und Klassifizierung vornehmen, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten anzuzeigen.  Möglicherweise möchten Sie dies zunächst tun, um Forschungsbereiche zu identifizieren und dann einen Map & Classify-Scan für diese Bereiche durchzuführen.
-* **Map & Classify-Scans** ermöglichen ein gründliches Scannen Ihrer Daten.
+* **Nur-Karten-Scans** bieten lediglich einen groben Überblick über Ihre Daten und werden auf ausgewählten Datenquellen durchgeführt. Nur-Karten-Scans benötigen weniger Zeit als vollständige Scans, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten zu sehen.
+* **Vollständige Scans** bieten eine tiefgehende Überprüfung Ihrer Daten. Ein vollständiger Scan umfasst eine Kartierung und eine Klassifizierung der Daten innerhalb der Dateien.
 
 
-Die folgende Tabelle zeigt einige der Unterschiede:
+
+TIP: Eine reine Map-only-Scan-Analyse kann hilfreich sein, um sich einen Überblick über Ihre Daten zu verschaffen und bestimmte Bereiche zu identifizieren, auf die vollständige Scans angewendet werden sollten.
+
+Überprüfen Sie die Tabellen, um zu sehen, welche Informationen bei reinen Kartenscans und vollständigen Scans angezeigt werden.
 
 [cols="47,18,18"]
 |===
-| Funktion | Scans zuordnen und klassifizieren | Nur-Mapping-Scans 
+| Funktion | Vollständiger Scan | Nur-Map-Scan 
 
 
 | Scangeschwindigkeit | Langsam | Schnell 
@@ -72,22 +75,22 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 
 | Möglichkeit, Metadaten aus Dateien anzuzeigen** | Ja | Ja 
 |===
-{Asterisk} Die Datenklassifizierung setzt keine Begrenzung für die Datenmenge, die gescannt werden kann.  Jeder Konsolenagent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] Dannlink:task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"] .  + Die Konsolen-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an.  Tipps zum Anzeigen von Daten von mehreren Konsolenagenten finden Sie unterlink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^] .
+{asterisk}Die Datenklassifizierung beschränkt die Menge der gescannten Daten nicht. Jeder Console-Agent unterstützt das Scannen und Anzeigen von 500 TiB Daten. Um mehr als 500 TiB Daten zu scannen, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["einen anderen Konsolenagenten installieren"^] dann link:task-deploy-overview.html["eine weitere Data Classification-Instanz bereitstellen"]. + Die Console-Benutzeroberfläche zeigt Daten von einem einzelnen Connector an. Tipps zum Anzeigen von Daten mehrerer Console-Agents finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Arbeiten mit mehreren Konsolenagenten"^].
 
 {asterisk}{asterisk} Die folgenden Metadaten werden während Mapping-Scans aus Dateien extrahiert:
 
-* System
-* Systemtyp
-* Speicherrepository
+* Uhrzeit der Dateierkennung
+* Datei zuletzt aufgerufen
+* Datei zuletzt geändert
 * Dateityp
-* Genutzte Kapazität
-* Anzahl der Dateien
 * Dateigröße
 * Dateierstellung
-* Letzter Dateizugriff
-* Datei zuletzt geändert
-* Uhrzeit der Dateierkennung
+* Anzahl der Dateien
 * Berechtigungsextraktion
+* Speicherrepository
+* System
+* Systemtyp
+* Genutzte Kapazität
 
 
 .Unterschiede im Governance-Dashboard:
@@ -95,7 +98,7 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 ====
 [cols="40,25,25"]
 |===
-| Funktion | Kartieren und klassifizieren | Karte 
+| Funktion | Vollständiger Scan | Nur-Map-Scan 
 
 
 | Veraltete Daten | Ja | Ja 
@@ -145,7 +148,7 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 ====
 [cols="40,25,25"]
 |===
-| Funktion | Kartieren und klassifizieren | Karte 
+| Funktion | Vollständiger Scan | Nur-Map-Scan 
 
 
 | Persönliche Informationen | Ja | Nein 
@@ -168,7 +171,7 @@ Die folgende Tabelle zeigt einige der Unterschiede:
 ====
 [cols="40,25,25"]
 |===
-| Funktion | Kartieren und klassifizieren | Karte 
+| Funktion | Vollständiger Scan | Nur-Map-Scan 
 
 
 | Gespeicherte Abfragen | Ja | Ja 

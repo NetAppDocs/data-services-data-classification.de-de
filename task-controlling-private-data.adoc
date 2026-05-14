@@ -17,7 +17,7 @@ summary: 'Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Det
 Übernehmen Sie die Kontrolle über Ihre privaten Daten, indem Sie Details zu den personenbezogenen Daten (PII) und sensiblen personenbezogenen Daten (SPII) in Ihrem Unternehmen anzeigen.  Sie können außerdem Transparenz gewinnen, indem Sie die Kategorien und Dateitypen überprüfen, die NetApp Data Classification in Ihren Daten gefunden hat.
 
 
-NOTE: Konformitätsdetails auf Dateiebene sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan durchführen. Reine Mapping-Scans liefern keine Details auf Dateiebene.
+NOTE: Detaillierte Informationen zur Konformität auf Dateiebene sind nur bei einer vollständigen Klassifizierungsprüfung verfügbar. Reine Kartenprüfungen liefern keine Details auf Dateiebene.
 
 Standardmäßig zeigt das Dashboard „Datenklassifizierung“ Compliance-Daten für alle Systeme und Datenbanken an.  Um nur für einige der Systeme Daten anzuzeigen, wählen Sie diese aus.
 
@@ -50,10 +50,10 @@ image:screenshot_personal_files.png["Ein Screenshot des Dialogfelds „Persönli
 Die folgenden Bilder zeigen persönliche Daten, die in einem Verzeichnis (Freigaben und Ordner) gefunden wurden. Im Reiter *Strukturiert* können Sie in Datenbanken gefundene personenbezogene Daten einsehen. Auf der Registerkarte *Unstrukturiert* können Sie Daten auf Dateiebene anzeigen.
 
 +
-image:screenshot_compliance_investigation_page.png["Ein Screenshot mit detaillierten Informationen, die in Dateien gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
+image:screenshot_compliance_investigation_page.png["Ein Screenshot mit detaillierten Informationen, die in Dateien nach Auswahl von „Ergebnisse untersuchen“ gefunden wurden."]
 
 +
-image:screenshot_compliance_investigation_page_directory.png["Ein Screenshot mit detaillierten Informationen, die in Verzeichnissen gefunden wurden, nachdem Sie auf „Ergebnisse untersuchen“ geklickt haben."]
+image:screenshot_compliance_investigation_page_directory.png["Ein Screenshot mit detaillierten Informationen, die in Verzeichnissen nach Auswahl von Investigate Results gefunden wurden."]
 
 
 
@@ -77,5 +77,5 @@ NOTE: Beim Scannen nach sensiblen personenbezogenen Daten wird nur Englisch unte
 image:screenshot-sensitive-personal.png["Screenshot der sensiblen persönlichen Ergebniskarte"] .
 
 . Um die Details für einen bestimmten Typ sensibler personenbezogener Daten zu untersuchen, wählen Sie *Alle anzeigen* und dann das Pfeilsymbol *Ergebnisse untersuchen* für einen bestimmten Typ sensibler personenbezogener Daten.
-. Untersuchen Sie die Daten, indem Sie nach einer bestimmten Datei suchen, sie sortieren, Details erweitern, auf *Ergebnisse untersuchen* klicken, um maskierte Informationen anzuzeigen, oder indem Sie die Dateiliste herunterladen.
+. Untersuchen Sie die Daten, indem Sie suchen, sortieren, Details für eine bestimmte Datei erweitern, *Untersuchungsergebnisse* auswählen, um maskierte Informationen anzuzeigen, oder indem Sie die Dateiliste herunterladen.
 

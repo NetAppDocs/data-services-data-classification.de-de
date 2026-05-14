@@ -23,10 +23,8 @@ Die erforderlichen Schritte hängen davon ab, ob Sie die Datenklassifizierung in
 == Deinstallieren Sie Data Classification von einem Cloud-Anbieter
 
 . Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Wählen Sie unten auf der Konfigurationsseite **Klassifizierung deinstallieren** aus.
-+
-image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallieren von Data Classification."]
-
+. Wechseln Sie zur Registerkarte **Einstellungen**.
+. Wählen Sie **Datenklassifizierung deinstallieren**.
 . Geben Sie im Dialogfeld „uninstall“ ein, um mit der Trennung der Data Classification-Instanz vom Konsolenagent fortzufahren.  Wählen Sie zur Bestätigung **Deinstallieren**.
 . Geben Sie im Dialogfeld „Klassifizierung deinstallieren“ *deinstallieren* ein, um zu bestätigen, dass Sie die Datenklassifizierungsinstanz vom Konsolenagenten trennen möchten, und wählen Sie dann *Deinstallieren* aus.
 . Um den Deinstallationsvorgang abzuschließen, gehen Sie zur Konsole Ihres Cloud-Anbieters und löschen Sie die Data Classification-Instanz.  Die Instanz trägt den Namen _CloudCompliance_ und ist mit einem generierten Hash (UUID) verknüpft.  Beispiel: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
@@ -37,11 +35,12 @@ image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallie
 == Deinstallieren der Datenklassifizierung aus einer lokalen Bereitstellung
 
 . Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Wählen Sie unten auf der Konfigurationsseite **Klassifizierung deinstallieren** aus.
+. Wechseln Sie zur Registerkarte **Einstellungen**.
+. Wählen Sie **Datenklassifizierung deinstallieren**.
 +
 image:screenshot-uninstall.png["Ein Screenshot der Schaltfläche zum Deinstallieren von Data Classification."]
 
-. Geben Sie im Dialogfeld „uninstall“ ein, um mit der Trennung der Data Classification-Instanz vom Konsolenagent fortzufahren.  Wählen Sie zur Bestätigung **Deinstallieren**.
+. Geben Sie im Dialogfeld „uninstall“ ein, um die Datenklassifizierungsinstanz vom Console-Agenten zu trennen. Wählen Sie **Uninstall**, um zu bestätigen.
 . Um die Software vom Host zu deinstallieren, führen Sie den `cleanup.sh` Skript auf dem Hostcomputer für die Datenklassifizierung, zum Beispiel:
 +
 [source, cli]

@@ -20,7 +20,7 @@ Standardmäßig zeigen die Dashboards zur Datenklassifizierung Compliance- und G
 
 [NOTE]
 ====
-* Compliance-Berichte sind nur verfügbar, wenn Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, können nur den Datenmapping-Bericht generieren.
+* Compliance-Berichte sind nur verfügbar, wenn Sie eine vollständige Klassifizierungsprüfung Ihrer Datenquellen durchführen. Datenquellen, die lediglich einer Zuordnungsprüfung unterzogen wurden, können nur den Datenzuordnungsbericht generieren.
 * NetApp kann keine hundertprozentige Genauigkeit der personenbezogenen Daten und sensiblen personenbezogenen Daten garantieren, die durch die Datenklassifizierung identifiziert werden.  Sie sollten die Informationen immer durch Überprüfung der Daten validieren.
 
 

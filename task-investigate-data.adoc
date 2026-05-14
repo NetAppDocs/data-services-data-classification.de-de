@@ -17,7 +17,7 @@ summary: Sie können die Daten Ihrer Organisation untersuchen, indem Sie die Det
 Das Dashboard „Data Investigation“ zeigt Einblicke auf Datei- und Verzeichnisebene in Ihre Daten und ermöglicht es Ihnen, Ergebnisse zu sortieren und zu filtern. Die Seite „Data Investigation“ präsentiert Einblicke in Metadaten und Berechtigungen von Dateien und Verzeichnissen sowie die Identifizierung doppelter Dateien. Mit Einblicken auf Datei-, Verzeichnis- und Datenbankebene können Sie Maßnahmen ergreifen, um die Compliance Ihres Unternehmens zu verbessern und Speicherplatz zu sparen. Die Seite „Data Investigation“ unterstützt außerdem link:task-copy-move.html["Dateien verschieben, kopieren und löschen"].
 
 
-NOTE: Um Erkenntnisse aus der Untersuchungsseite zu gewinnen, müssen Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen.  Datenquellen, bei denen nur ein Mapping-Scan durchgeführt wurde, zeigen keine Details auf Dateiebene an.
+NOTE: Um von der Untersuchungsseite zu profitieren, müssen Sie einen vollständigen Klassifizierungsscan Ihrer Datenquellen durchführen. Datenquellen, bei denen nur ein reiner Mapping-Scan durchgeführt wurde, zeigen keine Details auf Dateiebene an.
 
 
 

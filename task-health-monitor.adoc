@@ -48,7 +48,7 @@ Das Systeminformationsfeld erfasst wichtige Informationen über die NetApp Conso
 == Greifen Sie auf das Dashboard des Gesundheitsmonitors zu.
 
 . Wählen Sie unter Datenklassifizierung **Konfiguration** aus.
-. Wählen Sie unter der Überschrift **Konfiguration** die Option **Datenklassifizierungs-Integritätsüberwachung**.
+. Wählen Sie die Registerkarte **Health monitor** aus.
 . Im Dashboard des Gesundheitsmonitors können Sie:
 +
 ** Überprüfen Sie die Nutzung und den Einsatz. Wenn bei Nutzungs- oder Auslastungsmetriken Warnungen angezeigt werden, wählen Sie die Warnung aus, um Empfehlungen zur Behebung des Problems zu erhalten.

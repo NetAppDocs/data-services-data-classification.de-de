@@ -24,7 +24,7 @@ Diese Integration bietet zusätzliche Informationen an den folgenden Stellen in 
 +
 Sie können auch weitere Details zum Dateibesitzer anzeigen: Kontoname, E-Mail-Adresse und SAM-Kontoname oder Elemente anzeigen, die diesem Benutzer gehören.
 
-* Sie können sehenlink:task-investigate-data.html["vollständige Dateiberechtigungen"] für jede Datei und jedes Verzeichnis, wenn Sie auf die Schaltfläche „Alle Berechtigungen anzeigen“ klicken.
+* Sie können link:task-investigate-data.html["vollständige Dateiberechtigungen"] für jede Datei und jedes Verzeichnis sehen, wenn Sie auf die Schaltfläche „Alle Berechtigungen anzeigen“ klicken.
 * Imlink:task-controlling-governance-data.html["Governance-Dashboard"] , zeigt das Bedienfeld „Berechtigungen öffnen“ einen größeren Detaillierungsgrad zu Ihren Daten an.
 
 
@@ -37,10 +37,10 @@ NOTE: Lokale Benutzer-SIDs und SIDs aus unbekannten Domänen werden nicht in den
 
 Eine Active Directory-Integration mit Datenklassifizierung kann Daten aus den folgenden Datenquellen identifizieren:
 
-* On-Premises- ONTAP -Systeme
-* Cloud Volumes ONTAP
 * Azure NetApp Files
+* Cloud Volumes ONTAP
 * FSx für ONTAP
+* On-Premises- ONTAP -Systeme
 
 
 
@@ -91,22 +91,15 @@ LDAP-Server-IP-Adresse oder mehrere IP-Adressen
 
 
 .Schritte
-. Klicken Sie auf der Seite „Datenklassifizierungskonfiguration“ auf *Active Directory hinzufügen*.
-+
-image:screenshot_compliance_integrate_active_directory.png["Ein Screenshot, der zeigt, wie Sie auf die Schaltfläche klicken, um einen Active Directory-Server zur Datenklassifizierung hinzuzufügen."]
-
-. Geben Sie im Dialogfeld „Mit Active Directory verbinden“ die Active Directory-Details ein und klicken Sie auf *Verbinden*.
+. Wählen Sie unter Datenklassifizierung **Konfiguration** aus.
+. Wechseln Sie zur Registerkarte **Einstellungen**.
+. Wählen Sie unter der Überschrift **Active Directory** die Option **Hinzufügen**.
+. Geben Sie im Dialogfeld „Verbindung zu Active Directory herstellen“ die Active Directory-Details ein und wählen Sie dann *Verbinden*.
 +
 Sie können bei Bedarf mehrere IP-Adressen hinzufügen, indem Sie *IP hinzufügen* auswählen.
 
 +
-image:screenshot_compliance_active_directory_dialog.png["Ein Screenshot des Dialogfelds, in dem Sie das Active Directory definieren, das Sie in die Datenklassifizierung integrieren möchten."]
-
-+
 Die Datenklassifizierung wird in das Active Directory integriert und der Konfigurationsseite wird ein neuer Abschnitt hinzugefügt.
-
-+
-image:screenshot_compliance_active_directory_added.png["Ein Screenshot, der das neue Active Directory zeigt, das in die Datenklassifizierung integriert ist."]
 
 
 
@@ -114,6 +107,6 @@ image:screenshot_compliance_active_directory_added.png["Ein Screenshot, der das 
 
 == Verwalten Sie Ihre Active Directory-Integration
 
-Wenn Sie Werte in Ihrer Active Directory-Integration ändern müssen, klicken Sie auf die Schaltfläche *Bearbeiten* und nehmen Sie die Änderungen vor.
+Wenn Sie Werte in Ihrer Active Directory-Integration ändern müssen, müssen Sie die Active Directory-Konfiguration in Data Classification aktualisieren. Kehren Sie zum Menü **Konfiguration** in Data Classification zurück und wechseln Sie dann zum Tab „Einstellungen“, um die Änderungen vorzunehmen.
 
-Sie können die Integration auch löschen, indem Sie dasimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie auf die Schaltfläche „Active Directory entfernen“ und dann auf „Active Directory entfernen“.
+Sie können die Integration auch löschen, indem Sie unter Active Directory die Schaltfläche **Entfernen** auswählen.

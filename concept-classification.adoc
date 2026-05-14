@@ -166,7 +166,7 @@ TIP: Die Instanz sollte ständig ausgeführt werden, da die Datenklassifizierung
 Im Großen und Ganzen funktioniert das Scannen der Datenklassifizierung folgendermaßen:
 
 . Sie stellen eine Instanz der Datenklassifizierung in der Konsole bereit.
-. Sie aktivieren die Zuordnung auf hoher Ebene (sogenannte _Mapping only_-Scans) oder die Tiefenscans (sogenannte _Map & Classify_-Scans) für eine oder mehrere Datenquellen.
+. Sie aktivieren Scans für eine oder mehrere Datenquellen.
 . Bei der Datenklassifizierung werden Daten mithilfe eines KI-Lernprozesses gescannt.
 . Sie verwenden die bereitgestellten Dashboards und Berichtstools, um Ihre Compliance- und Governance-Bemühungen zu unterstützen.
 
@@ -186,15 +186,15 @@ NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, 
 
 
 
-== Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?
+== Kartierung und vollständige Scans
 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
 
-* **Nur-Mapping-Scans** bieten nur einen allgemeinen Überblick über Ihre Daten und werden für ausgewählte Datenquellen durchgeführt.  Reine Mapping-Scans benötigen weniger Zeit als Mapping- und Klassifizierungs-Scans, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten anzuzeigen.  Möglicherweise möchten Sie dies zunächst tun, um Forschungsbereiche zu identifizieren und dann einen Map & Classify-Scan für diese Bereiche durchführen.
-* **Map & Classify-Scans** ermöglichen ein gründliches Scannen Ihrer Daten.
+* **Nur-Karten-Scans** bieten lediglich einen groben Überblick über Ihre Daten und werden auf ausgewählten Datenquellen durchgeführt. Nur-Karten-Scans benötigen weniger Zeit als vollständige Scans, da sie nicht auf die Dateien zugreifen, um die darin enthaltenen Daten einzusehen. Sie können dies zunächst nutzen, um Forschungsbereiche zu identifizieren und anschließend einen vollständigen Scan dieser Bereiche durchzuführen.
+* **Vollständige Scans** ermöglichen eine tiefgehende Überprüfung Ihrer Daten. Ein vollständiger Scan umfasst eine reine Kartierung und eine Klassifizierung der Daten innerhalb der Dateien.
 
 
-Einzelheiten zu den Unterschieden zwischen Mapping- und Klassifizierungsscans finden Sie unterlink:task-scanning-overview.html["Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?"] .
+Eine detaillierte Aufschlüsselung der Unterschiede zwischen reinen Kartenscans und vollständigen Scans finden Sie unter link:task-scanning-overview.html["Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?"].
 
 
 

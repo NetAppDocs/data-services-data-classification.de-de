@@ -43,10 +43,8 @@ Sie können die Sicherheitsgruppe entweder für den Datenverkehr von der IP-Adre
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-+
-image:screen-cl-config-cvo-map-options.png["Ein Screenshot der Registerkarte „Konfiguration“, der die Optionen zum Zuordnen und Klassifizieren von Repositories zeigt."]
-
-. Wenn Sie CIFS verwenden, stellen Sie der Datenklassifizierung Active Directory-Anmeldeinformationen zur Verfügung, damit CIFS-Volumes gescannt werden können. Wählen Sie für jedes System *CIFS-Anmeldeinformationen bearbeiten* und geben Sie den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
+. Suchen Sie das System, für das Sie die CIFS-Anmeldeinformationen hinzufügen oder ändern möchten, und wählen Sie dann **Verwalten**.
+. Wählen Sie *CIFS-Anmeldeinformationen bearbeiten* und geben Sie den Benutzernamen und das Kennwort ein, die Data Classification für den Zugriff auf CIFS-Volumes auf dem System benötigt.
 +
 Die Anmeldeinformationen können schreibgeschützt sein, durch die Angabe von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
 
@@ -56,31 +54,26 @@ Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dat
 +
 Wenn Sie die Anmeldeinformationen korrekt eingegeben haben, bestätigt eine Meldung, dass alle CIFS-Volumes erfolgreich authentifiziert wurden.
 
-. Wählen Sie auf der Konfigurationsseite *Konfiguration* aus, um den Status für jedes CIFS- und NFS-Volume zu überprüfen und etwaige Fehler zu beheben.
 
 
 
 
 == Aktivieren oder Deaktivieren von Scans auf Volumes
 
-Sie können Scans auf jedem System jederzeit von der Konfigurationsseite aus starten oder stoppen.  Sie können Scans auch von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans umstellen und umgekehrt.  Es wird empfohlen, alle Volumes in einem System zu scannen.
+Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
+
+Der Schalter oben auf der Seite für *Scannen ohne Schreibberechtigungen* ist standardmäßig deaktiviert. Das bedeutet, dass wenn Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, das System die Dateien nicht scannt, weil Data Classification die „Letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^].
 
 
-TIP: Neue Datenträger, die dem System hinzugefügt werden, werden nur dann automatisch gescannt, wenn Sie im Überschriftenbereich die Einstellung *Zuordnen* oder *Zuordnen und klassifizieren* ausgewählt haben. Wenn Sie im Überschriftenbereich die Option *Benutzerdefiniert* oder *Aus* einstellen, müssen Sie die Zuordnung und/oder das vollständige Scannen für jedes neue Volume aktivieren, das Sie dem System hinzufügen.
-
-Der Schalter oben auf der Seite für *Scannen bei fehlenden Schreibberechtigungen* ist standardmäßig deaktiviert. Dies bedeutet, dass das System die Dateien nicht scannt, wenn Data Classification keine Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS hat, da Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter auf EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^].
-
-
-NOTE: Neue Datenträger, die dem System hinzugefügt werden, werden nur dann automatisch gescannt, wenn Sie im Überschriftenbereich die Einstellung *Zuordnen* oder *Zuordnen und Klassifizieren* festgelegt haben. Wenn die Einstellung für alle Volumes *Benutzerdefiniert* oder *Aus* ist, müssen Sie das Scannen für jedes neue Volume, das Sie hinzufügen, manuell aktivieren.
+NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie im Kopfbereich die Einstellung *Map* oder *Full scan* gesetzt haben. Wenn die Einstellung für alle Volumes auf *Custom* oder *Off* steht, müssen Sie das Scannen für jedes neue Volume, das Sie hinzufügen, manuell aktivieren.
 
 image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Wählen Sie ein System und dann *Konfiguration*.
-. Um Scans für alle Volumes zu aktivieren oder zu deaktivieren, wählen Sie in der Überschrift über allen Volumes **Zuordnen**, **Zuordnen und klassifizieren** oder **Aus**.
+. Identifizieren Sie das System, das Sie scannen möchten. Wählen Sie **Scan aktivieren**. Wählen Sie im Dropdown-Menü **Vollständiger Scan**, **Nur Mapping** oder **Scans verwalten**, um das Systemmenü zu öffnen und das Scannen bestimmter Volumes oder Freigaben zu konfigurieren.
 +
-Um Scans für einzelne Volumes zu aktivieren oder zu deaktivieren, suchen Sie die Volumes in der Liste und wählen Sie dann neben dem Volumenamen **Zuordnen**, **Zuordnen und klassifizieren** oder **Aus** aus.
+Um Scans für einzelne Volumes zu aktivieren oder zu deaktivieren, suchen Sie die Volumes oder Freigaben in der Liste und wählen Sie dann neben dem Volume-Namen **Map**, **Full scan** oder **Off** aus.
 
 
 

@@ -12,15 +12,15 @@ Die folgenden Betriebssysteme erfordern die Verwendung der Podman-Container-Engi
 
 
 
-=== Priorisieren Sie reine Mapping-Scans
+=== Priorisieren Sie nur-Map-Scans
 
-Wenn Sie reine Mapping-Scans durchführen, können Sie den wichtigsten Scans Priorität einräumen. Diese Funktion ist hilfreich, wenn Sie über viele Arbeitsumgebungen verfügen und sicherstellen möchten, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
+Bei Map-only-Scans können Sie die wichtigsten Scans priorisieren. Diese Funktion ist hilfreich, wenn Sie viele Arbeitsumgebungen haben und sicherstellen möchten, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
 
 Standardmäßig werden Scans in der Reihenfolge ihrer Einleitung in die Warteschlange gestellt. Mit der Möglichkeit, Scans zu priorisieren, können Sie Scans an den Anfang der Warteschlange verschieben. Mehrere Scans können priorisiert werden. Die Priorität wird in der Reihenfolge „First In, First Out“ vergeben. Das bedeutet, dass der erste Scan, den Sie priorisieren, an den Anfang der Warteschlange rückt, der zweite Scan, den Sie priorisieren, an den zweiten in der Warteschlange usw.
 
 Die Priorität wird einmalig gewährt. Automatische erneute Scans der Kartendaten erfolgen in der Standardreihenfolge.
 
-Die Priorisierung beschränkt sich auflink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Nur-Mapping-Scans"^] ; es ist nicht für Karten- und Klassifizierungsscans verfügbar.
+Die Priorisierung ist auf link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Nur-Map-Scans"^] beschränkt; sie ist nicht für Map- und Klassifizierungsscans verfügbar.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorisieren Sie Scans"^] .
 

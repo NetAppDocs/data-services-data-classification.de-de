@@ -68,7 +68,7 @@ Datenscans haben nur einen vernachlässigbaren Einfluss auf Ihre Speichersysteme
 
 Die Scanleistung kann je nach Netzwerkbandbreite und durchschnittlicher Dateigröße in Ihrer Umgebung variieren.  Es kann auch von den Größenmerkmalen des Hostsystems abhängen (entweder in der Cloud oder vor Ort). Siehe link:concept-classification.html["Die Datenklassifizierungsinstanz"] Und link:task-deploy-overview.html["Bereitstellen der Datenklassifizierung"] für weitere Informationen.
 
-Beim erstmaligen Hinzufügen neuer Datenquellen können Sie auch festlegen, dass anstelle eines vollständigen „Klassifizierungs“-Scans (Map & Classify) nur ein „Mapping“-Scan (Mapping only) durchgeführt wird.  Das Mapping Ihrer Datenquellen kann sehr schnell durchgeführt werden, da zum Anzeigen der darin enthaltenen Daten kein Zugriff auf Dateien erforderlich ist. link:task-scanning-overview.html["Sehen Sie den Unterschied zwischen einem Mapping- und einem Klassifizierungsscan"] .
+Beim erstmaligen Hinzufügen neuer Datenquellen können Sie auch wählen, nur einen reinen Mapping-Scan oder einen vollständigen Scan durchzuführen. Das Mapping kann auf Ihren Datenquellen sehr schnell durchgeführt werden, da dabei nicht auf die Dateien zugegriffen wird, um die darin enthaltenen Daten anzusehen. link:task-scanning-overview.html["Verstehen Sie den Unterschied zwischen einem Mapping- und einem Klassifizierungsscan"].
 
 
 
@@ -115,9 +115,9 @@ Nein. Die Datenklassifizierung scannt keine Snapshots, da der Inhalt mit dem Inh
 
 === Was passiert, wenn auf Ihren ONTAP Volumes Data Tiering aktiviert ist?
 
-Wenn die Datenklassifizierung Volumes mit Cold Data scannt, die mithilfe von Nur-Mapping-Scans in Objektspeichern abgelegt sind, scannt sie alle Daten – Daten auf lokalen Festplatten und Cold Data, die in Objektspeichern abgelegt sind.  Dies gilt auch für Nicht- NetApp -Produkte, die Tiering implementieren.
+Wenn die Datenklassifizierung Volumes mit selten genutzten Daten, die in Objektspeicher ausgelagert sind, mithilfe von Map-Only-Scans durchsucht, werden alle Daten gescannt – sowohl die Daten auf lokalen Festplatten als auch die selten genutzten Daten, die in Objektspeicher ausgelagert sind. Dies gilt auch für Nicht-NetApp-Produkte, die Tiering implementieren.
 
-Der reine Mapping-Scan erwärmt die kalten Daten nicht – sie bleiben kalt und verbleiben im Objektspeicher.  Wenn Sie hingegen den Map & Classify-Scan durchführen, können einige Konfigurationen die kalten Daten aufheizen.
+Der reine Kartenscan erwärmt die kalten Daten nicht: Sie bleiben kalt und verbleiben im Objektspeicher. Führt man hingegen einen vollständigen Scan durch, können bestimmte Konfigurationen dazu führen, dass die kalten Daten erwärmt werden.
 
 
 
@@ -162,7 +162,7 @@ Mit der Datenklassifizierung können Sie einen allgemeinen „Mapping“-Scan od
 +
 Nach einem schnellen Scan können Sie einen Datenzuordnungsbericht erstellen.  Dieser Bericht bietet eine Übersicht über die in Ihren Unternehmensdatenquellen gespeicherten Daten und unterstützt Sie bei Entscheidungen zu Ressourcennutzung, Migration, Sicherung, Sicherheit und Compliance-Prozessen.
 
-* *Tiefenscan zur Datenklassifizierung (Map & Classify-Scan)*: Die Datenklassifizierung scannt Daten mithilfe von Standardprotokollen und schreibgeschützter Berechtigung in Ihren gesamten Umgebungen.  Ausgewählte Dateien werden geöffnet und auf vertrauliche geschäftsbezogene Daten, private Informationen und Probleme im Zusammenhang mit Ransomware gescannt.
+* *Tiefenscan zur Datenklassifizierung (vollständiger Scan)*: Die Datenklassifizierung scannt Daten mithilfe von Standardprotokollen und Leseberechtigung in Ihrer gesamten Umgebung. Ausgewählte Dateien werden geöffnet und auf sensible geschäftsbezogene Daten, private Informationen und Probleme im Zusammenhang mit Ransomware überprüft.
 +
 Nach einem vollständigen Scan stehen Ihnen zahlreiche zusätzliche Datenklassifizierungsfunktionen zur Verfügung, die Sie auf Ihre Daten anwenden können, z. B. das Anzeigen und Verfeinern von Daten auf der Seite „Datenuntersuchung“, die Suche nach Namen in Dateien, das Kopieren, Verschieben und Löschen von Quelldateien und vieles mehr.
 

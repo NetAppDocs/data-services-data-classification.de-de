@@ -67,16 +67,14 @@ StorageGRID wird zur Liste der Systeme hinzugefügt.
 Nachdem Sie die Datenklassifizierung auf StorageGRID aktiviert haben, besteht der nächste Schritt darin, die Buckets zu konfigurieren, die Sie scannen möchten.  Die Datenklassifizierung erkennt diese Buckets und zeigt sie in dem von Ihnen erstellten System an.
 
 .Schritte
-. Suchen Sie auf der Konfigurationsseite das StorageGRID -System.
-. Wählen Sie auf der StorageGRID -Systemkachel *Konfiguration* aus.
-. Führen Sie einen der folgenden Schritte aus, um das Scannen zu aktivieren oder zu deaktivieren:
+. Wählen Sie unter Datenklassifizierung **Konfiguration** aus.
+. Suchen Sie auf der Konfigurationsseite das StorageGRID-System, für das Sie das Scannen aktivieren möchten.
+. Entscheiden Sie, wie Sie die Volumes scannen möchten. link:task-scanning-overview.html["Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?"].
+. Um das Scannen aller Volumes im System zu aktivieren, wählen Sie *Scan aktivieren* und anschließend *Nur alle Volumes zuordnen* oder *Vollständiger Scan aller Volumes*.
 +
-** Um Nur-Mapping-Scans für einen Bucket zu aktivieren, wählen Sie *Map*.
-** Um vollständige Scans für einen Bucket zu aktivieren, wählen Sie *Zuordnen und klassifizieren*.
-** Um das Scannen eines Buckets zu deaktivieren, wählen Sie *Aus*.
-
+Um das Scannen nur auf ausgewählten Volumes zu steuern, wählen Sie *Scan aktivieren* und anschließend *Verwalten*. Identifizieren Sie in der Systemübersicht die Ressourcen, die Sie scannen möchten. Wählen Sie für jedes Volume den Scantyp aus und legen Sie ihn auf den gewünschten Typ fest: vollständig oder nur Zuordnung.
 
 
 
 .Ergebnis
-Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen aktivierten Buckets.  Sie können den Fortschritt des ersten Scans verfolgen, indem Sie zum Menü **Konfiguration** navigieren und dann die **Systemkonfiguration** auswählen.  Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt.  Sie können auch mit der Maus über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtzahl der Dateien im Volume anzuzeigen.  Wenn Fehler vorliegen, werden diese zusammen mit der erforderlichen Aktion zur Behebung des Fehlers in der Spalte „Status“ angezeigt.
+Die Datenklassifizierung beginnt mit dem Scannen der aktivierten Buckets. Den Fortschritt des ersten Scans können Sie im Menü **Konfiguration** verfolgen. Identifizieren Sie das System und wählen Sie dann **Verwalten**. Der Fortschritt jedes Scans wird als Fortschrittsbalken angezeigt. Sie können auch mit dem Mauszeiger über den Fortschrittsbalken fahren, um die Anzahl der gescannten Dateien im Verhältnis zur Gesamtanzahl der Dateien im Volume zu sehen. Wenn Fehler auftreten, werden sie in der Spalte Status zusammen mit der erforderlichen Aktion zur Behebung des Fehlers angezeigt.
