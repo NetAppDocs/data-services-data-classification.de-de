@@ -2853,4 +2853,10 @@
   <block id="c5efbb0c5c86f10e09723fd321118168" category="list-text">Geben Sie im Dialogfeld „uninstall“ ein, um die Datenklassifizierungsinstanz vom Console-Agenten zu trennen. Wählen Sie **Uninstall**, um zu bestätigen.</block>
   <block id="9b70df306d1f1719fd9d70e02911394c" category="section-title">11. Mai 2026</block>
   <block id="bbb6c300cb8841042895c9d8861857a2" category="paragraph">*Version 1.54*</block>
+  <block id="cf975b28ba57e8d6ba85ec36d74a06c3" category="section-title">Compliance-Administrator-IAM-Rolle</block>
+  <block id="7cd2bb6be419d190aa59909bb89ac3d8" category="paragraph">Data Classification unterstützt jetzt eine Compliance-Administratorrolle zur Verwaltung von Berechtigungen in Data Classification. Die Compliance-Administratorrolle hat keinen Zugriff auf Ressourcen, einschließlich Konsolenagenten und Arbeitsbereichen. Benutzer mit der Compliance-Administratorrolle müssen mindestens einer weiteren Rolle zugeordnet sein.</block>
+  <block id="dc778a1e9a5cca347a8492c869a90dc5" category="paragraph">Bei der Installation der Data Classification sollten Sie entweder die Rolle eines Console Platform Admin oder die Compliance Admin Rolle haben.</block>
+  <block id="0d1a008033e3d9d27f9dd95b4127ec91" category="paragraph">Wenn Sie bereits ein Benutzer sind, sollte der Zugriff wie gewohnt weiterlaufen. Beispielsweise hat eine Plattformrolle mit einer Ordner- oder Projektadministratorrolle bereits bestehenden Zugriff.</block>
+  <block id="eeeb9dcaeb66c431b51b12eff19105f3" category="inline-link-macro">Datenklassifizierungsrollen</block>
+  <block id="31228a8fb4b495437a73c890178a5d10" category="paragraph">Weitere Informationen finden Sie unter <block ref="2470dbb8f361be9555feba4c3093f332" category="inline-link-macro-rx"></block>.</block>
 </blocks>

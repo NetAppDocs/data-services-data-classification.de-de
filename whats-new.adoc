@@ -32,6 +32,18 @@ Die Datenklassifizierung hat die Konfigurationsseite aktualisiert und verbessert
 
 
 
+=== Compliance-Administrator-IAM-Rolle
+
+Data Classification unterstützt jetzt eine Compliance-Administratorrolle zur Verwaltung von Berechtigungen in Data Classification. Die Compliance-Administratorrolle hat keinen Zugriff auf Ressourcen, einschließlich Konsolenagenten und Arbeitsbereichen. Benutzer mit der Compliance-Administratorrolle müssen mindestens einer weiteren Rolle zugeordnet sein.
+
+Bei der Installation der Data Classification sollten Sie entweder die Rolle eines Console Platform Admin oder die Compliance Admin Rolle haben.
+
+Wenn Sie bereits ein Benutzer sind, sollte der Zugriff wie gewohnt weiterlaufen. Beispielsweise hat eine Plattformrolle mit einer Ordner- oder Projektadministratorrolle bereits bestehenden Zugriff.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin_classification-role/reference-iam-data-classification.html["Datenklassifizierungsrollen"^].
+
+
+
 === Datenklassifizierung mit OVA implementieren
 
 NetApp Data Classification unterstützt jetzt die Bereitstellung mit VMware Open Virtual Appliance (OVA) und bietet eine vereinfachte Bereitstellungsstrategie für lokale VMware vSphere-Umgebungen.
