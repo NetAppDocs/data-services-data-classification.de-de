@@ -32,7 +32,7 @@ Sie können den Scan-Status jeder Arbeitsumgebung auf der Konfigurationsseite an
 * *Läuft* (grüner Punkt): Die Scanaufgabe, die sich in der Warteschlange befand, wird derzeit aktiv im ausgewählten Speicherrepository ausgeführt.
 * *Fertig* (grüner Punkt): Der Scan des Speicherrepositorys ist abgeschlossen.
 * *Pausiert* (grauer Punkt): Sie haben den Scanvorgang pausiert. Obwohl die Volumenänderungen im System nicht angezeigt werden, bleiben die gescannten Erkenntnisse verfügbar.
-* *Fehler* (roter Punkt): Der Scan kann nicht abgeschlossen werden, da Probleme aufgetreten sind.  Wenn Sie eine Aktion abschließen müssen, wird der Fehler im Tooltip unter der Spalte „Erforderliche Aktion“ angezeigt.  Andernfalls zeigt das System den Status „Fehler“ an und versucht, die Wiederherstellung durchzuführen.  Wenn es fertig ist, ändert sich der Status.
+* *Fehler* (roter Punkt): Der Scan kann nicht abgeschlossen werden, da er auf Probleme gestoßen ist. Falls Sie eine Aktion ausführen müssen, wird der Fehler in der QuickInfo unter der Spalte „Erforderliche Aktion“ angezeigt. Andernfalls zeigt das System den Status „Fehler“ an und versucht, sich zu erholen. Wenn der Vorgang abgeschlossen ist, ändert sich der Status.
 * *Nicht scannen*: Die Volume-Konfiguration wurde auf „Aus“ eingestellt und das System scannt das Volume nicht.
 
 

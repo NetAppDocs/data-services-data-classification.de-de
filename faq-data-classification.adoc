@@ -168,7 +168,7 @@ Nach einem vollständigen Scan stehen Ihnen zahlreiche zusätzliche Datenklassif
 
 
 
-Die Datenklassifizierung erfasst Metadaten wie Dateiname, Berechtigungen, Erstellungszeit, letzter Zugriff und letzte Änderung.  Dies umfasst alle Metadaten, die auf der Seite „Datenuntersuchungsdetails“ und in den Datenuntersuchungsberichten angezeigt werden.
+Die Datenklassifizierung erfasst Metadaten wie: Dateiname, Berechtigungen, Erstellungszeitpunkt, letzter Zugriff und letzte Änderung. Dies umfasst alle Metadaten, die auf der Seite Data Investigation Details und in Data Investigation Reports angezeigt werden.
 
 Durch die Datenklassifizierung können viele Arten privater Daten identifiziert werden, beispielsweise personenbezogene Daten (PII) und sensible personenbezogene Daten (SPII).  Einzelheiten zu privaten Daten finden Sie unterxref:reference-private-data-categories.html[Kategorien privater Daten, die von der Datenklassifizierung gescannt werden] .
 

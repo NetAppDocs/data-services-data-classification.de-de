@@ -40,7 +40,7 @@ Bei der Installation der Data Classification sollten Sie entweder die Rolle eine
 
 Wenn Sie bereits ein Benutzer sind, sollte der Zugriff wie gewohnt weiterlaufen. Beispielsweise hat eine Plattformrolle mit einer Ordner- oder Projektadministratorrolle bereits bestehenden Zugriff.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin_classification-role/reference-iam-data-classification.html["Datenklassifizierungsrollen"^].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-data-classification.html["Datenklassifizierungsrollen"^].
 
 
 

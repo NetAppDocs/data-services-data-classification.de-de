@@ -115,7 +115,7 @@ Der Bericht enthält die folgenden Informationen:
 |===
 .Schritte
 . Wählen Sie unter „Datenklassifizierung“ *Governance* aus.
-. Wählen Sie in der Berichtskachel *Vollständiger Übersichtsbericht zur Datenzuordnung* aus.
+. Wählen Sie in der Kachel „Berichte“ die Schaltfläche **Herunterladen** in der Überschrift „Übersichtsbericht zur vollständigen Datenzuordnung“.
 +
 image:screenshot-compliance-report-buttons.png["Ein Screenshot des Governance-Dashboards, der zeigt, wie der Datenzuordnungsbericht gestartet wird."]
 

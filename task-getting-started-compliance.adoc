@@ -65,15 +65,15 @@ Sie können Scans auf jedem System jederzeit über die Konfigurationsseite start
 Der Schalter oben auf der Seite für *Scannen ohne Schreibberechtigungen* ist standardmäßig deaktiviert. Das bedeutet, dass wenn Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, das System die Dateien nicht scannt, weil Data Classification die „Letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^].
 
 
-NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie im Kopfbereich die Einstellung *Map* oder *Full scan* gesetzt haben. Wenn die Einstellung für alle Volumes auf *Custom* oder *Off* steht, müssen Sie das Scannen für jedes neue Volume, das Sie hinzufügen, manuell aktivieren.
+NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie das Scannen für alle Volumes aktiviert haben. Wenn Sie das Scannen nur für bestimmte Volumes aktiviert haben, müssen Sie das Scannen für das neu hinzugefügte Volume manuell aktivieren.
 
 image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Identifizieren Sie das System, das Sie scannen möchten. Wählen Sie **Scan aktivieren**. Wählen Sie im Dropdown-Menü **Vollständiger Scan**, **Nur Mapping** oder **Scans verwalten**, um das Systemmenü zu öffnen und das Scannen bestimmter Volumes oder Freigaben zu konfigurieren.
+. Identifizieren Sie das System, das Sie scannen möchten. Wählen Sie **Scan aktivieren**. Wählen Sie im Dropdown-Menü **Alle Volumes scannen: Vollständiger Scan**, **Alle Volumes scannen: Nur Zuordnung** oder **Scans verwalten**, um das Systemmenü zu öffnen und das Scannen bestimmter Volumes zu konfigurieren.
 +
-Um Scans für einzelne Volumes zu aktivieren oder zu deaktivieren, suchen Sie die Volumes oder Freigaben in der Liste und wählen Sie dann neben dem Volume-Namen **Map**, **Full scan** oder **Off** aus.
+Um Scans für einzelne Volumes zu aktivieren oder zu deaktivieren, suchen Sie die Volumes in der Liste. Wählen Sie in der Spalte „Scantyp“ **Map only** oder **Full scan** aus.
 
 
 
