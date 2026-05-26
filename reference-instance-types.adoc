@@ -41,10 +41,10 @@ Wenn in den folgenden Tabellen das mit „default“ gekennzeichnete System in d
 | Systemgröße | Technische Daten | Instanztyp 
 
 
-| Extragroß | 32 CPUs, 128 GB RAM, Betriebssystemfestplatte (2.048 GiB, min. 250 MB/s Durchsatz) und Datenfestplatte (1 TiB SSD, min. 750 MB/s Durchsatz) | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dv3-series["Standard_D32_v3"^](Standard) 
+| Extragroß | 16 CPUs, 64 GB RAM, Betriebssystemfestplatte (2.048 GiB, min 250 MB/s Durchsatz) und Datenfestplatte (1 TiB SSD, min 750 MB/s Durchsatz) | https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dv5-series["Standard_D32s_v5 oder Standard_D32_v5"^] 
 
 
-| Groß | 16 CPUs, 64 GB RAM, 500 GiB SSD | https://learn.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3"^](Standard) 
+| Groß | 16 CPUs, 64 GB RAM, 500 GiB SSD | link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dsv5-series?tabs=sizebasic["Standard_D16_v5 oder Standard_D16s_v5"^] (Standard) 
 |===
 
 
