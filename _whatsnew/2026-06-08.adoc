@@ -1,0 +1,9 @@
+= Allgemeine Verbesserungen
+:allow-uri-read: 
+
+
+
+
+=== Allgemeine Verbesserungen
+
+Diese Version der Datenklassifizierung beinhaltet Sicherheitsverbesserungen und Leistungsverbesserungen.
