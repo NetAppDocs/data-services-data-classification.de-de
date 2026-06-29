@@ -27,7 +27,7 @@ NOTE: Das Scannen von Daten aus Nicht- NetApp Dateifreigaben wird in der Kernver
 
 * Die Freigaben können überall gehostet werden, auch in der Cloud oder vor Ort.  CIFS-Freigaben von älteren NetApp 7-Mode-Speichersystemen können als Dateifreigaben gescannt werden.
 +
-** Die Datenklassifizierung kann aus 7-Mode-Systemen weder Berechtigungen noch die „letzte Zugriffszeit“ extrahieren.
+** Die Datenklassifizierung kann weder Berechtigungen noch den "zuletzt aufgerufenen Zeitpunkt" aus 7-Mode Systemen extrahieren.
 ** Aufgrund eines bekannten Problems zwischen einigen Linux-Versionen und CIFS-Freigaben auf 7-Mode-Systemen müssen Sie die Freigabe so konfigurieren, dass nur SMBv1 mit aktivierter NTLM-Authentifizierung verwendet wird.
 
 
@@ -79,7 +79,7 @@ Sehen<<Aktivieren und Deaktivieren von Scans auf Volumes,Aktivieren und Deaktivi
 
 
 
-NOTE: Die Systemübersichtsseite bietet eine Option für *Scannen ohne Schreibberechtigungen*, die standardmäßig deaktiviert ist. Das bedeutet, dass wenn Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, das System die Dateien nicht scannt, weil Data Classification die „letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. + Wenn Sie die Option *Scannen ohne Schreibberechtigungen* aktivieren, wird die letzte Zugriffszeit zurückgesetzt und alle Dateien werden unabhängig von den Berechtigungen gescannt. + Weitere Informationen zur letzten Zugriffszeit finden Sie unter link:reference-collected-metadata.html#last-access-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"].
+NOTE: Die Systemübersichtsseite bietet die Option *Scannen ohne Schreibberechtigungen*, die standardmäßig deaktiviert ist. Wenn NetApp Data Classification nicht über die entsprechenden Berechtigungen verfügt, werden die Dateien nicht gescannt, da NetApp Data Classification die „Zuletzt zugegriffen“-Zeit nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. + Diese Einstellung lässt sich mit der Option *Scannen ohne Schreibberechtigungen* überschreiben. Weitere Informationen zu dieser Option sind unter link:reference-collected-metadata.html#last-accessed-time-timestamp["Aus Datenquellen in der Datenklassifizierung gesammelte Metadaten"] zu finden.
 
 .Ergebnis
 Die Datenklassifizierung beginnt mit dem Scannen der Dateien in den von Ihnen hinzugefügten Dateifreigaben.  Du kannstxref:#track-the-scanning-progress[Verfolgen Sie den Scan-Fortschritt] und sehen Sie sich die Ergebnisse des Scans im **Dashboard** an.
@@ -147,7 +147,7 @@ Sie können den Fortschritt des ersten Scans verfolgen.
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
 
-Der Schalter oben auf der Seite für *Scannen ohne Schreibberechtigungen* ist standardmäßig deaktiviert. Das bedeutet, dass wenn Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, das System die Dateien nicht scannt, weil Data Classification die „Letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^].
+Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Falls Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
 
 
 NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie das Scannen für alle Volumes aktiviert haben. Wenn Sie das Scannen nur für bestimmte Volumes aktiviert haben, müssen Sie das Scannen für das neu hinzugefügte Volume manuell aktivieren.

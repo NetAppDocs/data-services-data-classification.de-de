@@ -4,7 +4,7 @@
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
 
-Der Schalter oben auf der Seite für *Scannen ohne Schreibberechtigungen* ist standardmäßig deaktiviert. Das bedeutet, dass wenn Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, das System die Dateien nicht scannt, weil Data Classification die „Letzte Zugriffszeit“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn es Ihnen egal ist, ob die letzte Zugriffszeit zurückgesetzt wird, schalten Sie den Schalter EIN und alle Dateien werden unabhängig von den Berechtigungen gescannt. link:reference-collected-metadata.html#last-access-time-timestamp["Mehr erfahren"^].
+Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Falls Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
 
 
 NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie das Scannen für alle Volumes aktiviert haben. Wenn Sie das Scannen nur für bestimmte Volumes aktiviert haben, müssen Sie das Scannen für das neu hinzugefügte Volume manuell aktivieren.
