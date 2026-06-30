@@ -56,19 +56,3 @@ Diese Funktionalität ist auf lokale ONTAP Systeme, Cloud Volumes ONTAP, Azure N
 
 
 NOTE: ONTAP Volumes, die mit SnapLock konfiguriert sind, verfügen über reine Leseberechtigungen und können den Zeitpunkt des letzten Zugriffs auch nicht auf den ursprünglichen Zeitstempel zurücksetzen.
-
-
-
-=== Scan-Analyseereignisse
-
-Auf der Seite „Untersuchung“ gibt es einen Filter namens „Scan Analysis Event“, mit dem entweder die Dateien angezeigt werden, die nicht klassifiziert wurden, weil NetApp Data Classification den letzten Zugriffszeitpunkt nicht zurücksetzen konnte, oder die Dateien, die klassifiziert wurden, obwohl NetApp Data Classification den letzten Zugriffszeitpunkt nicht zurücksetzen konnte.
-
-image:screenshot_scan_analysis_event_filter.png["Ein Screenshot des Filters, um zu sehen, welche Dateien gescannt und welche nicht gescannt wurden, je nachdem, ob sie Schreibberechtigungen hatten oder nicht."]
-
-Die Filterauswahl ist:
-
-* „Nicht klassifiziert -- Letzter Zugriffszeitpunkt kann nicht wiederhergestellt werden“ - Hier werden die Dateien angezeigt, die aufgrund fehlender Schreibberechtigungen nicht klassifiziert wurden.
-* „Klassifiziert und zuletzt aufgerufen“ – Hier werden die Dateien angezeigt, die klassifiziert wurden und deren zuletzt aufgerufener Zeitpunkt von NetApp Data Classification nicht auf das ursprüngliche Datum zurückgesetzt werden konnte. Dieser Filter ist nur für Umgebungen relevant, in denen *Scannen ohne Schreibberechtigung* aktiviert ist.
-
-
-Bei Bedarf ist ein Export dieser Ergebnisse in einen Bericht möglich, sodass ersichtlich ist, welche Dateien aufgrund von Berechtigungen gescannt werden oder nicht. link:task-investigate-data.html#download-your-report["Erfahren Sie mehr über Data Investigation-Berichte"^].
