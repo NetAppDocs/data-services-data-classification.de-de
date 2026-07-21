@@ -18,6 +18,7 @@ Bekannte Einschränkungen kennzeichnen Funktionen, die in dieser Version nicht u
 
 
 
+[[netapp-data-classification-disabled-options]]
 == Deaktivierte Optionen für die NetApp Data Classification
 
 Mit der Version vom Dezember 2023 (Version 1.26.6) wurden die folgenden Optionen entfernt:
@@ -29,12 +30,14 @@ Mit der Version vom Dezember 2023 (Version 1.26.6) wurden die folgenden Optionen
 
 
 
+[[data-classification-scanning]]
 == Datenklassifizierungsscan
 
 Bei Datenklassifizierungsscans treten die folgenden Einschränkungen auf.
 
 
 
+[[data-classification-scans-only-one-share-under-a-volume]]
 === Die Datenklassifizierung scannt nur eine Freigabe unter einem Volume
 
 Wenn Sie mehrere Dateifreigaben unter einem einzigen Volume haben, scannt die Datenklassifizierung die Freigabe mit der höchsten Hierarchie.  Wenn Sie beispielsweise Aktien wie die folgenden haben:
@@ -70,6 +73,7 @@ Fügen Sie alle Anteile einzeln hinzu, zum Beispiel:
 
 
 
+[[last-accessed-timestamp]]
 === Zeitstempel des letzten Zugriffs
 
 Wenn Data Classification einen Scan eines Verzeichnisses durchführt, wirkt sich der Scan auf das Feld **Zuletzt aufgerufen** des Verzeichnisses aus.  Wenn Sie das Feld **Letzter Zugriff** anzeigen, geben diese Metadaten entweder das Datum und die Uhrzeit des Scans oder den letzten Zeitpunkt wieder, zu dem ein Benutzer auf das Verzeichnis zugegriffen hat.

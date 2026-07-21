@@ -21,6 +21,7 @@ NOTE: Um von der Untersuchungsseite zu profitieren, müssen Sie einen vollständ
 
 
 
+[[data-investigation-structure]]
 == Struktur der Datenuntersuchung
 
 Auf der Seite „Datenuntersuchung“ werden die Daten in drei Registerkarten sortiert:
@@ -32,6 +33,7 @@ Auf der Seite „Datenuntersuchung“ werden die Daten in drei Registerkarten so
 
 
 
+[[data-filters]]
 == Datenfilter
 
 Die Seite „Datenuntersuchung“ bietet zahlreiche Filter zum Sortieren Ihrer Daten, damit Sie das finden, was Sie benötigen.  Sie können mehrere Filter gleichzeitig verwenden.
@@ -196,6 +198,7 @@ TIP: Nach dem Filtern der Daten können Sie link:task-copy-move.html["unstruktur
 
 
 
+[[view-file-metadata]]
 == Dateimetadaten anzeigen
 
 Die Metadaten zeigen Ihnen nicht nur das System und das Volume an, auf dem sich die Datei befindet, sondern enthalten auch viele weitere Informationen, darunter die Dateiberechtigungen, den Dateieigentümer und ob es Duplikate dieser Datei gibt.  Diese Informationen sind nützlich, wenn Sie planen,link:task-using-policies.html["Erstellen gespeicherter Abfragen"] weil Sie alle Informationen sehen, die Sie zum Filtern Ihrer Daten verwenden können.
@@ -213,6 +216,7 @@ image:screenshot_compliance_file_details.png["Ein Screenshot, der die Metadatend
 
 
 
+[[view-user-permissions-for-files-and-directories]]
 == Benutzerberechtigungen für Dateien und Verzeichnisse anzeigen
 
 Um eine Liste aller Benutzer oder Gruppen anzuzeigen, die Zugriff auf eine Datei oder ein Verzeichnis haben, sowie die Art ihrer Berechtigungen, wählen Sie *Alle Berechtigungen anzeigen*.  Diese Option ist nur für Daten in CIFS-Freigaben verfügbar.
@@ -237,6 +241,7 @@ TIP: Sie können eine Ebene der Gruppe erweitern, um die Benutzer anzuzeigen, di
 
 
 
+[[check-for-duplicate-files-in-your-storage-systems]]
 == Suchen Sie in Ihren Speichersystemen nach doppelten Dateien
 
 Sie können überprüfen, ob in Ihren Speichersystemen doppelte Dateien gespeichert werden.  Dies ist nützlich, wenn Sie Bereiche identifizieren möchten, in denen Sie Speicherplatz sparen können.  Außerdem sollten Sie sicherstellen, dass bestimmte Dateien mit speziellen Berechtigungen oder vertraulichen Informationen nicht unnötig in Ihren Speichersystemen dupliziert werden.
@@ -276,6 +281,7 @@ TIP: Sie können den auf dieser Seite bereitgestellten „Datei-Hash“-Wert ver
 
 
 
+[[download-your-report]]
 == Laden Sie Ihren Bericht herunter
 
 Sie können Ihre gefilterten Ergebnisse im CSV- oder JSON-Format herunterladen.
@@ -293,6 +299,7 @@ NOTE: Sie können eine Version der CSV-Datei herunterladen und in diesem Browser
 
 
 
+[[whats-included-in-the-downloadable-report]]
 === Was ist im herunterladbaren Bericht enthalten?
 
 Der *Datenbericht zu unstrukturierten Dateien* enthält die folgenden Informationen zu Ihren Dateien:
@@ -370,6 +377,7 @@ In einem Dialogfeld wird die Meldung angezeigt, dass die Berichte heruntergelade
 
 
 
+[[create-a-saved-query-based-on-selected-filters]]
 == Erstellen Sie eine gespeicherte Abfrage basierend auf ausgewählten Filtern
 
 .Schritte
@@ -398,6 +406,7 @@ TIP: Es kann bis zu 15 Minuten dauern, bis die Ergebnisse auf der Seite „Gespe
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-copy-move.html["Daten aus dem Investigation Dashboard kopieren, verschieben und löschen"]

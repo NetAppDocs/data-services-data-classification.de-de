@@ -20,6 +20,7 @@ Die erforderlichen Schritte hängen davon ab, ob Sie die Datenklassifizierung in
 
 
 
+[[uninstall-data-classification-from-a-cloud-provider]]
 == Deinstallieren Sie Data Classification von einem Cloud-Anbieter
 
 . Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.
@@ -32,6 +33,7 @@ Die erforderlichen Schritte hängen davon ab, ob Sie die Datenklassifizierung in
 
 
 
+[[uninstall-data-classification-from-an-on-premises-deployment]]
 == Deinstallieren der Datenklassifizierung aus einer lokalen Bereitstellung
 
 . Wählen Sie unter „Datenklassifizierung“ die Option „Konfiguration“ aus.

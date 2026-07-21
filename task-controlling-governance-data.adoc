@@ -22,6 +22,7 @@ Wenn Sie außerdem planen, Daten von lokalen Standorten in die Cloud zu migriere
 
 
 
+[[review-the-governance-dashboard]]
 == Überprüfen des Governance-Dashboards
 
 Das Governance-Dashboard bietet Informationen, mit denen Sie die Effizienz steigern und die Kosten im Zusammenhang mit den auf Ihren Speicherressourcen gespeicherten Daten kontrollieren können.
@@ -38,6 +39,7 @@ Das Governance-Dashboard wird angezeigt.
 
 
 
+[[review-savings-opportunities]]
 === Sparmöglichkeiten prüfen
 
 Die Komponente „Einsparmöglichkeiten“ zeigt Daten an, die Sie löschen oder in einen kostengünstigeren Objektspeicher verschieben können.  Die Daten in _Sparmöglichkeiten_ werden alle 2 Stunden aktualisiert.  Sie können die Daten auch manuell aktualisieren.
@@ -57,6 +59,7 @@ NOTE: Wenn eine Ihrer Datenquellen Daten-Tiering implementiert, können alte Dat
 
 
 
+[[create-the-data-discovery-assessment-report]]
 == Erstellen des Data Discovery-Bewertungsberichts
 
 Der Bewertungsbericht zur Datenermittlung bietet eine umfassende Analyse der gescannten Umgebung, um Problembereiche und mögliche Abhilfemaßnahmen aufzuzeigen. Die Ergebnisse basieren sowohl auf der Zuordnung als auch auf der Klassifizierung Ihrer Daten. Das Ziel dieses Berichts besteht darin, das Bewusstsein für drei wichtige Aspekte Ihres Datensatzes zu schärfen:
@@ -94,6 +97,7 @@ Die Datenklassifizierung generiert einen PDF-Bericht, den Sie überprüfen und w
 
 
 
+[[create-the-data-mapping-overview-report]]
 == Erstellen des Datenzuordnungsübersichtsberichts
 
 Der Übersichtsbericht zur Datenzuordnung bietet einen Überblick über die in Ihren Unternehmensdatenquellen gespeicherten Daten und unterstützt Sie bei Entscheidungen zu Migrations-, Sicherungs-, Sicherheits- und Compliance-Prozessen.  Der Bericht fasst alle Systeme und Datenquellen zusammen.  Es bietet auch eine Analyse für jedes System.
@@ -128,6 +132,7 @@ Wenn der Bericht größer als 1 MB ist, wird die PDF-Datei in der Datenklassifiz
 
 
 
+[[review-the-top-data-repositories-listed-by-data-sensitivity]]
 === Überprüfen Sie die wichtigsten Datenspeicher nach Datensensibilität
 
 Im Bereich „Top-Datenrepositorys nach Vertraulichkeitsstufe“ des Berichts „Datenzuordnungsübersicht“ werden die vier wichtigsten Datenrepositorys (Systeme und Datenquellen) aufgelistet, die die sensibelsten Elemente enthalten.  Das Balkendiagramm für jedes System ist unterteilt in:
@@ -146,6 +151,7 @@ Diese Daten werden alle zwei Stunden aktualisiert und können manuell aktualisie
 
 
 
+[[review-sensitive-data-and-wide-permissions]]
 === Überprüfen Sie vertrauliche Daten und umfassende Berechtigungen
 
 Der Bereich „Sensible Daten und umfassende Berechtigungen“ des Governance-Dashboards zeigt die Anzahl der Dateien an, die vertrauliche Daten enthalten und über umfassende Berechtigungen verfügen.  Die Tabelle zeigt die folgenden Berechtigungstypen:
@@ -161,6 +167,7 @@ Der Bereich „Sensible Daten und umfassende Berechtigungen“ des Governance-Da
 
 
 
+[[review-data-listed-by-types-of-open-permissions]]
 === Überprüfen Sie die nach Arten offener Berechtigungen aufgelisteten Daten
 
 Der Bereich „Offene Berechtigungen“ des Berichts „Datenzuordnungsübersicht“ zeigt den Prozentsatz für jeden Berechtigungstyp an, der für alle gescannten Dateien vorhanden ist.  Das Diagramm zeigt die folgenden Berechtigungstypen:
@@ -178,6 +185,7 @@ Der Bereich „Offene Berechtigungen“ des Berichts „Datenzuordnungsübersich
 
 
 
+[[review-the-age-and-size-of-data]]
 === Überprüfen Sie das Alter und die Größe der Daten
 
 Sie können die Elemente in den Diagrammen „Alter“ und „Größe“ des Berichts „Datenzuordnungsübersicht“ untersuchen, um festzustellen, ob es Daten gibt, die Sie löschen oder in einen weniger teuren Objektspeicher verschieben sollten.

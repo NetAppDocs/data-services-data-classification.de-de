@@ -21,6 +21,7 @@ NOTE: Das Scannen von Daten aus Nicht- NetApp Dateifreigaben wird in der Kernver
 
 
 
+[[prerequisites]]
 == Voraussetzungen
 
 Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung aktivieren.
@@ -48,6 +49,7 @@ Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dat
 
 
 
+[[create-a-file-shares-group]]
 == Erstellen einer Dateifreigabegruppe
 
 Wenn Sie Dateifreigaben zur Gruppe hinzufügen, müssen Sie das Format verwenden `<host_name>:/<share_path>` .
@@ -89,6 +91,7 @@ NOTE: Wenn der Scan für eine CIFS-Konfiguration mit Kerberos-Authentifizierung 
 
 
 
+[[edit-a-file-shares-group]]
 == Bearbeiten einer Dateifreigabegruppe
 
 Nachdem Sie eine Dateifreigabegruppe erstellt haben, können Sie das CIFS-Protokoll bearbeiten oder Dateifreigaben hinzufügen und entfernen.
@@ -132,6 +135,7 @@ Wenn Sie Dateifreigaben mit einem zweiten Protokoll hinzufügen, stellen Sie sic
 
 
 
+[[track-the-scanning-progress]]
 == Verfolgen Sie den Scan-Fortschritt
 
 Sie können den Fortschritt des ersten Scans verfolgen.
@@ -143,6 +147,7 @@ Sie können den Fortschritt des ersten Scans verfolgen.
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Aktivieren und Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.

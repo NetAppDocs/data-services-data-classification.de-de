@@ -44,6 +44,7 @@ NetApp Data Classification erfasst Metadaten beim Scannen Ihrer Datenquellen und
 ====
 
 
+[[last-accessed-time]]
 == Letzter Zugriffszeitpunkt
 
 Wenn NetApp Data Classification Daten aus Dateifreigaben extrahiert, wertet das Betriebssystem dies als Zugriffsereignis und aktualisiert die „letzte Zugriffszeit“ entsprechend. Nach dem Scan versucht NetApp Data Classification, die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen. Wenn NetApp Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, kann das System die letzte Zugriffszeit nicht auf den ursprünglichen Zeitstempel zurücksetzen.

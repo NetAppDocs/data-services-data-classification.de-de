@@ -22,6 +22,7 @@ Um diese Funktion zu aktivieren, müssen Sie sich beim Datenklassifizierungssyst
 
 
 
+[[add-the-open-to-organization-permission-to-group-ids]]
 == Fügen Sie Gruppen-IDs die Berechtigung „Für Organisation öffnen“ hinzu
 
 Sie müssen über die Gruppen-ID-Nummern (GIDs) verfügen, bevor Sie mit dieser Aufgabe beginnen.
@@ -50,6 +51,7 @@ Mit denselben Schritten können Sie die Liste der Gruppen-IDs bearbeiten und all
 
 
 
+[[view-the-current-list-of-group-ids]]
 == Aktuelle Liste der Gruppen-IDs anzeigen
 
 Es ist möglich, dass der Inhalt der `data_provider.yaml` Konfigurationsdatei von dem abweicht, was nach dem Ausführen des `update_data_providers_from_config_file.sh` Skript.  Um die aktuelle Liste der Gruppen-IDs anzuzeigen, die Sie zur Datenklassifizierung hinzugefügt haben, führen Sie den folgenden Befehl von „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ aus:

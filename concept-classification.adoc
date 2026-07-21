@@ -21,6 +21,7 @@ IMPORTANT: Ab Version 1.31 ist die Datenklassifizierung als Kernfunktion in der 
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 Auf die Datenklassifizierung kann über die NetApp Console zugegriffen werden.
@@ -33,6 +34,7 @@ Erfahren Sie mehr über dielink:https://docs.netapp.com/us-en/console-setup-admi
 
 
 
+[[features]]
 == Features
 
 Bei der Datenklassifizierung werden künstliche Intelligenz (KI), natürliche Sprachverarbeitung (NLP) und maschinelles Lernen (ML) verwendet, um die gescannten Inhalte zu verstehen, Entitäten zu extrahieren und die Inhalte entsprechend zu kategorisieren.  Dadurch kann die Datenklassifizierung die folgenden Funktionsbereiche bereitstellen.
@@ -65,6 +67,7 @@ Die Datenklassifizierung bietet Tools, die Ihnen bei der Reduzierung der Gesamtb
 
 
 
+[[supported-systems-and-data-sources]]
 == Unterstützte Systeme und Datenquellen
 
 Die Datenklassifizierung kann strukturierte und unstrukturierte Daten aus den folgenden Systemtypen und Datenquellen scannen und analysieren:
@@ -99,12 +102,14 @@ Die Datenklassifizierung unterstützt die NFS-Versionen 3.x, 4.0 und 4.1 sowie d
 
 
 
+[[cost]]
 == Kosten
 
 Die Nutzung der Datenklassifizierung ist kostenlos.  Es ist keine Klassifizierungslizenz oder kostenpflichtiges Abonnement erforderlich.
 
 
 
+[[infrastructure-costs]]
 === Infrastrukturkosten
 
 * Für die Installation der Datenklassifizierung in der Cloud ist die Bereitstellung einer Cloud-Instanz erforderlich, wofür vom Cloud-Anbieter, bei dem die Instanz bereitgestellt wird, Gebühren anfallen. Sehen <<Die Datenklassifizierungsinstanz,der Instanztyp, der für jeden Cloud-Anbieter bereitgestellt wird>> .  Wenn Sie Data Classification auf einem lokalen System installieren, fallen keine Kosten an.
@@ -113,6 +118,7 @@ Die Nutzung der Datenklassifizierung ist kostenlos.  Es ist keine Klassifizierun
 
 
 
+[[data-transfer-costs]]
 === Kosten für die Datenübertragung
 
 Die Kosten für die Datenübertragung hängen von Ihrer Konfiguration ab.  Wenn sich die Datenklassifizierungsinstanz und die Datenquelle in derselben Verfügbarkeitszone und Region befinden, fallen keine Datenübertragungskosten an.  Wenn sich die Datenquelle, beispielsweise ein Cloud Volumes ONTAP -System, jedoch in einer anderen Availability Zone oder Region befindet, werden Ihnen von Ihrem Cloud-Anbieter die Kosten für die Datenübertragung in Rechnung gestellt.  Weitere Einzelheiten finden Sie unter diesen Links:
@@ -124,6 +130,7 @@ Die Kosten für die Datenübertragung hängen von Ihrer Konfiguration ab.  Wenn 
 
 
 
+[[the-data-classification-instance]]
 == Die Datenklassifizierungsinstanz
 
 Wenn Sie die Datenklassifizierung in der Cloud bereitstellen, stellt die Konsole die Instanz im selben Subnetz wie der Konsolenagent bereit. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Erfahren Sie mehr über den Konsolenagenten."^]
@@ -161,6 +168,7 @@ TIP: Die Instanz sollte ständig ausgeführt werden, da die Datenklassifizierung
 |===
 
 
+[[how-data-classification-scanning-works]]
 == Funktionsweise des Datenklassifizierungsscans
 
 Im Großen und Ganzen funktioniert das Scannen der Datenklassifizierung folgendermaßen:
@@ -186,6 +194,7 @@ NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, 
 
 
 
+[[mapping-and-full-scans]]
 == Kartierung und vollständige Scans
 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
@@ -198,6 +207,7 @@ Eine detaillierte Aufschlüsselung der Unterschiede zwischen reinen Kartenscans 
 
 
 
+[[information-that-data-classification-categorizes]]
 == Informationen, die durch die Datenklassifizierung kategorisiert werden
 
 Die Datenklassifizierung sammelt, indiziert und ordnet die folgenden Daten Kategorien zu:
@@ -213,6 +223,7 @@ Die Datenklassifizierung sammelt, indiziert und ordnet die folgenden Daten Kateg
 
 
 
+[[networking-overview]]
 == Netzwerkübersicht
 
 Data Classification stellt einen einzelnen Server oder Cluster bereit, wo immer Sie möchten: in der Cloud oder vor Ort.  Die Server stellen über Standardprotokolle eine Verbindung zu den Datenquellen her und indizieren die Ergebnisse in einem Elasticsearch-Cluster, der ebenfalls auf denselben Servern bereitgestellt wird.  Dies ermöglicht die Unterstützung von Multi-Cloud-, Cross-Cloud-, Private-Cloud- und On-Premises-Umgebungen.

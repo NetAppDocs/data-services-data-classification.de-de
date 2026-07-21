@@ -4,6 +4,7 @@
 
 
 
+[[prioritize-classification-scans]]
 === Priorisieren Sie Klassifizierungsscans
 
 Die Datenklassifizierung unterstützt die Möglichkeit, Map-&-Classify-Scans zusätzlich zu reinen Map-Scans zu priorisieren, sodass Sie auswählen können, welche Scans zuerst abgeschlossen werden. Die Priorisierung von Map-&-Classify-Scans wird sowohl während als auch vor Beginn der Scans unterstützt. Wenn Sie sich entscheiden, einen Scan während seiner Ausführung zu priorisieren, werden sowohl der Mapping- als auch der Klassifizierungsscan priorisiert.
@@ -12,6 +13,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[support-for-canadian-personally-identifiable-information-pii-data-categories]]
 === Unterstützung für kanadische Datenkategorien personenbezogener Daten (PII)
 
 Datenklassifizierungsscans identifizieren kanadische PII-Datenkategorien. Zu diesen Kategorien gehören Bankdaten, Passnummern, Sozialversicherungsnummern, Führerscheinnummern und Krankenversicherungskartennummern für alle kanadischen Provinzen und Territorien.
@@ -20,6 +22,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[custom-classification-preview]]
 === Benutzerdefinierte Klassifizierung (Vorschau)
 
 Die Datenklassifizierung unterstützt benutzerdefinierte Klassifizierungen für Map & Classify-Scans. Mit benutzerdefinierten Klassifizierungen können Sie Datenklassifizierungsscans anpassen, um mithilfe regulärer Ausdrücke unternehmensspezifische Daten zu erfassen. Diese Funktion befindet sich derzeit in der Vorschau.
@@ -28,18 +31,21 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[saved-searches-tab]]
 === Registerkarte „Gespeicherte Suchen“
 
 Die Registerkarte **Richtlinien** wurde umbenanntlink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Gespeicherte Suchen**"] . Die Funktionalität bleibt unverändert.
 
 
 
+[[send-scan-events-to-the-audit-page]]
 === Scanereignisse an die Audit-Seite senden
 
 Die Datenklassifizierung unterstützt das Senden von Klassifizierungsereignissen (wenn ein Scan gestartet und wenn er beendet wird) an den link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console Audit-Seite"^].
 
 
 
+[[security-updates]]
 === Sicherheitsupdates
 
 * Das Keras-Paket wurde aktualisiert, um Schwachstellen (BDSA-2025-0107 und BDSA-2025-1984) zu beheben.
@@ -48,12 +54,14 @@ Die Datenklassifizierung unterstützt das Senden von Klassifizierungsereignissen
 
 
 
+[[performance-enhancements]]
 === Leistungsverbesserungen
 
 Es wurden Codeverbesserungen implementiert, um die RAM-Nutzung zu reduzieren und die Gesamtleistung der Datenklassifizierung zu verbessern.
 
 
 
+[[bug-fixes]]
 === Fehlerbehebungen
 
 Fehler, die dazu führten, dass StorageGRID -Scans fehlschlugen, die Filteroptionen der Untersuchungsseite nicht geladen wurden und die Data Discovery-Bewertung bei Bewertungen mit hohem Volumen nicht heruntergeladen wurde, wurden behoben.

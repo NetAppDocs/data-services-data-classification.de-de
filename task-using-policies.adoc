@@ -26,6 +26,7 @@ image:screenshot_compliance_highlights_tab.png["Ein Screenshot der Registerkarte
 
 
 
+[[view-saved-queries-results-in-the-investigation-page]]
 == Anzeigen der Ergebnisse gespeicherter Abfragen auf der Seite „Untersuchung“
 
 Um die Ergebnisse einer gespeicherten Abfrage auf der Seite „Untersuchung“ anzuzeigen, wählen Sie dasimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie auf die Schaltfläche für eine bestimmte Suche und wählen Sie dann *Ergebnisse untersuchen* aus.
@@ -34,6 +35,7 @@ image:screenshot_compliance_highlights_investigate.png["Ein Screenshot der Auswa
 
 
 
+[[create-saved-queries-and-policies]]
 == Erstellen gespeicherter Abfragen und Richtlinien
 
 Sie können Ihre eigenen benutzerdefinierten gespeicherten Abfragen erstellen, die Ergebnisse für Abfragen liefern, die für Ihre Organisation spezifisch sind.  Es werden Ergebnisse für alle Dateien und Verzeichnisse (Freigaben und Ordner) zurückgegeben, die den Suchkriterien entsprechen.
@@ -61,6 +63,7 @@ Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Re
 
 
 
+[[edit-saved-queries-or-policies]]
 == Bearbeiten gespeicherter Abfragen oder Richtlinien
 
 Sie können den Namen und die Beschreibung einer gespeicherten Abfrage ändern.  Sie können eine Abfrage auch in eine Richtlinie umwandeln und umgekehrt.
@@ -81,6 +84,7 @@ Sie können die Abfrage optional in eine Richtlinie oder die Richtlinie in eine 
 
 
 
+[[delete-saved-queries]]
 == Gespeicherte Abfragen löschen
 
 Sie können jede benutzerdefinierte gespeicherte Abfrage oder Richtlinie löschen, wenn Sie sie nicht mehr benötigen.  Sie können standardmäßig gespeicherte Abfragen nicht löschen.
@@ -89,6 +93,7 @@ Um eine gespeicherte Abfrage zu löschen, wählen Sie dasimage:button-gallery-op
 
 
 
+[[default-queries]]
 == Standardabfragen
 
 Die Datenklassifizierung bietet die folgenden systemdefinierten Suchanfragen:

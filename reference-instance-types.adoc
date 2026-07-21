@@ -20,6 +20,7 @@ Wenn in den folgenden Tabellen das mit „default“ gekennzeichnete System in d
 
 
 
+[[aws-instance-types]]
 == AWS-Instanztypen
 
 [cols="20,30,25"]
@@ -34,6 +35,7 @@ Wenn in den folgenden Tabellen das mit „default“ gekennzeichnete System in d
 |===
 
 
+[[azure-instance-types]]
 == Azure-Instanztypen
 
 [cols="20,30,25"]
@@ -48,6 +50,7 @@ Wenn in den folgenden Tabellen das mit „default“ gekennzeichnete System in d
 |===
 
 
+[[gcp-instance-types]]
 == GCP-Instanztypen
 
 [cols="20,30,25"]

@@ -18,6 +18,7 @@ Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Cloud Volumes ONTAP un
 
 
 
+[[prerequisites]]
 == Voraussetzungen
 
 Stellen Sie vor dem Aktivieren der Datenklassifizierung sicher, dass Sie über eine unterstützte Konfiguration verfügen.
@@ -28,6 +29,7 @@ Stellen Sie vor dem Aktivieren der Datenklassifizierung sicher, dass Sie über e
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
 
 Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Sie müssen Data Classification CIFS-Anmeldeinformationen bereitstellen, damit es auf CIFS-Volumes zugreifen kann.
@@ -58,6 +60,7 @@ Wenn Sie die Anmeldeinformationen korrekt eingegeben haben, bestätigt eine Meld
 
 
 
+[[enable-or-disable-scans-on-volumes]]
 == Aktivieren oder Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.

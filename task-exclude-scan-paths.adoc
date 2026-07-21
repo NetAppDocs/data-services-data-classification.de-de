@@ -21,6 +21,7 @@ NOTE: Standardmäßig werden bei Datenklassifizierungsscans Volume-Snapshot-Date
 
 
 
+[[supported-data-sources]]
 == Unterstützte Datenquellen
 
 Das Ausschließen bestimmter Verzeichnisse von Datenklassifizierungsscans wird für NFS- und CIFS-Freigaben in den folgenden Datenquellen unterstützt:
@@ -34,6 +35,7 @@ Das Ausschließen bestimmter Verzeichnisse von Datenklassifizierungsscans wird f
 
 
 
+[[define-the-directories-to-exclude-from-scanning]]
 == Definieren Sie die Verzeichnisse, die vom Scan ausgeschlossen werden sollen
 
 Bevor Sie Verzeichnisse vom Klassifizierungsscan ausschließen können, müssen Sie sich beim Datenklassifizierungssystem anmelden, damit Sie eine Konfigurationsdatei bearbeiten und ein Skript ausführen können.  Erfahren Sie, wie Sielink:reference-log-in-to-instance.html["Melden Sie sich beim Datenklassifizierungssystem an"] abhängig davon, ob Sie die Software manuell auf einem Linux-Rechner installiert oder die Instanz in der Cloud bereitgestellt haben.
@@ -70,6 +72,7 @@ Mit denselben Schritten können Sie Elemente zur Ausschlussliste hinzufügen, be
 
 
 
+[[examples]]
 == Beispiele
 
 .Konfiguration 1:
@@ -140,6 +143,7 @@ data_providers:
 
 
 
+[[escaping-special-characters-in-folder-names]]
 == Escapezeichen für Sonderzeichen in Ordnernamen
 
 Wenn Ihr Ordnername eines der folgenden Sonderzeichen enthält und Sie die Daten in diesem Ordner vom Scannen ausschließen möchten, müssen Sie vor dem Ordnernamen die Escape-Sequenz \\ verwenden.
@@ -153,6 +157,7 @@ Syntax in der Ausschlussdatei: `"\\*not_to_scan"`
 
 
 
+[[view-the-current-exclusion-list]]
 == Aktuelle Ausschlussliste anzeigen
 
 Es ist möglich, dass der Inhalt der `data_provider.yaml` Konfigurationsdatei anders sein als das, was tatsächlich nach dem Ausführen des `update_data_providers_from_config_file.sh` Skript.  Um die aktuelle Liste der Verzeichnisse anzuzeigen, die Sie vom Datenklassifizierungsscan ausgeschlossen haben, führen Sie den folgenden Befehl von „/opt/netapp/Datasense/tools/customer_configuration/data_providers“ aus:

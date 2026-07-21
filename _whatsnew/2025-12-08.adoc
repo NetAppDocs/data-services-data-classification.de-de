@@ -4,6 +4,7 @@
 
 
 
+[[monitor-metrics-and-performance-in-the-health-monitoring-dashboard]]
 === Überwachen Sie Kennzahlen und Leistung im Dashboard für die Gesundheitsüberwachung.
 
 Die Datenklassifizierung bietet jetzt ein Dashboard zur Gesundheitsüberwachung, das eine Echtzeitüberwachung Ihrer Ressourcen sowie Einblicke in Speichernutzung, Festplattennutzung, Festplattenauslastung und mehr ermöglicht. Mithilfe der Erkenntnisse aus dem Dashboard zur Gesundheitsüberwachung können Sie die Infrastruktur Ihrer Bereitstellung überprüfen und Einblicke gewinnen, um Speicher und Leistung zu optimieren.
@@ -12,6 +13,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[improved-loading-performance]]
 === Verbesserte Ladeleistung
 
 Die Ladeleistung aller Seiten in der Datenklassifizierung wurde verbessert, um ein effizienteres Benutzererlebnis zu schaffen.

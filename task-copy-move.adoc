@@ -18,6 +18,7 @@ Zusätzlich zu Einblicken in Governance und Einsparpotenziale ermöglicht NetApp
 
 
 
+[[copy-files]]
 == Dateien kopieren
 
 Data Classification unterstützt das Kopieren von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB Daten oder 5 Millionen Dateien kopieren, je nachdem, welche Grenze zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel kopieren. Die Quelldatei bleibt beim Kopieren unverändert.
@@ -41,6 +42,7 @@ image:screenshot-copy-nfs.png["Screenshot der Kopierfunktion für NFS-Dateien"]
 
 
 
+[[move-files]]
 == Dateien verschieben
 
 Data Classification unterstützt das Verschieben von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB an Daten oder 5 Millionen Dateien verschieben, je nachdem, welches Limit zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel verschieben.
@@ -69,6 +71,7 @@ image:screenshot-move-nfs.png["Screenshot der Verschiebefunktion für NFS-Dateie
 
 
 
+[[delete-files]]
 == Dateien löschen
 
 Wenn Sie Daten im Investigation Dashboard filtern, um Speicherplatz- und Kosteneinsparungspotenziale zu ermitteln, können Sie diese Dateien löschen. Das Löschen von Dateien wird nur für unstrukturierte Dateien unterstützt.

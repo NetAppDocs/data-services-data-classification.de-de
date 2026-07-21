@@ -27,6 +27,7 @@ TIP: Wenn Sie eine Datenklassifizierung benötigen, um andere private Datentypen
 
 
 
+[[types-of-personal-data]]
 == Arten personenbezogener Daten
 
 Bei den in Dateien enthaltenen personenbezogenen Daten oder persönlich identifizierbaren Informationen (PII) kann es sich um allgemeine personenbezogene Daten oder nationale Kennungen handeln.  Die dritte Spalte in der folgenden Tabelle gibt an, ob die Datenklassifizierunglink:task-controlling-private-data.html#view-files-that-contain-personal-data["Näherungsvalidierung"^] um seine Ergebnisse für die Kennung zu validieren.
@@ -321,6 +322,7 @@ Die Sprachen, in denen diese Elemente erkannt werden können, sind in der Tabell
 |===
 
 
+[[types-of-sensitive-personal-data]]
 == Arten sensibler personenbezogener Daten
 
 Die Datenklassifizierung kann die folgenden sensiblen persönlichen Informationen (SPII) in Dateien finden.
@@ -340,6 +342,7 @@ Die folgenden SPII können derzeit nur in englischer Sprache erkannt werden:
 
 
 
+[[types-of-categories]]
 == Kategorientypen
 
 Die Datenklassifizierung kategorisiert Ihre Daten wie folgt.
@@ -443,6 +446,7 @@ Die folgenden Metadaten werden ebenfalls in denselben unterstützten Sprachen ka
 
 
 
+[[types-of-files]]
 == Dateitypen
 
 Die Datenklassifizierung durchsucht alle Dateien nach Kategorien und Metadaten und zeigt alle Dateitypen im Abschnitt „Dateitypen“ des Dashboards an.  Wenn die Datenklassifizierung personenbezogene Daten (PII) erkennt oder eine DSAR-Suche durchführt, werden nur die folgenden Dateiformate unterstützt:
@@ -451,6 +455,7 @@ Die Datenklassifizierung durchsucht alle Dateien nach Kategorien und Metadaten u
 
 
 
+[[accuracy-of-information-found]]
 == Genauigkeit der gefundenen Informationen
 
 NetApp kann keine 100-prozentige Genauigkeit der durch die Datenklassifizierung identifizierten personenbezogenen Daten und sensiblen personenbezogenen Daten garantieren.  Sie sollten die Informationen immer durch Überprüfung der Daten validieren.

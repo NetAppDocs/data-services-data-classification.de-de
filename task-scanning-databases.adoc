@@ -18,12 +18,14 @@ Führen Sie einige Schritte aus, um mit dem Scannen Ihrer Datenbankschemata mit 
 
 
 
+[[review-prerequisites]]
 == Überprüfen der Voraussetzungen
 
 Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung aktivieren.
 
 
 
+[[supported-databases]]
 === Unterstützte Datenbanken
 
 Die Datenklassifizierung kann Schemata aus den folgenden Datenbanken scannen:
@@ -42,6 +44,7 @@ CAUTION: Die Funktion zum Sammeln von Statistiken *muss* in der Datenbank aktivi
 
 
 
+[[database-requirements]]
 === Datenbankanforderungen
 
 Jede Datenbank mit Verbindung zur Datenklassifizierungsinstanz kann gescannt werden, unabhängig davon, wo sie gehostet wird.  Um eine Verbindung zur Datenbank herzustellen, benötigen Sie lediglich die folgenden Informationen:
@@ -60,6 +63,7 @@ NOTE: Für MongoDB ist eine schreibgeschützte Administratorrolle erforderlich.
 
 
 
+[[deploy-the-data-classification-instance]]
 == Bereitstellen der Datenklassifizierungsinstanz
 
 Stellen Sie die Datenklassifizierung bereit, wenn noch keine Instanz bereitgestellt ist.
@@ -70,6 +74,7 @@ Wenn Sie Datenbankschemata scannen, die in einer Dark Site ohne Internetzugang i
 
 
 
+[[add-the-database-server]]
 == Hinzufügen des Datenbankservers
 
 Fügen Sie den Datenbankserver hinzu, auf dem sich die Schemas befinden.
@@ -94,6 +99,7 @@ Die Datenbank wird der Liste der Systeme hinzugefügt.
 
 
 
+[[enable-and-disable-scans-on-database-schemas]]
 == Aktivieren und Deaktivieren von Scans für Datenbankschemata
 
 Sie können den vollständigen Scan Ihrer Schemata jederzeit stoppen oder starten.

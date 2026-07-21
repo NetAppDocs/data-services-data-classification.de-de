@@ -4,6 +4,7 @@
 
 
 
+[[general-improvements]]
 === Allgemeine Verbesserungen
 
 Diese Version der Datenklassifizierung enthält Fehlerbehebungen, Sicherheitsverbesserungen und Leistungsoptimierungen.

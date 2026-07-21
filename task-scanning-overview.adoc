@@ -22,6 +22,7 @@ Sie können Scans auf Volume-Ebene oder auf Datenbankschemaebene aktivieren und 
 
 
 
+[[understand-scan-types]]
 == Scanarten verstehen
 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:

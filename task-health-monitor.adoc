@@ -21,6 +21,7 @@ Das NetApp Data Classification Health Monitor Dashboard bietet Echtzeitüberwach
 
 
 
+[[health-monitor-insights]]
 == Erkenntnisse aus dem Gesundheitsmonitor
 
 Das Dashboard des Gesundheitsmonitors präsentiert Informationen in vier Kategorien.
@@ -45,6 +46,7 @@ Das Systeminformationsfeld erfasst wichtige Informationen über die NetApp Conso
 
 
 
+[[access-the-health-monitor-dashboard]]
 == Greifen Sie auf das Dashboard des Gesundheitsmonitors zu.
 
 . Wählen Sie unter Datenklassifizierung **Konfiguration** aus.

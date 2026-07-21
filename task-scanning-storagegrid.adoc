@@ -18,6 +18,7 @@ Führen Sie einige Schritte aus, um mit dem Scannen von Daten in StorageGRID dir
 
 
 
+[[review-storagegrid-requirements]]
 == Überprüfen Sie die StorageGRID Anforderungen
 
 Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung aktivieren.
@@ -28,6 +29,7 @@ Führen Sie einige Schritte aus, um mit dem Scannen von Daten in StorageGRID dir
 
 
 
+[[deploy-the-data-classification-instance]]
 == Bereitstellen der Datenklassifizierungsinstanz
 
 Stellen Sie die Datenklassifizierung bereit, wenn noch keine Instanz bereitgestellt ist.
@@ -38,6 +40,7 @@ Wenn Sie Daten von StorageGRID scannen, das in einer Dark Site ohne Internetzuga
 
 
 
+[[add-the-storagegrid-service-to-data-classification]]
 == Fügen Sie den StorageGRID -Dienst zur Datenklassifizierung hinzu
 
 Fügen Sie den StorageGRID -Dienst hinzu.
@@ -62,6 +65,7 @@ StorageGRID wird zur Liste der Systeme hinzugefügt.
 
 
 
+[[enable-and-disable-scans-on-storagegrid-buckets]]
 == Aktivieren und Deaktivieren von Scans auf StorageGRID Buckets
 
 Nachdem Sie die Datenklassifizierung auf StorageGRID aktiviert haben, besteht der nächste Schritt darin, die Buckets zu konfigurieren, die Sie scannen möchten.  Die Datenklassifizierung erkennt diese Buckets und zeigt sie in dem von Ihnen erstellten System an.

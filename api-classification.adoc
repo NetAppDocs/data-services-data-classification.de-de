@@ -28,6 +28,7 @@ Mit den APIs in der Swagger-Dokumentation können Sie suchen, Daten aggregieren,
 
 
 
+[[overview]]
 == Überblick
 
 Mit der API können Sie die folgenden Funktionen ausführen:
@@ -56,6 +57,7 @@ Die API ist sicher und verwendet dieselbe Authentifizierungsmethode wie die Benu
 
 
 
+[[accessing-the-swagger-api-reference]]
 == Zugriff auf die Swagger-API-Referenz
 
 Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classification-Instanz. Bei einer Cloud-Bereitstellung verwenden Sie die öffentliche IP-Adresse. Anschließend müssen Sie auf diesen Endpunkt zugreifen:
@@ -64,6 +66,7 @@ Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classificat
 
 
 
+[[example-using-the-apis]]
 == Beispiel für die Verwendung der APIs
 
 Das folgende Beispiel zeigt einen API-Aufruf zum Kopieren von Dateien.

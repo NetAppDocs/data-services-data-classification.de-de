@@ -26,6 +26,7 @@ TIP: Bei lokalen VMware vSphere-Bereitstellungen unterstützt die Datenklassifiz
 
 
 
+[[on-premises-installation-script]]
 == Installationsskript für die lokale Umgebung
 
 Sowohl die Installation auf einem Linux-Rechner mit Internetzugang als auch die lokale Installation auf einem Linux-Rechner ohne Internetzugang erfolgen mithilfe eines Installationsskripts. Das Skript prüft zunächst, ob System und Umgebung die Voraussetzungen erfüllen. Sind die Voraussetzungen erfüllt, startet die Installation.

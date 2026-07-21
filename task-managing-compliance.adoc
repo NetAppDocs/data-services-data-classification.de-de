@@ -18,6 +18,7 @@ Bei Bedarf können Sie NetApp Data Classification daran hindern, ein oder mehrer
 
 
 
+[[deactivate-scans-for-a-system]]
 == Deaktivieren von Scans für ein System
 
 Wenn Sie Scans deaktivieren, scannt Data Classification die Daten auf dem System nicht mehr und entfernt die indizierten Erkenntnisse aus der Data Classification-Instanz.  Die Daten aus dem System selbst werden nicht gelöscht.
@@ -30,6 +31,7 @@ TIP: Sie können Scans für ein System auch über das Bedienfeld „Dienste“ d
 
 
 
+[[remove-a-database-from-data-classification]]
 == Entfernen einer Datenbank aus der Datenklassifizierung
 
 Wenn Sie eine bestimmte Datenbank nicht mehr scannen müssen, können Sie sie aus der Datenklassifizierungsschnittstelle löschen und alle Scans stoppen.
@@ -39,6 +41,7 @@ Wenn Sie eine bestimmte Datenbank nicht mehr scannen müssen, können Sie sie au
 
 
 
+[[remove-a-group-of-file-shares-from-data-classification]]
 == Entfernen einer Gruppe von Dateifreigaben aus der Datenklassifizierung
 
 Wenn Sie Benutzerdateien aus einer Dateifreigabegruppe nicht mehr scannen möchten, können Sie die Dateifreigabegruppe aus der Datenklassifizierungsschnittstelle löschen und alle Scans stoppen.

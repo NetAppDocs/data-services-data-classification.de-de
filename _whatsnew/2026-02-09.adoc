@@ -4,6 +4,7 @@
 
 
 
+[[activate-data-classification-with-amazon-fsxn-for-ontap-directly-from-the-netapp-console-canvas]]
 === Aktivieren Sie die Datenklassifizierung mit Amazon FSxN für ONTAP direkt aus der NetApp Console-Übersicht
 
 Sie können Amazon FSxN für ONTAP-Systeme jetzt direkt von der NetApp Console-Oberfläche aus aktivieren, sodass Sie die Datenklassifizierung für Ihre FSxN-Systeme schneller starten können.
@@ -12,6 +13,7 @@ Weitere Informationen zur Verwendung von Data Classification mit Amazon FSxN fü
 
 
 
+[[increased-export-limit-for-investigating-directories]]
 === Erhöhtes Exportlimit für die Untersuchung von Verzeichnissen
 
 Beim Export eines Untersuchungsberichts zu Verzeichnissen aus dem Untersuchungs-Dashboard können Sie nun 10.000 Zeilen einbeziehen. Diese Erhöhung gegenüber dem vorherigen Limit von 5.000 Zeilen unterstützt umfangreichere Untersuchungen im Bereich Daten-Governance und Compliance.
@@ -20,6 +22,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[increased-limits-for-copy-and-move]]
 === Erhöhte Limits für Kopieren und Verschieben
 
 Beim Kopieren oder Verschieben von Dateien können Sie jetzt Dateien mit einer Größe von bis zu 250 MB kopieren oder verschieben, eine Erhöhung gegenüber dem vorherigen Limit von 50 MB.
@@ -28,6 +31,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[improved-display-for-low-resolution-screens]]
 === Verbesserte Darstellung für Bildschirme mit niedriger Auflösung
 
 Data Classification hat die Anzeigeleistung für Bildschirme mit niedriger Auflösung verbessert und so die Benutzererfahrung verbessert.

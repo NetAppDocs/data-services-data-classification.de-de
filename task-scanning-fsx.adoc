@@ -18,6 +18,7 @@ Führen Sie einige Schritte aus, um Amazon FSx mit NetApp Data Classification na
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Sie benötigen einen aktiven Konsolenagenten in AWS, um die Datenklassifizierung bereitzustellen und zu verwalten.
@@ -41,6 +42,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Elastische A
 
 
 
+[[deploy-the-data-classification-instance]]
 == Bereitstellen der Datenklassifizierungsinstanz
 
 link:task-deploy-cloud-compliance.html["Datenklassifizierung bereitstellen"^]wenn noch keine Instanz bereitgestellt ist.
@@ -53,6 +55,7 @@ Upgrades der Datenklassifizierungssoftware erfolgen automatisiert, solange die I
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Aktivieren Sie die Datenklassifizierung in Ihren Systemen
 
 Sie können die Datenklassifizierung für FSx für ONTAP -Volumes aktivieren.
@@ -82,6 +85,7 @@ Die Datenklassifizierung beginnt mit dem Scannen der von Ihnen im System ausgew�
 ====
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
 
 Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.
@@ -116,6 +120,7 @@ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angez
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Aktivieren und Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
@@ -140,6 +145,7 @@ Wenn Sie das Scannen aktivieren, beginnt die Datenklassifizierung mit dem Scanne
 
 
 
+[[scan-data-protection-volumes]]
 == Scannen von Datenschutzvolumes
 
 Standardmäßig werden Datenschutzvolumes (DP) nicht gescannt, da sie nicht extern verfügbar sind und die Datenklassifizierung nicht auf sie zugreifen kann.  Dies sind die Zielvolumes für SnapMirror -Vorgänge von einem FSx für ONTAP Dateisystem.

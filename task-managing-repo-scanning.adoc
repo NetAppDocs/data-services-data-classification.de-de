@@ -20,6 +20,7 @@ Sie können unter anderem ändern, ob ein Repository gescannt wird oder nicht un
 
 
 
+[[view-the-scan-status-for-your-repositories]]
 == Den Scan-Status für Ihre Repositories anzeigen
 
 Sie können die einzelnen Repositories anzeigen, die NetApp Data Classification für jedes System und jede Datenquelle scannt (Volumes, Buckets usw.).  Sie können auch sehen, wie viele „kartiert“ und wie viele „klassifiziert“ wurden.  Die Klassifizierung dauert länger, da die vollständige KI-Identifizierung für alle Daten durchgeführt wird.
@@ -51,6 +52,7 @@ image:screenshot_compliance_repo_scan_settings.png["Ein Screenshot, der zeigt, o
 
 
 
+[[change-the-scan-type]]
 == Ändern Sie den Scan-Typ
 
 Auf der Konfigurationsseite können Sie Scans in einem System jederzeit starten oder stoppen. Sie können außerdem zwischen reinen Kartierungsscans und vollständigen Scans wechseln und umgekehrt.
@@ -74,6 +76,7 @@ Wählen Sie in der individuellen Systemkonfiguration das zu ändernde Asset aus.
 
 
 
+[[prioritize-scans]]
 == Priorisieren Sie Scans
 
 Sie können die wichtigsten Map-only- oder vollständigen Scans priorisieren, um sicherzustellen, dass Scans mit hoher Priorität zuerst abgeschlossen werden.
@@ -90,6 +93,7 @@ Die Priorität wird einmalig gewährt. Automatische erneute Scans der Kartendate
 
 
 
+[[stop-scanning-for-a-repository]]
 == Scannen nach einem Repository beenden
 
 Sie können das Scannen eines Repositorys (z. B. eines Volumes) beenden, wenn Sie es nicht mehr auf Konformität überwachen müssen.  Dies erreichen Sie, indem Sie das Scannen „ausschalten“.  Wenn das Scannen deaktiviert wird, werden alle Indizes und Informationen zu diesem Datenträger aus dem System entfernt und die Gebühren für das Scannen der Daten werden nicht mehr erhoben.
@@ -105,6 +109,7 @@ image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Si
 
 
 
+[[pause-and-resume-scanning-for-a-repository]]
 == Scannen nach einem Repository anhalten und fortsetzen
 
 Sie können den Scanvorgang pausieren, sodass Data Classification keine zukünftigen Scans nach Änderungen oder Ergänzungen im Repository durchführt. Alle aktuellen Scan-Ergebnisse bleiben in Data Classification zugänglich.

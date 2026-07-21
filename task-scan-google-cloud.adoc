@@ -18,12 +18,14 @@ NetApp Data Classification unterstützt Google Cloud NetApp Volumes als System. 
 
 
 
+[[discover-the-google-cloud-netapp-volumes-system-that-you-want-to-scan]]
 == Ermitteln Sie das Google Cloud NetApp Volumes -System, das Sie scannen möchten
 
 Wenn das Google Cloud NetApp Volumes -System, das Sie scannen möchten, nicht bereits als System in der NetApp Console vorhanden ist,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["fügen Sie es der Seite „Systeme“ hinzu"^] .
 
 
 
+[[deploy-the-data-classification-instance]]
 == Bereitstellen der Datenklassifizierungsinstanz
 
 link:task-deploy-cloud-compliance.html["Datenklassifizierung bereitstellen"^]wenn noch keine Instanz bereitgestellt ist.
@@ -34,6 +36,7 @@ Beim Scannen von Google Cloud NetApp Volumes muss die Datenklassifizierung in de
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Aktivieren Sie die Datenklassifizierung in Ihren Systemen
 
 Sie können die Datenklassifizierung auf Ihrem Google Cloud NetApp Volumes -System aktivieren.
@@ -59,6 +62,7 @@ Data Classification beginnt mit dem Scannen der von Ihnen im System ausgewählte
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Überprüfen Sie, ob die Datenklassifizierung Zugriff auf die Volumes hat.
 
 Stellen Sie sicher, dass die Datenklassifizierung auf Volumes zugreifen kann, indem Sie Ihre Netzwerk-, Sicherheitsgruppen- und Exportrichtlinien überprüfen.  Für CIFS-Volumes müssen Sie die Datenklassifizierung mit CIFS-Anmeldeinformationen bereitstellen.
@@ -97,6 +101,7 @@ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angez
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Aktivieren und Deaktivieren von Scans auf Volumes
 
 Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.

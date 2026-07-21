@@ -4,6 +4,7 @@
 
 
 
+[[improved-update-times-for-the-governance-dashboard]]
 === Verbesserte Aktualisierungszeiten für das Governance-Dashboard
 
 Die Aktualisierungszeiten für einzelne Komponenten des Governance-Dashboards wurden verbessert. Die folgende Tabelle zeigt die Aktualisierungshäufigkeit für jede Komponente.
@@ -52,12 +53,14 @@ Sie können den Zeitpunkt der letzten Aktualisierung anzeigen und die Komponente
 
 
 
+[[performance-and-security-improvements]]
 === Leistungs- und Sicherheitsverbesserungen
 
 Es wurden Verbesserungen vorgenommen, um die Leistung, den Speicherverbrauch und die Sicherheit der BlueXP Klassifizierung zu verbessern.
 
 
 
+[[bug-fixes]]
 === Fehlerbehebungen
 
 Redis wurde aktualisiert, um die Zuverlässigkeit der BlueXP classification zu verbessern. Die BlueXP classification verwendet jetzt Elasticsearch, um die Genauigkeit der Dateianzahlberichterstattung während der Scans zu verbessern.

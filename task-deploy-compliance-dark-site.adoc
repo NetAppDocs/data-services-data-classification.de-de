@@ -25,6 +25,7 @@ Das Installationsskript für die Datenklassifizierung prüft zunächst, ob das S
 
 
 
+[[supported-data-sources]]
 == Unterstützte Datenquellen
 
 Wenn der private Modus installiert ist (manchmal auch als „Offline“- oder „Dark“-Site bezeichnet), kann Data Classification nur Daten aus Datenquellen scannen, die ebenfalls lokal am On-Premises-Standort sind. Derzeit kann Data Classification die folgenden *lokalen* Datenquellen scannen:
@@ -37,6 +38,7 @@ Derzeit wird das Scannen von Cloud Volumes ONTAP, Azure NetApp Files oder FSx fo
 
 
 
+[[limitations]]
 == Einschränkungen
 
 Die meisten Funktionen der Datenklassifizierung funktionieren, wenn sie an einem Standort ohne Internetzugang bereitgestellt werden. Bestimmte Funktionen, die einen Internetzugang benötigen, werden jedoch nicht unterstützt, zum Beispiel:
@@ -51,6 +53,7 @@ Sowohl der Konsolenagent als auch die Datenklassifizierung erfordern regelmäßi
 
 
 
+[[quick-start]]
 == Schnellstart
 
 Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach unten zu den restlichen Abschnitten, um alle Einzelheiten zu erfahren.
@@ -69,12 +72,14 @@ Laden Sie die Data Classification-Software von der NetApp Support Site herunter 
 
 
 
+[[install-the-console-agent]]
 == Installieren Sie den Console-Agenten
 
 Falls Sie noch keinen Console-Agenten im privaten Modus installiert haben, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Console-Agent bereitstellen"^] auf einem Linux-Host an Ihrem Offline-Standort.
 
 
 
+[[prepare-the-linux-host-system]]
 == Vorbereiten des Linux-Hostsystems
 
 Die Data Classification Software muss auf einem Host ausgeführt werden, der bestimmte Anforderungen an das Betriebssystem, den Arbeitsspeicher, die Software usw. erfüllt.
@@ -185,7 +190,11 @@ Beachten Sie, dass Sie Docker oder Podman neu starten müssen, wenn Sie aktivier
 TIP: Die IP-Adresse des Data Classification-Hostsystems kann nach der Installation nicht mehr geändert werden.
 
 
+NOTE: Das Installationsprogramm für Data Classification reserviert UID 4321 und GID 4321. Vor Beginn der Installation sollte sichergestellt sein, dass UID 4321 und GID 4321 auf dem Host-System nicht verwendet werden. Falls sie verwendet werden, schlägt die Installation mit einer „invalid user“-Fehlermeldung fehl.
 
+
+
+[[verify-console-and-data-classification-prerequisites]]
 == Überprüfen Sie die Voraussetzungen für Konsole und Datenklassifizierung
 
 Überprüfen Sie die folgenden Voraussetzungen, um sicherzustellen, dass Sie über eine unterstützte Konfiguration verfügen, bevor Sie die Datenklassifizierung bereitstellen.
@@ -200,6 +209,7 @@ Die Datenklassifizierungsinstanz verwendet eine private IP-Adresse, um sicherzus
 
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Stellen Sie sicher, dass alle erforderlichen Ports aktiviert sind
 
 Sie müssen sicherstellen, dass alle erforderlichen Ports für die Kommunikation zwischen dem Konsolenagenten, der Datenklassifizierung, Active Directory und Ihren Datenquellen geöffnet sind.
@@ -263,6 +273,7 @@ Sie benötigen die Informationen für das Active Directory:
 |===
 
 
+[[install-data-classification-on-the-on-premises-linux-host]]
 == Installieren Sie Data Classification auf dem lokalen Linux-Host
 
 Bei typischen Konfigurationen installieren Sie die Software auf einem einzelnen Hostsystem.
@@ -346,6 +357,7 @@ Auf der Konfigurationsseite können Sie das lokale link:task-getting-started-com
 
 
 
+[[upgrade-data-classification-software]]
 == Datenklassifizierungssoftware aktualisieren
 
 Da die Data Classification Software regelmäßig mit neuen Funktionen aktualisiert wird, sollten Sie sich angewöhnen, regelmäßig nach neuen Versionen zu suchen, um sicherzustellen, dass Sie die neueste Software und die neuesten Funktionen verwenden. Sie müssen die Data Classification Software manuell aktualisieren, da keine Internetverbindung besteht, um das Upgrade automatisch durchzuführen.
@@ -394,6 +406,7 @@ Sie können überprüfen, ob die Software aktualisiert wurde, indem Sie die Vers
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-scanning-overview.html["Konfigurieren Sie das Scannen Ihrer Datenquellen"]

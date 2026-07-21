@@ -4,6 +4,7 @@
 
 
 
+[[enhanced-scan-event-insights-in-the-audit-page]]
 === Verbesserte Einblicke in Scan-Ereignisse auf der Audit-Seite
 
 Die Audit-Seite unterstützt jetzt erweiterte Einblicke in Scan-Ereignisse für die BlueXP classification. Auf der Audit-Seite wird jetzt angezeigt, wann der Scan eines Systems beginnt, sowie der Status der Systeme und etwaige Probleme. Status für Freigaben und Systeme sind nur für Mapping-Scans verfügbar.
@@ -12,6 +13,7 @@ Weitere Informationen zur Seite „Audit“ finden Sie unterlink:https://docs.ne
 
 
 
+[[support-for-rhel-9-6]]
 === Unterstützung für RHEL 9.6
 
 Diese Version fügt Unterstützung für Red Hat Enterprise Linux v9.6 für die manuelle Vor-Ort-Installation der BlueXP classification hinzu, einschließlich Dark Site-Bereitstellungen.

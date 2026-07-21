@@ -33,6 +33,7 @@ NOTE: Lokale Benutzer-SIDs und SIDs aus unbekannten Domänen werden nicht in den
 
 
 
+[[supported-data-sources]]
 == Unterstützte Datenquellen
 
 Eine Active Directory-Integration mit Datenklassifizierung kann Daten aus den folgenden Datenquellen identifizieren:
@@ -45,6 +46,7 @@ Eine Active Directory-Integration mit Datenklassifizierung kann Daten aus den fo
 
 
 
+[[connect-to-your-active-directory-server]]
 == Stellen Sie eine Verbindung zu Ihrem Active Directory-Server her
 
 Nachdem Sie die Datenklassifizierung bereitgestellt und das Scannen Ihrer Datenquellen aktiviert haben, können Sie die Datenklassifizierung in Ihr Active Directory integrieren.  Auf Active Directory kann über eine DNS-Server-IP-Adresse oder eine LDAP-Server-IP-Adresse zugegriffen werden.
@@ -105,6 +107,7 @@ Die Datenklassifizierung wird in das Active Directory integriert und der Konfigu
 
 
 
+[[manage-your-active-directory-integration]]
 == Verwalten Sie Ihre Active Directory-Integration
 
 Wenn Sie Werte in Ihrer Active Directory-Integration ändern müssen, müssen Sie die Active Directory-Konfiguration in Data Classification aktualisieren. Kehren Sie zum Menü **Konfiguration** in Data Classification zurück und wechseln Sie dann zum Tab „Einstellungen“, um die Änderungen vorzunehmen.

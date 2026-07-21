@@ -20,6 +20,7 @@ Diese Methode wird für neue VMware-basierte Implementierungen empfohlen.
 
 
 
+[[prerequisites]]
 == Voraussetzungen
 
 Bevor Sie die OVA-Datei zur Installation der Datenklassifizierung verwenden, benötigen Sie Folgendes:
@@ -33,6 +34,7 @@ Bevor Sie die OVA-Datei zur Installation der Datenklassifizierung verwenden, ben
 
 
 
+[[deploy-the-ova-in-vmware-vsphere]]
 == Die OVA in VMware vSphere bereitstellen
 
 . Laden Sie die OVA-Datei von link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter. Wählen Sie die für Ihre Umgebung geeignete OVA-Appliance aus:
@@ -73,6 +75,7 @@ NOTE: Das Passwort wird für Root-Zugriff, SSH-Zugriff und die Systemadministrat
 
 
 
+[[install-data-classification]]
 == Datenklassifizierung installieren
 
 . Laden Sie die Data Classification-Software von der link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter.
@@ -92,6 +95,7 @@ image:screenshot-deploy-classification.png["Ein Screenshot der Auswahl der Schal
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-scanning-overview.html["Konfigurieren Sie das Scannen Ihrer Datenquellen"]

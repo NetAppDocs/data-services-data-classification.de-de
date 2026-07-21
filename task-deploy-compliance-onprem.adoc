@@ -33,6 +33,7 @@ image:diagram_deploy_onprem_cloud_instance.png["Ein Diagramm der erforderlichen 
 
 
 
+[[quick-start]]
 == Schnellstart
 
 Beginnen Sie schnell, indem Sie diese Schritte befolgen, oder scrollen Sie nach unten zu den restlichen Abschnitten, um alle Einzelheiten zu erfahren.
@@ -57,6 +58,7 @@ Laden Sie die Cloud Data Classification-Software von der NetApp -Support-Site he
 
 
 
+[[create-a-console-agent]]
 == Erstellen eines Konsolenagenten
 
 Für die Installation und Nutzung von NetApp Data Classification ist ein Console Agent erforderlich. In den meisten Fällen haben Sie wahrscheinlich bereits einen Console Agent eingerichtet, bevor Sie NetApp Data Classification aktivieren.
@@ -81,6 +83,7 @@ Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wen
 
 
 
+[[prepare-the-linux-host-system]]
 == Vorbereiten des Linux-Hostsystems
 
 Datenklassifizierungssoftware muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Softwareanforderungen usw. erfüllt.  Der Linux-Host kann sich in Ihrem Netzwerk oder in der Cloud befinden.
@@ -204,6 +207,7 @@ NOTE: Die IP-Adresse des Data Classification-Hostsystems kann nach der Installat
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Ausgehenden Internetzugriff von der Datenklassifizierung aus aktivieren
 
 Für die Datenklassifizierung ist ein ausgehender Internetzugang erforderlich.  Wenn Ihr virtuelles oder physisches Netzwerk einen Proxyserver für den Internetzugang verwendet, stellen Sie sicher, dass die Datenklassifizierungsinstanz über ausgehenden Internetzugang verfügt, um die folgenden Endpunkte zu kontaktieren.
@@ -232,6 +236,7 @@ Für die Datenklassifizierung ist ein ausgehender Internetzugang erforderlich.  
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Stellen Sie sicher, dass alle erforderlichen Ports aktiviert sind
 
 Sie müssen sicherstellen, dass alle erforderlichen Ports für die Kommunikation zwischen dem Konsolenagenten, der Datenklassifizierung, Active Directory und Ihren Datenquellen geöffnet sind.
@@ -285,6 +290,7 @@ Sie benötigen die Informationen für das Active Directory:
 |===
 
 
+[[install-data-classification-on-the-linux-host]]
 == Installieren Sie Data Classification auf dem Linux-Host
 
 Bei typischen Konfigurationen installieren Sie die Software auf einem einzelnen Hostsystem. <<Single-Host-Installation für typische Konfigurationen,Sehen Sie sich diese Schritte hier an>> .
@@ -300,6 +306,7 @@ NOTE: Data Classification kann derzeit keine S3-Buckets, Azure NetApp Files oder
 
 
 
+[[single-host-installation-for-typical-configurations]]
 === Single-Host-Installation für typische Konfigurationen
 
 Überprüfen Sie die Anforderungen und befolgen Sie diese Schritte, wenn Sie die Datenklassifizierungssoftware auf einem einzelnen lokalen Host installieren.
@@ -389,6 +396,7 @@ Wenn zwischen dem Hostcomputer und der Konsolen-Agentinstanz eine Verbindung üb
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-scanning-overview.html["Konfigurieren Sie das Scannen Ihrer Datenquellen"]

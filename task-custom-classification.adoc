@@ -21,6 +21,7 @@ Alle benutzerdefinierten Klassifizierungen sind im Dashboard „Benutzerdefinier
 
 
 
+[[create-a-custom-personal-identifier]]
 == Erstellen Sie eine benutzerdefinierte persönliche Kennung
 
 Die Datenklassifizierung ermöglicht es Ihnen, mithilfe von Kontext-Schlüsselwörtern oder einem regulären Ausdruck eine benutzerdefinierte persönliche Kennung zu erstellen, um Daten zu identifizieren, die für Ihre Organisation eindeutig sind.
@@ -63,6 +64,7 @@ Nachdem Sie eine benutzerdefinierte persönliche Kennung erstellt haben, werden 
 
 
 
+[[create-a-custom-category]]
 == Erstellen Sie eine benutzerdefinierte Kategorie
 
 Mit benutzerdefinierten Kategorien können Sie Daten speziell für Ihre Organisation kategorisieren. Es werden benutzerdefinierte Kategorien auf Basis von Textdateien erstellt, die Sie hochladen. Aus diesen Dateien erstellt die Datenklassifizierung ein KI-Modell, um ähnliche Informationen in anderen Dateien zu identifizieren.
@@ -99,6 +101,7 @@ Nachdem Sie eine benutzerdefinierte Kategorie erstellt haben, werden deren Ergeb
 
 
 
+[[edit-a-custom-classifier]]
 == Bearbeiten Sie einen benutzerdefinierten Klassifikator
 
 Sie können die Logik einer persönlichen Kennung auch nach deren Erstellung ändern. Sie können weder den Typ der persönlichen Kennung noch den Logiktyp ändern; beispielsweise können Sie eine benutzerdefinierte Kategorie nicht in eine benutzerdefinierte persönliche Kennung ändern. Außerdem können Sie einen auf Schlüsselwörtern basierenden benutzerdefinierten Bezeichner nicht in einen auf regulären Ausdrücken basierenden benutzerdefinierten Bezeichner ändern.
@@ -113,6 +116,7 @@ Sie können die Logik einer persönlichen Kennung auch nach deren Erstellung än
 
 
 
+[[delete-a-custom-classifier]]
 == Einen benutzerdefinierten Klassifikator löschen
 
 . Wählen Sie in NetApp Data Classification die Option *Benutzerdefinierte Klassifizierung*.
@@ -122,6 +126,7 @@ Sie können die Logik einer persönlichen Kennung auch nach deren Erstellung än
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * xref:task-generating-compliance-reports.html[Erstellen von Compliance-Berichten]
