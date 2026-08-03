@@ -46,7 +46,7 @@ Ja, Data Classification verfügt über eine REST-API für die unterstützten Fun
 [[is-data-classification-available-through-the-cloud-marketplaces]]
 === Ist die Datenklassifizierung über die Cloud-Marktplätze verfügbar?
 
-Die Datenklassifizierung ist Teil der Kernfunktionen der NetApp Console , daher müssen Sie für diesen Dienst nicht die Marktplätze verwenden.
+Die Datenklassifizierung ist Teil der NetApp Console Kernfunktionen. Eine Bereitstellung der Datenklassifizierung über einen Cloud-Marktplatz ist nicht erforderlich.
 
 
 
@@ -87,6 +87,13 @@ Die Datenklassifizierung bietet umfangreiche Suchfunktionen, die die Suche nach 
 Sobald die gewünschten Dateien gefunden wurden, können Merkmale aufgelistet werden, darunter Tags, Systemkonto, Bucket, Dateipfad, Kategorie (aus der Klassifizierung), Dateigröße, letzte Änderung, Berechtigungsstatus, Duplikate, Vertraulichkeitsstufe, persönliche Daten, vertrauliche Datentypen innerhalb der Datei, Eigentümer, Dateityp, Dateigröße, Erstellungszeit, Datei-Hash, ob die Daten jemandem zugewiesen wurden, der ihre Aufmerksamkeit sucht, und mehr.  Um nicht relevante Merkmale auszusortieren, können Filter angewendet werden.
 
 Die Datenklassifizierung verfügt außerdem über eine rollenbasierte Zugriffskontrolle (RBAC), um das Verschieben oder Löschen von Dateien zu ermöglichen, sofern die entsprechenden Berechtigungen vorhanden sind.  Wenn die richtigen Berechtigungen nicht vorhanden sind, können die Aufgaben jemandem in der Organisation zugewiesen werden, der über die richtigen Berechtigungen verfügt.
+
+
+
+[[if-i-restart-my-vm-during-scans-what-is-the-impact-on-the-scan]]
+=== Wenn die VM während eines Scans neu gestartet wird, welche Auswirkungen hat dies auf den Scan?
+
+Die Scans bleiben bestehen. Wenn eine VM während laufender Scans neu gestartet wird, setzen die Scans nach dem erfolgreichen Neustart der VM an der Stelle fort, an der sie unterbrochen wurden.
 
 
 
