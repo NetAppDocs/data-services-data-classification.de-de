@@ -2802,7 +2802,6 @@
   <block id="5b727e9ed04fc43b0f4e0f294915a248" category="section-title">Scanarten verstehen</block>
   <block id="486c832e76fd0638886898fc9c62ff69" category="list-text">**Nur-Karten-Scans** bieten lediglich einen groben Überblick über Ihre Daten und werden auf ausgewählten Datenquellen durchgeführt. Nur-Karten-Scans benötigen weniger Zeit als vollständige Scans, da sie nicht auf Dateien zugreifen, um die darin enthaltenen Daten zu sehen.</block>
   <block id="71ebf849818df3526b1f19c48d22ee23" category="list-text">**Vollständige Scans** bieten eine tiefgehende Überprüfung Ihrer Daten. Ein vollständiger Scan umfasst eine Kartierung und eine Klassifizierung der Daten innerhalb der Dateien.</block>
-  <block id="81f9f5fbbc14757a16be8eb963cfb5bb" category="admonition">Eine reine Map-only-Scan-Analyse kann hilfreich sein, um sich einen Überblick über Ihre Daten zu verschaffen und bestimmte Bereiche zu identifizieren, auf die vollständige Scans angewendet werden sollten.</block>
   <block id="8666915a830702ebb197dde305a34dc5" category="paragraph">Überprüfen Sie die Tabellen, um zu sehen, welche Informationen bei reinen Kartenscans und vollständigen Scans angezeigt werden.</block>
   <block id="4cc971a27d1b8959788abcd1eab8e72b" category="cell">Vollständiger Scan</block>
   <block id="7f138c4c12db7bfc5e7b57acbcffe2d2" category="cell">Nur-Map-Scan</block>
@@ -2860,4 +2859,7 @@
   <block id="7a6e24dc300a73a85d44ed828d28c3db" category="paragraph">Die Datenklassifizierung ist Teil der NetApp Console Kernfunktionen. Eine Bereitstellung der Datenklassifizierung über einen Cloud-Marktplatz ist nicht erforderlich.</block>
   <block id="e99dacbe5fb8f13a88a038ccac0ae040" category="section-title">Wenn die VM während eines Scans neu gestartet wird, welche Auswirkungen hat dies auf den Scan?</block>
   <block id="c11dddbf642df4798f94fb3c97c30774" category="paragraph">Die Scans bleiben bestehen. Wenn eine VM während laufender Scans neu gestartet wird, setzen die Scans nach dem erfolgreichen Neustart der VM an der Stelle fort, an der sie unterbrochen wurden.</block>
+  <block id="4c9398ce1129f1601e4d55b176ae4cd8" category="inline-link-macro">manuell priorisieren</block>
+  <block id="b053d0df91aae10a4ef1dd644b52ec10" category="paragraph">Nach dem ersten Scan durchsucht Data Classification Ihre Daten kontinuierlich im Round-Robin-Verfahren, um inkrementelle Änderungen zu erkennen. Scans werden täglich automatisch durchgeführt. Data Classification führt Scans in Sechsergruppen durch; Sie können Scans pausieren oder <block ref="eb2a9ee088a42a6c145bd3fba80d3402" category="inline-link-macro-rx"></block>.</block>
+  <block id="65f7cd44708007c7eaad8b5c146ed3dc" category="admonition">Eine reine Kartenanalyse kann hilfreich sein, um einen Überblick über Ihre Daten zu erhalten. Mit diesem Überblick auf hoher Ebene kann anschließend entschieden werden, bei welchen Datenquellen vollständige Analysen durchgeführt werden sollen.</block>
 </blocks>

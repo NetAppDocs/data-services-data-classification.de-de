@@ -16,7 +16,7 @@ summary: Scannen Sie Ihre Datenquellen mit NetApp Data Classification.
 [role="lead"]
 NetApp Data Classification scannt die Daten in den von Ihnen ausgewählten Repositories (den Volumes, Datenbankschemata oder anderen Benutzerdaten), um personenbezogene und sensible Daten zu identifizieren. Data Classification ordnet anschließend Ihre Organisationsdaten zu, kategorisiert jede Datei und identifiziert vordefinierte Muster in den Daten. Das Ergebnis des Scans ist ein Index mit personenbezogenen Informationen, sensiblen personenbezogenen Informationen, Datenkategorien und Dateitypen.
 
-Nach dem ersten Scan scannt die Datenklassifizierung Ihre Daten kontinuierlich im Round-Robin-Verfahren, um inkrementelle Änderungen zu erkennen.  Aus diesem Grund ist es wichtig, die Instanz am Laufen zu halten.
+Nach dem ersten Scan durchsucht Data Classification Ihre Daten kontinuierlich im Round-Robin-Verfahren, um inkrementelle Änderungen zu erkennen. Scans werden täglich automatisch durchgeführt. Data Classification führt Scans in Sechsergruppen durch; Sie können Scans pausieren oder link:task-managing-repo-scanning.html#prioritize-scans["manuell priorisieren"].
 
 Sie können Scans auf Volume-Ebene oder auf Datenbankschemaebene aktivieren und deaktivieren.
 
@@ -32,7 +32,7 @@ Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
 
 
 
-TIP: Eine reine Map-only-Scan-Analyse kann hilfreich sein, um sich einen Überblick über Ihre Daten zu verschaffen und bestimmte Bereiche zu identifizieren, auf die vollständige Scans angewendet werden sollten.
+TIP: Eine reine Kartenanalyse kann hilfreich sein, um einen Überblick über Ihre Daten zu erhalten. Mit diesem Überblick auf hoher Ebene kann anschließend entschieden werden, bei welchen Datenquellen vollständige Analysen durchgeführt werden sollen.
 
 Überprüfen Sie die Tabellen, um zu sehen, welche Informationen bei reinen Kartenscans und vollständigen Scans angezeigt werden.
 
