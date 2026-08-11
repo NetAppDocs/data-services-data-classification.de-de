@@ -1,0 +1,12 @@
+= Registerkarte „Active scans“ zur Verbesserung der Scanverwaltung
+:allow-uri-read: 
+
+
+
+
+[[active-scans-tab-to-enhance-scan-management]]
+=== Registerkarte „Active scans“ zur Verbesserung der Scanverwaltung
+
+Data Classification bietet jetzt im Konfigurationsmenü die Registerkarte *Aktive Scans*, die eine verbesserte Benutzererfahrung für die Verwaltung von Scans ermöglicht. Die Registerkarte *Aktive Scans* bietet eine Übersicht über alle Volumes, die Sie für das Scannen aktiviert haben, mit vertrauten Filtern zum Sortieren Ihrer Ressourcen. Die Registerkarte bietet außerdem einen zentralen Ort, um Scans zu priorisieren, Scans zu pausieren und Fehler zu überprüfen.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html["Scans verwalten"^].

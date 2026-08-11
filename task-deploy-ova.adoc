@@ -82,6 +82,8 @@ NOTE: Das Passwort wird für Root-Zugriff, SSH-Zugriff und die Systemadministrat
 +
 Wählen Sie die Datei mit dem Namen *DATASENSE-INSTALLER-<version>.tar.gz* aus.
 
+. Die Installationsdatei auf den VM-Host kopieren `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
+. Die Installationsdatei auf dem Host-Rechner entpacken.
 . Wählen Sie in der Konsole *Governance > Klassifizierung* aus.
 . Wählen Sie *Klassifizierung bereitstellen*.
 +

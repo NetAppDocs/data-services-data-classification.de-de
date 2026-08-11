@@ -63,14 +63,12 @@ NOTE: Für Datenbanken sind reine Mapping-Scans nicht verfügbar. Wenn Sie das D
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
 . Um den Scan-Typ für alle Assets in einem System zu ändern, wählen Sie das Aktionsmenü für dieses System und ändern Sie dann auf den gewünschten Scan-Typ. Um beispielsweise die Scans für eine Dateifreigabegruppe von „Nur Zuordnung“ auf „Vollständiger Scan“ zu ändern, wählen Sie *Alle Freigaben scannen: Vollständiger Scan*.
-+
-Um den Scan-Typ für einzelne Buckets, Freigaben oder Volumes zu ändern, wählen Sie die Schaltfläche **Verwalten** für das System aus.
-
+. Um den Scan-Typ für einzelne Buckets, Freigaben oder Volumes zu ändern, die Registerkarte **Aktive Scans** auswählen. Die entsprechenden Filter anwenden, um die Ressourcen zu identifizieren, die geändert werden sollen.
 +
 image:screenshot_compliance_config_button.png["Ein Screenshot, der zeigt, wie Sie die Schaltfläche „Konfiguration“ für ein System auswählen."]
 
 +
-Wählen Sie in der individuellen Systemkonfiguration das zu ändernde Asset aus. Wählen Sie den *Scantyp* und ändern Sie ihn anschließend in den gewünschten Scantyp.
+In der Spalte „Scantyp“ die entsprechende Ressource auswählen und auf **Nur Mapping** oder **Vollständiger Scan** ändern.
 
 
 
@@ -87,8 +85,8 @@ Die Priorität wird einmalig gewährt. Automatische erneute Scans der Kartendate
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Suchen Sie das System, dessen Scans Sie ändern möchten, und wählen Sie dann *Verwalten*.
-. Suchen Sie die Ressourcen, die Sie priorisieren möchten. Wählen Sie die Aktion `...`-Menüoption und dann *Scan priorisieren*.
+. Die Registerkarte **Aktive Scans** auswählen.
+. Optional können die entsprechenden Filter angewendet werden, um die Ressourcen zu identifizieren, die geändert werden sollen. Die Ressourcen, die priorisiert werden sollen, auffinden. Im Aktionsmenü die Option  `...`*Scan priorisieren* auswählen.
 
 
 
@@ -120,8 +118,8 @@ Sie können den Scanvorgang jederzeit fortsetzen.
 
 .Schritte
 . Wählen Sie im Menü „Datenklassifizierung“ die Option „Konfiguration“ aus.
-. Suchen Sie das System, dessen Scans Sie ändern möchten, und wählen Sie dann *Verwalten*.
-. Identifizieren Sie die Ressourcen, die Sie pausieren möchten. Wählen Sie für jede Ressource die Aktion-Menü `...`-Option und dann *Scan pausieren*.
+. Die Registerkarte **Aktive Scans** auswählen.
+. Optional können die entsprechenden Filter angewendet werden, um die Ressourcen zu identifizieren, die geändert werden sollen. Die Ressourcen, die pausiert werden sollen, identifizieren. Für jede Ressource die Aktion-Menü `...` Option auswählen und dann *Scan pausieren*.
 +
 Wenn Sie den Scanvorgang fortsetzen möchten, wiederholen Sie den Vorgang und wählen Sie dann *Scan fortsetzen*.
 
