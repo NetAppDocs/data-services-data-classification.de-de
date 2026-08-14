@@ -18,7 +18,7 @@ Veraltete Daten können anhand des Zeitpunkts des letzten Zugriffs oder der letz
 Standardmäßig gelten Daten als veraltet, wenn sie zuletzt vor drei Jahren geändert wurden.
 
 .veraltete Daten definieren
-. Wählen Sie unter Ransomware Resilience die Option **Konfiguration**.
+. Wählen Sie unter Datenklassifizierung **Konfiguration** aus.
 . Wählen Sie auf der Konfigurationsseite die Registerkarte **Einstellungen** aus.
 . Wählen Sie unter der Überschrift „Definition veralteter Daten“ die Option *Bearbeiten*.
 . Im Dropdown-Menü **Dateieigenschaft** wählen Sie aus, ob Sie veraltete Daten basierend auf dem Zeitpunkt des *zuletzt aufgerufenen* oder *zuletzt geänderten* Datums definieren möchten.

@@ -14,7 +14,7 @@ summary: Nach dem Filtern der Daten im Untersuchungs-Dashboard können Sie unstr
 
 
 [role="lead"]
-Zusätzlich zu Einblicken in Governance und Einsparpotenziale ermöglicht NetApp Data Classification Ihnen auch, Aktionen an Dateien über das Investigation Dashboard durchzuführen. Nach dem Filtern von Daten im Investigation Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen. Das Ausführen dieser Aktionen kann die Compliance verbessern, zum Beispiel durch das Verschieben von Dateien an einen sichereren Ort, oder Einsparpotenziale schaffen, indem alte oder doppelte Dateien gelöscht werden.
+NetApp Data Classification ermöglicht das Ausführen von Aktionen an Dateien, die im Investigation Dashboard gefunden wurden. Nach dem Filtern der Daten besteht die Möglichkeit, unstrukturierte Daten zu kopieren, zu verschieben und zu löschen, um die Compliance zu verbessern (zum Beispiel durch das Verschieben sensibler Dateien an einen sichereren Ort) oder Einsparungen zu erzielen, indem alte oder doppelte Dateien gelöscht werden.
 
 
 
@@ -74,7 +74,7 @@ image:screenshot-move-nfs.png["Screenshot der Verschiebefunktion für NFS-Dateie
 [[delete-files]]
 == Dateien löschen
 
-Wenn Sie Daten im Investigation Dashboard filtern, um Speicherplatz- und Kosteneinsparungspotenziale zu ermitteln, können Sie diese Dateien löschen. Das Löschen von Dateien wird nur für unstrukturierte Dateien unterstützt.
+Wenn Daten im Investigation Dashboard gefiltert werden, um Möglichkeiten zur Platz- und Kosteneinsparung zu erkennen, können diese Dateien gelöscht werden. Es können nur unstrukturierte Dateien gelöscht werden.
 
 .Schritte
 . Wählen Sie im Investigation Dashboard die Dateien aus, die Sie löschen möchten.

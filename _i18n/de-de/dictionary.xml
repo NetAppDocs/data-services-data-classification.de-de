@@ -2432,7 +2432,6 @@
   <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">Veraltete Daten können anhand des Zeitpunkts des letzten Zugriffs oder der letzten Änderung definiert werden. Die wählbaren Zeiträume reichen von vor 6 Monaten bis vor 10 Jahren.</block>
   <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">Standardmäßig gelten Daten als veraltet, wenn sie zuletzt vor drei Jahren geändert wurden.</block>
   <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">veraltete Daten definieren</block>
-  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">Wählen Sie unter Ransomware Resilience die Option **Konfiguration**.</block>
   <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">Wählen Sie den Zeitraum für die Definition veralteter Daten.</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">Wählen Sie **Speichern**.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2552,7 +2551,6 @@
   <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Melden Sie sich bei NetApp Data Classification an</block>
   <block id="f214292b356953b67175bbd37992066d" category="summary">Nach dem Filtern der Daten im Untersuchungs-Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen.</block>
   <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Dateien mit NetApp Data Classification kopieren, verschieben und löschen</block>
-  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Zusätzlich zu Einblicken in Governance und Einsparpotenziale ermöglicht NetApp Data Classification Ihnen auch, Aktionen an Dateien über das Investigation Dashboard durchzuführen. Nach dem Filtern von Daten im Investigation Dashboard können Sie unstrukturierte Daten kopieren, verschieben und löschen. Das Ausführen dieser Aktionen kann die Compliance verbessern, zum Beispiel durch das Verschieben von Dateien an einen sichereren Ort, oder Einsparpotenziale schaffen, indem alte oder doppelte Dateien gelöscht werden.</block>
   <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Dateien kopieren</block>
   <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">Data Classification unterstützt das Kopieren von Dateien mit einer Größe von bis zu 1 GB. Sie können insgesamt 1 TB Daten oder 5 Millionen Dateien kopieren, je nachdem, welche Grenze zuerst erreicht wird. Sie können Dateien an ein CIFS- oder NFS-Ziel kopieren. Die Quelldatei bleibt beim Kopieren unverändert.</block>
   <block id="37214830ec688e601a722f40084e9795" category="list-text">Wählen Sie im Investigation Dashboard die Dateien aus, die Sie kopieren möchten.</block>
@@ -2576,7 +2574,6 @@
   <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7afd3db29a42496704a6705958fec121" category="list-text">Wählen Sie **Move items**.</block>
   <block id="19e43848563797a6f937c7895b604754" category="section-title">Dateien löschen</block>
-  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Wenn Sie Daten im Investigation Dashboard filtern, um Speicherplatz- und Kosteneinsparungspotenziale zu ermitteln, können Sie diese Dateien löschen. Das Löschen von Dateien wird nur für unstrukturierte Dateien unterstützt.</block>
   <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">Wählen Sie im Investigation Dashboard die Dateien aus, die Sie löschen möchten.</block>
   <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">Geben Sie im Bestätigungsdialog „permanently delete“ ein.</block>
   <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Wählen Sie **Delete File**, um den Vorgang zu bestätigen.</block>
@@ -2870,4 +2867,6 @@
   <block id="687c102bfd5cd4e0df7368ee54670aa2" category="list-text">Optional können die entsprechenden Filter angewendet werden, um die Ressourcen zu identifizieren, die geändert werden sollen. Die Ressourcen, die pausiert werden sollen, identifizieren. Für jede Ressource die Aktion-Menü<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> Option auswählen und dann *Scan pausieren*.</block>
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">10. August 2026</block>
   <block id="05ad566aec59d2434a4789dad053f408" category="paragraph">*Version 1.56*</block>
+  <block id="2a6207bf09c73302b5baadda003d21a2" category="paragraph">NetApp Data Classification ermöglicht das Ausführen von Aktionen an Dateien, die im Investigation Dashboard gefunden wurden. Nach dem Filtern der Daten besteht die Möglichkeit, unstrukturierte Daten zu kopieren, zu verschieben und zu löschen, um die Compliance zu verbessern (zum Beispiel durch das Verschieben sensibler Dateien an einen sichereren Ort) oder Einsparungen zu erzielen, indem alte oder doppelte Dateien gelöscht werden.</block>
+  <block id="f011267af7448f5cee47e71e75b30301" category="paragraph">Wenn Daten im Investigation Dashboard gefiltert werden, um Möglichkeiten zur Platz- und Kosteneinsparung zu erkennen, können diese Dateien gelöscht werden. Es können nur unstrukturierte Dateien gelöscht werden.</block>
 </blocks>
