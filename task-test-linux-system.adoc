@@ -57,7 +57,7 @@ Sie benötigen die IP-Adresse oder den Hostnamen des Konsolenagentensystems, wen
 
 Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, der bestimmte Anforderungen an das Betriebssystem, den Arbeitsspeicher und die Software erfüllt.
 
-* Die Datenklassifizierung muss auf einem dedizierten Host erfolgen. Der Host darf nicht mit anderen Anwendungen oder Drittanbietersoftware wie z. B. Antivirenprogrammen geteilt werden.
+* Die Datenklassifizierung muss auf einem dedizierten Host erfolgen. Der Host darf nicht mit anderen Anwendungen oder Drittanbietersoftware wie Antivirus gemeinsam genutzt werden.
 * Wählen Sie die Größe, die zu dem Datensatz passt, den Sie mit der Datenklassifizierung scannen möchten.
 +
 [cols="17,17,27,31"]
@@ -124,7 +124,7 @@ Die Software zur Datenklassifizierung muss auf einem Host ausgeführt werden, de
 ** Advanced Vector Extensions (AVX2) müssen auf dem Hostsystem aktiviert sein.
 
 
-* *Red Hat Subscription Management*: Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann das System während der Installation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+* *Red Hat Subscription Management*: Der Host muss bei Red Hat Subscription Management registriert sein. Ist keine Registrierung vorhanden, kann das System während der Installation nicht auf die Repositories zugreifen, um erforderliche Drittanbietersoftware zu aktualisieren.
 * *Zusätzliche Software*: Sie müssen die folgende Software auf dem Host installieren, bevor Sie Data Classification installieren:
 +
 ** Je nach verwendetem Betriebssystem müssen Sie eine der Container-Engines installieren:

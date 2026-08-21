@@ -14,7 +14,7 @@ summary: Die über die Web-Benutzeroberfläche verfügbaren NetApp Data Classifi
 
 
 [role="lead"]
-Die über die Web-Benutzeroberfläche verfügbaren NetApp Data Classification sind auch über die REST-API verfügbar.
+Die NetApp Data Classification REST API bietet Zugriff auf dieselben Funktionen, die auch in der Web-UI verfügbar sind.
 
 Innerhalb der Datenklassifizierung sind vier Kategorien definiert, die den Registerkarten in der Benutzeroberfläche entsprechen:
 
@@ -36,12 +36,12 @@ Mit der API können Sie die folgenden Funktionen ausführen:
 * Exportinformationen
 +
 ** Alles, was in der Benutzeroberfläche verfügbar ist, kann über die API exportiert werden (mit Ausnahme von Berichten).
-** Daten werden im JSON-Format exportiert (einfach zu analysieren und an Anwendungen von Drittanbietern wie Splunk weiterzuleiten).
+** Daten werden im JSON-Format exportiert (einfach zu parsen und an Drittanwendungen wie Splunk weiterzuleiten)
 
 
 * Erstellen Sie Abfragen mit „UND“- und „ODER“-Anweisungen, schließen Sie Informationen ein und aus und mehr.
 +
-Sie können beispielsweise Dateien _ohne_ spezifische personenbezogene Daten (PII) suchen (Funktion in der Benutzeroberfläche nicht verfügbar).  Sie können auch bestimmte Felder vom Exportvorgang ausschließen.
+Beispielsweise können Dateien _ohne_ spezifische personenbezogene Informationen (PII) gefunden werden (diese Funktion ist in der Benutzeroberfläche nicht verfügbar). Bestimmte Felder können zudem vom Exportvorgang ausgeschlossen werden.
 
 * Aktionen ausführen
 +
@@ -60,7 +60,7 @@ Die API ist sicher und verwendet dieselbe Authentifizierungsmethode wie die Benu
 [[accessing-the-swagger-api-reference]]
 == Zugriff auf die Swagger-API-Referenz
 
-Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classification-Instanz. Bei einer Cloud-Bereitstellung verwenden Sie die öffentliche IP-Adresse. Anschließend müssen Sie auf diesen Endpunkt zugreifen:
+Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classification Instanz. Für eine Cloud-Bereitstellung ist die öffentliche IP-Adresse zu verwenden. Anschließend ist folgender Endpunkt aufzurufen:
 
 \https://<Klassifizierungs-IP>/documentation
 
@@ -72,7 +72,7 @@ Um auf Swagger zuzugreifen, benötigen Sie die IP-Adresse Ihrer Data Classificat
 Das folgende Beispiel zeigt einen API-Aufruf zum Kopieren von Dateien.
 
 .API-Anforderung
-Sie müssen zunächst alle relevanten Felder und Optionen für ein System abrufen, um alle Filter auf der Registerkarte „Untersuchung“ anzuzeigen.
+Alle relevanten Felder und Optionen müssen für ein System abgerufen werden, um alle Filter auf der Registerkarte „Untersuchung“ anzuzeigen.
 
 [source, http]
 ----
@@ -434,14 +434,14 @@ curl -X GET "http://{classification_ip}/api/{classification_version} /search/opt
   ]
 }
 ----
-Wir werden diese Antwort in unseren Anforderungsparametern verwenden, um die gewünschten Dateien zu filtern, die wir kopieren möchten.
+Die Antwort in den Anfrageparametern kann verwendet werden, um die Dateien zu filtern, die kopiert werden sollen.
 
 Sie können eine Aktion auf mehrere Elemente anwenden.  Zu den unterstützten Aktionstypen gehören: Verschieben, Löschen und Kopieren.
 
-Wir erstellen die Kopieraktion:
+Die Kopieraktion erstellen:
 
 .API-Anforderung
-Diese nächste API ist die Aktions-API und ermöglicht Ihnen die Erstellung mehrerer Aktionen.
+Diese API ermöglicht das Erstellen mehrerer Aktionen.
 
 [source, http]
 ----

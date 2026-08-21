@@ -109,7 +109,7 @@ NOTE: Bei FSx for ONTAP kann die Datenklassifizierung Volumes nur in derselben R
 Die Anmeldeinformationen können schreibgeschützt sein, durch die Angabe von Administratoranmeldeinformationen wird jedoch sichergestellt, dass die Datenklassifizierung alle Daten lesen kann, für die erweiterte Berechtigungen erforderlich sind.  Die Anmeldeinformationen werden auf der Data Classification-Instanz gespeichert.
 
 +
-Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+Um sicherzustellen, dass die „Last Accessed Times“ Ihrer Dateien durch Data Classification-Scans unverändert bleiben, wird der Active Directory-Benutzer mit Write Attributes-Berechtigungen in CIFS oder mit Schreibberechtigungen in NFS konfiguriert. Wenn möglich, wird der Active Directory-Benutzer als Teil einer übergeordneten Gruppe in der Organisation konfiguriert, die Berechtigungen für alle Dateien besitzt.
 
 +
 Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angezeigt werden, dass alle CIFS-Volumes erfolgreich authentifiziert wurden.
@@ -123,12 +123,12 @@ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angez
 [[enable-and-disable-scans-on-volumes]]
 == Aktivieren und Deaktivieren von Scans auf Volumes
 
-Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
+Über das Konfigurationsmenü können Sie Scans auf jedem System jederzeit starten oder stoppen. Scans können außerdem von reinen Kartenscans auf vollständige Scans und umgekehrt umgeschaltet werden.
 
-Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Falls Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
+Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
 
 
-NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie das Scannen für alle Volumes aktiviert haben. Wenn Sie das Scannen nur für bestimmte Volumes aktiviert haben, müssen Sie das Scannen für das neu hinzugefügte Volume manuell aktivieren.
+NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn das Scannen für alle Volumes aktiviert ist. Ist das Scannen nur für bestimmte Volumes aktiviert, muss das Scannen für das neu hinzugefügte Volume manuell aktiviert werden.
 
 image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
 

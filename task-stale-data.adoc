@@ -11,9 +11,9 @@ summary: Passen Sie die Definition veralteter Daten in NetApp Data Classificatio
 
 
 [role="lead"]
-Die NetApp Data Classification identifiziert veraltete Daten, um Ihnen dabei zu helfen, Einsparmöglichkeiten und Governance-Risiken zu erkennen. Da die Definition von veralteten Daten je nach organisatorischem Kontext variieren kann, können Sie anpassen, wie die Datenklassifizierung veraltete Daten definiert.
+NetApp Data Classification identifiziert veraltete Daten, sodass Einsparpotenziale erkannt und Governance-Risiken adressiert werden können. Die Definition veralteter Daten kann an die Anforderungen Ihrer Organisation angepasst werden, sodass veraltete Daten basierend auf dem letzten Zugriffs- oder Änderungsdatum identifiziert werden.
 
-Veraltete Daten können anhand des Zeitpunkts des letzten Zugriffs oder der letzten Änderung definiert werden. Die wählbaren Zeiträume reichen von vor 6 Monaten bis vor 10 Jahren.
+Veraltete Daten können anhand des Zeitpunkts des letzten Zugriffs oder der letzten Änderung definiert werden. Ein Zeitraum von sechs Monaten bis zu zehn Jahren steht zur Auswahl.
 
 Standardmäßig gelten Daten als veraltet, wenn sie zuletzt vor drei Jahren geändert wurden.
 

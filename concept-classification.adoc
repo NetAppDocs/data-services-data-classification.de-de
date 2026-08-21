@@ -14,10 +14,10 @@ summary: Data Classification ist ein Data-Governance-Dienst für die NetApp Cons
 
 
 [role="lead"]
-NetApp Data Classification ist ein Data-Governance-Service für die NetApp Console , der Ihre unternehmenseigenen Datenquellen vor Ort und in der Cloud scannt, um Daten zuzuordnen und zu klassifizieren und private Informationen zu identifizieren. Dies kann dazu beitragen, Ihr Sicherheits- und Compliance-Risiko zu verringern, die Speicherkosten zu senken und Ihre Datenmigrationsprojekte zu unterstützen.
+NetApp Data Classification ist ein Data-Governance-Service in der NetApp Console, der Ihre lokalen und Cloud-Datenquellen scannt, um Daten zuzuordnen und zu klassifizieren sowie private Informationen zu identifizieren. Dadurch werden Sicherheits- und Compliance-Risiken reduziert, Speicherkosten gesenkt und Datenmigrationen unterstützt.
 
 
-IMPORTANT: Ab Version 1.31 ist die Datenklassifizierung als Kernfunktion in der NetApp Console verfügbar.  Es fallen keine zusätzlichen Kosten an.  Es ist keine Klassifizierungslizenz oder kein Abonnement erforderlich.  + Wenn Sie die Vorgängerversion 1.30 oder früher verwendet haben, ist diese Version verfügbar, bis Ihr Abonnement abläuft.
+IMPORTANT: Ab Version 1.31 ist Datenklassifizierung als Kernfunktion innerhalb der NetApp Console verfügbar. Es fallen keine zusätzlichen Kosten an. Für Datenklassifizierung ist weder eine Lizenz noch ein Abonnement erforderlich. + Wenn bisher die ältere Version 1.30 oder eine frühere Version genutzt wurde, bleibt diese bis zum Ablauf des Abonnements verfügbar.
 
 
 
@@ -26,7 +26,7 @@ IMPORTANT: Ab Version 1.31 ist die Datenklassifizierung als Kernfunktion in der 
 
 Auf die Datenklassifizierung kann über die NetApp Console zugegriffen werden.
 
-Die NetApp Console ermöglicht eine zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene. Die Konsole ist für den Zugriff auf und die Nutzung der NetApp -Datendienste erforderlich. Als Verwaltungsschnittstelle ermöglicht es Ihnen, viele Speicherressourcen über eine Schnittstelle zu verwalten. Konsolenadministratoren können den Zugriff auf Speicher und Dienste für alle Systeme innerhalb des Unternehmens steuern.
+Die NetApp Console ermöglicht die zentrale Verwaltung von NetApp Speicher- und Datendiensten in lokalen und Cloud-Umgebungen im Unternehmensmaßstab. Die Console ist für den Zugriff auf und die Nutzung von NetApp Datendiensten erforderlich. Als Managementoberfläche ermöglicht sie die Verwaltung zahlreicher Speicherressourcen über eine einzige Oberfläche. Console-Administratoren können den Zugriff auf Speicher und Dienste für alle Systeme im Unternehmen steuern.
 
 Sie benötigen weder eine Lizenz noch ein Abonnement, um die NetApp Console zu verwenden. Es fallen nur dann Kosten an, wenn Sie Konsolenagenten in Ihrer Cloud bereitstellen müssen, um die Konnektivität zu Ihren Speichersystemen oder NetApp -Datendiensten sicherzustellen. Einige NetApp -Datendienste, auf die über die Konsole zugegriffen werden kann, sind jedoch lizenz- oder abonnementbasiert.
 
@@ -44,7 +44,7 @@ link:https://www.netapp.com/data-services/classification/["Erfahren Sie mehr üb
 .Einhaltung der Vorschriften
 Die Datenklassifizierung bietet mehrere Tools, die Sie bei Ihren Compliance-Bemühungen unterstützen können.  Sie können die Datenklassifizierung für Folgendes verwenden:
 
-* Identifizieren Sie personenbezogene Daten (PII).
+* Personenbezogene Daten (PII) werden identifiziert.
 * Identifizieren Sie ein breites Spektrum sensibler personenbezogener Daten gemäß den Datenschutzbestimmungen DSGVO, CCPA, PCI und HIPAA.
 * Beantworten Sie Anfragen zum Zugriff auf personenbezogene Daten (DSAR) basierend auf Name oder E-Mail-Adresse.
 
@@ -59,7 +59,7 @@ Durch die Datenklassifizierung können Daten identifiziert werden, bei denen das
 
 
 .Optimieren Sie die Speichernutzung
-Die Datenklassifizierung bietet Tools, die Ihnen bei der Reduzierung der Gesamtbetriebskosten (TCO) Ihres Speichers helfen können.  Sie können die Datenklassifizierung für Folgendes verwenden:
+Data Classification bietet Werkzeuge zur Senkung der Gesamtbetriebskosten (TCO) von Speichern. Data Classification kann für Folgendes verwendet werden:
 
 * Steigern Sie die Speichereffizienz, indem Sie doppelte oder nicht geschäftsbezogene Daten identifizieren.
 * Sparen Sie Speicherkosten, indem Sie inaktive Daten identifizieren, die Sie in einen kostengünstigeren Objektspeicher verschieben können. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Erfahren Sie mehr über das Tiering von Cloud Volumes ONTAP -Systemen"^] . https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["Erfahren Sie mehr über das Tiering von On-Premises ONTAP -Systemen"^] .
@@ -121,7 +121,7 @@ Die Nutzung der Datenklassifizierung ist kostenlos.  Es ist keine Klassifizierun
 [[data-transfer-costs]]
 === Kosten für die Datenübertragung
 
-Die Kosten für die Datenübertragung hängen von Ihrer Konfiguration ab.  Wenn sich die Datenklassifizierungsinstanz und die Datenquelle in derselben Verfügbarkeitszone und Region befinden, fallen keine Datenübertragungskosten an.  Wenn sich die Datenquelle, beispielsweise ein Cloud Volumes ONTAP -System, jedoch in einer anderen Availability Zone oder Region befindet, werden Ihnen von Ihrem Cloud-Anbieter die Kosten für die Datenübertragung in Rechnung gestellt.  Weitere Einzelheiten finden Sie unter diesen Links:
+Die Kosten für den Datentransfer hängen von Ihrer Konfiguration ab. Befinden sich die NetApp Data Classification-Instanz und die Datenquelle in derselben Verfügbarkeitszone und Region, fallen keine Kosten für den Datentransfer an. Befindet sich die Datenquelle, wie zum Beispiel ein Cloud Volumes ONTAP-System, jedoch in einer anderen Verfügbarkeitszone oder Region, berechnet Ihr Cloud-Anbieter Kosten für den Datentransfer. Weitere Einzelheiten bieten die folgenden Links:
 
 * https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Preise für Amazon Elastic Compute Cloud (Amazon EC2)"^]
 * https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure: Details zu den Bandbreitenpreisen"^]
@@ -200,7 +200,7 @@ NOTE: Die Datenklassifizierung setzt keine Begrenzung für die Menge der Daten, 
 Sie können in der Datenklassifizierung zwei Arten von Scans durchführen:
 
 * **Nur-Karten-Scans** bieten lediglich einen groben Überblick über Ihre Daten und werden auf ausgewählten Datenquellen durchgeführt. Nur-Karten-Scans benötigen weniger Zeit als vollständige Scans, da sie nicht auf die Dateien zugreifen, um die darin enthaltenen Daten einzusehen. Sie können dies zunächst nutzen, um Forschungsbereiche zu identifizieren und anschließend einen vollständigen Scan dieser Bereiche durchzuführen.
-* **Vollständige Scans** ermöglichen eine tiefgehende Überprüfung Ihrer Daten. Ein vollständiger Scan umfasst eine reine Kartierung und eine Klassifizierung der Daten innerhalb der Dateien.
+* **Vollständige Scans** bieten eine tiefgehende Analyse Ihrer Daten. Ein vollständiger Scan umfasst eine reine Kartendarstellung und die Klassifizierung der Daten innerhalb der Dateien.
 
 
 Eine detaillierte Aufschlüsselung der Unterschiede zwischen reinen Kartenscans und vollständigen Scans finden Sie unter link:task-scanning-overview.html["Was ist der Unterschied zwischen Mapping- und Klassifizierungsscans?"].

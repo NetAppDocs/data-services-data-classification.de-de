@@ -4,7 +4,7 @@
 
 .Schritte
 . Definieren Sie auf der Registerkarte „Untersuchung“ eine Suche, indem Sie die gewünschten Filter auswählen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Untersuchung“"] für Details.
-. Wenn Sie alle Filtereigenschaften nach Ihren Wünschen eingestellt haben, wählen Sie *Abfrage speichern*.
+. Sobald alle Filtermerkmale konfiguriert sind, auf *Abfrage speichern* auswählen.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot, der zeigt, wie eine gefilterte Abfrage als gespeicherte Abfrage gespeichert wird."]
 
@@ -21,4 +21,4 @@ image:../media/screenshot_compliance_save_highlight2.png["Ein Screenshot, der ze
 
 
 
-Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Registerkarte **Gespeicherte Abfragen** anzeigen.
+Sobald die Suche oder Richtlinie erstellt wurde, ist sie auf der Registerkarte **Gespeicherte Abfragen** sichtbar.

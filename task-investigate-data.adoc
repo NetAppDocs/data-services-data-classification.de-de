@@ -57,7 +57,7 @@ Verwenden Sie die folgenden Filter, um anzuzeigen, wie viele vertrauliche Inform
 | Empfindlichkeitsstufe | Wählen Sie die Empfindlichkeitsstufe: Persönlich, Persönlich sensibel oder Nicht sensibel. 
 
 
-| Anzahl der Kennungen | Wählen Sie den Bereich der erkannten vertraulichen Kennungen pro Datei aus.  Umfasst personenbezogene Daten und sensible personenbezogene Daten.  Beim Filtern in Verzeichnissen summiert die Datenklassifizierung die Übereinstimmungen aller Dateien in jedem Ordner (und Unterordnern).  HINWEIS: In der Version vom Dezember 2023 (Version 1.26.6) wurde die Option zum Berechnen der Anzahl personenbezogener Daten (PII) nach Verzeichnissen entfernt. 
+| Anzahl der Kennungen | Wählen Sie den Bereich der erkannten sensiblen Kennungen pro Datei aus. Dies umfasst personenbezogene Daten und sensible personenbezogene Daten. Beim Filtern in Verzeichnissen summiert die Datenklassifizierung die Treffer aus allen Dateien in jedem Ordner und Unterordner. HINWEIS: Die Dezember 2023 (Version 1.26.6) Veröffentlichung hat die Option entfernt, die Anzahl personenbezogener Daten (PII) nach Verzeichnissen zu berechnen. 
 
 
 | Personenbezogene Daten | Wählen Sie dielink:reference-private-data-categories.html["Arten personenbezogener Daten"] . 
@@ -382,7 +382,7 @@ In einem Dialogfeld wird die Meldung angezeigt, dass die Berichte heruntergelade
 
 .Schritte
 . Definieren Sie auf der Registerkarte „Untersuchung“ eine Suche, indem Sie die gewünschten Filter auswählen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Untersuchung“"] für Details.
-. Wenn Sie alle Filtereigenschaften nach Ihren Wünschen eingestellt haben, wählen Sie *Abfrage speichern*.
+. Sobald alle Filtermerkmale konfiguriert sind, auf *Abfrage speichern* auswählen.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot, der zeigt, wie eine gefilterte Abfrage als gespeicherte Abfrage gespeichert wird."]
 
@@ -399,7 +399,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Ein Screenshot, der ze
 
 
 
-Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Registerkarte **Gespeicherte Abfragen** anzeigen.
+Sobald die Suche oder Richtlinie erstellt wurde, ist sie auf der Registerkarte **Gespeicherte Abfragen** sichtbar.
 
 
 TIP: Es kann bis zu 15 Minuten dauern, bis die Ergebnisse auf der Seite „Gespeicherte Abfragen“ angezeigt werden.

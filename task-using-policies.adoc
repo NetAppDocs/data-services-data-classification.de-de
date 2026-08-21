@@ -14,11 +14,11 @@ summary: Gespeicherte Abfragen sind benutzerdefinierte Filter, die auf der Unter
 
 
 [role="lead"]
-NetaApp Data Classification unterstützt das Speichern Ihrer Suchanfragen.  Mit einer gespeicherten Abfrage können Sie benutzerdefinierte Filter erstellen, um häufige Abfragen Ihrer Datenuntersuchungsseite zu sortieren.  Die Datenklassifizierung umfasst auch vordefinierte gespeicherte Abfragen basierend auf häufigen Anfragen.
+NetApp Data Classification ermöglicht das Speichern von Suchanfragen und das Erstellen benutzerdefinierter Filter, um Daten auf der Untersuchungsseite zu finden. Vordefinierte Abfragen können verwendet oder gespeicherte Abfragen und Richtlinien erstellt werden, um auf übereinstimmende Daten zuzugreifen.
 
 Die Registerkarte *Gespeicherte Abfragen* im Compliance-Dashboard listet alle vordefinierten und benutzerdefinierten gespeicherten Abfragen auf, die für diese Instanz der Datenklassifizierung verfügbar sind.
 
-Gespeicherte Abfragen können auch als **Richtlinien** gespeichert werden.  Während Abfragen Daten filtern, ermöglichen Richtlinien Ihnen, auf die Daten zu reagieren.  Mit einer Richtlinie: Sie können erkannte Daten löschen oder E-Mail-Updates zu den erkannten Daten senden.
+Gespeicherte Abfragen lassen sich in **Richtlinien** umwandeln. Während Abfragen Daten filtern, ermöglichen Richtlinien Maßnahmen an den Daten. Mit einer Richtlinie können gefundene Daten gelöscht oder E-Mail-Benachrichtigungen darüber versendet werden.
 
 Gespeicherte Abfragen werden auch in der Filterliste auf der Untersuchungsseite angezeigt.
 
@@ -29,7 +29,7 @@ image:screenshot_compliance_highlights_tab.png["Ein Screenshot der Registerkarte
 [[view-saved-queries-results-in-the-investigation-page]]
 == Anzeigen der Ergebnisse gespeicherter Abfragen auf der Seite „Untersuchung“
 
-Um die Ergebnisse einer gespeicherten Abfrage auf der Seite „Untersuchung“ anzuzeigen, wählen Sie dasimage:button-gallery-options.gif["Schaltfläche „Mehr“"] Klicken Sie auf die Schaltfläche für eine bestimmte Suche und wählen Sie dann *Ergebnisse untersuchen* aus.
+Um gespeicherte Suchergebnisse auf der Untersuchungsseite anzuzeigen, die image:button-gallery-options.gif["Schaltfläche „Mehr“"] Schaltfläche für eine Suche auswählen und anschließend *Ergebnisse untersuchen* wählen.
 
 image:screenshot_compliance_highlights_investigate.png["Ein Screenshot der Auswahl von „Ergebnisse untersuchen“ für eine bestimmte Suche auf der Registerkarte „Gespeicherte Abfrage“."]
 
@@ -38,11 +38,11 @@ image:screenshot_compliance_highlights_investigate.png["Ein Screenshot der Auswa
 [[create-saved-queries-and-policies]]
 == Erstellen gespeicherter Abfragen und Richtlinien
 
-Sie können Ihre eigenen benutzerdefinierten gespeicherten Abfragen erstellen, die Ergebnisse für Abfragen liefern, die für Ihre Organisation spezifisch sind.  Es werden Ergebnisse für alle Dateien und Verzeichnisse (Freigaben und Ordner) zurückgegeben, die den Suchkriterien entsprechen.
+Sie können benutzerdefinierte gespeicherte Abfragen erstellen, die organisationsspezifische Ergebnisse liefern. Ergebnisse werden für alle Dateien und Verzeichnisse (Freigaben und Ordner) zurückgegeben, die den Suchkriterien entsprechen.
 
 .Schritte
 . Definieren Sie auf der Registerkarte „Untersuchung“ eine Suche, indem Sie die gewünschten Filter auswählen. Sehenlink:task-investigate-data.html["Filtern von Daten auf der Seite „Untersuchung“"] für Details.
-. Wenn Sie alle Filtereigenschaften nach Ihren Wünschen eingestellt haben, wählen Sie *Abfrage speichern*.
+. Sobald alle Filtermerkmale konfiguriert sind, auf *Abfrage speichern* auswählen.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Screenshot, der zeigt, wie eine gefilterte Abfrage als gespeicherte Abfrage gespeichert wird."]
 
@@ -59,7 +59,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Ein Screenshot, der ze
 
 
 
-Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Registerkarte **Gespeicherte Abfragen** anzeigen.
+Sobald die Suche oder Richtlinie erstellt wurde, ist sie auf der Registerkarte **Gespeicherte Abfragen** sichtbar.
 
 
 
@@ -68,16 +68,16 @@ Nachdem Sie die Suche oder Richtlinie erstellt haben, können Sie sie auf der Re
 
 Sie können den Namen und die Beschreibung einer gespeicherten Abfrage ändern.  Sie können eine Abfrage auch in eine Richtlinie umwandeln und umgekehrt.
 
-Sie können standardmäßig gespeicherte Abfragen nicht ändern.  Sie können die Filter einer gespeicherten Abfrage nicht ändern.  Sie können alternativ die Untersuchungsergebnisse einer gespeicherten Abfrage anzeigen, die Filter ändern oder modifizieren und sie dann als neue Abfrage oder Richtlinie speichern.
+Standardmäßig gespeicherte Abfragen oder die Filter einer bestehenden gespeicherten Abfrage können nicht geändert werden. Stattdessen lassen sich die Untersuchungsergebnisse der gespeicherten Abfrage anzeigen, die Filter anpassen und das Ergebnis als neue Abfrage oder Richtlinie speichern.
 
 .Schritte
 . Wählen Sie auf der Seite „Gespeicherte Abfragen“ *Suche bearbeiten* für die Suche aus, die Sie ändern möchten.
 +
 image:screenshot-edit-search.png["Ein Screenshot, der „Gespeicherte Abfrage bearbeiten“ zeigt."]
 
-. Nehmen Sie die Änderungen an den Feldern „Name“ und „Beschreibung“ vor.  Um nur die Felder Name und Beschreibung zu ändern.
+. Änderungen an den Feldern Name und Beschreibung vornehmen.
 +
-Sie können die Abfrage optional in eine Richtlinie oder die Richtlinie in eine gespeicherte Abfrage umwandeln.  Schalten Sie den Schalter *Als Richtlinie ausführen* nach Bedarf um. ..  Wenn Sie die Abfrage in eine Richtlinie umwandeln, wählen Sie *Dauerhaft löschen* oder *E-Mail-Updates senden*.  Wenn Sie E-Mail-Updates auswählen, können Sie die Abfrageergebnisse täglich, wöchentlich oder monatlich per E-Mail an _alle_ Konsolenbenutzer senden.  Alternativ können Sie die Benachrichtigung in der gleichen Häufigkeit an bestimmte E-Mail-Adressen senden.
+Optional ist es möglich, die Abfrage in eine Richtlinie oder die Richtlinie in eine gespeicherte Abfrage umzuwandeln. Der Schalter *Als Richtlinie ausführen* kann nach Bedarf umgestellt werden. .. Wird die Abfrage in eine Richtlinie umgewandelt, besteht die Wahl zwischen *Endgültig löschen* oder *E-Mail-Benachrichtigungen senden*. Bei Auswahl von E-Mail-Benachrichtigungen lassen sich die Abfrageergebnisse täglich, wöchentlich oder monatlich an _alle_ Console-Benutzer per E-Mail senden. Alternativ kann die Benachrichtigung in denselben Intervallen an eine bestimmte E-Mail-Adresse gesendet werden.
 
 . Wählen Sie *Speichern*, um die Änderungen abzuschließen.
 
@@ -112,7 +112,7 @@ Dateien mit mehr als 20 personenbezogenen Datenkennungen oder Datenbankspalten, 
 
 * **Private Daten – über 7 Jahre veraltet**
 +
-Dateien mit persönlichen oder sensiblen persönlichen Informationen, die zuletzt vor mehr als 7 Jahren geändert wurden
+Dateien, die persönliche oder sensible persönliche Informationen enthalten und vor mehr als sieben Jahren zuletzt geändert wurden
 
 * **Schutz – Hoch**
 +
@@ -120,11 +120,11 @@ Dateien oder Datenbankspalten, die ein Passwort, Kreditkarteninformationen, eine
 
 * **Schutz – Niedrig**
 +
-Dateien, auf die seit mehr als 3 Jahren nicht zugegriffen wurde
+Dateien, auf die seit mehr als drei Jahren nicht mehr zugegriffen wurde
 
 * **Schutz - Mittel**
 +
-Dateien, die Dateien oder Datenbankspalten mit personenbezogenen Datenkennungen enthalten, darunter Ausweisnummern, Steueridentifikationsnummern, Führerscheinnummern, medizinische Ausweise oder Passnummern
+Dateien oder Datenbankspalten, die personenbezogene Daten wie Ausweisnummern, Steueridentifikationsnummern, Führerscheinnummern, medizinische IDs oder Reisepassnummern enthalten
 
 * **Sensible personenbezogene Daten – Hohes Risiko**
 +

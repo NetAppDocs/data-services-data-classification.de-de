@@ -24,7 +24,7 @@ Bekannte Einschränkungen kennzeichnen Funktionen, die in dieser Version nicht u
 Mit der Version vom Dezember 2023 (Version 1.26.6) wurden die folgenden Optionen entfernt:
 
 * Die Option zum Aktivieren der Überwachungsprotokollerfassung wurde deaktiviert.
-* Während der Verzeichnisuntersuchung ist die Option zum Berechnen der Anzahl personenbezogener Daten (PII) nach Verzeichnissen nicht verfügbar.
+* Während der Untersuchung der Verzeichnisse besteht keine Möglichkeit, die Anzahl der personenbezogenen Daten (PII) nach Verzeichnissen zu berechnen.
 * Die Option zum Integrieren von Daten mithilfe von Azure Information Protection (AIP)-Beschriftungen wurde deaktiviert.
 
 

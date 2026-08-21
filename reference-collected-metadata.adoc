@@ -14,7 +14,7 @@ summary: Bei der Datenklassifizierung werden bestimmte Metadaten erfasst, wenn K
 
 
 [role="lead"]
-NetApp Data Classification erfasst Metadaten beim Scannen Ihrer Datenquellen und Systeme. Die meisten Metadaten sind verfügbar, aber einige Attribute sind nicht für alle Protokolle verfügbar.
+NetApp Data Classification erfasst Metadaten beim Scannen Ihrer Datenquellen und Systeme. Einige Metadatenattribute sind nicht für alle Protokolle verfügbar.
 
 [cols="15,25,25,25"]
 |===
@@ -47,13 +47,13 @@ NetApp Data Classification erfasst Metadaten beim Scannen Ihrer Datenquellen und
 [[last-accessed-time]]
 == Letzter Zugriffszeitpunkt
 
-Wenn NetApp Data Classification Daten aus Dateifreigaben extrahiert, wertet das Betriebssystem dies als Zugriffsereignis und aktualisiert die „letzte Zugriffszeit“ entsprechend. Nach dem Scan versucht NetApp Data Classification, die letzte Zugriffszeit auf den ursprünglichen Zeitstempel zurückzusetzen. Wenn NetApp Data Classification keine Schreibattributberechtigungen in CIFS oder Schreibberechtigungen in NFS hat, kann das System die letzte Zugriffszeit nicht auf den ursprünglichen Zeitstempel zurücksetzen.
+Wenn Data Classification Daten aus Dateifreigaben extrahiert, behandelt das Betriebssystem dies als Zugriffsereignis und aktualisiert den „Zugriffszeitpunkt“ entsprechend. Nach dem Scan versucht Data Classification, den Zugriffszeitpunkt auf den ursprünglichen Zeitstempel zurückzusetzen. Wenn Data Classification keine Schreibattribut-Berechtigungen in CIFS oder Schreibberechtigungen in NFS hat, kann das System den Zugriffszeitpunkt nicht auf den ursprünglichen Zeitstempel zurücksetzen.
 
-Standardmäßig scannt NetApp Data Classification Dateien nicht, wenn keine Schreibberechtigung zum Wiederherstellen des ursprünglichen Zeitstempels vorhanden ist. Falls Ihre Daten es tolerieren, dass die zuletzt aufgerufene Zeit nicht auf den ursprünglichen Zeitstempel zurückgesetzt wird, kann die Option *Scan without write permissions* auf der Systemkonfigurationsseite aktiviert werden.
+Standardmäßig scannt NetApp Data Classification Dateien nicht, wenn keine Schreibberechtigungen vorhanden sind, um den ursprünglichen Zeitstempel wiederherzustellen. Falls Ihre Daten es tolerieren, dass die zuletzt aufgerufene Zeit nicht auf den ursprünglichen Zeitstempel zurückgesetzt wird, kann auf der Systemkonfigurationsseite die Option *Scannen ohne Schreibberechtigungen* aktiviert werden.
 
 image:screenshot_scan_missing_permissions.png["Ein Screenshot, der den Schalter zeigt, mit dem Data Classification Ihre Dateien scannen kann, selbst wenn nicht die erforderlichen Berechtigungen vorhanden sind, um die zuletzt aufgerufene Zeit auf den ursprünglichen Zeitstempel zurückzusetzen."]
 
 Diese Funktionalität ist auf lokale ONTAP Systeme, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP Management und Dateifreigaben von Drittanbietern anwendbar.
 
 
-NOTE: ONTAP Volumes, die mit SnapLock konfiguriert sind, verfügen über reine Leseberechtigungen und können den Zeitpunkt des letzten Zugriffs auch nicht auf den ursprünglichen Zeitstempel zurücksetzen.
+NOTE: ONTAP Volumes, die mit SnapLock konfiguriert sind, verfügen über reine Leseberechtigungen und können den Zeitpunkt des letzten Zugriffs nicht auf den ursprünglichen Zeitstempel zurücksetzen.

@@ -36,7 +36,7 @@ NOTE: Das Scannen von Daten aus Nicht- NetApp Dateifreigaben wird in der Kernver
 * Sie können eine DFS-Freigabe (Distributed File System) als normale CIFS-Freigabe hinzufügen.  Da die Datenklassifizierung nicht erkennt, dass die Freigabe auf mehreren Servern/Volumes basiert, die zu einer einzigen CIFS-Freigabe zusammengefasst sind, erhalten Sie möglicherweise Berechtigungs- oder Verbindungsfehler bezüglich der Freigabe, obwohl die Meldung tatsächlich nur für einen der Ordner/Freigaben gilt, der sich auf einem anderen Server/Volume befindet.
 * Stellen Sie bei CIFS-Freigaben (SMB) sicher, dass Sie über Active Directory-Anmeldeinformationen verfügen, die Lesezugriff auf die Freigaben ermöglichen.  Administratoranmeldeinformationen werden bevorzugt, wenn die Datenklassifizierung Daten scannen muss, für die erweiterte Berechtigungen erforderlich sind.
 +
-Wenn Sie sicherstellen möchten, dass die „letzten Zugriffszeiten“ Ihrer Dateien durch Datenklassifizierungsscans unverändert bleiben, wird empfohlen, dass der Benutzer über Schreibberechtigungen für Attribute in CIFS oder Schreibberechtigungen in NFS verfügt. Konfigurieren Sie den Active Directory-Benutzer nach Möglichkeit als Teil einer übergeordneten Gruppe in der Organisation, die über Berechtigungen für alle Dateien verfügt.
+Um sicherzustellen, dass die „Last Accessed Times“ Ihrer Dateien durch Data Classification-Scans unverändert bleiben, wird der Active Directory-Benutzer mit Write Attributes-Berechtigungen in CIFS oder mit Schreibberechtigungen in NFS konfiguriert. Wenn möglich, wird der Active Directory-Benutzer als Teil einer übergeordneten Gruppe in der Organisation konfiguriert, die Berechtigungen für alle Dateien besitzt.
 
 * Alle CIFS-Dateifreigaben in einer Gruppe müssen dieselben Active Directory-Anmeldeinformationen verwenden.
 * Sie können NFS- und CIFS-Freigaben (entweder mit Kerberos oder NTLM) mischen.  Sie müssen die Freigaben separat zur Gruppe hinzufügen.  Das heißt, Sie müssen den Vorgang zweimal durchführen – einmal pro Protokoll.
@@ -150,12 +150,12 @@ Sie können den Fortschritt des ersten Scans verfolgen.
 [[enable-and-disable-scans-on-volumes]]
 == Aktivieren und Deaktivieren von Scans auf Volumes
 
-Sie können Scans auf jedem System jederzeit über die Konfigurationsseite starten oder stoppen. Sie können außerdem Scans von reinen Mapping-Scans auf Mapping- und Klassifizierungs-Scans und umgekehrt umschalten. Es wird empfohlen, alle Volumes in einem System zu scannen.
+Über das Konfigurationsmenü können Sie Scans auf jedem System jederzeit starten oder stoppen. Scans können außerdem von reinen Kartenscans auf vollständige Scans und umgekehrt umgeschaltet werden.
 
-Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Falls Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
+Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
 
 
-NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn Sie das Scannen für alle Volumes aktiviert haben. Wenn Sie das Scannen nur für bestimmte Volumes aktiviert haben, müssen Sie das Scannen für das neu hinzugefügte Volume manuell aktivieren.
+NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn das Scannen für alle Volumes aktiviert ist. Ist das Scannen nur für bestimmte Volumes aktiviert, muss das Scannen für das neu hinzugefügte Volume manuell aktiviert werden.
 
 image:screenshot_volume_compliance_selection.png["Ein Screenshot der Konfigurationsseite, auf der Sie das Scannen einzelner Volumes aktivieren oder deaktivieren können."]
 
