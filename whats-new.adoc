@@ -792,7 +792,7 @@ Die folgenden Metadaten werden während Mapping-Scans aus Dateien extrahiert und
 * Anzahl der Dateien
 * Dateigröße
 * Dateierstellung
-* Letzter Dateizugriff
+* Datei zuletzt aufgerufen
 * Datei zuletzt geändert
 * Uhrzeit der Dateierkennung
 * Berechtigungsextraktion
