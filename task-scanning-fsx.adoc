@@ -125,7 +125,7 @@ Nachdem Sie die Anmeldeinformationen eingegeben haben, sollte eine Meldung angez
 
 Über das Konfigurationsmenü können Sie Scans auf jedem System jederzeit starten oder stoppen. Scans können außerdem von reinen Kartenscans auf vollständige Scans und umgekehrt umgeschaltet werden.
 
-Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time-timestamp["Mehr erfahren"^].
+Die Option „Scannen ohne Schreibberechtigung“ ist standardmäßig deaktiviert. Das bedeutet, dass das System die Dateien nicht scannt, wenn NetApp Data Classification nicht über die erforderlichen Schreibberechtigungen verfügt, da NetApp Data Classification den „Zugriffszeitpunkt“ nicht auf den ursprünglichen Zeitstempel zurücksetzen kann. Wenn Ihr System eine Änderung des Zugriffszeitpunkts toleriert, kann diese Option ausgewählt werden. link:reference-collected-metadata.html#last-accessed-time["Mehr erfahren"^].
 
 
 NOTE: Neu hinzugefügte Volumes werden nur dann automatisch gescannt, wenn das Scannen für alle Volumes aktiviert ist. Ist das Scannen nur für bestimmte Volumes aktiviert, muss das Scannen für das neu hinzugefügte Volume manuell aktiviert werden.
