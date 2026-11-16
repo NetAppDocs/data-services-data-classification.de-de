@@ -48,6 +48,10 @@ Bevor Sie die OVA-Datei zur Installation der Datenklassifizierung verwenden, ben
 
 | `DataClassification-<version>-XL.ova` | Hohe Produktionslast: 32 CPUs, 128 GB RAM, 1 TB Festplatte | 500 Millionen Dateien 
 |===
++
+
+NOTE: Die OVA-Datei ist ein Basis-Image und nicht an eine bestimmte Data Classification Version gebunden. Auf der NetApp Support Site sind mehrere OVA-Versionen verfügbar, und die Appliance kann mit jeder davon eingesetzt werden. Die gewünschte Data Classification Version wird in der <<Datenklassifizierung installieren,nächster Abschnitt>> über der OVA installiert. Es ist keine OVA-Version erforderlich, die zu Ihrem Data Classification Release passt.
+
 . Den vSphere Client öffnen. Mit der rechten Maustaste auf den Zielcluster oder Host klicken und *OVF-Vorlage bereitstellen* > *VM aus OVA erstellen* auswählen.
 . Laden Sie die OVA-Datei hoch, die Sie in Schritt eins heruntergeladen haben.
 . Geben Sie den *VM-Namen* und das Zielrechenzentrum, den Host oder Cluster sowie den Datenspeicher an.
@@ -78,12 +82,14 @@ NOTE: Das Passwort wird für Root-Zugriff, SSH-Zugriff und die Systemadministrat
 [[install-data-classification]]
 == Datenklassifizierung installieren
 
+
+NOTE: Die heruntergeladene Installationsversion bestimmt die Data Classification Version, die auf der Appliance ausgeführt wird. Im Gegensatz zur OVA ist die Installationsversion entscheidend. Es ist die Installationsdatei für die gewünschte Data Classification Version herunterzuladen.
+
 . Laden Sie die Data Classification-Software von der link:https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["NetApp Support Site"^] herunter.
 +
-Wählen Sie die Datei mit dem Namen *DATASENSE-INSTALLER-<version>.tar.gz* aus.
+Auszuwählen ist die Datei mit dem Namen *DATASENSE-INSTALLER-<version>.tar.gz*; dabei ist sicherzustellen, dass die entsprechende Version ausgewählt wurde. Die neueste Version lässt sich in link:whats-new.html["die Versionshinweise"] überprüfen.
 
-. Das Installationsarchiv wird auf dem VM-Host extrahiert, indem  `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz` ausgeführt wird.
-. Das Installationsarchiv auf dem Host-Rechner extrahieren.
+. Die Extraktion des Installationsarchivs erfolgt auf dem Host-Rechner: `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
 . Wählen Sie in der Konsole *Governance > Klassifizierung* aus.
 . Wählen Sie *Klassifizierung bereitstellen*.
 +
